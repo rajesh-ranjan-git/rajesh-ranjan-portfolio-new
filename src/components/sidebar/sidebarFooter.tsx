@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import profileImg from "@/assets/personal-img/personal-img-circular.png"
+import profileImg from "@/assets/personal-img/personal-img-circular.png";
+import { SidebarFooterProps } from "@/types/propTypes";
 
-const SidebarFooter = ({ sidebarToggle }) => {
+const SidebarFooter = ({ sidebarToggle }: SidebarFooterProps) => {
   return (
     <div className="flex flex-col w-full h-20 overflow-hidden">
       <hr className="text-slate-700" />
