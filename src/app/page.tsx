@@ -1,6 +1,5 @@
-import Image from "next/image";
+import Main from "@/container/main/main";
 
 export default function Home() {
-  return (<div className="flex justify-center items-center w-full h-screen font-bold text-2xl">Rajesh Ranjan Portfolio</div>
-  );
+  return <Main />;
 }
