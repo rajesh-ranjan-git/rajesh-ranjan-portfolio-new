@@ -5,6 +5,7 @@ Welcome to my portfolio! This project showcases my work, skills, and experience 
 ## Table of Contents
 
 - [About Me](#about-me)
+- [Profession](#profession)
 - [Tech Stack](#tech-stack)
 - [Projects](#projects)
 - [How to View My Portfolio](#how-to-view-my-portfolio)
