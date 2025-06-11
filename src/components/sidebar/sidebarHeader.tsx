@@ -1,8 +1,12 @@
 import { Divide as Hamburger } from "hamburger-react";
+import { SidebarHeaderProps } from "@/types/propTypes";
 
-const SidebarHeader = ({ sidebarToggle, handleSidebarToggle }) => {
+const SidebarHeader = ({
+  sidebarToggle,
+  handleSidebarToggle,
+}: SidebarHeaderProps) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 overflow-hidden">
       <div className="flex items-center py-2">
         <button
           type="button"
@@ -17,7 +21,9 @@ const SidebarHeader = ({ sidebarToggle, handleSidebarToggle }) => {
           </div>
         )}
       </div>
-      <hr className="text-slate-700" />
+      <div>
+        <hr className="h-10 text-slate-700" />
+      </div>
     </div>
   );
 };
