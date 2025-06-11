@@ -9,46 +9,47 @@ import {
   faTrophy,
   faUserAstronaut,
 } from "@fortawesome/free-solid-svg-icons";
+import { MenuItem } from "@/types/types";
 
-export const menuItems = [
+export const menuItems: MenuItem[] = [
   {
     item: "home",
-    name: "Home",
+    label: "Home",
     icon: <FontAwesomeIcon icon={faHouse} />,
   },
   {
     item: "about",
-    name: "About",
+    label: "About",
     icon: <FontAwesomeIcon icon={faUserAstronaut} />,
   },
   {
     item: "experience",
-    name: "Experience",
+    label: "Experience",
     icon: <FontAwesomeIcon icon={faBriefcase} />,
   },
   {
     item: "education",
-    name: "Education",
+    label: "Education",
     icon: <FontAwesomeIcon icon={faBookOpenReader} />,
   },
   {
     item: "achievements",
-    name: "Achievements",
+    label: "Achievements",
     icon: <FontAwesomeIcon icon={faTrophy} />,
   },
   {
     item: "portfolio",
-    name: "Portfolio",
+    label: "Portfolio",
     icon: <FontAwesomeIcon icon={faCubes} />,
   },
   {
     item: "certificates",
-    name: "Certificates",
+    label: "Certificates",
     icon: <FontAwesomeIcon icon={faCertificate} />,
   },
   {
     item: "contact",
-    name: "contact",
+    label: "Contact Me",
     icon: <FontAwesomeIcon icon={faIdCard} />,
   },
 ];
