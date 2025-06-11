@@ -16,7 +16,7 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`fixed flex flex-col justify-between bg-slate-900 p-4 pb-2 rounded-r-md  h-screen text-white transition-all ease-in-out duration-700 ${
+      className={`fixed hidden sm:flex flex-col justify-between bg-slate-900 p-4 pb-2 rounded-r-md  h-screen text-white transition-all ease-in-out duration-700 ${
         sidebarToggle ? "w-64" : "w-20"
       }`}
     >
@@ -26,7 +26,7 @@ const Sidebar = () => {
       />
 
       <nav className="flex w-full h-full">
-        <ul className="flex flex-col gap-5 w-full">
+        <ul className="flex flex-col gap-2 2xl:gap-5 w-full">
           {menuItems && menuItems.length > 0 ? (
             menuItems.map((item, index) => (
               <li
