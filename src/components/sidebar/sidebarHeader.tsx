@@ -6,7 +6,7 @@ const SidebarHeader = ({
   handleSidebarToggle,
 }: SidebarHeaderProps) => {
   return (
-    <div className="flex flex-col gap-0 overflow-hidden">
+    <div className="flex flex-col gap-2 overflow-hidden">
       <div className="flex items-center py-2">
         <button
           type="button"

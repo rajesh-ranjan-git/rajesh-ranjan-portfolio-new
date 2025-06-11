@@ -78,7 +78,7 @@ const Sidebar = () => {
       />
 
       <nav className="flex w-full h-full">
-        <ul className="flex flex-col gap-2 w-full">
+        <ul className="flex flex-col gap-5 w-full">
           {menuItems && menuItems.length > 0 ? (
             menuItems.map((item, index) => (
               <li
