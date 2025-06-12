@@ -7,17 +7,20 @@ body {
   box-sizing: border-box;
 }
 
-@keyframes spin {
+
+/* Border rotation animation */
+
+@keyframes rotate-angle {
   from {
-    transform: rotate(0deg);
+    --angle: 0deg;
   }
   to {
-    transform: rotate(360deg);
+    --angle: 360deg;
   }
 }
 
-@layer utilities {
-  .animate-spin-slow {
-    animation: spin 4s linear infinite;
-  }
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }

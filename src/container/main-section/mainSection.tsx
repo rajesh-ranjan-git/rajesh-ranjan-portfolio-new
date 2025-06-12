@@ -8,22 +8,15 @@ const MainSection = () => {
   return (
     <section className="flex justify-around items-center pl-20 w-full h-screen">
       <div className="flex justify-center items-center w-full">
-        <ReactParallaxTilt scale={1.05}>
-          <div className="group relative rounded-full w-[400px] h-[400px] overflow-hidden">
-            {/* Equivalent to ::before */}
-            <div className="-top-[10px] right-[140px] bottom-[-10px] left-[140px] absolute group-hover:inset-[-10px_0px] bg-gradient-to-br from-[#00ccff] to-[#d400d4] transition-all animate-spin-slow duration-500" />
-
-            {/* Equivalent to ::after */}
-            <div className="z-[1] absolute inset-1 group-hover:inset-[-10px_0px] bg-white rounded-full transition-all animate-spin-slow duration-500" />
-
-            {/* Content */}
-            <div className="z-[3] absolute inset-2.5 flex flex-col justify-center items-center border-2 border-slate-700 rounded-full overflow-hidden">
+        <ReactParallaxTilt scale={1.04}>
+          <div className="before:top-1/2 after:top-1/2 before:left-1/2 after:left-1/2 before:z-[-1] after:z-[-1] before:absolute after:absolute relative flex flex-col justify-center items-center before:bg-[conic-gradient(from_var(--angle),#FF6B6B,#FFD93D,#6BCB77,#4D96FF,#843BFF,#FF6EC7,#FF6B6B)] after:bg-[conic-gradient(from_var(--angle),#FF6B6B,#FFD93D,#6BCB77,#4D96FF,#843BFF,#FF6EC7,#FF6B6B)] before:blur-[1.5rem] p-0.5 rounded-full before:rounded-full after:rounded-full before:w-full after:w-full before:h-full after:h-full before:content-[''] after:content-[''] before:translate-x-[-50%] before:translate-y-[-50%] after:translate-x-[-50%] after:translate-y-[-50%] before:[animation:rotate-angle_4s_linear_infinite] after:[animation:rotate-angle_4s_linear_infinite]">
+            <div className="flex justify-center items-center bg-white p-1 rounded-full w-96 h-96 overflow-hidden">
               <Image
                 src={bannerImage}
                 alt="Profile"
                 width={300}
                 height={300}
-                className="top-0 z-[3] absolute w-full h-full object-cover transition-opacity duration-500 pointer-events-none"
+                className="rounded-full w-full h-full object-cover"
               />
             </div>
           </div>
@@ -31,14 +24,16 @@ const MainSection = () => {
       </div>
       <div className="flex justify-center items-center w-full">
         <ReactParallaxTilt scale={1.04}>
-          <div>
-            <Image
-              src={bannerImage}
-              width={300}
-              height={300}
-              alt="banner-img"
-              className="rounded-2xl min-w-96"
-            />
+          <div className="before:top-1/2 after:top-1/2 before:left-1/2 after:left-1/2 before:z-[-1] after:z-[-1] before:absolute after:absolute relative flex flex-col justify-center items-center before:bg-[conic-gradient(from_var(--angle),#FF6B6B,#FFD93D,#6BCB77,#4D96FF,#843BFF,#FF6EC7,#FF6B6B)] after:bg-[conic-gradient(from_var(--angle),#FF6B6B,#FFD93D,#6BCB77,#4D96FF,#843BFF,#FF6EC7,#FF6B6B)] before:blur-[1.5rem] p-0.5 rounded-2xl before:rounded-2xl after:rounded-2xl before:w-full after:w-full before:h-full after:h-full before:content-[''] after:content-[''] before:translate-x-[-50%] before:translate-y-[-50%] after:translate-x-[-50%] after:translate-y-[-50%] before:[animation:rotate-angle_4s_linear_infinite] after:[animation:rotate-angle_4s_linear_infinite]">
+            <div className="flex justify-center items-center bg-white p-1 rounded-2xl">
+              <Image
+                src={bannerImage}
+                alt="Profile"
+                width={300}
+                height={300}
+                className="rounded-2xl w-full h-full object-cover"
+              />
+            </div>
           </div>
         </ReactParallaxTilt>
       </div>
