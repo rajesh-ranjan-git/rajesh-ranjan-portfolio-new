@@ -6,3 +6,21 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* Border rotation animation */
+
+@keyframes rotate-angle {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
