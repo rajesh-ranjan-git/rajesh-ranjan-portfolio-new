@@ -13,7 +13,7 @@ const SidebarFooter = ({ sidebarToggle }: SidebarFooterProps) => {
           width={40}
           height={40}
           alt="profile-img"
-          className="bg-[conic-gradient(from_var(--angle),#FF6B6B,#FFD93D,#6BCB77,#4D96FF,#843BFF,#FF6EC7,#FF6B6B)] border-2 rounded-full"
+          className="hover:bg-[conic-gradient(from_var(--angle),#FF6B6B,#FFD93D,#6BCB77,#4D96FF,#843BFF,#FF6EC7,#FF6B6B)] border-2 rounded-full hover:scale-105 transition-all ease-in-out cursor-pointer"
         />
 
         {sidebarToggle && (
