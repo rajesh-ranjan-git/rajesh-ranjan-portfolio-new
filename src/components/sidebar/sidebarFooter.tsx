@@ -8,7 +8,13 @@ const SidebarFooter = ({ sidebarToggle }: SidebarFooterProps) => {
     <div className="flex flex-col w-full h-20 overflow-hidden">
       <hr className="text-slate-700" />
       <div className="flex justify-between items-center gap-2 px-1 w-full h-full">
-        <Image src={profileImg} width={36} height={36} alt="profile-img" />
+        <Image
+          src={profileImg}
+          width={40}
+          height={40}
+          alt="profile-img"
+          className="bg-[conic-gradient(from_var(--angle),#FF6B6B,#FFD93D,#6BCB77,#4D96FF,#843BFF,#FF6EC7,#FF6B6B)] border-2 rounded-full"
+        />
 
         {sidebarToggle && (
           <div className="flex flex-col gap-0 w-full">
