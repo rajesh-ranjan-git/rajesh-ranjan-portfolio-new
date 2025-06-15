@@ -1,9 +1,14 @@
+import { ButtonMask1, ButtonMask2 } from "@/components/button/button";
 import GreetingsImg from "@/components/greetings-img/greetings-img";
 import ProfileImgSquare from "@/components/profile-img/profileImgSquare";
 import TypeText from "@/components/type-text/typeText";
 import SocialMedia from "@/container/social-media/socialMedia";
 
 const MainSection = () => {
+  const openInNewTab = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className="flex md:flex-row flex-col justify-around items-center md:p-20 w-full h-screen overflow-hidden">
       <div className="flex flex-col justify-center gap-4 lg:gap-8 p-4 md:min-w-[360px] text-2xl md:text-3xl lg:text-4xl item-center">
@@ -25,6 +30,26 @@ const MainSection = () => {
         </div>
 
         <SocialMedia />
+
+        <div>
+          <ButtonMask2
+            className="contact_me_btn"
+            onClick={() => console.log("ButtonMask2")}
+          >
+            CONTACT ME
+          </ButtonMask2>
+
+          <ButtonMask1
+            onClick={() =>
+              openInNewTab(
+                "https://drive.google.com/file/d/1i57BJ4Zp61cIREahhDu-HEPkcNZ6X1AE/view?usp=drive_link"
+              )
+            }
+            className="download_resume_btn"
+          >
+            SEE MY RESUME
+          </ButtonMask1>
+        </div>
       </div>
 
       <div className="flex justify-start items-start">
