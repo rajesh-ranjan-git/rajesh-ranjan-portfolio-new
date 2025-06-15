@@ -1,5 +1,5 @@
 import Sidebar from "@/components/sidebar/sidebar";
-import MainSection from "../main-section/mainSection";
+import MainSection from "@/container/main-section/mainSection";
 
 const Main = () => {
   return (

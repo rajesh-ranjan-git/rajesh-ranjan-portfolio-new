@@ -1,36 +1,59 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { useSidebarStore } from "@/store/store";
 import { menuItems } from "@/config/menuItems";
 import SidebarFooter from "@/components/sidebar/sidebarFooter";
 import SidebarHeader from "@/components/sidebar/sidebarHeader";
 
 const Sidebar = () => {
-  const [sidebarToggle, setSidebarToggle] = useState(false);
+  const sidebarToggle = useSidebarStore((state) => state.sidebarToggle);
+  const setSidebarToggle = useSidebarStore((state) => state.setSidebarToggle);
 
-  const handleSidebarToggle = () => {
-    setSidebarToggle(!sidebarToggle);
+  const sidebarRef = useRef<HTMLDivElement>(null);
+
+  const handleListItemAction = () => {
+    if (sidebarToggle) setSidebarToggle(false);
   };
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
+        setSidebarToggle(false);
+      }
+    };
+
+    // Only add listener when sidebar is open
+    if (sidebarToggle) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [sidebarToggle]);
 
   return (
     <aside
       className={`fixed hidden sm:flex flex-col justify-between bg-slate-900 p-4 pb-2 rounded-r-md  h-screen text-white overflow-hidden transition-all ease-in-out duration-700 z-[10] ${
         sidebarToggle ? "w-64" : "w-20"
       }`}
+      ref={sidebarRef}
     >
-      <SidebarHeader
-        sidebarToggle={sidebarToggle}
-        handleSidebarToggle={handleSidebarToggle}
-      />
+      <SidebarHeader />
 
       <nav className="flex w-full h-full">
         <ul className="flex flex-col gap-2 2xl:gap-5 w-full">
           {menuItems && menuItems.length > 0 ? (
             menuItems.map((item, index) => (
               <li
-                className="flex justify-start items-center gap-4 hover:bg-blue-500 p-2 px-3 rounded-md w-full h-10 text-xl transition-all ease-in-out cursor-pointer"
+                className="flex justify-start items-center gap-4 hover:bg-blue-500 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out cursor-pointer"
+                onClick={handleListItemAction}
                 key={index}
               >
                 <div className="flex justify-center items-center w-6 min-w-6">
@@ -60,7 +83,7 @@ const Sidebar = () => {
         </ul>
       </nav>
 
-      <SidebarFooter sidebarToggle={sidebarToggle} />
+      <SidebarFooter />
     </aside>
   );
 };

@@ -1,19 +1,24 @@
 import { Divide as Hamburger } from "hamburger-react";
-import { SidebarHeaderProps } from "@/types/propTypes";
+import { useSidebarStore } from "@/store/store";
 
-const SidebarHeader = ({
-  sidebarToggle,
-  handleSidebarToggle,
-}: SidebarHeaderProps) => {
+const SidebarHeader = () => {
+  const sidebarToggle = useSidebarStore((state) => state.sidebarToggle);
+  const setSidebarToggle = useSidebarStore((state) => state.setSidebarToggle);
+
   return (
     <div className="flex flex-col gap-2 overflow-hidden">
       <div className="flex items-center py-2">
         <button
           type="button"
           className="hover:bg-blue-500 bg-none border-0 rounded-md outline-none font-bold text-2xl transition-all ease-in-out"
-          onClick={handleSidebarToggle}
+          onClick={() => setSidebarToggle(!sidebarToggle)}
         >
-          <Hamburger easing="ease-in" size={24} rounded />
+          <Hamburger
+            easing="ease-in"
+            size={24}
+            rounded
+            toggled={sidebarToggle}
+          />
         </button>
         {sidebarToggle && (
           <div className="p-2 px-4 whitespace-nowrap">

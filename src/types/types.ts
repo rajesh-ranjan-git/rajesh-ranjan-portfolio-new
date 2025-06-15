@@ -1,4 +1,7 @@
-import React from "react";
+export type SidebarState = {
+  sidebarToggle: boolean;
+  setSidebarToggle: (value: boolean) => void;
+};
 
 export type MenuItem = {
   item:
