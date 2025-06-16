@@ -30,28 +30,7 @@ const MainSection = () => {
         </div>
 
         <SocialMedia />
-
-        <div>
-          <ButtonMask2
-            className="contact_me_btn"
-            onClick={() => console.log("ButtonMask2")}
-          >
-            CONTACT ME
-          </ButtonMask2>
-
-          <ButtonMask1
-            onClick={() =>
-              openInNewTab(
-                "https://drive.google.com/file/d/1i57BJ4Zp61cIREahhDu-HEPkcNZ6X1AE/view?usp=drive_link"
-              )
-            }
-            className="download_resume_btn"
-          >
-            SEE MY RESUME
-          </ButtonMask1>
-        </div>
       </div>
-
       <div className="flex justify-start items-start">
         <GreetingsImg />
       </div>
