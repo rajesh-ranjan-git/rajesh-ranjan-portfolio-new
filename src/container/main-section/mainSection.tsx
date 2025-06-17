@@ -45,7 +45,7 @@ const MainSection = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex justify-center items-center md:col-start-1 md:row-start-2 w-full lg:row-auto lg:col-auto">
+      <div className="hidden md:flex justify-center items-center md:col-start-1 md:row-start-2 p-4 w-full lg:row-auto lg:col-auto">
         <ProfileImgSquare />
       </div>
 
