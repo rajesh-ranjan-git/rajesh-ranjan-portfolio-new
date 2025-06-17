@@ -12,7 +12,7 @@ const MainSection = () => {
     <section className="gap-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pl-0 md:pl-24 w-full h-screen">
       <div className="flex flex-col justify-center gap-4 lg:gap-8 p-4 text-2xl md:text-3xl md:text-left text-center item-center">
         <h1>
-          Hi There!
+          Hi There!{" "}
           <span className="wave" role="img" aria-labelledby="wave">
             👋🏻
           </span>
@@ -28,6 +28,21 @@ const MainSection = () => {
         </div>
 
         <SocialMedia />
+
+        <div className="flex justify-center md:justify-start items-center gap-4 lg:gap-2 xl:gap-4 text-white text-lg">
+          <button
+            type="button"
+            className="bg-blue-500 px-6 lg:px-3 xl:px-6 py-4 lg:py-2 xl:py-4 border-1 border-transparent rounded-xl font-semibold text-nowrap cursor-pointer"
+          >
+            Contact Me
+          </button>
+          <button
+            type="button"
+            className="bg-blue-500 px-6 lg:px-3 xl:px-6 py-4 lg:py-2 xl:py-4 border-1 border-transparent rounded-xl font-semibold text-nowrap cursor-pointer"
+          >
+            See My Resume
+          </button>
+        </div>
       </div>
 
       <div className="flex justify-center items-center md:col-start-1 md:row-start-2 w-full lg:row-auto lg:col-auto">
