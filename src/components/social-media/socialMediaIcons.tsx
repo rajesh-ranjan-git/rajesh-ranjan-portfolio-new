@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SocialMediaIcons() {
   return (
-    <div className="flex flex-wrap items-center gap-2 rounded-full w-full">
+    <div className="flex lg:flex-wrap flex-nowrap xl:flex-nowrap justify-center md:justify-start items-center gap-2 rounded-full w-full">
       <Link
         href="https://github.com/rajesh-ranjan-git"
         className="flex justify-center items-center bg-[#333] hover:bg-[#040b14] rounded-full w-10 min-w-10 h-10 min-h-10 text-white text-center transition-all ease-in-out cursor-pointer select-none"

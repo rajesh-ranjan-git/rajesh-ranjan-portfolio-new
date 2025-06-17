@@ -7,12 +7,12 @@ const TypeText = () => {
     <Typewriter
       options={{
         strings: [
-          "Full Stack Developer",
-          "Software Engineer",
-          "Web Developer",
+          // "Full Stack Developer",
+          // "Software Engineer",
+          // "Web Developer",
           "Full Stack Web Developer",
-          "Frontend Engineer",
-          "Backend Engineer",
+          // "Frontend Engineer",
+          // "Backend Engineer",
         ],
         autoStart: true,
         loop: true,
