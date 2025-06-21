@@ -1,5 +1,4 @@
 import GreetingsImg from "@/components/greetings-img/greetings-img";
-import ProfileImgSquare from "@/components/profile-img/profileImgSquare";
 import TypeText from "@/components/type-text/typeText";
 import SocialMedia from "@/container/social-media/socialMedia";
 
@@ -9,21 +8,24 @@ const MainSection = () => {
   };
 
   return (
-    <section className="gap-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pl-0 md:pl-24 w-full h-screen">
-      <div className="flex flex-col justify-center gap-4 lg:gap-8 p-4 text-2xl md:text-3xl md:text-left text-center item-center">
-        <h1>
+    <section className="gap-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 pl-0 md:pl-48 w-full h-screen">
+      <div className="flex flex-col justify-center gap-4 lg:gap-8 p-4 md:text-left text-center item-center">
+        <h1 className="montserrat-font-regular text-4xl">
           Hi There!{" "}
           <span className="wave" role="img" aria-labelledby="wave">
             👋🏻
           </span>
         </h1>
 
-        <h1>
+        <h1 className="font-bahu text-5xl">
           I'm
-          <strong className="whitespace-nowrap"> Rajesh Ranjan !</strong>
+          <strong className="font-extrabold text-6xl whitespace-nowrap">
+            {" "}
+            Rajesh Ranjan !
+          </strong>
         </h1>
 
-        <div className="relative h-10 font-semibold lg:text-2xl xl:text-3xl whitespace-nowrap">
+        <div className="relative h-10 font-semibold whitespace-nowrap">
           <TypeText />
         </div>
 
@@ -43,10 +45,6 @@ const MainSection = () => {
             See My Resume
           </button>
         </div>
-      </div>
-
-      <div className="hidden md:flex justify-center items-center md:col-start-1 md:row-start-2 p-4 w-full lg:row-auto lg:col-auto">
-        <ProfileImgSquare />
       </div>
 
       <div className="flex justify-center items-center md:col-start-2 md:row-span-2 lg:row-span-1 w-full lg:col-auto">

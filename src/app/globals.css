@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Font Definition */
+@font-face {
+  font-family: "Augustina";
+  src: url("../assets/fonts/agustina/agustina.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Amsterdam Kingdom";
+  src: url("../assets/fonts/amsterdam-kingdom/amsterdam-kingdom.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Bahu";
+  src: url("../assets/fonts/bahu/bahu.ttf") format("truetype");
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -7,9 +24,20 @@ body {
   box-sizing: border-box;
 }
 
+/* Font Classes */
+.font-augustina {
+  font-family: "Augustina", Helvetica, sans-serif;
+}
+
+.font-amsterdam-kingdom {
+  font-family: "Amsterdam Kingdom", Helvetica, sans-serif;
+}
+
+.font-bahu {
+  font-family: "Bahu", Helvetica, sans-serif;
+}
 
 /* Border rotation animation */
-
 @keyframes rotate-angle {
   from {
     --angle: 0deg;
