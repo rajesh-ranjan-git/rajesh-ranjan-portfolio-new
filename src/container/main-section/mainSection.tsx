@@ -9,9 +9,9 @@ const MainSection = () => {
 
   return (
     <section className="gap-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 pl-0 md:pl-48 w-full h-screen">
-      {/* <div className="flex flex-col justify-center gap-4 lg:gap-8 p-4 md:text-left text-center item-center">
-        <h1 className="montserrat-font-regular text-4xl">
-          Hi There!{" "}
+      <div className="flex flex-col justify-center gap-4 lg:gap-8 p-4 md:text-left text-center item-center">
+        <h1 className="font-bahu text-4xl tracking-wide">
+          Hi There !{" "}
           <span className="wave" role="img" aria-labelledby="wave">
             👋🏻
           </span>
@@ -19,13 +19,13 @@ const MainSection = () => {
 
         <h1 className="font-bahu text-5xl">
           I'm
-          <strong className="font-extrabold text-6xl whitespace-nowrap">
+          <strong className="font-chollistio font-extrabold text-5xl whitespace-nowrap">
             {" "}
             Rajesh Ranjan !
           </strong>
         </h1>
 
-        <div className="relative h-10 font-semibold whitespace-nowrap">
+        <div className="relative mt-5 font-merriweather font-semibold text-4xl whitespace-nowrap">
           <TypeText />
         </div>
 
@@ -45,62 +45,11 @@ const MainSection = () => {
             See My Resume
           </button>
         </div>
-      </div> */}
-
-      <div className="text-5xl">
-        <h1 className="pt-2 font-augustina">I'm Rajesh Ranjan !</h1>
-        <h1 className="pt-2 font-amsterdam-kingdom">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-bahu">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-barsime">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-biggest-cat-ever">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-bright-aura">I'm Rajesh Ranjan !</h1>
-        <h1 className="pt-2 font-chollistio">I'm Rajesh Ranjan !</h1>
-        <h1 className="pt-2 font-friendly-stranger">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-huron">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-huron-texture">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-inter">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-jellycow">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-late-spring">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-merriweather">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-montserrat">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-mova">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-old-rocket">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-open-sans">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-playfair-display">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-poppins">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-portiere">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-rampung">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-realbun">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-roasted-chicken">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-savage-garden">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-savage-garden-decorative">I'm Rajesh Ranjan !</h1>
       </div>
 
-      <div className="text-5xl">
-        <h1 className="font-sermo">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-south-east">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-sweet-joys">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-sweet-joys-dot">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-sweet-joys-half-line">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-sweet-joys-inline">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-sweet-joys-line">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-sweet-joys-outline">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-sweet-joys-shadow text-4xl">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-thanksgiving-joy">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-thanksgiving-joy-decorative">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-thanksgiving-joy-dot">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-thanksgiving-joy-hat">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-thanksgiving-joy-leaf">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-thanksgiving-joy-pumpkin">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-thanksgiving-joy-turkey">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-thanksgiving-joy-turkey-head">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-thanksgiving-joy-turkey-tail">I'm Rajesh Ranjan !</h1>
-        <h1 className="font-workout">I'm Rajesh Ranjan !</h1>
-      </div>
-
-      {/* <div className="flex justify-center items-center md:col-start-2 md:row-span-2 lg:row-span-1 w-full lg:col-auto">
+      <div className="flex justify-center items-center w-full">
         <GreetingsImg />
-      </div> */}
+      </div>
     </section>
   );
 };

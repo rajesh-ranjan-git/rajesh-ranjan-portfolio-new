@@ -22,7 +22,7 @@ const SidebarHeader = () => {
         </button>
         {sidebarToggle && (
           <div className="p-2 px-4 whitespace-nowrap">
-            <h2 className="w-full font-bold text-xl">Rajesh Ranjan</h2>
+            <h2 className="w-full font-amsterdam-kingdom font-semibold text-2xl tracking-wider">Rajesh Ranjan</h2>
           </div>
         )}
       </div>

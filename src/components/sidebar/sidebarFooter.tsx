@@ -28,13 +28,13 @@ const SidebarFooter = () => {
 
         {sidebarToggle && (
           <div className="flex flex-col gap-0 w-full">
-            <h2 className="w-full font-bold text-md whitespace-nowrap">
+            <h2 className="w-full font-bahu text-lg tracking-wider whitespace-nowrap">
               Rajesh Ranjan
             </h2>
             <Link
               href="mailto:rajeshranjan8271@gmail.com"
               target="_blank"
-              className="font-semibold text-slate-400 hover:text-white text-xs transition-all ease-in-out"
+              className="font-semibold text-slate-400 hover:text-white text-xs tracking-tight transition-all ease-in-out"
             >
               rajeshranjan8271@gmail.com
             </Link>
