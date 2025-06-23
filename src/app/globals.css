@@ -17,6 +17,223 @@
   src: url("../assets/fonts/bahu/bahu.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Barsime";
+  src: url("../assets/fonts/barsime/barsime.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Biggest Cat Ever";
+  src: url("../assets/fonts/biggest-cat-ever/biggest-cat-ever.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Bright Aura";
+  src: url("../assets/fonts/bright-aura/bright-aura.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Chollistio";
+  src: url("../assets/fonts/chollistio/chollistio.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Friendly Stranger";
+  src: url("../assets/fonts/friendly-stranger/friendly-stranger.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Huron";
+  src: url("../assets/fonts/huron/huron.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Huron Texture";
+  src: url("../assets/fonts/huron/huron-texture.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter/inter.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jellycow";
+  src: url("../assets/fonts/jellycow/jellycow.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Late Spring";
+  src: url("../assets/fonts/late-spring/late-spring.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../assets/fonts/merriweather/merriweather.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat/montserrat.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mova";
+  src: url("../assets/fonts/mova/mova.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Old Rocket";
+  src: url("../assets/fonts/old-rocket/old-rocket.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/open-sans/open-sans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../assets/fonts/playfair-display/playfair-display.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/poppins/poppins.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Portiere";
+  src: url("../assets/fonts/portiere/portiere.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rampung";
+  src: url("../assets/fonts/rampung/rampung.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Realbun";
+  src: url("../assets/fonts/realbun/realbun.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roasted Chicken";
+  src: url("../assets/fonts/roasted-chicken/roasted-chicken.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Savage Garden";
+  src: url("../assets/fonts/savage-garden/savage-garden.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Savage Garden Decorative";
+  src: url("../assets/fonts/savage-garden/savage-garden-decorative.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Sermo";
+  src: url("../assets/fonts/sermo/sermo.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sweet Joys";
+  src: url("../assets/fonts/south-east/south-east.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sweet Joys";
+  src: url("../assets/fonts/sweet-joys/sweet-joys.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sweet Joys Dot";
+  src: url("../assets/fonts/sweet-joys/sweet-joys-dot.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sweet Joys Half Line";
+  src: url("../assets/fonts/sweet-joys/sweet-joys-half-line.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Sweet Joys Inline";
+  src: url("../assets/fonts/sweet-joys/sweet-joys-inline.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Sweet Joys Line";
+  src: url("../assets/fonts/sweet-joys/sweet-joys-line.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sweet Joys Outline";
+  src: url("../assets/fonts/sweet-joys/sweet-joys-outline.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Sweet Joys Shadow";
+  src: url("../assets/fonts/sweet-joys/sweet-joys-shadow.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thanksgiving Joy";
+  src: url("../assets/fonts/thanksgiving-joy/thanksgiving-joy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thanksgiving Joy Decorative";
+  src: url("../assets/fonts/thanksgiving-joy/thanksgiving-joy-decorative.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thanksgiving Joy Dot";
+  src: url("../assets/fonts/thanksgiving-joy/thanksgiving-joy-dot.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thanksgiving Joy Hat";
+  src: url("../assets/fonts/thanksgiving-joy/thanksgiving-joy-hat.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thanksgiving Joy Leaf";
+  src: url("../assets/fonts/thanksgiving-joy/thanksgiving-joy-leaf.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thanksgiving Joy Pumpkin";
+  src: url("../assets/fonts/thanksgiving-joy/thanksgiving-joy-pumpkin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thanksgiving Joy Turkey";
+  src: url("../assets/fonts/thanksgiving-joy/thanksgiving-joy-turkey.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thanksgiving Joy Turkey Head";
+  src: url("../assets/fonts/thanksgiving-joy/thanksgiving-joy-turkey-head.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Thanksgiving Joy Turkey Tail";
+  src: url("../assets/fonts/thanksgiving-joy/thanksgiving-joy-turkey-tail.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Workout";
+  src: url("../assets/fonts/workout/workout.ttf") format("truetype");
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -35,6 +252,166 @@ body {
 
 .font-bahu {
   font-family: "Bahu", Helvetica, sans-serif;
+}
+
+.font-barsime {
+  font-family: "Barsime", Helvetica, sans-serif;
+}
+
+.font-biggest-cat-ever {
+  font-family: "Biggest Cat Ever", Helvetica, sans-serif;
+}
+
+.font-bright-aura {
+  font-family: "Bright Aura", Helvetica, sans-serif;
+}
+
+.font-chollistio {
+  font-family: "Chollistio", Helvetica, sans-serif;
+}
+
+.font-friendly-stranger {
+  font-family: "Friendly Stranger", Helvetica, sans-serif;
+}
+
+.font-huron {
+  font-family: "Huron", Helvetica, sans-serif;
+}
+
+.font-huron-texture {
+  font-family: "Huron Texture", Helvetica, sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", Helvetica, sans-serif;
+}
+
+.font-jellycow {
+  font-family: "Jellycow", Helvetica, sans-serif;
+}
+
+.font-late-spring {
+  font-family: "Late Spring", Helvetica, sans-serif;
+}
+
+.font-merriweather {
+  font-family: "Merriweather", Helvetica, sans-serif;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+.font-mova {
+  font-family: "Mova", Helvetica, sans-serif;
+}
+
+.font-old-rocket {
+  font-family: "Old Rocket", Helvetica, sans-serif;
+}
+
+.font-open-sans {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.font-playfair-display {
+  font-family: "Playfair Display", Helvetica, sans-serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+
+.font-rampung {
+  font-family: "Rampung", Helvetica, sans-serif;
+}
+
+.font-realbun {
+  font-family: "Realbun", Helvetica, sans-serif;
+}
+
+.font-roasted-chicken {
+  font-family: "Roasted Chicken", Helvetica, sans-serif;
+}
+
+.font-savage-garden {
+  font-family: "Savage Garden", Helvetica, sans-serif;
+}
+
+.font-savage-garden-decorative {
+  font-family: "Savage Garden Decorative", Helvetica, sans-serif;
+}
+
+.font-sermo {
+  font-family: "Sermo", Helvetica, sans-serif;
+}
+
+.font-sweet-joys {
+  font-family: "Sweet Joys", Helvetica, sans-serif;
+}
+
+.font-sweet-joys-dot {
+  font-family: "Sweet Joys Dot", Helvetica, sans-serif;
+}
+
+.font-sweet-joys-half-line {
+  font-family: "Sweet Joys Half Line", Helvetica, sans-serif;
+}
+
+.font-sweet-joys-inline {
+  font-family: "Sweet Joys Inline", Helvetica, sans-serif;
+}
+
+.font-sweet-joys-line {
+  font-family: "Sweet Joys Line", Helvetica, sans-serif;
+}
+
+.font-sweet-joys-outline {
+  font-family: "Sweet Joys Outline", Helvetica, sans-serif;
+}
+
+.font-sweet-joys-shadow {
+  font-family: "Sweet Joys Shadow", Helvetica, sans-serif;
+}
+
+.font-thanksgiving-joy {
+  font-family: "Thanksgiving Joy", Helvetica, sans-serif;
+}
+
+.font-thanksgiving-joy-decorative {
+  font-family: "Thanksgiving Joy Decorative", Helvetica, sans-serif;
+}
+
+.font-thanksgiving-joy-dot {
+  font-family: "Thanksgiving Joy Dot", Helvetica, sans-serif;
+}
+
+.font-thanksgiving-joy-hat {
+  font-family: "Thanksgiving Joy Hat", Helvetica, sans-serif;
+}
+
+.font-thanksgiving-joy-leaf {
+  font-family: "Thanksgiving Joy Leaf", Helvetica, sans-serif;
+}
+
+.font-thanksgiving-joy-pumpkin {
+  font-family: "Thanksgiving Joy Pumpkin", Helvetica, sans-serif;
+}
+
+.font-thanksgiving-joy-turkey {
+  font-family: "Thanksgiving Joy Turkey", Helvetica, sans-serif;
+}
+
+.font-thanksgiving-joy-turkey-head {
+  font-family: "Thanksgiving Joy Turkey Head", Helvetica, sans-serif;
+}
+
+.font-thanksgiving-joy-turkey-tail {
+  font-family: "Thanksgiving Joy Turkey Tail", Helvetica, sans-serif;
+}
+
+.font-workout {
+  font-family: "Workout", Helvetica, sans-serif;
 }
 
 /* Border rotation animation */
