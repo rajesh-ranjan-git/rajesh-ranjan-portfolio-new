@@ -96,3 +96,5 @@ npm run dev # Open the portfolio in your browser
 - **Facebook**: [https://www.facebook.com/rajeshranjan8271/](https://www.facebook.com/rajeshranjan8271/)
 - **Twitter**: [https://x.com/\_rajesh\_\_\_\_](https://x.com/_rajesh____)
 - **Instagram**: [https://www.instagram.com/\_rajesh\_\_\_\_/](https://www.instagram.com/_rajesh____/)
+
+## Thank you for stopping by!
