@@ -1,5 +1,4 @@
 .btn_mask_1 {
-  background-color: #3f82d9;
   mask-image: url("../assets/background/btnMask1.png");
   -webkit-mask-image: url("../assets/background/btnMask1.png");
   -moz-mask-image: url("../assets/background/btnMask1.png");
@@ -14,7 +13,6 @@
 }
 
 .btn_mask_2 {
-  background-color: #000;
   mask-image: url("../assets/background/btnMask2.png");
   -webkit-mask-image: url("../assets/background/btnMask2.png");
   -moz-mask-image: url("../assets/background/btnMask2.png");
