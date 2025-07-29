@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Sidebar />
       <section className="flex flex-wrap justify-center items-center pl-24 w-screen min-h-screen max-h-screen overflow-hidden">
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center gap-2">
           <div className="h-full text-4xl leading-12">
             <h1>
               Hi There!{" "}
