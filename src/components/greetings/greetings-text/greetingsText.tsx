@@ -3,7 +3,7 @@ import Typewriter from "@/components/typewriter/typewriter";
 
 const GreetingsText = () => {
   return (
-    <div className="flex flex-col justify-center pt-20 h-full text-white text-3xl md:text-4xl lg:text-5xl leading-16 lg:leading-20">
+    <div className="flex flex-col justify-center pt-20 lg:pt-10 h-full text-white text-2xl md:text-4xl lg:text-5xl leading-12 lg:leading-20">
       <h1>
         Hi There!{" "}
         <span
@@ -33,7 +33,7 @@ const GreetingsText = () => {
           typingSpeed={120}
           deletingSpeed={60}
           delayBetweenWords={1000}
-          className="text-shadow-[1px_1px_black] font-semibold text-[#699ee1] md:text-2xl text-3xl lg:text-5xl"
+          className="text-shadow-[1px_1px_black] font-semibold text-[#699ee1] text-xl md:text-3xl lg:text-4xl"
         />
       </div>
     </div>
