@@ -19,6 +19,16 @@ const Greetings = () => {
       <div
         className={`border-16 border-white opacity-20 absolute block lg:w-[45rem] lg:h-[45rem] md:w-[35rem] md:h-[35rem] w-[25rem] h-[25rem] right-[-10%] top-[5%] ${greetingsStyles.rectangle_transparent}`}
       ></div>
+      <div
+        className={`border-4 border-white opacity-20 absolute block rounded-full w-20 h-20 left-[5%] top-[50%] ${greetingsStyles.circle}`}
+      ></div>
+      <div
+        className={`border-4 border-white opacity-20 absolute block rounded-full w-32 h-32 left-[83%] top-[20%] ${greetingsStyles.circle}`}
+      ></div>
+      <div
+        className={`border-4 border-white opacity-20 absolute block rounded-full w-40 h-40 right-[25%] top-[80%] ${greetingsStyles.circle}`}
+      ></div>
+
       <GreetingsMain />
       <GreetingsImg />
     </section>
