@@ -9,6 +9,11 @@ body {
   overflow-y: scroll;
 }
 
+/* Hide Body Scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* Scrollbar Width */
 ::-webkit-scrollbar {
   width: 8px;
