@@ -1,12 +1,13 @@
 import greetingsStyles from "@/animations/greetings.module.css";
+import Typewriter from "@/components/typewriter/typewriter";
 
 const GreetingsText = () => {
   return (
-    <div className="h-full text-4xl leading-12">
+    <div className="flex flex-col justify-center h-full text-3xl leading-16">
       <h1>
         Hi There!{" "}
         <span
-          className={greetingsStyles.wave}
+          className={`inline-block ${greetingsStyles.wave}`}
           role="img"
           aria-labelledby="wave"
         >
@@ -14,13 +15,23 @@ const GreetingsText = () => {
         </span>
       </h1>
 
-      <h1>
+      <h1 className="text-4xl">
         I'm
-        <strong>&nbsp;Rajesh Ranjan</strong>
+        <span className="ml-2 font-semibold">Rajesh Ranjan</span>
       </h1>
-      <div>
-        <p>Full Stack Developer</p>
-      </div>
+      <Typewriter
+        words={[
+          "Full Stack Developer",
+          "Software Developer",
+          "Software Engineer",
+          "Freelancer",
+          "Open Source Contributor",
+        ]}
+        typingSpeed={120}
+        deletingSpeed={60}
+        delayBetweenWords={1000}
+        className="font-semibold"
+      />
     </div>
   );
 };
