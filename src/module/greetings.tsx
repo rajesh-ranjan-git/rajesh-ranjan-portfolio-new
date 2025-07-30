@@ -1,6 +1,8 @@
 import greetingsStyles from "@/animations/greetings.module.css";
 import GreetingsMain from "@/containers/greetings/greetingsMain";
 import GreetingsImg from "@/components/greetings/greetings-img/greetingsImg";
+import obj_triangle from "@/assets/background/obj-triangle.png";
+import Image from "next/image";
 
 const Greetings = () => {
   return (
@@ -28,6 +30,48 @@ const Greetings = () => {
       <div
         className={`border-4 border-white opacity-20 absolute block rounded-full w-40 h-40 right-[25%] top-[80%] ${greetingsStyles.circle}`}
       ></div>
+      <div className={`absolute right-0 ${greetingsStyles.triangle_1}`}>
+        <Image
+          src={obj_triangle}
+          alt=""
+          width={50}
+          height={50}
+          className="opacity-20"
+        />
+      </div>
+      <div
+        className={`absolute top-[30%] left-[20%] ${greetingsStyles.triangle_2}`}
+      >
+        <Image
+          src={obj_triangle}
+          alt=""
+          width={75}
+          height={75}
+          className="opacity-20"
+        />
+      </div>
+      <div
+        className={`absolute top-[80%] left-[15%] ${greetingsStyles.triangle_3}`}
+      >
+        <Image
+          src={obj_triangle}
+          alt=""
+          width={45}
+          height={45}
+          className="opacity-20"
+        />
+      </div>
+      <div
+        className={`absolute top-[60%] right-[15%] ${greetingsStyles.triangle_4}`}
+      >
+        <Image
+          src={obj_triangle}
+          alt=""
+          width={45}
+          height={45}
+          className="opacity-20"
+        />
+      </div>
 
       <GreetingsMain />
       <GreetingsImg />
