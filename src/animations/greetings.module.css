@@ -1,7 +1,6 @@
 .greetings::before {
-  background: #bec9e5;
-  background: linear-gradient(to right, #040b14, transparent);
-  z-index: -3;
+  background: linear-gradient(to right, #040b14 8%, transparent 100%);
+  z-index: -2;
 }
 
 .wave {
@@ -13,9 +12,8 @@
 }
 
 .rectangle {
-  background: #040b14;
-  z-index: -1;
-  opacity: 0.5;
+  background: linear-gradient(to right, #040b14, rgb(190, 201, 229));
+  z-index: -3;
   box-shadow: 0px 20px 30px 7px rgba(9, 21, 54, 0.25);
 }
 
@@ -32,7 +30,7 @@
 }
 
 .rectangle_transparent {
-  z-index: -2;
+  z-index: -3;
   animation: floatingSlow ease-in-out 12s infinite;
 }
 
@@ -125,7 +123,7 @@
     transform: scale(2) rotate(-10deg);
   }
   to {
-    opacity: 0.5;
+    opacity: 01;
     transform: scale(1) rotate(-10deg);
   }
 }
@@ -136,7 +134,7 @@
     transform: scale(2) rotate(50deg);
   }
   to {
-    opacity: 0.5;
+    opacity: 1;
     transform: scale(1) rotate(50deg);
   }
 }
@@ -197,6 +195,10 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .greetings::before {
+    background: linear-gradient(to right, #040b14 15%, transparent 100%);
+  }
+  
   .rectangle_1 {
     transform-origin: 175% 347% 0;
   }
