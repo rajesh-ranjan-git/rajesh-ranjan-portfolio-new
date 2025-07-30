@@ -4,10 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const PersonalInfoText = () => {
   return (
     <div className="flex flex-col gap-2 lg:gap-6 lg:p-10 py-2 text-md md:text-lg lg:text-xl">
-      <h2 className="text-2xl md:text-3xl lg:text-5xl text-nowrap">
-        Personal Information
-      </h2>
-
       <h3>
         <span className="text-nowrap">Full Stack Developer</span> |{" "}
         <span className="text-nowrap">Business Today Technology</span> |{" "}
