@@ -21,19 +21,21 @@ const GreetingsText = () => {
           Rajesh Ranjan
         </span>
       </h1>
-      <Typewriter
-        words={[
-          "Full Stack Developer",
-          "Software Developer",
-          "Software Engineer",
-          "Freelancer",
-          "Open Source Contributor",
-        ]}
-        typingSpeed={120}
-        deletingSpeed={60}
-        delayBetweenWords={1000}
-        className="text-shadow-[1px_1px_black] font-semibold text-[#699ee1]"
-      />
+      <div>
+        <Typewriter
+          words={[
+            "Full Stack Developer",
+            "Software Developer",
+            "Software Engineer",
+            "Freelancer",
+            "Open Source Contributor",
+          ]}
+          typingSpeed={120}
+          deletingSpeed={60}
+          delayBetweenWords={1000}
+          className="text-shadow-[1px_1px_black] font-semibold text-[#699ee1] md:text-2xl text-3xl lg:text-5xl"
+        />
+      </div>
     </div>
   );
 };
