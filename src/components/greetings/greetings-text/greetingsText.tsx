@@ -3,7 +3,7 @@ import Typewriter from "@/components/typewriter/typewriter";
 
 const GreetingsText = () => {
   return (
-    <div className="flex flex-col justify-center h-full text-3xl leading-16">
+    <div className="flex flex-col justify-center h-full text-2xl md:text-3xl leading-16">
       <h1>
         Hi There!{" "}
         <span
@@ -15,7 +15,7 @@ const GreetingsText = () => {
         </span>
       </h1>
 
-      <h1 className="text-4xl">
+      <h1 className="text-3xl md:text-4xl">
         I'm
         <span className="ml-2 font-semibold">Rajesh Ranjan</span>
       </h1>
