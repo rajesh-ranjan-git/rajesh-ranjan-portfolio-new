@@ -40,7 +40,7 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`fixed flex flex-col justify-between bg-slate-900 p-4 pb-2 rounded-r-md  h-screen text-white overflow-hidden transition-all ease-in-out duration-700 z-[10] ${
+      className={`fixed flex flex-col justify-between bg-[#040B14] p-4 pb-2 rounded-r-md  h-screen text-white overflow-hidden transition-all ease-in-out duration-700 z-[10] ${
         sidebarToggle ? "w-64" : "w-20"
       }`}
       ref={sidebarRef}
