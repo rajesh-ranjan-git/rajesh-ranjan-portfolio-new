@@ -70,10 +70,10 @@ const Typewriter = ({
   ]);
 
   return (
-    <span className={`${className}`}>
+    <span className={`${className} text-nowrap`}>
       {text}
       <span
-        className={`inline-block ml-2 w-0.5 origin-center ${typewriterStyles.cursor}`}
+        className={`inline-block ml-1 w-1 origin-center ${typewriterStyles.cursor}`}
       ></span>
     </span>
   );
