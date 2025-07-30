@@ -1,4 +1,5 @@
 import Sidebar from "@/components/sidebar/sidebar";
+import About from "@/module/about";
 import Greetings from "@/module/greetings";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Sidebar />
       <Greetings />
+      <About />
     </>
   );
 }

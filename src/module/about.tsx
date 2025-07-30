@@ -1,0 +1,13 @@
+import GreetingsMain from "@/containers/greetings/greetingsMain";
+import GreetingsImg from "@/components/greetings/greetings-img/greetingsImg";
+
+const About = () => {
+  return (
+    <section className="flex flex-wrap justify-around items-center pl-24 w-screen min-h-screen max-h-screen overflow-hidden">
+      <GreetingsMain />
+      <GreetingsImg />
+    </section>
+  );
+};
+
+export default About;

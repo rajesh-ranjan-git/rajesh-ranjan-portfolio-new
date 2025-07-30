@@ -5,8 +5,29 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
+/* Scrollbar Width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #bec9e5;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: #040b14;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a2232;
+}
 
 /* Border rotation animation */
 
