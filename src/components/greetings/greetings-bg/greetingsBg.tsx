@@ -1,6 +1,7 @@
+import Image from "next/image";
 import greetingsStyles from "@/animations/greetings.module.css";
 import obj_triangle from "@/assets/background/obj-triangle.png";
-import Image from "next/image";
+import GreetingsBgParticles from "@/components/greetings/greetings-bg-particles/greetingsBgParticles";
 
 const GreetingsBg = () => {
   return (
@@ -68,6 +69,8 @@ const GreetingsBg = () => {
           className="opacity-20"
         />
       </div>
+
+      <GreetingsBgParticles />
     </>
   );
 };
