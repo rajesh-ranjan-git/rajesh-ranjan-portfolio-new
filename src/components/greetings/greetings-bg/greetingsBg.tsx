@@ -7,7 +7,7 @@ const GreetingsBg = () => {
   return (
     <>
       <div
-        className={`w-[250vh] h-96 absolute left-0 ${greetingsStyles.rectangle} ${greetingsStyles.rectangle_1}`}
+        className={`w-[300vh] h-96 absolute left-0 ${greetingsStyles.rectangle} ${greetingsStyles.rectangle_1}`}
       ></div>
       <div
         className={`w-[250vh] h-96 absolute left-0 ${greetingsStyles.rectangle} ${greetingsStyles.rectangle_2}`}
