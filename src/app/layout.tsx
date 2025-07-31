@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
 import TitleManager from "@/components/title-manager/titleManager";
+import Sidebar from "@/components/sidebar/sidebar";
 
 export const metadata: Metadata = {
   title: "Rajesh Ranjan | Full Stack Developer",
@@ -16,7 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
+        {/* To update title on active/inactive tab */}
         <TitleManager />
+
+        {/* Sidebar */}
+        <Sidebar />
+
         {children}
       </body>
     </html>

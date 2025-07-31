@@ -1,12 +1,9 @@
 "use client";
 
-import { useSnapScroll } from "@/hooks/useSnapScroll";
+import useSnapScroll from "@/hooks/useSnapScroll";
 
-export default function SnapScrollManager({
-  scrollRef,
-}: {
-  scrollRef: React.RefObject<HTMLElement>;
-}) {
-  useSnapScroll(scrollRef, 500);
+export default function SnapScrollManager() {
+  // Hook for managing smooth scroll
+  useSnapScroll(500);
   return null;
 }

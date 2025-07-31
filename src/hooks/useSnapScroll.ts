@@ -2,14 +2,13 @@
 
 import { useEffect } from "react";
 
-export function useSnapScroll(
-  containerRef: React.RefObject<HTMLElement>,
-  duration = 300
-) {
+const useSnapScroll = (duration = 300) => {
   useEffect(() => {
-    const scrollContainer = containerRef.current;
+    // To scroll only on the main document and not on others like sidebar
+    const scrollContainer = document.querySelector("main");
     if (!scrollContainer) return;
 
+    // For snapping scroll to sections
     const sections = scrollContainer.querySelectorAll("section");
     let isScrolling = false;
 
@@ -62,5 +61,7 @@ export function useSnapScroll(
     return () => {
       scrollContainer.removeEventListener("wheel", handleWheel);
     };
-  }, [containerRef, duration]);
-}
+  }, [duration]);
+};
+
+export default useSnapScroll;
