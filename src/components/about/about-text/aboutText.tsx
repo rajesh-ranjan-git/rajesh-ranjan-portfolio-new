@@ -2,7 +2,7 @@ const AboutText = () => {
   return (
     <div className="flex flex-col gap-2 lg:gap-6 lg:p-10 py-2 pr-4 h-full text-justify">
       <h2 className="relative mb-4 font-bold text-[#12192c] text-2xl md:text-3xl lg:text-5xl">
-        <span className="after:-bottom-2 after:left-0 after:absolute relative after:bg-[#12192c] after:rounded-md after:w-1/2 after:h-[0.3rem]">
+        <span className="after:-bottom-2 after:left-0 after:absolute relative after:bg-[#12192c] after:rounded-md after:w-2/3 after:h-[0.3rem]">
           About
         </span>
       </h2>
