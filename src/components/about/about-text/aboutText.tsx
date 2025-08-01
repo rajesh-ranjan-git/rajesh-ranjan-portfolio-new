@@ -1,7 +1,9 @@
 const AboutText = () => {
   return (
     <div className="flex flex-col gap-2 lg:gap-6 lg:p-10 py-2 pr-4 text-md md:text-lg lg:text-xl text-justify">
-      <h2 className="text-2xl md:text-3xl lg:text-5xl text-nowrap">About</h2>
+      <h2 className="after:-bottom-2 after:left-0 after:absolute relative after:bg-[#12192c] after:rounded-md after:w-20 after:h-1.5 font-bold text-[#12192c] text-2xl md:text-3xl lg:text-5xl text-nowrap">
+        About
+      </h2>
 
       <p>
         I’m a passionate and results-driven Full Stack Developer with over 6

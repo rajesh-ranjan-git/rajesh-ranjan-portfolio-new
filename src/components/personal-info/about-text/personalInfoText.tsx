@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PersonalInfoText = () => {
   return (
-    <div className="flex flex-col gap-2 lg:gap-6 lg:p-10 py-2 text-md md:text-lg lg:text-xl">
+    <div className="flex flex-col gap-2 lg:gap-6 lg:p-10 py-2 w-full lg:w-[70%] text-md md:text-lg lg:text-xl">
       <h3 className="text-shadow-2xs font-semibold text-[#699ee1]">
         <span className="text-nowrap">Full Stack Developer</span> |{" "}
         <span className="text-nowrap">Business Today Technology</span> |{" "}
