@@ -102,7 +102,7 @@ const GreetingsBgParticles = () => {
     []
   );
 
-  return <Particles id="tsparticles" options={options} />;
+  return <Particles id="tsparticles" options={options} className="z-[-1]" />;
 };
 
 export default GreetingsBgParticles;
