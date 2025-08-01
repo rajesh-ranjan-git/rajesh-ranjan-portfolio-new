@@ -10,7 +10,7 @@ const ButtonMask1 = (props: ButtonProps) => {
         {props.btnText}
       </span>
       <button
-        className={`bg-[#3f82d9] p-2 md:p-4 md:px-6 border-none w-full h-full text-white cursor-pointer mask-no-repeat uppercase ${buttonStyles.btn_mask_1} ${props.className}`}
+        className={`bg-[#3f82d9] p-4 md:px-6 border-none w-full h-full text-white cursor-pointer mask-no-repeat uppercase ${buttonStyles.btn_mask_1} ${props.className}`}
       >
         {props.btnText}
       </button>
@@ -27,7 +27,7 @@ const ButtonMask2 = (props: ButtonProps) => {
         {props.btnText}
       </span>
       <button
-        className={`bg-[#000] p-2 md:p-4 md:px-6 border-none w-full h-full text-white cursor-pointer mask-no-repeat uppercase ${buttonStyles.btn_mask_2} ${props.className}`}
+        className={`bg-[#000] p-4 md:px-6 border-none w-full h-full text-white cursor-pointer mask-no-repeat uppercase ${buttonStyles.btn_mask_2} ${props.className}`}
       >
         {props.btnText}
       </button>
