@@ -1,7 +1,8 @@
+import SnapScrollManager from "@/components/snap-scroll-manager/snapScrollManager";
 import About from "@/module/about";
 import Greetings from "@/module/greetings";
 import PersonalInfo from "@/module/personalInfo";
-import SnapScrollManager from "@/components/snap-scroll-manager/snapScrollManager";
+import Skills from "@/module/skills";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Greetings />
       <About />
       <PersonalInfo />
+      <Skills />
     </main>
   );
 }
