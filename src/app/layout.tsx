@@ -1,0 +1,69 @@
+import "@/app/globals.css";
+import "@/services/logger/logger";
+import type { Metadata, Viewport } from "next";
+import { alkatra, arima, poppins, lobster } from "@/config/font.config";
+import { ReactNodeProps } from "@/types/props/common.props.types";
+import Banner from "@/services/banner/banner";
+import { ToastProvider } from "@/hooks/toast";
+import ServiceWorker from "@/components/service-worker/service.worker";
+import ThemeManager from "@/components/theme/theme.manager";
+import ErrorWrapper from "@/components/errors/error.wrapper";
+import TitleManager from "@/components/title-manager/title.manager";
+import Sidebar from "@/components/sidebar/sidebar";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Rajesh Ranjan | Portfolio",
+    default: "Portfolio",
+    template: "%s | Portfolio",
+  },
+  description:
+    "Welcome to Rajesh Ranjan's portfolio! This project showcases Rajesh Ranjan's work, skills, and experience as a Full Stack Developer, designer, or any other creative role. You’ll find a collection of Rajesh Ranjan's best projects, along with a brief overview of who he is and what he does.",
+  icons: {
+    icon: [
+      {
+        url: "/assets/favicon/favicon-96x96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
+      {
+        url: "/assets/favicon/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: "/assets/favicon/favicon.ico",
+    apple: [
+      {
+        url: "/assets/favicon/apple-touch-icon.png",
+        sizes: "180x180",
+      },
+    ],
+  },
+  manifest: "/manifest/manifest.json",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
+
+const RootLayout = ({ children }: Readonly<ReactNodeProps>) => {
+  return (
+    <html lang="en" data-scroll-behavior="smooth">
+      <body
+        className={`${alkatra.variable} ${arima.variable} ${poppins.variable} ${lobster.variable} antialiased`}
+        suppressHydrationWarning
+      >
+        <ServiceWorker />
+        <TitleManager />
+        <Sidebar />
+        <ToastProvider>
+          <Banner nodeVersion={process.version} />
+          <ThemeManager />
+          <ErrorWrapper>{children}</ErrorWrapper>
+        </ToastProvider>
+      </body>
+    </html>
+  );
+};
+
+export default RootLayout;
