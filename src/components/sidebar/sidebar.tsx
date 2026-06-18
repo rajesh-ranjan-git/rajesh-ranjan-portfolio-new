@@ -7,6 +7,7 @@ import { menuItems } from "@/config/sidebar.config";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import SidebarFooter from "@/components/sidebar/sidebar.footer";
 import SidebarHeader from "@/components/sidebar/sidebar.header";
+import BackdropOverlay from "@/components/ui/overlays/backdrop.overlay";
 
 const Sidebar = () => {
   const sidebarToggle = useAppStore((state) => state.sidebarToggle);
@@ -27,13 +28,18 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`fixed flex flex-col justify-between bg-[#040B14] p-2 md:p-4 pb-2 rounded-r-md h-screen text-white overflow-hidden transition-all ease-in-out duration-700 z-20 ${
+      className={`fixed flex flex-col justify-between bg-[#040B14] rounded-r-md h-screen text-white overflow-hidden transition-all ease-in-out duration-700 z-20 ${
         sidebarToggle
-          ? "w-64 translate-x-0"
-          : "w-64 -translate-x-full md:w-20 md:translate-x-0"
+          ? "w-64 p-2 pb-2 md:p-4 md:pb-2"
+          : "w-0 p-0 md:w-20 md:p-4 md:pb-2"
       }`}
       ref={sidebarRef}
     >
+      <BackdropOverlay
+        when={sidebarToggle}
+        callback={() => setSidebarToggle(false)}
+      />
+
       <SidebarHeader />
 
       <nav className="flex w-full h-full">

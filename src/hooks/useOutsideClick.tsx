@@ -4,9 +4,9 @@ import { UseOutsideClickProps } from "@/types/props/hooks.props.types";
 export const useOutsideClick = ({
   ref,
   when,
-  callback,
   eventType = "click",
   defer = false,
+  callback,
 }: UseOutsideClickProps) => {
   const savedCallback = useRef(callback);
 

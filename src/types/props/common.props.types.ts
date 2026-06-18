@@ -24,3 +24,8 @@ export interface TypewriterProps {
   delayBetweenWords?: number;
   className?: string;
 }
+
+export interface BackdropOverlayProps {
+  when: boolean;
+  callback: () => void;
+}

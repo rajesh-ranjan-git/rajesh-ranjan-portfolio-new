@@ -18,9 +18,9 @@ export interface UseInputFieldOptionsProps<T> {
 export interface UseOutsideClickProps {
   ref: RefObject<HTMLElement | null> | RefObject<HTMLElement | null>[];
   when: boolean;
-  callback: () => void;
   eventType?: "click" | "mousedown";
   defer?: boolean;
+  callback: () => void;
 }
 
 export interface SheetProps {
