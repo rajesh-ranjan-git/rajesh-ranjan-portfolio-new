@@ -9,9 +9,9 @@ import MaskedButton from "@/components/ui/buttons/masked.button";
 const Greetings = () => {
   return (
     <section
-      className={`before:block before:top-0 before:right-0 before:bottom-0 before:left-0 before:absolute relative before:inset-0 flex flex-wrap justify-around items-center before:opacity-100 pr-2 md:pr-10 pl-20 md:pl-28 w-screen min-h-screen max-h-screen overflow-hidden ${greetingsStyles.greetings}`}
+      className={`before:block before:top-0 before:right-0 before:bottom-0 before:left-0 before:absolute relative before:inset-0 flex flex-wrap justify-around items-center before:opacity-100 pr-2 md:pr-10 pl-6 md:pl-28 w-screen min-h-screen max-h-screen overflow-hidden ${greetingsStyles.greetings}`}
     >
-      <div className="top-8 right-8 z-100 absolute flex items-center py-2">
+      <div className="md:hidden top-4 right-4 z-100 absolute flex items-center py-2">
         <MenuButton />
       </div>
 

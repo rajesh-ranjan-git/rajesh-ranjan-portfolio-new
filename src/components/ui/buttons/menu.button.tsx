@@ -10,8 +10,13 @@ const MenuButton = () => {
   return (
     <button
       type="button"
+      data-sidebar-menu-button="true"
       className="bg-[#040B14] bg-none p-2 border-0 rounded-md outline-none font-bold text-2xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer"
-      onClick={() => setSidebarToggle(!sidebarToggle)}
+      onMouseDown={(event) => event.stopPropagation()}
+      onClick={(event) => {
+        event.stopPropagation();
+        setSidebarToggle(!sidebarToggle);
+      }}
     >
       <div className="p-1 w-8 h-8">
         <Hamburger />

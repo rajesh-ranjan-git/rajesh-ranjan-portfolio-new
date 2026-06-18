@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { FaHouse } from "react-icons/fa6";
 import { useAppStore } from "@/store/store";
+import { menuItems } from "@/config/sidebar.config";
+import { useOutsideClick } from "@/hooks/useOutsideClick";
 import SidebarFooter from "@/components/sidebar/sidebar.footer";
 import SidebarHeader from "@/components/sidebar/sidebar.header";
-import { menuItems } from "@/config/sidebar.config";
 
 const Sidebar = () => {
   const sidebarToggle = useAppStore((state) => state.sidebarToggle);
@@ -17,29 +18,19 @@ const Sidebar = () => {
     if (sidebarToggle) setSidebarToggle(false);
   };
 
-  useEffect(() => {
-    const handleOutsideClick = (event: MouseEvent) => {
-      if (
-        sidebarRef.current &&
-        !sidebarRef.current.contains(event.target as Node)
-      ) {
-        setSidebarToggle(false);
-      }
-    };
-
-    if (sidebarToggle) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [sidebarToggle]);
+  useOutsideClick({
+    ref: sidebarRef,
+    when: sidebarToggle,
+    callback: () => setSidebarToggle(false),
+    eventType: "mousedown",
+  });
 
   return (
     <aside
-      className={`fixed flex flex-col justify-between bg-[#040B14] p-2 md:p-4 pb-2 rounded-r-md  h-screen text-white overflow-hidden transition-all ease-in-out duration-700 z-20 ${
-        sidebarToggle ? "w-64" : "w-16 md:w-20"
+      className={`fixed flex flex-col justify-between bg-[#040B14] p-2 md:p-4 pb-2 rounded-r-md h-screen text-white overflow-hidden transition-all ease-in-out duration-700 z-20 ${
+        sidebarToggle
+          ? "w-64 translate-x-0"
+          : "w-64 -translate-x-full md:w-20 md:translate-x-0"
       }`}
       ref={sidebarRef}
     >
