@@ -11,7 +11,7 @@ import {
 
 const SocialMedia = () => {
   return (
-    <div className="z-10 flex flex-wrap items-center gap-2 w-full text-white">
+    <div className="z-10 flex flex-wrap justify-center lg:justify-start items-center gap-2 w-full text-white">
       <Link
         href="https://github.com/rajesh-ranjan-git"
         className="flex justify-center items-center bg-[#333] hover:bg-[#040b14] p-1 rounded-full w-10 h-10 transition-all ease-in-out"
