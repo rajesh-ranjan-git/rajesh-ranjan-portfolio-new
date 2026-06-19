@@ -28,9 +28,9 @@ const SidebarFooter = () => {
 
         {sidebarToggle && (
           <div className="flex flex-col gap-0 w-full">
-            <h2 className="w-full font-bold text-md whitespace-nowrap">
+            <p className="w-full font-bold text-md whitespace-nowrap">
               Rajesh Ranjan
-            </h2>
+            </p>
             <Link
               href="mailto:rajeshranjan8271@gmail.com"
               target="_blank"

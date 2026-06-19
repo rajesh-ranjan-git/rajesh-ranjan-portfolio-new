@@ -60,7 +60,7 @@ const Sidebar = () => {
 
                   {sidebarToggle && (
                     <div className="px-3 w-full text-lg whitespace-nowrap">
-                      <h2 className="w-full text-left">{item?.label}</h2>
+                      <p className="w-full text-left">{item?.label}</p>
                     </div>
                   )}
                 </li>
@@ -74,7 +74,7 @@ const Sidebar = () => {
 
               {sidebarToggle && (
                 <div className="px-3 w-full text-lg whitespace-nowrap">
-                  <h2 className="w-full text-left">Home</h2>
+                  <p className="w-full text-left">Home</p>
                 </div>
               )}
             </li>

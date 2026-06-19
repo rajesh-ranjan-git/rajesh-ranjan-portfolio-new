@@ -11,7 +11,7 @@ const Greetings = () => {
     <section
       className={`before:block before:absolute relative before:inset-0 flex flex-wrap justify-around items-center before:opacity-100 pr-2 md:pr-10 pl-6 w-screen min-h-screen max-h-screen overflow-hidden ${greetingsStyles.greetings}`}
     >
-      <div className="md:hidden top-4 right-4 z-100 absolute flex items-center py-2">
+      <div className="md:hidden top-4 right-4 z-100 fixed flex items-center py-2">
         <MenuButton />
       </div>
 
