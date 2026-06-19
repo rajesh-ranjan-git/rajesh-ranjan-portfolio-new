@@ -5,27 +5,27 @@ const GreetingsBg = () => {
   return (
     <>
       <div
-        className={`w-[300vh] h-96 absolute left-0 ${greetingsStyles.rectangle} ${greetingsStyles.rectangle_1}`}
+        className={`w-[300vh] h-64 absolute left-0 ${greetingsStyles.rectangle} ${greetingsStyles.rectangle_1}`}
       ></div>
       <div
-        className={`w-[250vh] h-96 absolute left-0 ${greetingsStyles.rectangle} ${greetingsStyles.rectangle_2}`}
+        className={`w-[250vh] h-64 absolute left-0 ${greetingsStyles.rectangle} ${greetingsStyles.rectangle_2}`}
       ></div>
       <div
-        className={`border-16 border-white opacity-20 absolute lg:w-160 lg:h-160 md:w-120 md:h-120 w-80 h-80 block lg:left-[-20%] lg:bottom-[-30%] left-[-5%] bottom-[-10%] ${greetingsStyles.rectangle_transparent}`}
+        className={`border-8 border-white opacity-20 absolute lg:w-160 lg:h-160 md:w-120 md:h-120 w-80 h-80 block lg:left-[-20%] lg:bottom-[-30%] left-[-5%] bottom-[-10%] ${greetingsStyles.rectangle_transparent}`}
       ></div>
       <div
-        className={`border-16 border-white opacity-20 absolute block lg:w-180 lg:h-180 md:w-140 md:h-140 w-100 h-100 right-[-10%] top-[5%] ${greetingsStyles.rectangle_transparent}`}
+        className={`border-8 border-white opacity-20 absolute block lg:w-120 lg:h-120 md:w-140 md:h-140 w-100 h-100 right-[10%] top-[5%] ${greetingsStyles.rectangle_transparent}`}
       ></div>
       <div
-        className={`border-4 border-white opacity-20 absolute block rounded-full w-20 h-20 left-[5%] top-[50%] ${greetingsStyles.circle}`}
+        className={`border-2 border-white opacity-20 absolute block rounded-full w-20 h-20 left-[5%] top-[50%] ${greetingsStyles.circle}`}
       ></div>
       <div
-        className={`border-4 border-white opacity-20 absolute block rounded-full w-32 h-32 left-[83%] top-[20%] ${greetingsStyles.circle}`}
+        className={`border-2 border-white opacity-20 absolute block rounded-full w-32 h-32 left-[83%] top-[20%] ${greetingsStyles.circle}`}
       ></div>
       <div
-        className={`border-4 border-white opacity-20 absolute block rounded-full w-40 h-40 right-[25%] top-[80%] ${greetingsStyles.circle}`}
+        className={`border-2 border-white opacity-20 absolute block rounded-full w-40 h-40 right-[25%] top-[80%] ${greetingsStyles.circle}`}
       ></div>
-      <div className={`absolute right-0 ${greetingsStyles.triangle_1}`}>
+      <div className={`absolute right-[50%] ${greetingsStyles.triangle_1}`}>
         <svg
           width="75"
           height="75"
@@ -75,7 +75,7 @@ const GreetingsBg = () => {
         </svg>
       </div>
       <div
-        className={`absolute top-[60%] right-[15%] ${greetingsStyles.triangle_4}`}
+        className={`absolute top-0 right-[10%] ${greetingsStyles.triangle_4}`}
       >
         <svg
           width="45"

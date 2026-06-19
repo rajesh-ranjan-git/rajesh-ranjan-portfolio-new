@@ -3,7 +3,7 @@ import About from "@/sections/about";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <main className="pl-0 lg:pl-20 min-h-screen overflow-x-hidden">
       <Greetings />
       <About />
     </main>

@@ -3,7 +3,7 @@ import ProfileDetails from "@/components/about/profile.details";
 
 const About = () => {
   return (
-    <section className="flex justify-around items-center min-h-screen">
+    <section className="items-center gap-12 md:gap-24 grid grid-cols-1 md:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] px-6 sm:px-10 lg:px-20 xl:px-28 py-20 w-full min-h-screen">
       <ProfileImage />
       <ProfileDetails
         title="Full Stack Developer | Business Today Technology"

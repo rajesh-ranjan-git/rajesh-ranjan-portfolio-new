@@ -15,14 +15,16 @@ const ProfileDetails = ({
   details,
 }: ProfileDetailsProps) => {
   return (
-    <section className="w-full">
-      <h2 className="font-bold text-3xl">{title}</h2>
+    <section className="w-full min-w-0">
+      <h2 className="text-shadow-[2px_2px_black] font-bold text-[#699ee1] text-2xl sm:text-3xl text-balance">
+        {title}
+      </h2>
 
-      <p className="mt-3 text-gray-600 text-base">{description}</p>
+      <p className="mt-3 text-base text-pretty">{description}</p>
 
       <table className="mt-8 w-full table-fixed">
         <colgroup>
-          <col className="w-32 md:w-48 lg:w-56" />
+          <col className="w-24 sm:w-28 md:w-36 lg:w-44 xl:w-48" />
           <col />
         </colgroup>
         <tbody>
@@ -35,7 +37,7 @@ const ProfileDetails = ({
                 {item.label}
               </th>
 
-              <td className="py-2 text-gray-700 align-top">{item.value}</td>
+              <td className="py-2 wrap-break-word align-top">{item.value}</td>
             </tr>
           ))}
         </tbody>
