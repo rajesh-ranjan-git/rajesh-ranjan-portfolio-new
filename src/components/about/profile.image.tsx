@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ProfileImage = () => {
   return (
-    <div className="isolate relative flex justify-center justify-self-center md:justify-self-start items-center bg-[#1a1f4e] p-3 sm:p-4 rounded-[64px] sm:rounded-[84px] w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-none">
+    <div className="isolate relative flex justify-center justify-self-center items-center bg-[#1a1f4e] p-3 sm:p-4 rounded-[64px] sm:rounded-[84px] w-full md:w-1/2 lg:w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-none">
       <div className="top-0 left-0 -z-1 absolute inset-0 bg-white/20 rounded-[84px] -rotate-6"></div>
       <div className="top-0 left-0 -z-1 absolute inset-0 bg-white/30 rounded-[84px] -rotate-12"></div>
 
@@ -23,7 +23,7 @@ const ProfileImage = () => {
         alt="Rajesh Ranjan profile illustration"
         width={1024}
         height={1536}
-        className="rounded-br-[120px] sm:rounded-br-[160px] w-full h-auto"
+        className="rounded-br-[50%] w-full h-auto"
       />
     </div>
   );

@@ -24,7 +24,7 @@ const ProfileDetails = ({
 
       <table className="mt-8 w-full table-fixed">
         <colgroup>
-          <col className="w-24 sm:w-28 md:w-36 lg:w-44 xl:w-48" />
+          <col className="w-28 sm:w-32 md:w-36 lg:w-44 xl:w-48" />
           <col />
         </colgroup>
         <tbody>

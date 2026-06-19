@@ -10,7 +10,7 @@ export default function GreetingsImg() {
         width={1024}
         height={1536}
         loading="eager"
-        className="z-10 rounded-2xl w-full h-auto object-cover"
+        className="z-10 rounded-br-[50%] w-full h-auto object-cover"
       />
     </div>
   );

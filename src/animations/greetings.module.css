@@ -201,10 +201,6 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .greetings::before {
-    background: linear-gradient(to right, #040b14 0%, transparent 100%);
-  }
-
   .rectangle_1 {
     transform-origin: 175% 347% 0;
   }
