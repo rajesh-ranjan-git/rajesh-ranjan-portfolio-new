@@ -10,6 +10,7 @@ import ThemeManager from "@/components/theme/theme.manager";
 import ErrorWrapper from "@/components/errors/error.wrapper";
 import TitleManager from "@/components/title-manager/title.manager";
 import Sidebar from "@/components/sidebar/sidebar";
+import Orb from "@/components/ui/background/orb";
 
 export const metadata: Metadata = {
   title: {
@@ -55,6 +56,7 @@ const RootLayout = ({ children }: Readonly<ReactNodeProps>) => {
       >
         <ServiceWorker />
         <TitleManager />
+        <Orb />
         <Sidebar />
         <ToastProvider>
           <Banner nodeVersion={process.version} />

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="flex justify-around items-center bg-[#0d0f2b] min-h-screen">
+    <div className="flex justify-around items-center min-h-screen">
       <div className="isolate relative flex justify-center items-center bg-[#1a1f4e] p-4 rounded-[84px]">
         <div className="top-0 left-0 -z-1 absolute inset-0 bg-white/20 rounded-[84px] -rotate-6"></div>
         <div className="top-0 left-0 -z-1 absolute inset-0 bg-white/30 rounded-[84px] -rotate-12"></div>
