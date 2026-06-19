@@ -5,8 +5,8 @@ const SidebarHeader = () => {
   const sidebarToggle = useAppStore((state) => state.sidebarToggle);
 
   return (
-    <div className="flex flex-col gap-2 overflow-hidden">
-      <div className="flex items-center py-2">
+    <div className="flex flex-col gap-2 overflow-hidden shrink-0">
+      <div className="flex items-center">
         <MenuButton />
 
         {sidebarToggle && (
@@ -15,9 +15,7 @@ const SidebarHeader = () => {
           </div>
         )}
       </div>
-      <div>
-        <hr className="h-10 text-slate-700" />
-      </div>
+      <hr className="h-1 text-slate-700" />
     </div>
   );
 };

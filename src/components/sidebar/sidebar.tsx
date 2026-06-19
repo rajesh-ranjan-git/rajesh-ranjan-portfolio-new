@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FaHouse } from "react-icons/fa6";
 import { useAppStore } from "@/store/store";
 import { menuItems } from "@/config/sidebar.config";
@@ -15,6 +15,16 @@ const Sidebar = () => {
 
   const sidebarRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    document.documentElement.classList.toggle("sidebar-open", sidebarToggle);
+    document.body.classList.toggle("sidebar-open", sidebarToggle);
+
+    return () => {
+      document.documentElement.classList.remove("sidebar-open");
+      document.body.classList.remove("sidebar-open");
+    };
+  }, [sidebarToggle]);
+
   const handleListItemAction = () => {
     if (sidebarToggle) setSidebarToggle(false);
   };
@@ -28,9 +38,9 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`fixed flex flex-col justify-between bg-[#040B14] rounded-r-md h-screen text-white overflow-hidden transition-all ease-in-out duration-700 z-20 ${
+      className={`fixed inset-y-0 flex flex-col bg-[#040B14] rounded-r-md h-dvh max-h-dvh text-white overflow-hidden transition-all ease-in-out duration-700 z-20 ${
         sidebarToggle
-          ? "w-64 p-2 pb-2 md:p-4 md:pb-2"
+          ? "w-72 p-2 pb-2 md:p-4 md:pb-2"
           : "w-0 p-0 md:w-20 md:p-4 md:pb-2"
       }`}
       ref={sidebarRef}
@@ -42,15 +52,15 @@ const Sidebar = () => {
 
       <SidebarHeader />
 
-      <nav className="flex w-full h-full">
-        <ul className="flex flex-col gap-2 2xl:gap-5 w-full">
+      <nav className="flex flex-1 w-full min-h-0 overflow-x-hidden overflow-y-auto no-scrollbar">
+        <ul className="flex flex-col gap-1 2xl:gap-5 py-1 w-full">
           {menuItems && menuItems.length > 0 ? (
             menuItems.map((item, index) => {
               const Icon = item?.icon;
 
               return (
                 <li
-                  className="flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer"
+                  className="flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer shrink-0"
                   onClick={handleListItemAction}
                   key={index}
                 >
@@ -67,7 +77,7 @@ const Sidebar = () => {
               );
             })
           ) : (
-            <li className="flex items-center gap-4 p-3 rounded-md w-full text-xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer">
+            <li className="flex items-center gap-4 p-3 rounded-md w-full text-xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer shrink-0">
               <div>
                 <FaHouse />
               </div>

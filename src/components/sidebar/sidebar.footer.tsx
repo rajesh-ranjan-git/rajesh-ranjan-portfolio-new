@@ -13,7 +13,7 @@ const SidebarFooter = () => {
   };
 
   return (
-    <div className="flex flex-col w-full h-20 overflow-hidden">
+    <div className="flex flex-col w-full h-12 overflow-hidden shrink-0">
       <hr className="text-slate-700" />
       <div className="flex justify-between items-center gap-2 px-1 w-full h-full">
         <Image
