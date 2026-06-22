@@ -19,7 +19,7 @@ const ScrollButton = () => {
 
   return (
     <div
-      className={`fixed right-2 bottom-2 transition-all duration-300 ${
+      className={`fixed right-2 bottom-2 transition-all duration-500 ${
         isVisible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-4 pointer-events-none"
