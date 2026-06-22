@@ -6,9 +6,9 @@ import { ReactNodeProps } from "@/types/props/common.props.types";
 import Banner from "@/services/banner/banner";
 import { ToastProvider } from "@/hooks/toast";
 import ServiceWorker from "@/components/service-worker/service.worker";
-import ThemeManager from "@/components/theme/theme.manager";
-import ErrorWrapper from "@/components/errors/error.wrapper";
 import TitleManager from "@/components/title-manager/title.manager";
+import ErrorWrapper from "@/components/errors/error.wrapper";
+import ThemeManager from "@/components/theme/theme.manager";
 import Sidebar from "@/components/sidebar/sidebar";
 import Orb from "@/components/ui/background/orb";
 

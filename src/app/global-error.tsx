@@ -6,9 +6,15 @@ import Image from "next/image";
 import { MdError } from "react-icons/md";
 import { staticImagesConfig } from "@/config/common.config";
 import { alkatra, arima, poppins, lobster } from "@/config/font.config";
+import Banner from "@/services/banner/banner";
 import { ToastProvider } from "@/hooks/toast";
+import ServiceWorker from "@/components/service-worker/service.worker";
+import TitleManager from "@/components/title-manager/title.manager";
 import ThemeManager from "@/components/theme/theme.manager";
-import Reload from "@/components/ui/buttons/reload";
+import Sidebar from "@/components/sidebar/sidebar";
+import Orb from "@/components/ui/background/orb";
+import FloatingMenu from "@/components/ui/floating/floating.menu";
+import ReloadButton from "@/components/ui/buttons/reload.button";
 
 const GlobalError = () => {
   return (
@@ -17,12 +23,18 @@ const GlobalError = () => {
         className={`${poppins.variable} ${alkatra.variable} ${arima.variable} ${lobster.variable} antialiased`}
         suppressHydrationWarning
       >
+        <ServiceWorker />
+        <TitleManager />
+        <Orb />
+        <Sidebar />
         <ToastProvider>
+          <Banner nodeVersion={process.version} />
           <ThemeManager />
+          <FloatingMenu />
 
-          <div className="flex flex-col bg-slate-50 h-dvh overflow-hidden text-slate-900">
+          <div className="flex flex-col bg-red-100 h-dvh overflow-hidden text-slate-900">
             <main className="relative flex flex-1 overflow-hidden">
-              <div className="relative flex flex-col flex-1 justify-center items-center gap-4 bg-red-50 p-2 pb-20 md:pb-6 overflow-hidden">
+              <div className="relative flex flex-col flex-1 justify-center items-center gap-4 p-2 pb-20 md:pb-6 overflow-hidden">
                 <div className="relative flex justify-center w-full overflow-hidden">
                   <Image
                     src={staticImagesConfig.unexpectedError.src}
@@ -41,7 +53,7 @@ const GlobalError = () => {
                   </h3>
                 </div>
 
-                <Reload />
+                <ReloadButton />
               </div>
             </main>
           </div>

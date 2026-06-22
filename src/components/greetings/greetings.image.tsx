@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function GreetingsImg() {
+const GreetingsImage = () => {
   return (
     <div className="flex justify-center items-center w-full lg:w-[40%] h-full grow">
       <Image
@@ -14,4 +14,6 @@ export default function GreetingsImg() {
       />
     </div>
   );
-}
+};
+
+export default GreetingsImage;

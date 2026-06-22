@@ -70,12 +70,14 @@ const Typewriter = ({
   ]);
 
   return (
-    <span className={`${className} text-nowrap`}>
-      {text}
-      <span
-        className={`inline-block ml-1 w-1 origin-center ${typewriterStyles.cursor}`}
-      ></span>
-    </span>
+    <div>
+      <span className={`${className} text-nowrap`}>
+        {text}
+        <span
+          className={`inline-block ml-1 w-1 origin-center ${typewriterStyles.cursor}`}
+        ></span>
+      </span>
+    </div>
   );
 };
 

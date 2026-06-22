@@ -1,11 +1,12 @@
-import ProfileImage from "@/components/about/profile.image";
-import ProfileDetails from "@/components/about/profile.details";
+import AboutImage from "@/components/about/about.image";
+import AboutText from "@/components/about/about.text";
 
 const About = () => {
   return (
     <section className="items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] px-6 sm:px-10 lg:px-20 xl:px-28 py-20 w-full min-h-screen">
-      <ProfileImage />
-      <ProfileDetails
+      <AboutImage />
+
+      <AboutText
         title="Full Stack Developer | Business Today Technology"
         description="Experienced Full Stack Developer with expertise in React, Next.js, Node.js, TypeScript, and cloud-based application development."
         details={[

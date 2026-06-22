@@ -1,19 +1,6 @@
-type DetailRow = {
-  label: string;
-  value: string;
-};
+import { AboutTextProps } from "@/types/props/common.props.types";
 
-interface ProfileDetailsProps {
-  title: string;
-  description: string;
-  details: DetailRow[];
-}
-
-const ProfileDetails = ({
-  title,
-  description,
-  details,
-}: ProfileDetailsProps) => {
+const AboutText = ({ title, description, details }: AboutTextProps) => {
   return (
     <section className="w-full min-w-0">
       <h2 className="text-shadow-[2px_2px_black] font-bold text-[#699ee1] text-2xl sm:text-3xl text-balance">
@@ -46,4 +33,4 @@ const ProfileDetails = ({
   );
 };
 
-export default ProfileDetails;
+export default AboutText;

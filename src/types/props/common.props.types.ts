@@ -1,4 +1,8 @@
 import { ReactNode } from "react";
+import {
+  AboutTextRowType,
+  FloatingBadgePositionType,
+} from "@/types/types/common.types";
 
 export interface ReactNodeProps {
   children: ReactNode;
@@ -28,4 +32,22 @@ export interface TypewriterProps {
 export interface BackdropOverlayProps {
   when: boolean;
   callback: () => void;
+}
+
+export interface FloatingBadgeProps {
+  position?: FloatingBadgePositionType;
+  textColor?: string;
+  bgColor?: string;
+  className?: string;
+  children?: string | ReactNode;
+}
+
+export interface ImageBackgroundProps {
+  className?: string;
+}
+
+export interface AboutTextProps {
+  title: string;
+  description: string;
+  details: AboutTextRowType[];
 }

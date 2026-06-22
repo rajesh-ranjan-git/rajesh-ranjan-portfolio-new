@@ -1,14 +1,14 @@
 import { useRouter } from "next/navigation";
 import { LuArrowLeft } from "react-icons/lu";
 
-const GoBack = () => {
+const GoBackButton = () => {
   const router = useRouter();
 
   return (
     <div className="flex justify-center items-center gap-4 w-full text-center">
       <button
         type="button"
-        className="group flex items-center gap-2 px-4 py-2 border border-amber-300 rounded-md bg-amber-50 text-amber-700 text-sm font-medium hover:bg-amber-100 transition-colors cursor-pointer"
+        className="group flex items-center gap-2 bg-amber-50 hover:bg-amber-100 px-4 py-2 border border-amber-300 rounded-md font-medium text-amber-700 text-sm transition-colors cursor-pointer"
         onClick={() => router.back()}
       >
         <LuArrowLeft
@@ -21,4 +21,4 @@ const GoBack = () => {
   );
 };
 
-export default GoBack;
+export default GoBackButton;

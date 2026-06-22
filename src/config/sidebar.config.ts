@@ -1,4 +1,4 @@
-import { MenuItem } from "@/types/types/common.types";
+import { MenuItemType } from "@/types/types/common.types";
 import { FaHouse } from "react-icons/fa6";
 import { FaUserAstronaut } from "react-icons/fa6";
 import { FaBriefcase } from "react-icons/fa6";
@@ -8,7 +8,7 @@ import { FaCubes } from "react-icons/fa6";
 import { FaCertificate } from "react-icons/fa6";
 import { FaIdCard } from "react-icons/fa6";
 
-export const menuItems: MenuItem[] = [
+export const menuItems: MenuItemType[] = [
   {
     item: "home",
     label: "Home",

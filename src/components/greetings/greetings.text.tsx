@@ -5,7 +5,7 @@ const GreetingsText = () => {
   return (
     <div className="flex flex-col justify-center pt-4 h-full text-white text-2xl md:text-4xl lg:text-5xl leading-12 lg:leading-20">
       <h1 className="font-semibold">
-        Hi There!{" "}
+        Hi There!&nbsp;
         <span
           className={`inline-block ${greetingsStyles.wave}`}
           role="img"
@@ -21,21 +21,18 @@ const GreetingsText = () => {
           Rajesh Ranjan
         </span>
       </h1>
-      <div>
-        <Typewriter
-          words={[
-            "Full Stack Developer",
-            "Software Developer",
-            "Software Engineer",
-            "Freelancer",
-            "Open Source Contributor",
-          ]}
-          typingSpeed={120}
-          deletingSpeed={60}
-          delayBetweenWords={1000}
-          className="text-shadow-[1px_1px_black] font-semibold text-[#699ee1] text-xl md:text-3xl lg:text-4xl"
-        />
-      </div>
+
+      <Typewriter
+        words={[
+          "Full Stack Developer",
+          "Software Developer",
+          "Software Engineer",
+        ]}
+        typingSpeed={120}
+        deletingSpeed={60}
+        delayBetweenWords={1000}
+        className="text-shadow-[1px_1px_black] font-semibold text-[#699ee1] text-xl md:text-3xl lg:text-4xl"
+      />
     </div>
   );
 };

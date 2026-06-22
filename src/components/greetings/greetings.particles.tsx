@@ -9,7 +9,7 @@ const particlesInit = async (engine: Engine): Promise<void> => {
   await loadSlim(engine);
 };
 
-const GreetingsBgParticles = () => {
+const GreetingsParticles = () => {
   const options = useMemo<ISourceOptions>(
     () => ({
       preset: "snow",
@@ -109,4 +109,4 @@ const GreetingsBgParticles = () => {
   );
 };
 
-export default GreetingsBgParticles;
+export default GreetingsParticles;

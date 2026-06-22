@@ -21,7 +21,18 @@ export type StoredDataType<T> = {
   expiresAt?: number;
 };
 
-export type MenuItem = {
+export type FloatingBadgePositionType =
+  | "top-left"
+  | "top-right"
+  | "top-center"
+  | "middle-left"
+  | "middle-right"
+  | "middle-center"
+  | "bottom-left"
+  | "bottom-right"
+  | "bottom-center";
+
+export type MenuItemType = {
   item:
     | "home"
     | "about"
@@ -41,4 +52,9 @@ export type MenuItem = {
     | "Certificates"
     | "Contact Me";
   icon: IconType;
+};
+
+export type AboutTextRowType = {
+  label: string;
+  value: string;
 };

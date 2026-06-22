@@ -1,7 +1,7 @@
 import greetingsStyles from "@/animations/greetings.module.css";
-import GreetingsBgParticles from "@/components/greetings/greetings-bg-particles/greetings.bg.particles";
+import GreetingsParticles from "@/components/greetings/greetings.particles";
 
-const GreetingsBg = () => {
+const GreetingsBackground = () => {
   return (
     <>
       <div
@@ -92,9 +92,9 @@ const GreetingsBg = () => {
         </svg>
       </div>
 
-      <GreetingsBgParticles />
+      <GreetingsParticles />
     </>
   );
 };
 
-export default GreetingsBg;
+export default GreetingsBackground;
