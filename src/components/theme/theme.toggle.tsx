@@ -2,6 +2,7 @@
 
 import { themeConfig } from "@/config/common.config";
 import { useAppStore } from "@/store/store";
+import { useEffect } from "react";
 
 const ThemeToggle = () => {
   const activeTheme = useAppStore((state) => state.activeTheme);
@@ -15,8 +16,14 @@ const ThemeToggle = () => {
     }
   };
 
+  useEffect(() => {
+    logger.debug("debug activeTheme:", activeTheme);
+  }, [activeTheme]);
+
   return (
-    <div className="bg-slate-200 p-0.5 rounded-full btn btn-secondary">
+    <div
+      className={`p-0.5 rounded-full btn btn-secondary transition-all duration-500 ${activeTheme === themeConfig.dark ? "bg-[#040b14]" : "bg-slate-200"}`}
+    >
       <input
         type="checkbox"
         id="theme-toggle"

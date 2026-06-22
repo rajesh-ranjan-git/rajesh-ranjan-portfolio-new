@@ -32,3 +32,8 @@ export interface SheetProps {
 export interface UseSheetProps {
   type: string | null;
 }
+
+export interface UseScrollVisibilityProps {
+  threshold?: number;
+  useViewportHeight?: boolean;
+}

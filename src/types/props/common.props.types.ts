@@ -13,11 +13,12 @@ export interface BannerProps {
 }
 
 export interface ButtonProps {
-  btnText: string;
   btnTextSize?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
   variant?: "mask-1" | "mask-2";
   color: string;
+  children: string | ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 export interface TypewriterProps {

@@ -11,19 +11,21 @@ const GreetingsContent = () => {
         <SocialMedia />
         <div className="flex justify-center lg:justify-start items-center gap-2 md:gap-6 w-full">
           <MaskedButton
-            btnText="Contact Me"
             btnTextSize="md"
             variant="mask-1"
             color="#3f82d9"
-            className="md:text-lg"
-          />
+            className="p-3 md:px-6 md:text-lg"
+          >
+            Contact Me
+          </MaskedButton>
           <MaskedButton
-            btnText="See My Resume"
             btnTextSize="md"
             variant="mask-2"
             color="#040b14"
-            className="md:text-lg"
-          />
+            className="p-3 md:px-6 md:text-lg"
+          >
+            See My Resume
+          </MaskedButton>
         </div>
       </div>
 
