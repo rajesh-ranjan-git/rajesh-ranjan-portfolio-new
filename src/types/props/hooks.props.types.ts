@@ -37,3 +37,9 @@ export interface UseScrollVisibilityProps {
   threshold?: number;
   useViewportHeight?: boolean;
 }
+
+export interface UseSectionNavigationProps {
+  sectionIds: string[];
+  rootMargin?: string;
+  threshold?: number | number[];
+}

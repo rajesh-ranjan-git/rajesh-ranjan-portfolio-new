@@ -1,32 +1,20 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { FaHouse } from "react-icons/fa6";
 import { useAppStore } from "@/store/store";
 import { menuItems } from "@/config/sidebar.config";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
+import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 import SidebarFooter from "@/components/sidebar/sidebar.footer";
 import SidebarHeader from "@/components/sidebar/sidebar.header";
 import BackdropOverlay from "@/components/ui/overlays/backdrop.overlay";
 
 const Sidebar = () => {
-  const [activeSection, setActiveSection] = useState("home");
-
   const sidebarToggle = useAppStore((state) => state.sidebarToggle);
   const setSidebarToggle = useAppStore((state) => state.setSidebarToggle);
 
   const sidebarRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("sidebar-open", sidebarToggle);
-    document.body.classList.toggle("sidebar-open", sidebarToggle);
-
-    return () => {
-      document.documentElement.classList.remove("sidebar-open");
-      document.body.classList.remove("sidebar-open");
-    };
-  }, [sidebarToggle]);
 
   const handleListItemAction = () => {
     if (sidebarToggle) setSidebarToggle(false);
@@ -39,9 +27,19 @@ const Sidebar = () => {
     eventType: "mousedown",
   });
 
+  const { activeSection, scrollToSection } = useSectionNavigation({
+    sectionIds: menuItems.map((item) => item.id),
+  });
+
   useEffect(() => {
-    // setActiveSection()
-  }, [activeSection]);
+    document.documentElement.classList.toggle("sidebar-open", sidebarToggle);
+    document.body.classList.toggle("sidebar-open", sidebarToggle);
+
+    return () => {
+      document.documentElement.classList.remove("sidebar-open");
+      document.body.classList.remove("sidebar-open");
+    };
+  }, [sidebarToggle]);
 
   return (
     <aside
@@ -68,10 +66,16 @@ const Sidebar = () => {
               return (
                 <li
                   className={`flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer shrink-0 ${activeSection === item.id ? "bg-accent-blue" : ""}`}
-                  onClick={handleListItemAction}
                   key={item.id}
                 >
-                  <Link href={activeSection}>
+                  <button
+                    type="button"
+                    className="flex items-center w-full"
+                    onClick={() => {
+                      scrollToSection(item.id);
+                      handleListItemAction();
+                    }}
+                  >
                     <div className="flex justify-center items-center w-6 min-w-6">
                       <Icon />
                     </div>
@@ -81,7 +85,7 @@ const Sidebar = () => {
                         <p className="w-full text-left">{item?.label}</p>
                       </div>
                     )}
-                  </Link>
+                  </button>
                 </li>
               );
             })
