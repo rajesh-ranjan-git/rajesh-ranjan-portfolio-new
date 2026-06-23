@@ -1,8 +1,35 @@
 @import "tailwindcss";
 
 :root {
+  /* ── Accent ─────────────────────────────────────────── */
   --accent-blue: #3f82d9;
   --accent-purple: #8b5cf6;
+
+  /* ── App surfaces ────────────────────────────────────── */
+  --color-base: #0d0f2b; /* body / page background          */
+  --color-sidebar: #040b14; /* sidebar panel background        */
+  --color-surface: #1a1f4e; /* raised card / image backgrounds */
+
+  /* ── Text & icon shades ──────────────────────────────── */
+  --color-accent-light: #699ee1; /* highlight text in headings      */
+  --color-muted: #7e7e7e; /* muted icons (e.g. theme toggle) */
+
+  /* ── Social-media brand colors ───────────────────────── */
+  --color-github: #333333;
+  --color-google: #ea4335;
+  --color-stackoverflow: #f48024;
+  --color-linkedin: #0e76a8;
+  --color-facebook: #3b5998;
+  --color-instagram: #e4405f;
+
+  /* ── Rainbow gradient stops (sidebar footer) ─────────── */
+  --color-rainbow-coral: #ff6b6b;
+  --color-rainbow-yellow: #ffd93d;
+  --color-rainbow-green: #6bcb77;
+  --color-rainbow-blue: #4d96ff;
+  --color-rainbow-purple: #843bff;
+  --color-rainbow-pink: #ff6ec7;
+
   --z-toast: 50;
 
   --fs-h1: clamp(2rem, 4vw, 4rem);
@@ -19,8 +46,35 @@
 
 [data-theme="dark"],
 .dark {
+  /* ── Accent ─────────────────────────────────────────── */
   --accent-blue: #3f82d9;
   --accent-purple: #8b5cf6;
+
+  /* ── App surfaces ────────────────────────────────────── */
+  --color-base: #0d0f2b;
+  --color-sidebar: #040b14;
+  --color-surface: #1a1f4e;
+
+  /* ── Text & icon shades ──────────────────────────────── */
+  --color-accent-light: #699ee1;
+  --color-muted: #7e7e7e;
+
+  /* ── Social-media brand colors ───────────────────────── */
+  --color-github: #333333;
+  --color-google: #ea4335;
+  --color-stackoverflow: #f48024;
+  --color-linkedin: #0e76a8;
+  --color-facebook: #3b5998;
+  --color-instagram: #e4405f;
+
+  /* ── Rainbow gradient stops ──────────────────────────── */
+  --color-rainbow-coral: #ff6b6b;
+  --color-rainbow-yellow: #ffd93d;
+  --color-rainbow-green: #6bcb77;
+  --color-rainbow-blue: #4d96ff;
+  --color-rainbow-purple: #843bff;
+  --color-rainbow-pink: #ff6ec7;
+
   --z-toast: 50;
 
   --fs-h1: clamp(2rem, 4vw, 4rem);
@@ -37,8 +91,35 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    /* ── Accent ─────────────────────────────────────────── */
     --accent-blue: #3f82d9;
     --accent-purple: #8b5cf6;
+
+    /* ── App surfaces ────────────────────────────────────── */
+    --color-base: #0d0f2b;
+    --color-sidebar: #040b14;
+    --color-surface: #1a1f4e;
+
+    /* ── Text & icon shades ──────────────────────────────── */
+    --color-accent-light: #699ee1;
+    --color-muted: #7e7e7e;
+
+    /* ── Social-media brand colors ───────────────────────── */
+    --color-github: #333333;
+    --color-google: #ea4335;
+    --color-stackoverflow: #f48024;
+    --color-linkedin: #0e76a8;
+    --color-facebook: #3b5998;
+    --color-instagram: #e4405f;
+
+    /* ── Rainbow gradient stops ──────────────────────────── */
+    --color-rainbow-coral: #ff6b6b;
+    --color-rainbow-yellow: #ffd93d;
+    --color-rainbow-green: #6bcb77;
+    --color-rainbow-blue: #4d96ff;
+    --color-rainbow-purple: #843bff;
+    --color-rainbow-pink: #ff6ec7;
+
     --z-toast: 50;
 
     --fs-h1: clamp(2rem, 4vw, 4rem);
@@ -60,8 +141,35 @@
   --font-poppins: var(--font-poppins);
   --font-lobster: var(--font-lobster);
 
+  /* ── Accent ─────────────────────────────────────────── */
   --color-accent-blue: #3f82d9;
   --color-accent-purple: #8b5cf6;
+
+  /* ── App surfaces ────────────────────────────────────── */
+  --color-base: #0d0f2b;
+  --color-sidebar: #040b14;
+  --color-surface: #1a1f4e;
+
+  /* ── Text & icon shades ──────────────────────────────── */
+  --color-accent-light: #699ee1;
+  --color-muted: #7e7e7e;
+
+  /* ── Social-media brand colors ───────────────────────── */
+  --color-github: #333333;
+  --color-google: #ea4335;
+  --color-stackoverflow: #f48024;
+  --color-linkedin: #0e76a8;
+  --color-facebook: #3b5998;
+  --color-instagram: #e4405f;
+
+  /* ── Rainbow gradient stops ──────────────────────────── */
+  --color-rainbow-coral: #ff6b6b;
+  --color-rainbow-yellow: #ffd93d;
+  --color-rainbow-green: #6bcb77;
+  --color-rainbow-blue: #4d96ff;
+  --color-rainbow-purple: #843bff;
+  --color-rainbow-pink: #ff6ec7;
+
   --z-toast: 50;
 
   --fs-h1: clamp(2rem, 4vw, 4rem);
@@ -100,7 +208,7 @@
     overflow: hidden;
     overflow-y: scroll;
     min-height: 100dvh;
-    background-color: #0d0f2b;
+    background-color: var(--color-base);
     font-size: var(--fs-body);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -191,6 +299,21 @@
   @media (max-width: 640px) {
     body {
       line-height: 1.65;
+    }
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+
+  @keyframes rotate {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
     }
   }
 }

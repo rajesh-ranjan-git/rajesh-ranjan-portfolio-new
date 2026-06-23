@@ -7,7 +7,7 @@ const AboutText = ({ title, description, details }: AboutTextProps) => {
         {title}
       </h2>
 
-      <p className="mt-3 text-base text-pretty">{description}</p>
+      <p className="mt-3 text-white text-pretty">{description}</p>
 
       <table className="mt-8 w-full table-fixed">
         <colgroup>
