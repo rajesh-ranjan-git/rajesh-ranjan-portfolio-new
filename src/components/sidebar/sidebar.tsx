@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { FaHouse } from "react-icons/fa6";
 import { useAppStore } from "@/store/store";
 import { menuItems } from "@/config/sidebar.config";
@@ -10,6 +11,8 @@ import SidebarHeader from "@/components/sidebar/sidebar.header";
 import BackdropOverlay from "@/components/ui/overlays/backdrop.overlay";
 
 const Sidebar = () => {
+  const [activeSection, setActiveSection] = useState("home");
+
   const sidebarToggle = useAppStore((state) => state.sidebarToggle);
   const setSidebarToggle = useAppStore((state) => state.setSidebarToggle);
 
@@ -36,6 +39,10 @@ const Sidebar = () => {
     eventType: "mousedown",
   });
 
+  useEffect(() => {
+    // setActiveSection()
+  }, [activeSection]);
+
   return (
     <aside
       className={`fixed inset-y-0 flex flex-col bg-[#040B14] rounded-r-md h-dvh max-h-dvh text-white overflow-hidden transition-all ease-in-out duration-700 z-20 ${
@@ -55,30 +62,32 @@ const Sidebar = () => {
       <nav className="flex flex-1 w-full min-h-0 overflow-x-hidden overflow-y-auto no-scrollbar">
         <ul className="flex flex-col gap-1 2xl:gap-5 py-1 w-full">
           {menuItems && menuItems.length > 0 ? (
-            menuItems.map((item, index) => {
+            menuItems.map((item) => {
               const Icon = item?.icon;
 
               return (
                 <li
-                  className="flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer shrink-0"
+                  className={`flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer shrink-0 ${activeSection === item.id ? "bg-accent-blue" : ""}`}
                   onClick={handleListItemAction}
-                  key={index}
+                  key={item.id}
                 >
-                  <div className="flex justify-center items-center w-6 min-w-6">
-                    <Icon />
-                  </div>
-
-                  {sidebarToggle && (
-                    <div className="px-3 w-full text-lg whitespace-nowrap">
-                      <p className="w-full text-left">{item?.label}</p>
+                  <Link href={activeSection}>
+                    <div className="flex justify-center items-center w-6 min-w-6">
+                      <Icon />
                     </div>
-                  )}
+
+                    {sidebarToggle && (
+                      <div className="px-3 w-full text-lg whitespace-nowrap">
+                        <p className="w-full text-left">{item?.label}</p>
+                      </div>
+                    )}
+                  </Link>
                 </li>
               );
             })
           ) : (
-            <li className="flex items-center gap-4 p-3 rounded-md w-full text-xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer shrink-0">
-              <div>
+            <li className="flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out bg-accent-blue cursor-pointer shrink-0">
+              <div className="flex justify-center items-center w-6 min-w-6">
                 <FaHouse />
               </div>
 

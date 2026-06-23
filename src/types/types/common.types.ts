@@ -33,7 +33,7 @@ export type FloatingBadgePositionType =
   | "bottom-center";
 
 export type MenuItemType = {
-  item:
+  id:
     | "home"
     | "about"
     | "experience"

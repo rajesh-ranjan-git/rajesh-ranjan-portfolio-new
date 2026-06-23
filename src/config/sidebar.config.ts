@@ -10,42 +10,42 @@ import { FaIdCard } from "react-icons/fa6";
 
 export const menuItems: MenuItemType[] = [
   {
-    item: "home",
+    id: "home",
     label: "Home",
     icon: FaHouse,
   },
   {
-    item: "about",
+    id: "about",
     label: "About",
     icon: FaUserAstronaut,
   },
   {
-    item: "experience",
+    id: "experience",
     label: "Experience",
     icon: FaBriefcase,
   },
   {
-    item: "education",
+    id: "education",
     label: "Education",
     icon: FaBookOpenReader,
   },
   {
-    item: "achievements",
+    id: "achievements",
     label: "Achievements",
     icon: FaTrophy,
   },
   {
-    item: "portfolio",
+    id: "portfolio",
     label: "Portfolio",
     icon: FaCubes,
   },
   {
-    item: "certificates",
+    id: "certificates",
     label: "Certificates",
     icon: FaCertificate,
   },
   {
-    item: "contact",
+    id: "contact",
     label: "Contact Me",
     icon: FaIdCard,
   },
