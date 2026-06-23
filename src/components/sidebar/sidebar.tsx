@@ -63,12 +63,12 @@ const Sidebar = () => {
 
               return (
                 <li
-                  className={`flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer shrink-0 ${activeSection === item.id ? "bg-accent-blue" : ""}`}
+                  className={`flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all duration-500 hover:bg-accent-blue cursor-pointer shrink-0 ${activeSection === item.id ? "bg-accent-blue" : ""}`}
                   key={item.id}
                 >
                   <button
                     type="button"
-                    className="flex items-center w-full"
+                    className="flex items-center w-full cursor-pointer"
                     onClick={() => {
                       scrollToSection(item.id);
                       handleListItemAction();

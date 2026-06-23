@@ -11,6 +11,8 @@ const ScrollButton = () => {
   });
 
   const scrollToTop = () => {
+    window.history.replaceState(null, "", "/");
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
