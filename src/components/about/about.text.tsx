@@ -2,8 +2,8 @@ import { AboutTextProps } from "@/types/props/common.props.types";
 
 const AboutText = ({ title, description, details }: AboutTextProps) => {
   return (
-    <section className="w-full min-w-0">
-      <h2 className="text-shadow-[2px_2px_black] font-arima font-bold text-accent-blue text-balance">
+    <div className="order-1 md:order-2 w-full min-w-0">
+      <h2 className="text-shadow-[2px_2px_black] font-arima font-bold text-balance text-accent-blue">
         {title}
       </h2>
 
@@ -29,7 +29,7 @@ const AboutText = ({ title, description, details }: AboutTextProps) => {
           ))}
         </tbody>
       </table>
-    </section>
+    </div>
   );
 };
 
