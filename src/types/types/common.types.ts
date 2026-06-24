@@ -32,6 +32,14 @@ export type FloatingBadgePositionType =
   | "bottom-right"
   | "bottom-center";
 
+export type FloatingBadgeFloatType =
+  | "float-x"
+  | "float-x-reverse"
+  | "float-y"
+  | "float-y-reverse"
+  | "float-diagonal"
+  | "float-diagonal-reverse";
+
 export type MenuItemType = {
   id:
     | "home"
@@ -51,6 +59,32 @@ export type MenuItemType = {
     | "Portfolio"
     | "Certificates"
     | "Contact Me";
+  icon: IconType;
+};
+
+export type SocialMediaType = {
+  id:
+    | "github"
+    | "google"
+    | "stack-overflow"
+    | "linkedin"
+    | "twitter"
+    | "youtube"
+    | "facebook"
+    | "instagram";
+  label:
+    | "GitHub"
+    | "Google"
+    | "Stack Overflow"
+    | "LinkedIn"
+    | "Twitter"
+    | "Youtube"
+    | "Facebook"
+    | "Instagram";
+  url: string;
+  color?: string;
+  bgColor?: string;
+  hoverColor?: string;
   icon: IconType;
 };
 

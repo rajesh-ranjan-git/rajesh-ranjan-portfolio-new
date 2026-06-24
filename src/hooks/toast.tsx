@@ -29,7 +29,11 @@ import useScreenWidthCheck from "@/hooks/useScreenWidthCheck";
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
-const ToastItem = ({ toast, onRemove, position }: Omit<ToastProps, "index">) => {
+const ToastItem = ({
+  toast,
+  onRemove,
+  position,
+}: Omit<ToastProps, "index">) => {
   const [shouldExit, setShouldExit] = useState(false);
   const [progress, setProgress] = useState(100);
   const config = variantConfig[toast.variant];
@@ -76,7 +80,7 @@ const ToastItem = ({ toast, onRemove, position }: Omit<ToastProps, "index">) => 
         damping: 40,
         mass: 1,
       }}
-      className={`${config.cn} relative flex flex-col backdrop-blur-lg min-w-64 max-w-72 overflow-hidden rounded-lg p-0`}
+      className={`${config.cn} bg-surface text-primary border border-primary/10 shadow-lg backdrop-blur-lg relative flex flex-col min-w-64 max-w-72 overflow-hidden rounded-lg p-0`}
     >
       {toast.toastProgressPosition === "top" && (
         <div className="h-1" style={progressContainerStyle}>
@@ -93,7 +97,7 @@ const ToastItem = ({ toast, onRemove, position }: Omit<ToastProps, "index">) => 
         <Icon className={config.iconColor} size={20} />
 
         <div className="pr-4">
-          <p className="font-poppins text-sm font-semibold">{toast.title}</p>
+          <p className="text-primary text-sm font-semibold">{toast.title}</p>
           <p className={`${config.text} opacity-90 m-0 text-xs`}>
             {toast.message}
           </p>

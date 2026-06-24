@@ -51,7 +51,7 @@ const Banner = ({ nodeVersion }: BannerProps) => {
               logger.warn(`🚨 [BANNER FAILED] Unable to show banner:`, error);
               showToast({
                 title: "BANNER ERROR",
-                message: "An error occurred while creating console banner",
+                message: "An error occurred while creating console banner!",
                 variant: toastVariantsConfig.error,
               });
               return;
@@ -70,7 +70,7 @@ const Banner = ({ nodeVersion }: BannerProps) => {
         logger.warn(`🚨 [BANNER FAILED] Unable to show banner:`, error);
         showToast({
           title: "BANNER ERROR",
-          message: "An error occurred while creating console banner",
+          message: "An error occurred while creating console banner!",
           variant: toastVariantsConfig.error,
         });
       });

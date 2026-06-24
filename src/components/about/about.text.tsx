@@ -3,11 +3,11 @@ import { AboutTextProps } from "@/types/props/common.props.types";
 const AboutText = ({ title, description, details }: AboutTextProps) => {
   return (
     <section className="w-full min-w-0">
-      <h2 className="text-shadow-[2px_2px_black] font-bold text-[#699ee1] text-2xl sm:text-3xl text-balance">
+      <h2 className="text-shadow-[2px_2px_black] font-arima font-bold text-accent-blue text-balance">
         {title}
       </h2>
 
-      <p className="mt-3 text-white text-pretty">{description}</p>
+      <p className="mt-3 text-pretty">{description}</p>
 
       <table className="mt-8 w-full table-fixed">
         <colgroup>

@@ -10,8 +10,10 @@ const SidebarHeader = () => {
         <MenuButton />
 
         {sidebarToggle && (
-          <div className="p-2 px-4 whitespace-nowrap">
-            <h2 className="w-full font-bold text-xl">Rajesh Ranjan</h2>
+          <div className="relative p-2 px-4 whitespace-nowrap">
+            <h2 className="absolute top-1/2 -translate-y-1/2 rotate-[-7deg] font-bold font-allura text-3xl md:text-4xl leading-none underline underline-offset-1">
+              Rajesh Ranjan
+            </h2>
           </div>
         )}
       </div>

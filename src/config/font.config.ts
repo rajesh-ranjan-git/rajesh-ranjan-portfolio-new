@@ -1,4 +1,4 @@
-import { Alkatra, Arima, Poppins, Lobster } from "next/font/google";
+import { Alkatra, Arima, Poppins, Allura } from "next/font/google";
 
 export const alkatra = Alkatra({
   subsets: ["latin"],
@@ -19,9 +19,9 @@ export const poppins = Poppins({
   display: "swap",
 });
 
-export const lobster = Lobster({
+export const allura = Allura({
   weight: ["400"],
   subsets: ["latin"],
-  variable: "--font-lobster",
+  variable: "--font-allura",
   display: "swap",
 });

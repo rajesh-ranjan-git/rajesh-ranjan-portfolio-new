@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
     "Alkatra",
+    "allura",
     "Arima",
     "Cyberlarge",
     "DOTENV",
@@ -10,5 +11,6 @@
     "Pradesh",
     "Uttar"
   ],
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "tailwindSorter.sortOnSave": true
 }

@@ -5,7 +5,7 @@ import "@/services/logger/logger";
 import Image from "next/image";
 import { MdError } from "react-icons/md";
 import { staticImagesConfig } from "@/config/common.config";
-import { alkatra, arima, poppins, lobster } from "@/config/font.config";
+import { alkatra, arima, poppins, allura } from "@/config/font.config";
 import Banner from "@/services/banner/banner";
 import { ToastProvider } from "@/hooks/toast";
 import ServiceWorker from "@/components/service-worker/service.worker";
@@ -20,7 +20,7 @@ const GlobalError = () => {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${alkatra.variable} ${arima.variable} ${lobster.variable} antialiased`}
+        className={`${poppins.variable} ${alkatra.variable} ${arima.variable} ${allura.variable} antialiased`}
         suppressHydrationWarning
       >
         <ServiceWorker />

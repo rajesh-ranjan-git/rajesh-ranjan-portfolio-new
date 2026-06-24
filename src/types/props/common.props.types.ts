@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import {
   AboutTextRowType,
   FloatingBadgePositionType,
+  FloatingBadgeFloatType,
 } from "@/types/types/common.types";
 
 export interface ReactNodeProps {
@@ -37,6 +38,8 @@ export interface BackdropOverlayProps {
 
 export interface FloatingBadgeProps {
   position?: FloatingBadgePositionType;
+  type?: FloatingBadgeFloatType;
+  duration?: number;
   textColor?: string;
   bgColor?: string;
   className?: string;

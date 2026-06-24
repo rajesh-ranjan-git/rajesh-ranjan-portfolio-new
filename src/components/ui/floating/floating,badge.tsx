@@ -1,14 +1,20 @@
 import aboutStyles from "@/animations/about.module.css";
+import {
+  FloatingBadgeFloatType,
+  FloatingBadgePositionType,
+} from "@/types/types/common.types";
 import { FloatingBadgeProps } from "@/types/props/common.props.types";
 
 const FloatingBadge = ({
   position,
+  type,
+  duration = 3,
   textColor,
   bgColor,
   className,
   children,
 }: FloatingBadgeProps) => {
-  const getBadgePosition = (position?: string) => {
+  const getBadgePosition = (position?: FloatingBadgePositionType) => {
     switch (position) {
       case "top-left":
         return "top-12 sm:top-16 lg:top-20 -left-4 sm:-left-8 lg:-left-12";
@@ -42,9 +48,39 @@ const FloatingBadge = ({
     }
   };
 
+  const getBadgeFloatingType = (type?: FloatingBadgeFloatType) => {
+    switch (type) {
+      case "float-x":
+        return aboutStyles.float_x;
+
+      case "float-x-reverse":
+        return aboutStyles.float_x_reverse;
+
+      case "float-y":
+        return aboutStyles.float_y;
+
+      case "float-y-reverse":
+        return aboutStyles.float_y_reverse;
+
+      case "float-diagonal":
+        return aboutStyles.float_diagonal;
+
+      case "float-diagonal-reverse":
+        return aboutStyles.float_diagonal_reverse;
+
+      default:
+        return aboutStyles.float_x;
+    }
+  };
+
   return (
     <div
-      className={`absolute px-4 sm:px-6 py-3 sm:py-4 rounded-[28px] sm:rounded-[36px] font-arima font-bold text-lg sm:text-xl lg:text-2xl whitespace-nowrap duration-500 ${aboutStyles.float} ${textColor ? textColor : "text-[#1a1f4e]"} ${bgColor ? bgColor : "bg-white"} ${getBadgePosition(position)} ${className}`}
+      style={
+        {
+          "--float-duration": `${duration}s`,
+        } as React.CSSProperties
+      }
+      className={`absolute px-4 sm:px-6 py-3 sm:py-4 rounded-[28px] sm:rounded-[36px] font-arima font-bold text-lg sm:text-xl lg:text-2xl border border-white/10 whitespace-nowrap shadow-lg duration-500 ${textColor ? textColor : ""} ${bgColor ? bgColor : "bg-bg"} ${getBadgePosition(position)} ${getBadgeFloatingType(type)} ${className}`}
     >
       {children || "Badge"}
     </div>

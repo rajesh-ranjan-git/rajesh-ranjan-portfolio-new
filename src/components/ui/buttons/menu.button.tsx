@@ -11,7 +11,7 @@ const MenuButton = () => {
     <button
       type="button"
       data-sidebar-menu-button="true"
-      className={`p-2 border-0 rounded-md outline-none font-bold text-2xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer ${sidebarToggle ? "bg-accent-blue" : "bg-[#040B14]"}`}
+      className={`p-2 border-0 rounded-md outline-none font-bold text-2xl transition-all ease-in-out hover:bg-accent-blue cursor-pointer ${sidebarToggle ? "bg-accent-blue" : "bg-sidebar-bg"}`}
       onMouseDown={(event) => event.stopPropagation()}
       onClick={(event) => {
         event.stopPropagation();

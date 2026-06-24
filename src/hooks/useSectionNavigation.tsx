@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { UseSectionNavigationProps } from "@/types/props/hooks.props.types";
+import { useToast } from "@/hooks/toast";
+import { toastVariantsConfig } from "@/config/toast.config";
+import { toTitleCase } from "@/utils/common.utils";
 
 export const useSectionNavigation = ({
   sectionIds,
@@ -9,6 +12,8 @@ export const useSectionNavigation = ({
   threshold = 0,
 }: UseSectionNavigationProps) => {
   const [activeSection, setActiveSection] = useState(sectionIds[0] || "");
+
+  const { showToast } = useToast();
 
   useEffect(() => {
     const sections = sectionIds
@@ -42,7 +47,15 @@ export const useSectionNavigation = ({
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
 
-    if (!element) return;
+    if (!element) {
+      logger.warn(`🚨 [SECTION] ${toTitleCase(sectionId)} is not available!`);
+      showToast({
+        title: "SECTION NOT FOUND",
+        message: `${toTitleCase(sectionId)} is not available!`,
+        variant: toastVariantsConfig.warning,
+      });
+      return;
+    }
 
     window.history.replaceState(null, "", `#${sectionId}`);
 

@@ -27,8 +27,8 @@ const SidebarFooter = () => {
         />
 
         {sidebarToggle && (
-          <div className="flex flex-col gap-0 w-full">
-            <p className="w-full font-bold text-md whitespace-nowrap">
+          <div className="flex flex-col w-full">
+            <p className="w-full translate-y-1 font-alkatra font-bold text-md whitespace-nowrap">
               Rajesh Ranjan
             </p>
             <Link

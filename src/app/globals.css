@@ -1,44 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  /* ── Accent ─────────────────────────────────────────── */
+  --bg: #f4f7ff;
+  --surface: #ffffff;
+  --sidebar-bg: #040b14;
+
+  --primary: #0d0f2b;
+  --secondary: #4b5563;
+  --sidebar-text: #ffffff;
+
   --accent-blue: #3f82d9;
   --accent-purple: #8b5cf6;
 
-  /* ── App surfaces ────────────────────────────────────── */
-  --color-base: #0d0f2b; /* body / page background          */
-  --color-sidebar: #040b14; /* sidebar panel background        */
-  --color-surface: #1a1f4e; /* raised card / image backgrounds */
+  --image-frame-bg: rgba(255, 255, 255, 0.55);
+  --image-frame-border: rgba(133, 154, 255, 0.18);
+  --image-frame-layer-bg: --image-frame-layer-bg: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.45)
+    );
+  --image-frame-layer-border: rgba(133, 154, 255, 0.12);
 
-  /* Light Theme */
-  --text-primary: #0d0f2b;
-  --text-secondary: #4b5563;
-
-  /* Dark Theme */
-  --text-primary: #ffffff;
-  --text-secondary: #cbd5e1;
-
-  /* ── Text & icon shades ──────────────────────────────── */
-  --color-accent-light: #699ee1; /* highlight text in headings      */
-  --color-muted: #7e7e7e; /* muted icons (e.g. theme toggle) */
-
-  /* ── Social-media brand colors ───────────────────────── */
-  --color-github: #333333;
-  --color-google: #ea4335;
-  --color-stackoverflow: #f48024;
-  --color-linkedin: #0e76a8;
-  --color-facebook: #3b5998;
-  --color-instagram: #e4405f;
-
-  /* ── Rainbow gradient stops (sidebar footer) ─────────── */
-  --color-rainbow-coral: #ff6b6b;
-  --color-rainbow-yellow: #ffd93d;
-  --color-rainbow-green: #6bcb77;
-  --color-rainbow-blue: #4d96ff;
-  --color-rainbow-purple: #843bff;
-  --color-rainbow-pink: #ff6ec7;
-
-  --z-toast: 50;
+  --github: #333333;
+  --google: #ea4335;
+  --stack-overflow: #f48024;
+  --linkedin: #0e76a8;
+  --twitter: #000000;
+  --youtube: #ff0000;
+  --facebook: #3b5998;
+  --instagram: #e4405f;
+  --social-bg: #3f82d9;
+  --social-text: #ffffff;
+  --social-hover: #040b14;
 
   --fs-h1: clamp(2rem, 4vw, 4rem);
   --fs-h2: clamp(1.75rem, 3.5vw, 3rem);
@@ -46,100 +39,46 @@
   --fs-h4: clamp(1.25rem, 2.5vw, 2rem);
   --fs-h5: clamp(1.125rem, 2vw, 1.5rem);
   --fs-h6: clamp(1rem, 1.5vw, 1.25rem);
-
   --fs-body: clamp(1rem, 1.2vw, 1.125rem);
-
   --fs-caption: clamp(0.75rem, 0.9vw, 0.875rem);
+
+  --z-toast: 50;
 }
 
 [data-theme="dark"],
 .dark {
-  /* ── Accent ─────────────────────────────────────────── */
-  --accent-blue: #3f82d9;
-  --accent-purple: #8b5cf6;
+  --bg: #0d0f2b;
+  --surface: #111827;
 
-  /* ── App surfaces ────────────────────────────────────── */
-  --color-base: #f4f7ff;
-  --color-sidebar: #040b14;
-  --color-surface: #1a1f4e;
+  --primary: #ffffff;
+  --secondary: #cbd5e1;
 
-  /* ── Text & icon shades ──────────────────────────────── */
-  --color-accent-light: #699ee1;
-  --color-muted: #7e7e7e;
-
-  /* ── Social-media brand colors ───────────────────────── */
-  --color-github: #333333;
-  --color-google: #ea4335;
-  --color-stackoverflow: #f48024;
-  --color-linkedin: #0e76a8;
-  --color-facebook: #3b5998;
-  --color-instagram: #e4405f;
-
-  /* ── Rainbow gradient stops ──────────────────────────── */
-  --color-rainbow-coral: #ff6b6b;
-  --color-rainbow-yellow: #ffd93d;
-  --color-rainbow-green: #6bcb77;
-  --color-rainbow-blue: #4d96ff;
-  --color-rainbow-purple: #843bff;
-  --color-rainbow-pink: #ff6ec7;
-
-  --z-toast: 50;
-
-  --fs-h1: clamp(2rem, 4vw, 4rem);
-  --fs-h2: clamp(1.75rem, 3.5vw, 3rem);
-  --fs-h3: clamp(1.5rem, 3vw, 2.5rem);
-  --fs-h4: clamp(1.25rem, 2.5vw, 2rem);
-  --fs-h5: clamp(1.125rem, 2vw, 1.5rem);
-  --fs-h6: clamp(1rem, 1.5vw, 1.25rem);
-
-  --fs-body: clamp(1rem, 1.2vw, 1.125rem);
-
-  --fs-caption: clamp(0.75rem, 0.9vw, 0.875rem);
+  --image-frame-bg: rgba(26, 31, 78, 0.45);
+  --image-frame-border: rgba(255, 255, 255, 0.15);
+  --image-frame-layer-bg: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.02)
+  );
+  --image-frame-layer-border: rgba(255, 255, 255, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    /* ── Accent ─────────────────────────────────────────── */
-    --accent-blue: #3f82d9;
-    --accent-purple: #8b5cf6;
+    --bg: #0d0f2b;
+    --surface: #111827;
 
-    /* ── App surfaces ────────────────────────────────────── */
-    --color-base: #f4f7ff;
-    --color-sidebar: #040b14;
-    --color-surface: #1a1f4e;
+    --primary: #ffffff;
+    --secondary: #cbd5e1;
 
-    /* ── Text & icon shades ──────────────────────────────── */
-    --color-accent-light: #699ee1;
-    --color-muted: #7e7e7e;
-
-    /* ── Social-media brand colors ───────────────────────── */
-    --color-github: #333333;
-    --color-google: #ea4335;
-    --color-stackoverflow: #f48024;
-    --color-linkedin: #0e76a8;
-    --color-facebook: #3b5998;
-    --color-instagram: #e4405f;
-
-    /* ── Rainbow gradient stops ──────────────────────────── */
-    --color-rainbow-coral: #ff6b6b;
-    --color-rainbow-yellow: #ffd93d;
-    --color-rainbow-green: #6bcb77;
-    --color-rainbow-blue: #4d96ff;
-    --color-rainbow-purple: #843bff;
-    --color-rainbow-pink: #ff6ec7;
-
-    --z-toast: 50;
-
-    --fs-h1: clamp(2rem, 4vw, 4rem);
-    --fs-h2: clamp(1.75rem, 3.5vw, 3rem);
-    --fs-h3: clamp(1.5rem, 3vw, 2.5rem);
-    --fs-h4: clamp(1.25rem, 2.5vw, 2rem);
-    --fs-h5: clamp(1.125rem, 2vw, 1.5rem);
-    --fs-h6: clamp(1rem, 1.5vw, 1.25rem);
-
-    --fs-body: clamp(1rem, 1.2vw, 1.125rem);
-
-    --fs-caption: clamp(0.75rem, 0.9vw, 0.875rem);
+    --image-frame-bg: rgba(26, 31, 78, 0.45);
+    --image-frame-border: rgba(255, 255, 255, 0.15);
+    --image-frame-layer-bg: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.02)
+    );
+    --image-frame-layer-border: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -147,49 +86,33 @@
   --font-alkatra: var(--font-alkatra);
   --font-arima: var(--font-arima);
   --font-poppins: var(--font-poppins);
-  --font-lobster: var(--font-lobster);
+  --font-allura: var(--font-allura);
 
-  /* ── Accent ─────────────────────────────────────────── */
-  --color-accent-blue: #3f82d9;
-  --color-accent-purple: #8b5cf6;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-sidebar-bg: var(--sidebar-bg);
 
-  /* ── App surfaces ────────────────────────────────────── */
-  --color-base: #0d0f2b;
-  --color-sidebar: #040b14;
-  --color-surface: #1a1f4e;
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-sidebar-text: var(--sidebar-text);
 
-  /* ── Text & icon shades ──────────────────────────────── */
-  --color-accent-light: #699ee1;
-  --color-muted: #7e7e7e;
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-purple: var(--accent-purple);
 
-  /* ── Social-media brand colors ───────────────────────── */
+  --color-image-frame-bg: var(--image-frame-bg);
+  --color-image-frame-border: var(--image-frame-border);
+  --color-image-frame-layer-bg: var(--image-frame-layer-bg);
+  --color-image-frame-layer-border: var(--image-frame-layer-border);
+
   --color-github: #333333;
   --color-google: #ea4335;
-  --color-stackoverflow: #f48024;
+  --color-stack-overflow: #f48024;
   --color-linkedin: #0e76a8;
   --color-facebook: #3b5998;
   --color-instagram: #e4405f;
-
-  /* ── Rainbow gradient stops ──────────────────────────── */
-  --color-rainbow-coral: #ff6b6b;
-  --color-rainbow-yellow: #ffd93d;
-  --color-rainbow-green: #6bcb77;
-  --color-rainbow-blue: #4d96ff;
-  --color-rainbow-purple: #843bff;
-  --color-rainbow-pink: #ff6ec7;
-
-  --z-toast: 50;
-
-  --fs-h1: clamp(2rem, 4vw, 4rem);
-  --fs-h2: clamp(1.75rem, 3.5vw, 3rem);
-  --fs-h3: clamp(1.5rem, 3vw, 2.5rem);
-  --fs-h4: clamp(1.25rem, 2.5vw, 2rem);
-  --fs-h5: clamp(1.125rem, 2vw, 1.5rem);
-  --fs-h6: clamp(1rem, 1.5vw, 1.25rem);
-
-  --fs-body: clamp(1rem, 1.2vw, 1.125rem);
-
-  --fs-caption: clamp(0.75rem, 0.9vw, 0.875rem);
+  --color-social-bg: #040b14;
+  --color-social-text: #ffffff;
+  --color-social-hover: #040b14;
 }
 
 @layer base {
@@ -209,22 +132,22 @@
 
   body {
     font-family: var(--font-poppins);
-    color: #fff;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
     overflow-y: scroll;
     min-height: 100dvh;
-    background-color: var(--color-base);
+    background-color: var(--bg);
+    color: var(--primary);
     font-size: var(--fs-body);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     transition:
-      background-color 300ms ease-in-out,
-      color 300ms ease-in-out;
+      background-color 250ms ease,
+      border-color 250ms ease,
+      color 250ms ease;
   }
 
   html.sidebar-open,

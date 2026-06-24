@@ -10,7 +10,7 @@ const MaskedButton = ({
   onClick,
 }: ButtonProps) => {
   return (
-    <div className="relative hover:shadow-md rounded-xl overflow-hidden font-semibold active:scale-95 duration-500">
+    <div className="relative shadow-lg rounded-xl overflow-hidden font-semibold active:scale-95 duration-500">
       <span
         style={{ borderColor: color, color: color }}
         className={`absolute flex bg-white border-2 justify-center items-center m-auto rounded-xl w-full h-full overflow-hidden text-center uppercase ${btnTextSize ? `text-${btnTextSize}` : `text-sm`} ${className}`}
