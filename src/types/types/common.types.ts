@@ -84,7 +84,6 @@ export type SocialMediaType = {
   url: string;
   color?: string;
   bgColor?: string;
-  hoverColor?: string;
   icon: IconType;
 };
 

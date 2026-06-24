@@ -97,7 +97,7 @@ const ToastItem = ({
         <Icon className={config.iconColor} size={20} />
 
         <div className="pr-4">
-          <p className="text-primary text-sm font-semibold">{toast.title}</p>
+          <p className="font-semibold text-primary text-sm">{toast.title}</p>
           <p className={`${config.text} opacity-90 m-0 text-xs`}>
             {toast.message}
           </p>
@@ -135,7 +135,7 @@ const ToastContainer: React.FC<{
 }> = ({ toasts, position, onRemove }) => {
   return (
     <div
-      className={`fixed ${positionStylesConfig[position]} z-(--z-toast) flex flex-col gap-2`}
+      className={`fixed ${positionStylesConfig[position]} z-50 flex flex-col gap-2`}
     >
       {toasts.map((toast) => (
         <ToastItem

@@ -11,7 +11,7 @@ const SidebarHeader = () => {
 
         {sidebarToggle && (
           <div className="relative p-2 px-4 whitespace-nowrap">
-            <h2 className="absolute top-1/2 -translate-y-1/2 rotate-[-7deg] font-bold font-allura text-3xl md:text-4xl leading-none underline underline-offset-1">
+            <h2 className="top-1/2 absolute font-allura font-bold text-3xl md:text-4xl leading-none -translate-y-1/2">
               Rajesh Ranjan
             </h2>
           </div>

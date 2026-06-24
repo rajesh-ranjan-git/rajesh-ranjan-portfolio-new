@@ -42,7 +42,16 @@
   --fs-body: clamp(1rem, 1.2vw, 1.125rem);
   --fs-caption: clamp(0.75rem, 0.9vw, 0.875rem);
 
-  --z-toast: 50;
+  /* Z-Index Scale */
+  --z-behind-deep: -3; /* deepest bg shapes — greetings rectangles */
+  --z-behind: -2; /* bg decorative shapes — greetings ::before, circles, triangles */
+  --z-below: -1; /* below-content — backdrop overlay, image bg, particles */
+  --z-base: 0; /* ambient bg — orb */
+  --z-dropdown: 1; /* within-component icon layer — theme toggle SVGs above slider ball */
+  --z-content: 10; /* in-page content — greeting image, social links */
+  --z-nav: 20; /* navigation — sidebar */
+  --z-toast: 50; /* notifications — toast container */
+  --z-floating: 100; /* top-level floating UI — floating menu */
 }
 
 [data-theme="dark"],
@@ -104,15 +113,16 @@
   --color-image-frame-layer-bg: var(--image-frame-layer-bg);
   --color-image-frame-layer-border: var(--image-frame-layer-border);
 
-  --color-github: #333333;
-  --color-google: #ea4335;
-  --color-stack-overflow: #f48024;
-  --color-linkedin: #0e76a8;
-  --color-facebook: #3b5998;
-  --color-instagram: #e4405f;
-  --color-social-bg: #040b14;
-  --color-social-text: #ffffff;
-  --color-social-hover: #040b14;
+  --color-github: var(--github);
+  --color-google: var(--google);
+  --color-stack-overflow: var(--stack-overflow);
+  --color-linkedin: var(--linkedin);
+  --color-twitter: var(--twitter);
+  --color-facebook: var(--facebook);
+  --color-instagram: var(--instagram);
+  --color-social-bg: var(--social-bg);
+  --color-social-text: var(--social-text);
+  --color-social-hover: var(--social-hover);
 }
 
 @layer base {
@@ -234,21 +244,6 @@
   @media (max-width: 640px) {
     body {
       line-height: 1.65;
-    }
-  }
-
-  @property --angle {
-    syntax: "<angle>";
-    inherits: false;
-    initial-value: 0deg;
-  }
-
-  @keyframes rotate {
-    from {
-      --angle: 0deg;
-    }
-    to {
-      --angle: 360deg;
     }
   }
 }

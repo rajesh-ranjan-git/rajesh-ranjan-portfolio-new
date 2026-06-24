@@ -17,7 +17,6 @@ export const socialMedia: SocialMediaType[] = [
     url: "https://github.com/rajesh-ranjan-git/",
     color: "text-social-text",
     bgColor: "bg-github",
-    hoverColor: "bg-social-hover",
     icon: FaGithub,
   },
   {
@@ -26,7 +25,6 @@ export const socialMedia: SocialMediaType[] = [
     url: "mailto:rajeshranjan8271@gmail.com",
     color: "text-social-text",
     bgColor: "bg-google",
-    hoverColor: "bg-social-hover",
     icon: FaGoogle,
   },
   {
@@ -35,7 +33,6 @@ export const socialMedia: SocialMediaType[] = [
     url: "https://stackoverflow.com/users/7486676/rajesh-ranjan/",
     color: "text-social-text",
     bgColor: "bg-stack-overflow",
-    hoverColor: "bg-social-hover",
     icon: FaStackOverflow,
   },
   {
@@ -44,7 +41,6 @@ export const socialMedia: SocialMediaType[] = [
     url: "https://www.linkedin.com/in/rajesh-ranjan-full-stack-developer/",
     color: "text-social-text",
     bgColor: "bg-linkedin",
-    hoverColor: "bg-social-hover",
     icon: FaLinkedinIn,
   },
   {
@@ -53,7 +49,6 @@ export const socialMedia: SocialMediaType[] = [
     url: "https://x.com/_rajesh____/",
     color: "text-social-text",
     bgColor: "bg-twitter",
-    hoverColor: "bg-social-hover",
     icon: FaXTwitter,
   },
   {
@@ -62,7 +57,6 @@ export const socialMedia: SocialMediaType[] = [
     url: "",
     color: "text-social-text",
     bgColor: "bg-youtube",
-    hoverColor: "bg-social-hover",
     icon: FaYoutube,
   },
   {
@@ -71,7 +65,6 @@ export const socialMedia: SocialMediaType[] = [
     url: "https://www.facebook.com/rajeshranjan8271/",
     color: "text-social-text",
     bgColor: "bg-facebook",
-    hoverColor: "bg-social-hover",
     icon: FaFacebook,
   },
   {
@@ -80,7 +73,6 @@ export const socialMedia: SocialMediaType[] = [
     url: "https://www.instagram.com/_rajesh____/",
     color: "text-social-text",
     bgColor: "bg-instagram",
-    hoverColor: "bg-social-hover",
     icon: FaInstagram,
   },
 ];
