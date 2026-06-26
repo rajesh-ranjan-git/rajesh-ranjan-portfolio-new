@@ -19,6 +19,11 @@ export const menuItems = [
     icon: FaUserAstronaut,
   },
   {
+    id: "skills",
+    label: "Skills",
+    icon: FaTrophy,
+  },
+  {
     id: "experience",
     label: "Experience",
     icon: FaBriefcase,
@@ -27,11 +32,6 @@ export const menuItems = [
     id: "education",
     label: "Education",
     icon: FaBookOpenReader,
-  },
-  {
-    id: "achievements",
-    label: "Achievements",
-    icon: FaTrophy,
   },
   {
     id: "portfolio",
