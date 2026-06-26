@@ -62,31 +62,6 @@ export type MenuItemType = {
   icon: IconType;
 };
 
-export type SocialMediaType = {
-  id:
-    | "github"
-    | "google"
-    | "stack-overflow"
-    | "linkedin"
-    | "twitter"
-    | "youtube"
-    | "facebook"
-    | "instagram";
-  label:
-    | "GitHub"
-    | "Google"
-    | "Stack Overflow"
-    | "LinkedIn"
-    | "Twitter"
-    | "Youtube"
-    | "Facebook"
-    | "Instagram";
-  url: string;
-  color?: string;
-  bgColor?: string;
-  icon: IconType;
-};
-
 export type AboutTextRowType = {
   label: string;
   value: string;
