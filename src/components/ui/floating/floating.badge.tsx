@@ -17,28 +17,28 @@ const FloatingBadge = ({
   const getBadgePosition = (position?: FloatingBadgePositionType) => {
     switch (position) {
       case "top-left":
-        return "top-12 sm:top-16 lg:top-20 -left-4 sm:-left-8 lg:-left-12";
+        return "top-12 -left-24";
 
       case "top-right":
-        return "top-12 sm:top-16 lg:top-20 -right-4 sm:-right-8 lg:-right-12";
+        return "top-12 -right-24";
 
       case "top-center":
         return "top-0 left-1/2 -translate-x-1/2";
 
       case "middle-left":
-        return "top-1/2 -translate-y-1/2 -left-4 sm:-left-8 lg:-left-12";
+        return "top-1/2 -translate-y-1/2 -left-24";
 
       case "middle-right":
-        return "top-1/2 -translate-y-1/2 -right-4 sm:-right-8 lg:-right-12";
+        return "top-1/2 -translate-y-1/2 -right-24";
 
       case "middle-center":
         return "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2";
 
       case "bottom-left":
-        return "bottom-12 sm:bottom-16 lg:bottom-20 -left-4 sm:-left-8 lg:-left-12";
+        return "bottom-12 sm:bottom-16 -left-24";
 
       case "bottom-right":
-        return "bottom-12 sm:bottom-16 lg:bottom-20 -right-4 sm:-right-8 lg:-right-12";
+        return "bottom-12 sm:bottom-16 -right-24";
 
       case "bottom-center":
         return "bottom-0 left-1/2 -translate-x-1/2";
@@ -80,7 +80,7 @@ const FloatingBadge = ({
           "--float-duration": `${duration}s`,
         } as React.CSSProperties
       }
-      className={`absolute px-4 sm:px-6 py-3 sm:py-4 rounded-[28px] sm:rounded-[36px] font-arima font-bold text-lg sm:text-xl lg:text-2xl border border-accent-blue whitespace-nowrap shadow-lg duration-500 ${textColor ? textColor : "text-badge-text"} ${bgColor ? bgColor : "bg-badge-bg"} ${getBadgePosition(position)} ${getBadgeFloatingType(type)} ${className}`}
+      className={`absolute p-1 rounded-[28px] sm:rounded-[36px] font-arima font-bold text-lg sm:text-xl border border-accent-blue/80 whitespace-nowrap shadow-lg duration-500 ${textColor ? textColor : "text-badge-text"} ${bgColor ? bgColor : "bg-badge-bg"} ${getBadgePosition(position)} ${getBadgeFloatingType(type)} ${className}`}
     >
       {children || "Badge"}
     </div>

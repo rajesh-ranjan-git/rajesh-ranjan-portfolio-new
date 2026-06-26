@@ -1,10 +1,10 @@
-import { socialMedia } from "@/config/social.config";
+import { socialMediaList } from "@/config/social.config";
 import Link from "next/link";
 
 const SocialMedia = () => {
   return (
     <div className="flex flex-wrap justify-center lg:justify-start items-center gap-2 w-full text-white">
-      {socialMedia.map((social) => {
+      {socialMediaList.map((social) => {
         if (!social.url) return;
 
         const Icon = social.icon;

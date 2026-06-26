@@ -8,71 +8,80 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
-import { SocialMediaType } from "@/types/types/common.types";
 
-export const socialMedia: SocialMediaType[] = [
-  {
+export const socialMedia = {
+  github: {
     id: "github",
     label: "GitHub",
+    userName: "rajesh-ranjan-git",
     url: "https://github.com/rajesh-ranjan-git/",
     color: "text-social-text",
     bgColor: "bg-github",
     icon: FaGithub,
   },
-  {
+  google: {
     id: "google",
     label: "Google",
+    userName: "rajeshranjan8271@gmail.com",
     url: "mailto:rajeshranjan8271@gmail.com",
     color: "text-social-text",
     bgColor: "bg-google",
     icon: FaGoogle,
   },
-  {
+  stackOverflow: {
     id: "stack-overflow",
     label: "Stack Overflow",
+    userName: "rajesh-ranjan",
     url: "https://stackoverflow.com/users/7486676/rajesh-ranjan/",
     color: "text-social-text",
     bgColor: "bg-stack-overflow",
     icon: FaStackOverflow,
   },
-  {
+  linkedin: {
     id: "linkedin",
     label: "LinkedIn",
+    userName: "rajesh-ranjan-full-stack-developer",
     url: "https://www.linkedin.com/in/rajesh-ranjan-full-stack-developer/",
     color: "text-social-text",
     bgColor: "bg-linkedin",
     icon: FaLinkedinIn,
   },
-  {
+  twitter: {
     id: "twitter",
     label: "Twitter",
+    userName: "_rajesh____",
     url: "https://x.com/_rajesh____/",
     color: "text-social-text",
     bgColor: "bg-twitter",
     icon: FaXTwitter,
   },
-  {
+  youtube: {
     id: "youtube",
     label: "Youtube",
+    userName: "",
     url: "",
     color: "text-social-text",
     bgColor: "bg-youtube",
     icon: FaYoutube,
   },
-  {
+  facebook: {
     id: "facebook",
     label: "Facebook",
+    userName: "rajeshranjan8271",
     url: "https://www.facebook.com/rajeshranjan8271/",
     color: "text-social-text",
     bgColor: "bg-facebook",
     icon: FaFacebook,
   },
-  {
+  instagram: {
     id: "instagram",
     label: "Instagram",
+    userName: "_rajesh____",
     url: "https://www.instagram.com/_rajesh____/",
     color: "text-social-text",
     bgColor: "bg-instagram",
     icon: FaInstagram,
   },
-];
+};
+
+export const socialMediaList = Object.values(socialMedia);

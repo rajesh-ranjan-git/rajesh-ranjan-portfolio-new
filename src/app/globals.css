@@ -14,6 +14,7 @@
 
   --badge-bg: #111827;
   --badge-text: #f4f7ff;
+  --badge-text-secondary: #cbd5e1;
 
   --image-frame-bg: rgba(4, 11, 20, 0.45);
   --image-frame-border: rgba(255, 255, 255, 0.25);
@@ -52,6 +53,7 @@
 
   --badge-bg: #f4f7ff;
   --badge-text: #0d0f2b;
+  --badge-text-secondary: #111827;
 
   --image-frame-bg: rgba(255, 255, 255, 0.05);
   --image-frame-border: rgba(133, 154, 255, 0.18);
@@ -69,6 +71,7 @@
 
     --badge-bg: #f4f7ff;
     --badge-text: #0d0f2b;
+    --badge-text-secondary: #4b5563;
 
     --image-frame-bg: rgba(255, 255, 255, 0.05);
     --image-frame-border: rgba(133, 154, 255, 0.18);
@@ -96,6 +99,7 @@
 
   --color-badge-bg: var(--badge-bg);
   --color-badge-text: var(--badge-text);
+  --color-badge-text-secondary: var(--badge-text-secondary);
 
   --color-image-frame-bg: var(--image-frame-bg);
   --color-image-frame-border: var(--image-frame-border);
