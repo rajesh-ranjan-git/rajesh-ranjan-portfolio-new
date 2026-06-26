@@ -17,7 +17,7 @@ const GreetingsParticles = () => {
         color: "transparent",
       },
       fullScreen: {
-        enable: true,
+        enable: false,
       },
       fpsLimit: 120,
       detectRetina: true,
@@ -100,7 +100,11 @@ const GreetingsParticles = () => {
 
   return (
     <ParticlesProvider init={particlesInit}>
-      <Particles id="tsparticles" className="absolute" options={options} />
+      <Particles
+        id="tsparticles"
+        className="absolute h-screen"
+        options={options}
+      />
     </ParticlesProvider>
   );
 };
