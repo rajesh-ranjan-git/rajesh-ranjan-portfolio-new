@@ -24,6 +24,7 @@ const AboutImage = () => {
         alt="Rajesh Ranjan profile illustration"
         width={1024}
         height={1536}
+        loading="eager"
         className="rounded-br-[50%] w-full h-auto"
       />
     </div>

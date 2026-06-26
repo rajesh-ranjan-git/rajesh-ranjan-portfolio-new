@@ -58,9 +58,9 @@ const RootLayout = ({ children }: Readonly<ReactNodeProps>) => {
         <TitleManager />
         <Orb />
         <ToastProvider>
-          <Sidebar />
           <Banner nodeVersion={process.version} />
           <ThemeManager />
+          <Sidebar />
           <ErrorWrapper>{children}</ErrorWrapper>
         </ToastProvider>
       </body>

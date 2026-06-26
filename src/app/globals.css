@@ -12,14 +12,13 @@
   --accent-blue: #3f82d9;
   --accent-purple: #8b5cf6;
 
-  --image-frame-bg: rgba(255, 255, 255, 0.55);
-  --image-frame-border: rgba(133, 154, 255, 0.18);
-  --image-frame-layer-bg: --image-frame-layer-bg: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.45)
-    );
-  --image-frame-layer-border: rgba(133, 154, 255, 0.12);
+  --badge-bg: #111827;
+  --badge-text: #f4f7ff;
+
+  --image-frame-bg: rgba(4, 11, 20, 0.45);
+  --image-frame-border: rgba(255, 255, 255, 0.25);
+  --image-frame-layer-bg: rgba(4, 11, 20, 0.45);
+  --image-frame-layer-border: rgba(255, 255, 255, 0.25);
 
   --github: #333333;
   --google: #ea4335;
@@ -62,14 +61,13 @@
   --primary: #ffffff;
   --secondary: #cbd5e1;
 
-  --image-frame-bg: rgba(26, 31, 78, 0.45);
-  --image-frame-border: rgba(255, 255, 255, 0.15);
-  --image-frame-layer-bg: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0.02)
-  );
-  --image-frame-layer-border: rgba(255, 255, 255, 0.1);
+  --badge-bg: #f4f7ff;
+  --badge-text: #0d0f2b;
+
+  --image-frame-bg: rgba(255, 255, 255, 0.05);
+  --image-frame-border: rgba(133, 154, 255, 0.18);
+  --image-frame-layer-bg: rgba(255, 255, 255, 0.05);
+  --image-frame-layer-border: rgba(133, 154, 255, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,14 +78,13 @@
     --primary: #ffffff;
     --secondary: #cbd5e1;
 
-    --image-frame-bg: rgba(26, 31, 78, 0.45);
-    --image-frame-border: rgba(255, 255, 255, 0.15);
-    --image-frame-layer-bg: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.15),
-      rgba(255, 255, 255, 0.02)
-    );
-    --image-frame-layer-border: rgba(255, 255, 255, 0.1);
+    --badge-bg: #f4f7ff;
+    --badge-text: #0d0f2b;
+
+    --image-frame-bg: rgba(255, 255, 255, 0.05);
+    --image-frame-border: rgba(133, 154, 255, 0.18);
+    --image-frame-layer-bg: rgba(255, 255, 255, 0.05);
+    --image-frame-layer-border: rgba(133, 154, 255, 0.12);
   }
 }
 
@@ -107,6 +104,9 @@
 
   --color-accent-blue: var(--accent-blue);
   --color-accent-purple: var(--accent-purple);
+
+  --color-badge-bg: var(--badge-bg);
+  --color-badge-text: var(--badge-text);
 
   --color-image-frame-bg: var(--image-frame-bg);
   --color-image-frame-border: var(--image-frame-border);
