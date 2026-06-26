@@ -25,10 +25,10 @@ export const ownerConfig = {
   social: {
     github: "rajesh-ranjan-git",
     google: "rajeshranjan8271@gmail.com",
-    stackOverflow: "rajesh-ranjan",
+    // stackOverflow: "rajesh-ranjan",
     linkedin: "rajesh-ranjan-full-stack-developer",
     twitter: "_rajesh____",
-    youtube: "rajeshranjan7733",
+    // youtube: "rajeshranjan7733",
     facebook: "rajeshranjan8271",
     instagram: "_rajesh____",
   },

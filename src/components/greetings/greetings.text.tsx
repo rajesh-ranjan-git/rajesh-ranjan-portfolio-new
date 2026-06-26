@@ -1,5 +1,5 @@
-import { ownerConfig } from "@/config/owner.config";
 import greetingsStyles from "@/animations/greetings.module.css";
+import { ownerConfig } from "@/config/owner.config";
 import { getFullName } from "@/helpers/owner.helpers";
 import Typewriter from "@/components/typewriter/typewriter";
 

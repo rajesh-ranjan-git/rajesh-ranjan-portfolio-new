@@ -17,28 +17,28 @@ const FloatingBadge = ({
   const getBadgePosition = (position?: FloatingBadgePositionType) => {
     switch (position) {
       case "top-left":
-        return "top-12 -left-24";
+        return "top-8 md:top-12 -left-12 md:-left-24";
 
       case "top-right":
-        return "top-12 -right-24";
+        return "top-8 md:top-12 -right-12 md:-right-24";
 
       case "top-center":
         return "top-0 left-1/2 -translate-x-1/2";
 
       case "middle-left":
-        return "top-1/2 -translate-y-1/2 -left-24";
+        return "top-1/2 -translate-y-1/2 -left-12 md:-left-24";
 
       case "middle-right":
-        return "top-1/2 -translate-y-1/2 -right-24";
+        return "top-1/2 -translate-y-1/2 -right-12 md:-right-24";
 
       case "middle-center":
         return "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2";
 
       case "bottom-left":
-        return "bottom-12 sm:bottom-16 -left-24";
+        return "bottom-8 md:bottom-12 sm:bottom-16 -left-12 md:-left-24";
 
       case "bottom-right":
-        return "bottom-12 sm:bottom-16 -right-24";
+        return "bottom-8 md:bottom-12 sm:bottom-16 -right-12 md:-right-24";
 
       case "bottom-center":
         return "bottom-0 left-1/2 -translate-x-1/2";

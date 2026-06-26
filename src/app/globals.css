@@ -12,6 +12,8 @@
   --accent-blue: #3f82d9;
   --accent-purple: #8b5cf6;
 
+  --greetings-bg-props: #000000;
+
   --badge-bg: #111827;
   --badge-text: #f4f7ff;
   --badge-text-secondary: #cbd5e1;
@@ -51,6 +53,8 @@
   --primary: #ffffff;
   --secondary: #cbd5e1;
 
+  --greetings-bg-props: #ffffff;
+
   --badge-bg: #f4f7ff;
   --badge-text: #0d0f2b;
   --badge-text-secondary: #111827;
@@ -68,6 +72,8 @@
 
     --primary: #ffffff;
     --secondary: #cbd5e1;
+
+    --greetings-bg-props: #ffffff;
 
     --badge-bg: #f4f7ff;
     --badge-text: #0d0f2b;
@@ -96,6 +102,8 @@
 
   --color-accent-blue: var(--accent-blue);
   --color-accent-purple: var(--accent-purple);
+
+  --color-greetings-bg-props: var(--greetings-bg-props);
 
   --color-badge-bg: var(--badge-bg);
   --color-badge-text: var(--badge-text);

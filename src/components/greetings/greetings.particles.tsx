@@ -4,12 +4,16 @@ import { useMemo } from "react";
 import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import type { Engine, ISourceOptions } from "@tsparticles/engine";
+import { themeConfig } from "@/config/common.config";
+import { useAppStore } from "@/store/store";
 
 const particlesInit = async (engine: Engine): Promise<void> => {
   await loadSlim(engine);
 };
 
 const GreetingsParticles = () => {
+  const activeTheme = useAppStore((state) => state.activeTheme);
+
   const options = useMemo<ISourceOptions>(
     () => ({
       preset: "snow",
@@ -22,11 +26,13 @@ const GreetingsParticles = () => {
       fpsLimit: 120,
       detectRetina: true,
       particles: {
-        color: {
-          value: "#ffffff",
+        paint: {
+          color: {
+            value: activeTheme === themeConfig.dark ? "#ffffff" : "#000000",
+          },
         },
         opacity: {
-          value: 0.4,
+          value: 0.5,
         },
         shape: {
           type: ["circle", "star", "edge"],
@@ -95,14 +101,22 @@ const GreetingsParticles = () => {
         },
       },
     }),
-    [],
+    [activeTheme],
+  );
+
+  console.log(
+    "Theme:",
+    activeTheme,
+    "Color:",
+    activeTheme === themeConfig.dark ? "#ffffff" : "#000000",
   );
 
   return (
     <ParticlesProvider init={particlesInit}>
       <Particles
+        key={activeTheme}
         id="tsparticles"
-        className="absolute h-screen"
+        className="absolute w-screen h-screen"
         options={options}
       />
     </ParticlesProvider>

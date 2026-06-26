@@ -17,7 +17,7 @@ const ThemeToggle = () => {
 
   return (
     <div
-      className={`p-0.5 rounded-full btn btn-secondary transition-all duration-500 ${activeTheme === themeConfig.dark ? "bg-[#040b14]" : "bg-slate-200"}`}
+      className={`p-0.5 rounded-full btn btn-secondary transition-all duration-500 ${activeTheme === themeConfig.dark ? "bg-secondary" : "bg-secondary"}`}
     >
       <input
         type="checkbox"
