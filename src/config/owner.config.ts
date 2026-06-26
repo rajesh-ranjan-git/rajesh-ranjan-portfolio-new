@@ -9,7 +9,7 @@ export const ownerConfig = {
   description:
     "Experienced Full Stack Developer with expertise in React, Next.js, Node.js, TypeScript, and cloud-based application development.",
   location: { city: "Noida", state: "Uttar Pradesh", country: "India" },
-  phone: 9999340771,
+  phone: "+91-9999340771",
   degree: "Bachelor of Technology",
   stream: "Computer Science & Engineering",
   images: {
@@ -25,10 +25,10 @@ export const ownerConfig = {
   social: {
     github: "rajesh-ranjan-git",
     google: "rajeshranjan8271@gmail.com",
-    // stackOverflow: "rajesh-ranjan",
+    stackOverflow: "",
     linkedin: "rajesh-ranjan-full-stack-developer",
     twitter: "_rajesh____",
-    // youtube: "rajeshranjan7733",
+    youtube: "",
     facebook: "rajeshranjan8271",
     instagram: "_rajesh____",
   },
