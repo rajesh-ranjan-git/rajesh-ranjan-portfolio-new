@@ -97,7 +97,7 @@ const GreetingsBackground = () => {
       </div>
 
       <div
-        className={`w-[300vh] z-8 h-64 absolute left-0 ${greetingsStyles.rectangle} ${greetingsStyles.rectangle_1}`}
+        className={`w-[100vh] md:w-[300vh] z-8 h-64 absolute left-0 ${greetingsStyles.rectangle} ${greetingsStyles.rectangle_1}`}
       ></div>
 
       <div
