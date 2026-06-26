@@ -135,7 +135,7 @@ const ToastContainer: React.FC<{
 }> = ({ toasts, position, onRemove }) => {
   return (
     <div
-      className={`fixed ${positionStylesConfig[position]} z-50 flex flex-col gap-2`}
+      className={`fixed ${positionStylesConfig[position]} z-100 flex flex-col gap-2`}
     >
       {toasts.map((toast) => (
         <ToastItem
