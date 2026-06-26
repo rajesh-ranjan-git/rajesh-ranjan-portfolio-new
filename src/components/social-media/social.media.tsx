@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const SocialMedia = () => {
   return (
-    <div className="z-10 flex flex-wrap justify-center lg:justify-start items-center gap-2 w-full text-white">
+    <div className="flex flex-wrap justify-center lg:justify-start items-center gap-2 w-full text-white">
       {socialMedia.map((social) => {
         if (!social.url) return;
 

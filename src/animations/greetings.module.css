@@ -1,6 +1,5 @@
 .greetings::before {
-  background: linear-gradient(to right, #040b14 -10%, transparent 100%);
-  z-index: -2;
+  background: linear-gradient(to right, #040b14 -10%, transparent 200%);
 }
 
 .wave {
@@ -13,7 +12,6 @@
 
 .rectangle {
   background: linear-gradient(to right, #040b14, rgb(190, 201, 229));
-  z-index: -3;
   box-shadow: 0px 20px 30px 7px rgba(9, 21, 54, 0.25);
 }
 
@@ -30,19 +28,16 @@
 }
 
 .rectangle_transparent {
-  z-index: -3;
   animation: floatingSlow ease-in-out 12s infinite;
 }
 
 .circle {
-  z-index: -2;
   animation:
     fadeInFromTop 0.5s linear forwards,
     floating ease 4s infinite;
 }
 
 .triangle_1 {
-  z-index: -2;
   animation:
     fadeInFromTop 0.5s linear forwards,
     floating ease-in-out 6s infinite;
@@ -53,7 +48,6 @@
 }
 
 .triangle_2 {
-  z-index: -2;
   animation:
     fadeInFromTop 0.5s linear forwards,
     floating ease-in-out 8s infinite;
@@ -64,7 +58,6 @@
 }
 
 .triangle_3 {
-  z-index: -2;
   animation:
     fadeInFromTop 0.5s linear forwards,
     floating ease-in-out 10s infinite;
@@ -75,7 +68,6 @@
 }
 
 .triangle_4 {
-  z-index: -2;
   animation:
     fadeInFromTop 0.5s linear forwards,
     floating ease-in-out 5s infinite;
@@ -129,7 +121,7 @@
     transform: scale(2) rotate(-10deg);
   }
   to {
-    opacity: 01;
+    opacity: 1;
     transform: scale(1) rotate(-10deg);
   }
 }

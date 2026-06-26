@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] px-6 sm:px-10 lg:px-20 xl:px-28 py-20 w-full min-h-screen"
+      className="z-10 items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] px-6 sm:px-10 lg:px-20 xl:px-28 py-20 w-full min-h-screen"
     >
       <AboutImage />
 

@@ -40,17 +40,6 @@
   --fs-h6: clamp(1rem, 1.5vw, 1.25rem);
   --fs-body: clamp(1rem, 1.2vw, 1.125rem);
   --fs-caption: clamp(0.75rem, 0.9vw, 0.875rem);
-
-  /* Z-Index Scale */
-  --z-behind-deep: -3; /* deepest bg shapes — greetings rectangles */
-  --z-behind: -2; /* bg decorative shapes — greetings ::before, circles, triangles */
-  --z-below: -1; /* below-content — backdrop overlay, image bg, particles */
-  --z-base: 0; /* ambient bg — orb */
-  --z-dropdown: 1; /* within-component icon layer — theme toggle SVGs above slider ball */
-  --z-content: 10; /* in-page content — greeting image, social links */
-  --z-nav: 20; /* navigation — sidebar */
-  --z-toast: 50; /* notifications — toast container */
-  --z-floating: 100; /* top-level floating UI — floating menu */
 }
 
 [data-theme="dark"],

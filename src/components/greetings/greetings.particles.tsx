@@ -19,14 +19,14 @@ const GreetingsParticles = () => {
       fullScreen: {
         enable: true,
       },
-      fpsLimit: 60,
+      fpsLimit: 120,
       detectRetina: true,
       particles: {
         color: {
           value: "#ffffff",
         },
         opacity: {
-          value: 0.2,
+          value: 0.4,
         },
         shape: {
           type: ["circle", "star", "edge"],
@@ -41,8 +41,8 @@ const GreetingsParticles = () => {
         },
         zIndex: {
           value: {
-            min: 0,
-            max: 100,
+            min: -1,
+            max: 5,
           },
         },
         number: {
@@ -100,11 +100,7 @@ const GreetingsParticles = () => {
 
   return (
     <ParticlesProvider init={particlesInit}>
-      <Particles
-        id="tsparticles"
-        className="z-[-1] absolute"
-        options={options}
-      />
+      <Particles id="tsparticles" className="absolute" options={options} />
     </ParticlesProvider>
   );
 };
