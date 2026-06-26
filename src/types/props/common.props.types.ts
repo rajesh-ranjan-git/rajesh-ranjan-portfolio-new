@@ -51,7 +51,7 @@ export interface ImageBackgroundProps {
 }
 
 export interface AboutTextProps {
-  title: string;
-  description: string;
+  title: string | null;
+  description: string | null;
   details: AboutTextRowType[];
 }

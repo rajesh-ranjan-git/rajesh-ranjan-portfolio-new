@@ -1,7 +1,10 @@
+import { getAboutDetails } from "@/helpers/owner.helpers";
 import AboutImage from "@/components/about/about.image";
 import AboutText from "@/components/about/about.text";
 
 const About = () => {
+  const aboutDetails = getAboutDetails();
+
   return (
     <section
       id="about"
@@ -10,34 +13,9 @@ const About = () => {
       <AboutImage />
 
       <AboutText
-        title="Full Stack Developer | Business Today Technology"
-        description="Experienced Full Stack Developer with expertise in React, Next.js, Node.js, TypeScript, and cloud-based application development."
-        details={[
-          {
-            label: "Organization",
-            value: "India Today Group",
-          },
-          {
-            label: "Experience",
-            value: "6+ Years",
-          },
-          {
-            label: "Location",
-            value: "Noida, Uttar Pradesh, India",
-          },
-          {
-            label: "Email",
-            value: "rajeshranjan8271@gmail.com",
-          },
-          {
-            label: "Phone",
-            value: "+91-9999340771",
-          },
-          {
-            label: "Degree",
-            value: "B.Tech (Computer Science & Engineering)",
-          },
-        ]}
+        title={aboutDetails.title}
+        description={aboutDetails.description}
+        details={aboutDetails.details}
       />
     </section>
   );

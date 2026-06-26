@@ -63,6 +63,7 @@ export type MenuItemType = {
 };
 
 export type AboutTextRowType = {
+  id: string;
   label: string;
   value: string;
 };

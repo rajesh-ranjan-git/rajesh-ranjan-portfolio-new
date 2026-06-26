@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ownerConfig } from "@/config/owner.config";
 import { useAppStore } from "@/store/store";
+import { getFullName } from "@/helpers/owner.helpers";
 
 const SidebarFooter = () => {
   const sidebarToggle = useAppStore((state) => state.sidebarToggle);
@@ -28,16 +30,18 @@ const SidebarFooter = () => {
 
         {sidebarToggle && (
           <div className="flex flex-col w-full">
-            <p className="w-full translate-y-1 font-alkatra font-bold text-md whitespace-nowrap">
-              Rajesh Ranjan
+            <p className="w-full font-alkatra font-bold text-md whitespace-nowrap translate-y-1">
+              {getFullName()}
             </p>
-            <Link
-              href="mailto:rajeshranjan8271@gmail.com"
-              target="_blank"
-              className="font-semibold text-slate-400 hover:text-white text-xs transition-all ease-in-out"
-            >
-              rajeshranjan8271@gmail.com
-            </Link>
+            {ownerConfig.social.google ? (
+              <Link
+                href="mailto:rajeshranjan8271@gmail.com"
+                target="_blank"
+                className="font-semibold text-slate-400 hover:text-white text-xs transition-all ease-in-out"
+              >
+                {ownerConfig.social.google}
+              </Link>
+            ) : null}
           </div>
         )}
       </div>

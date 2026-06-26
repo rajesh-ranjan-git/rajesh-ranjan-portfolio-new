@@ -1,4 +1,5 @@
 import { useAppStore } from "@/store/store";
+import { getFullName } from "@/helpers/owner.helpers";
 import MenuButton from "@/components/ui/buttons/menu.button";
 
 const SidebarHeader = () => {
@@ -12,7 +13,7 @@ const SidebarHeader = () => {
         {sidebarToggle && (
           <div className="relative p-2 px-4 whitespace-nowrap">
             <h2 className="top-1/2 absolute font-allura font-bold text-3xl md:text-4xl leading-none -translate-y-1/2">
-              Rajesh Ranjan
+              {getFullName()}
             </h2>
           </div>
         )}
