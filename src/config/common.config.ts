@@ -1,5 +1,3 @@
-import { StaticImagesConfigType } from "@/types/types/common.types";
-
 export const appConfig = {
   name: "Portfolio",
   description:
@@ -16,7 +14,7 @@ export const storageConfig = {
   session: "session",
 } as const;
 
-export const staticImagesConfig: StaticImagesConfigType = {
+export const staticImagesConfig = {
   notFoundError: {
     src: "/assets/error/404-error.webp",
     alt: "not-found",

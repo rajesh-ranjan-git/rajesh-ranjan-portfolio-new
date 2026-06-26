@@ -26,10 +26,10 @@ const GlobalError = () => {
         <ServiceWorker />
         <TitleManager />
         <Orb />
-        <Sidebar />
         <ToastProvider>
           <Banner nodeVersion={process.version} />
           <ThemeManager />
+          <Sidebar />
           <FloatingMenu />
 
           <div className="flex flex-col bg-red-100 h-dvh overflow-hidden text-slate-900">

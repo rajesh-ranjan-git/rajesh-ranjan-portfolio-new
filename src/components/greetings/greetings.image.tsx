@@ -1,5 +1,5 @@
-import { ownerConfig } from "@/config/owner.config";
 import Image from "next/image";
+import { ownerConfig } from "@/config/owner.config";
 
 const GreetingsImage = () => {
   return (

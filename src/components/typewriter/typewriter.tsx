@@ -1,7 +1,7 @@
 "use client";
 
-import typewriterStyles from "@/animations/typewriter.module.css";
 import { useEffect, useRef, useState } from "react";
+import typewriterStyles from "@/animations/typewriter.module.css";
 import { TypewriterProps } from "@/types/props/common.props.types";
 
 const Typewriter = ({

@@ -1,4 +1,3 @@
-import { ToastPositionType } from "@/types/types/toast.types";
 import { FaInfoCircle } from "react-icons/fa";
 import { FiAlertCircle, FiCheckCircle } from "react-icons/fi";
 import { TbAlertTriangle } from "react-icons/tb";
@@ -60,7 +59,7 @@ export const variantConfig = {
   },
 };
 
-export const positionStylesConfig: Record<ToastPositionType, string> = {
+export const positionStylesConfig = {
   "top-left": "top-4 left-4",
   "top-right": "top-4 right-4",
   "top-center": "top-4 left-1/2 -translate-x-1/2",

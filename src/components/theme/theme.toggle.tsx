@@ -2,7 +2,6 @@
 
 import { themeConfig } from "@/config/common.config";
 import { useAppStore } from "@/store/store";
-import { useEffect } from "react";
 
 const ThemeToggle = () => {
   const activeTheme = useAppStore((state) => state.activeTheme);

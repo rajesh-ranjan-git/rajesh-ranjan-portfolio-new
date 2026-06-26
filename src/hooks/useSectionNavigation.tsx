@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { toastVariantsConfig } from "@/config/toast.config";
 import { UseSectionNavigationProps } from "@/types/props/hooks.props.types";
 import { useToast } from "@/hooks/toast";
-import { toastVariantsConfig } from "@/config/toast.config";
 import { toTitleCase } from "@/utils/common.utils";
 
 export const useSectionNavigation = ({

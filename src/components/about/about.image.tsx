@@ -1,13 +1,12 @@
-import { ownerConfig } from "@/config/owner.config";
 import Image from "next/image";
 import Link from "next/link";
-import { socialMedia } from "@/config/social.config";
-import { getFullName, getSocialBadge } from "@/helpers/owner.helpers";
+import { ownerConfig } from "@/config/owner.config";
+import { getFullName, getSingleSocialLink } from "@/helpers/owner.helpers";
 import ImageBackground from "@/components/ui/background/image.background";
 import FloatingBadge from "@/components/ui/floating/floating.badge";
 
 const AboutImage = () => {
-  const socialBadge = getSocialBadge();
+  const social = getSingleSocialLink(ownerConfig.socialBadge);
 
   return (
     <div className="isolate relative flex justify-center justify-self-center items-center order-2 md:order-1 bg-image-frame-bg shadow-[0_8px_32px_rgba(13,15,43,0.08),0_2px_8px_rgba(13,15,43,0.04)] backdrop-blur-xl p-3 sm:p-4 border border-image-frame-border rounded-[64px] sm:rounded-[84px] w-full md:w-1/2 lg:w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-none min-h-108">
@@ -52,16 +51,18 @@ const AboutImage = () => {
         </FloatingBadge>
       ) : null}
 
-      {socialBadge ? (
-        <FloatingBadge
-          position="bottom-left"
-          type="float-y"
-          duration={3}
-          className="pr-4"
+      {social ? (
+        <Link
+          href={social.url ?? ""}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group"
         >
-          <Link
-            href={socialMedia.github.url}
-            className="group flex justify-between items-center gap-1 w-full h-full"
+          <FloatingBadge
+            position="bottom-left"
+            type="float-y"
+            duration={3}
+            className="flex justify-between items-center gap-1 pr-4"
           >
             <div className="bg-linear-to-r border border-image-frame-border rounded-full w-12 h-12 overflow-hidden from-accent-purple to-accent-blue shrink-0">
               {ownerConfig.images.profileImage ? (
@@ -82,11 +83,11 @@ const AboutImage = () => {
             <span className="flex flex-col justify-center items-start text-sm">
               <span className="text-lg">{getFullName()}</span>
               <span className="text-badge-text-secondary text-xs transition-all ease-in-out group-hover:text-accent-blue">
-                @{getSocialBadge()}
+                @{social.userName}
               </span>
             </span>
-          </Link>
-        </FloatingBadge>
+          </FloatingBadge>
+        </Link>
       ) : null}
 
       {ownerConfig.images.aboutImage ? (

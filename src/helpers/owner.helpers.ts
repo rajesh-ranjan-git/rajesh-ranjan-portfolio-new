@@ -10,89 +10,97 @@ export const getFullName = () => {
   return "John Doe";
 };
 
+export const getSingleSocialLink = (id: string) => {
+  switch (id) {
+    case socialMedia.github.id:
+      return {
+        id: socialMedia.github.id,
+        userName: ownerConfig.social.github,
+        url: `${socialMedia.github.urlPrefix}/${ownerConfig.social.github}/`,
+      };
+
+    case socialMedia.google.id:
+      return {
+        id: socialMedia.google.id,
+        userName: ownerConfig.social.google,
+        url: `${socialMedia.google.urlPrefix}${ownerConfig.social.google}`,
+      };
+
+    case socialMedia.stackOverflow.id:
+      return {
+        id: socialMedia.stackOverflow.id,
+        userName: ownerConfig.social.stackOverflow,
+        url: `${socialMedia.stackOverflow.urlPrefix}/${ownerConfig.social.stackOverflow}/`,
+      };
+
+    case socialMedia.linkedin.id:
+      return {
+        id: socialMedia.linkedin.id,
+        userName: ownerConfig.social.linkedin,
+        url: `${socialMedia.linkedin.urlPrefix}/${ownerConfig.social.linkedin}/`,
+      };
+
+    case socialMedia.twitter.id:
+      return {
+        id: socialMedia.twitter.id,
+        userName: ownerConfig.social.twitter,
+        url: `${socialMedia.twitter.urlPrefix}/${ownerConfig.social.twitter}/`,
+      };
+
+    case socialMedia.youtube.id:
+      return {
+        id: socialMedia.youtube.id,
+        userName: ownerConfig.social.youtube,
+        url: `${socialMedia.youtube.urlPrefix}${ownerConfig.social.youtube}/`,
+      };
+
+    case socialMedia.facebook.id:
+      return {
+        id: socialMedia.facebook.id,
+        userName: ownerConfig.social.facebook,
+        url: `${socialMedia.facebook.urlPrefix}/${ownerConfig.social.facebook}/`,
+      };
+
+    case socialMedia.instagram.id:
+      return {
+        id: socialMedia.instagram.id,
+        userName: ownerConfig.social.instagram,
+        url: `${socialMedia.instagram.urlPrefix}/${ownerConfig.social.instagram}/`,
+      };
+
+    default:
+      return null;
+  }
+};
+
 export const getSocialLinks = () => {
   let socialLinks = [];
 
   if (ownerConfig.social.github)
-    socialLinks.push({
-      id: socialMedia.github.id,
-      username: ownerConfig.social.github,
-      url: `${socialMedia.github}/${ownerConfig.social.github}/`,
-    });
+    socialLinks.push(getSingleSocialLink(socialMedia.github.id));
 
   if (ownerConfig.social.google)
-    socialLinks.push({
-      id: socialMedia.google.id,
-      username: ownerConfig.social.google,
-      url: `${socialMedia.google}/${ownerConfig.social.google}/`,
-    });
+    socialLinks.push(getSingleSocialLink(socialMedia.google.id));
 
   if (ownerConfig.social.stackOverflow)
-    socialLinks.push({
-      id: socialMedia.stackOverflow.id,
-      username: ownerConfig.social.stackOverflow,
-      url: `${socialMedia.stackOverflow}/${ownerConfig.social.stackOverflow}/`,
-    });
+    socialLinks.push(getSingleSocialLink(socialMedia.stackOverflow.id));
 
   if (ownerConfig.social.linkedin)
-    socialLinks.push({
-      id: socialMedia.linkedin.id,
-      username: ownerConfig.social.linkedin,
-      url: `${socialMedia.linkedin}/${ownerConfig.social.linkedin}/`,
-    });
+    socialLinks.push(getSingleSocialLink(socialMedia.linkedin.id));
 
   if (ownerConfig.social.twitter)
-    socialLinks.push({
-      id: socialMedia.twitter.id,
-      username: ownerConfig.social.twitter,
-      url: `${socialMedia.twitter}/${ownerConfig.social.twitter}/`,
-    });
+    socialLinks.push(getSingleSocialLink(socialMedia.twitter.id));
 
   if (ownerConfig.social.youtube)
-    socialLinks.push({
-      id: socialMedia.youtube.id,
-      username: ownerConfig.social.youtube,
-      url: `${socialMedia.youtube}/${ownerConfig.social.youtube}/`,
-    });
+    socialLinks.push(getSingleSocialLink(socialMedia.youtube.id));
 
   if (ownerConfig.social.facebook)
-    socialLinks.push({
-      id: socialMedia.facebook.id,
-      username: ownerConfig.social.facebook,
-      url: `${socialMedia.facebook}/${ownerConfig.social.facebook}/`,
-    });
+    socialLinks.push(getSingleSocialLink(socialMedia.facebook.id));
 
   if (ownerConfig.social.instagram)
-    socialLinks.push({
-      id: socialMedia.instagram.id,
-      username: ownerConfig.social.instagram,
-      url: `${socialMedia.instagram}/${ownerConfig.social.instagram}/`,
-    });
+    socialLinks.push(getSingleSocialLink(socialMedia.instagram.id));
 
   return socialLinks;
-};
-
-export const getSocialBadge = () => {
-  switch (ownerConfig.socialBadge) {
-    case socialMedia.github.id:
-      return ownerConfig.social.github ? ownerConfig.social.github : null;
-    case socialMedia.google.id:
-      return ownerConfig.social.google ? ownerConfig.social.google : null;
-    case socialMedia.stackOverflow.id:
-      return ownerConfig.social.stackOverflow
-        ? ownerConfig.social.stackOverflow
-        : null;
-    case socialMedia.linkedin.id:
-      return ownerConfig.social.linkedin ? ownerConfig.social.linkedin : null;
-    case socialMedia.twitter.id:
-      return ownerConfig.social.twitter ? ownerConfig.social.twitter : null;
-    case socialMedia.facebook.id:
-      return ownerConfig.social.facebook ? ownerConfig.social.facebook : null;
-    case socialMedia.instagram.id:
-      return ownerConfig.social.instagram ? ownerConfig.social.instagram : null;
-    default:
-      return null;
-  }
 };
 
 export const getLocation = () => {
