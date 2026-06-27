@@ -55,4 +55,4 @@ export const ownerConfig = {
       endYear: 2014,
     },
   },
-};
+} as const;
