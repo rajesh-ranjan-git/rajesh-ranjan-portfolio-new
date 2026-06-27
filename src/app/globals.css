@@ -20,8 +20,6 @@
 
   --image-frame-bg: rgba(4, 11, 20, 0.45);
   --image-frame-border: rgba(255, 255, 255, 0.25);
-  --image-frame-layer-bg: rgba(4, 11, 20, 0.45);
-  --image-frame-layer-border: rgba(255, 255, 255, 0.25);
 
   --github: #333333;
   --google: #ea4335;
@@ -67,8 +65,6 @@
 
   --image-frame-bg: rgba(255, 255, 255, 0.05);
   --image-frame-border: rgba(133, 154, 255, 0.18);
-  --image-frame-layer-bg: rgba(255, 255, 255, 0.05);
-  --image-frame-layer-border: rgba(133, 154, 255, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -87,8 +83,6 @@
 
     --image-frame-bg: rgba(255, 255, 255, 0.05);
     --image-frame-border: rgba(133, 154, 255, 0.18);
-    --image-frame-layer-bg: rgba(255, 255, 255, 0.05);
-    --image-frame-layer-border: rgba(133, 154, 255, 0.12);
   }
 }
 
@@ -117,8 +111,6 @@
 
   --color-image-frame-bg: var(--image-frame-bg);
   --color-image-frame-border: var(--image-frame-border);
-  --color-image-frame-layer-bg: var(--image-frame-layer-bg);
-  --color-image-frame-layer-border: var(--image-frame-layer-border);
 
   --color-github: var(--github);
   --color-google: var(--google);
