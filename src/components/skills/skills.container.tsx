@@ -1,7 +1,11 @@
 import Image from "next/image";
+import { ownerConfig } from "@/config/owner.config";
+import { technologiesConfig } from "@/config/technologies.config";
 import { SkillsToggleProps } from "@/types/props/sections.props.types";
 
 const SkillsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
+  const techItems = ownerConfig.skills;
+
   return (
     <div
       className={`flex flex-wrap justify-center items-center gap-4 transition-all duration-300 ease-in-out ${
@@ -10,230 +14,20 @@ const SkillsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
           : "opacity-0 scale-95 absolute inset-0 pointer-events-none"
       }`}
     >
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
-      <div className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 shrink-0">
-        <Image
-          src="/assets/tech-img/next-js.svg"
-          alt="next-js"
-          width="100"
-          height="100"
-        />
-      </div>
+      {techItems.map((item) => (
+        <div
+          className="flex justify-center items-center bg-white shadow-2xl p-2 rounded-2xl w-20 h-20 overflow-hidden shrink-0"
+          key={technologiesConfig[item].name}
+        >
+          <Image
+            src={technologiesConfig[item].src ?? ""}
+            alt={technologiesConfig[item].name ?? "tech-img"}
+            width="100"
+            height="100"
+            className="w-full h-full object-contain"
+          />
+        </div>
+      ))}
     </div>
   );
 };
