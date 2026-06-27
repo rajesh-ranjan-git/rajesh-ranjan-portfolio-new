@@ -1,10 +1,7 @@
 const Experience = () => {
   return (
-    <section
-      id="experience"
-      className="z-10 px-6 sm:px-10 lg:px-20 xl:px-28 py-16 w-full min-h-screen"
-    >
-      <h1 className="after:block md:after:bottom-12 after:bottom-8 after:absolute relative after:bg-primary pb-8 md:pb-12 after:rounded-lg after:w-20 after:h-1.5 font-arima">
+    <section id="experience">
+      <h1 className="after:block lg:after:bottom-12 after:bottom-8 after:absolute relative after:bg-primary pb-8 lg:pb-12 after:rounded-lg after:w-20 after:h-1.5 font-arima">
         Professional journey...
       </h1>
 

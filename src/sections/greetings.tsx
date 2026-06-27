@@ -6,7 +6,7 @@ const Greetings = () => {
   return (
     <section
       id="home"
-      className={`before:block before:z-10 before:absolute relative before:inset-0 flex flex-wrap justify-around items-center before:opacity-100 pr-2 md:pr-10 md:pl-6 w-full min-h-screen md:max-h-screen overflow-hidden ${greetingsStyles.greetings}`}
+      className={`before:block before:z-10 before:absolute relative before:inset-0 flex flex-wrap justify-around items-center before:opacity-100 pr-2 md:pr-10 md:pl-6 py-0 min-h-screen md:max-h-screen ${greetingsStyles.greetings}`}
     >
       <GreetingsBackground />
 
