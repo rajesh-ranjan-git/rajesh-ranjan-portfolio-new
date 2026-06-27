@@ -6,7 +6,7 @@ import {
 } from "@/helpers/owner.helpers";
 
 const EducationText = ({ details }: EducationTextProps) => {
-  const degree = getDegree();
+  const degree = getDegree(details.degree, details.stream);
   const timeline = getEducationTimeLine(details.startYear, details.endYear);
   const location = getEducationLocation(details.name, details.location);
 

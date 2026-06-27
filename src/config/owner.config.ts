@@ -10,8 +10,6 @@ export const ownerConfig = {
     "Experienced Full Stack Developer with expertise in React, Next.js, Node.js, TypeScript, and cloud-based application development.",
   location: { city: "Noida", state: "Uttar Pradesh", country: "India" },
   phone: "+91-9999340771",
-  degree: "Bachelor of Technology",
-  stream: "Computer Science & Engineering",
   images: {
     profileImage: "/assets/personal-img/profile_photo_3d_cartoon.png",
     greetingsImage: "/assets/personal-img/profile_photo_3d_cartoon.png",
@@ -39,6 +37,7 @@ export const ownerConfig = {
     college: {
       name: "JP Institute of Engineering & Technology",
       location: { city: "Meerut", state: "Uttar Pradesh", country: "India" },
+      degree: "Bachelor of Technology",
       stream: "Computer Science & Engineering",
       gradingSystem: "percent",
       score: 72.8,
@@ -48,6 +47,7 @@ export const ownerConfig = {
     highSchool: {
       name: "Indian School of Learning",
       location: { city: "Dhanbad", state: "Jharkhand", country: "India" },
+      degree: "Senior Secondary (XII)",
       stream: "Science",
       gradingSystem: "percent",
       score: 78,

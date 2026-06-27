@@ -134,12 +134,10 @@ export const getLocation = (location?: {
   return null;
 };
 
-export const getDegree = () => {
-  const degree = ownerConfig.degree;
-  const stream = ownerConfig.stream;
-
-  if (degree.toLowerCase() === "bachelor of technology")
+export const getDegree = (degree?: string, stream?: string) => {
+  if (degree?.toLowerCase() === "bachelor of technology")
     return `B.Tech (${stream})`;
+  else return `${degree}, ${stream}`;
 };
 
 export const getAboutDetails = () => {
@@ -150,7 +148,10 @@ export const getAboutDetails = () => {
   const location = getLocation();
   const email = ownerConfig.social.google;
   const phone = ownerConfig.phone;
-  const degree = getDegree();
+  const degree = getDegree(
+    ownerConfig.education.college.degree,
+    ownerConfig.education.college.stream,
+  );
   const details = [];
 
   if (organization)

@@ -18,6 +18,7 @@ export interface EducationTextProps {
   details: {
     name?: string;
     location?: LocationType;
+    degree?: string;
     stream?: string;
     gradingSystem?: "percent" | "cgpa";
     score?: number;
