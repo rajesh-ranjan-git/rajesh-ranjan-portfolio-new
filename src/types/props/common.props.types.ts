@@ -26,7 +26,7 @@ export interface ButtonProps {
 }
 
 export interface TypewriterProps {
-  words: string[];
+  words: readonly string[];
   loop?: boolean;
   typingSpeed?: number;
   deletingSpeed?: number;
