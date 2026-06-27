@@ -1,7 +1,7 @@
 .btn_mask_1 {
-  mask-image: url("/assets/background/btnMask1.png");
-  -webkit-mask-image: url("/assets/background/btnMask1.png");
-  -moz-mask-image: url("/assets/background/btnMask1.png");
+  mask-image: url("/assets/background/button-mask-1.png");
+  -webkit-mask-image: url("/assets/background/button-mask-1.png");
+  -moz-mask-image: url("/assets/background/button-mask-1.png");
   mask-size: 2300% 100%;
   -webkit-mask-size: 2300% 100%;
   -moz-mask-size: 2300% 100%;
@@ -13,9 +13,9 @@
 }
 
 .btn_mask_2 {
-  mask-image: url("/assets/background/btnMask2.png");
-  -webkit-mask-image: url("/assets/background/btnMask2.png");
-  -moz-mask-image: url("/assets/background/btnMask2.png");
+  mask-image: url("/assets/background/button-mask-2.png");
+  -webkit-mask-image: url("/assets/background/button-mask-2.png");
+  -moz-mask-image: url("/assets/background/button-mask-2.png");
   mask-size: 7100% 100%;
   -webkit-mask-size: 7100% 100%;
   -moz-mask-size: 7100% 100%;
