@@ -1,15 +1,15 @@
 import { getAboutDetails } from "@/helpers/owner.helpers";
+import { SectionProps } from "@/types/props/sections.props.types";
 import AboutImage from "@/components/about/about.image";
 import AboutText from "@/components/about/about.text";
+import SectionHeading from "@/components/sections/section.heading";
 
-const About = () => {
+const About = ({ title }: SectionProps) => {
   const aboutDetails = getAboutDetails();
 
   return (
     <section id="about">
-      <h1 className="after:block lg:after:bottom-12 after:bottom-8 after:absolute relative after:bg-primary pb-8 lg:pb-12 after:rounded-lg after:w-20 after:h-1.5 font-arima">
-        About me...
-      </h1>
+      {title ? <SectionHeading heading={title} /> : null}
 
       <div className="items-center gap-12 md:gap-28 grid grid-cols-1 lg:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] lg:pl-12 w-full">
         <AboutImage />

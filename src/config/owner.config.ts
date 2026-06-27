@@ -35,4 +35,24 @@ export const ownerConfig = {
   socialBadge: "github",
   resumeLink:
     "https://drive.google.com/file/d/1L73b_IyVJpdDCkDk1t9dBPB6kEnEHGrW/view?usp=drive_link",
+  education: {
+    college: {
+      name: "JP Institute of Engineering & Technology",
+      location: { city: "Meerut", state: "Uttar Pradesh", country: "India" },
+      stream: "Computer Science & Engineering",
+      gradingSystem: "percent",
+      score: 72.8,
+      startYear: 2014,
+      endYear: 2018,
+    },
+    highSchool: {
+      name: "Indian School of Learning",
+      location: { city: "Dhanbad", state: "Jharkhand", country: "India" },
+      stream: "Science",
+      gradingSystem: "percent",
+      score: 78,
+      startYear: 2013,
+      endYear: 2014,
+    },
+  },
 };

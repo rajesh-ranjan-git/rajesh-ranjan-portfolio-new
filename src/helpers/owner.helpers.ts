@@ -103,10 +103,19 @@ export const getSocialLinks = () => {
   return socialLinks;
 };
 
-export const getLocation = () => {
-  const city = ownerConfig.location.city;
-  const state = ownerConfig.location.state;
-  const country = ownerConfig.location.country;
+export const getLocation = (location?: {
+  city?: string;
+  state?: string;
+  country?: string;
+}) => {
+  const city =
+    location && location.city ? location.city : ownerConfig.location.city;
+  const state =
+    location && location.state ? location.state : ownerConfig.location.state;
+  const country =
+    location && location.country
+      ? location.country
+      : ownerConfig.location.country;
 
   if (city && state && country) return `${city}, ${state}, ${country}`;
 
@@ -172,4 +181,31 @@ export const getAboutDetails = () => {
     description: description ? description : null,
     details: details,
   };
+};
+
+export const getEducationTimeLine = (
+  startYear?: number,
+  endYear?: number,
+  pursuing?: boolean,
+) => {
+  if (startYear && endYear) return `${startYear} - ${endYear}`;
+
+  if (startYear && pursuing) return `${startYear} - present}`;
+
+  if (endYear) return endYear;
+
+  return null;
+};
+
+export const getEducationLocation = (
+  name?: string,
+  location?: { city?: string; state?: string; country?: string },
+) => {
+  const educationLocation = getLocation(location);
+
+  if (name && educationLocation) return `${name}, ${educationLocation}`;
+
+  if (name) return name;
+
+  return null;
 };

@@ -28,9 +28,3 @@ export type FloatingBadgeFloatType =
   | "float-y-reverse"
   | "float-diagonal"
   | "float-diagonal-reverse";
-
-export type AboutTextRowType = {
-  id: string;
-  label: string;
-  value: string;
-};

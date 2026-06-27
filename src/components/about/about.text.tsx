@@ -1,4 +1,4 @@
-import { AboutTextProps } from "@/types/props/common.props.types";
+import { AboutTextProps } from "@/types/props/sections.props.types";
 
 const AboutText = ({ title, description, details }: AboutTextProps) => {
   return (

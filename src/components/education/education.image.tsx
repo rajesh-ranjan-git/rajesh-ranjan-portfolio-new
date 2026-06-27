@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { EducationImageProps } from "@/types/props/sections.props.types";
 
-const EducationImage = ({ imageSrc }: { imageSrc: string }) => {
+const EducationImage = ({ imageSrc }: EducationImageProps) => {
   return (
-    <div className="top-0 md:top-1/2 left-1/2 md:-left-20 z-10 absolute flex justify-start items-center w-64 lg:w-72 group-hover:scale-102 transition-all -translate-x-1/2 -translate-y-1/2 md:-translate-y-1/2 md:translate-x-0 duration-300 shrink-0">
+    <div className="top-0 md:top-1/2 left-1/2 md:-left-20 z-10 absolute flex justify-start items-center w-64 md:w-68 group-hover:scale-102 transition-all -translate-x-1/2 -translate-y-1/2 md:-translate-y-1/2 md:translate-x-0 duration-300 lg:72 shrink-0">
       <Image
         src={imageSrc}
         alt="Education Background"

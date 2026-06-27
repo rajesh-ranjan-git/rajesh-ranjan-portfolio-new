@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import {
-  AboutTextRowType,
   FloatingBadgePositionType,
   FloatingBadgeFloatType,
 } from "@/types/types/common.types";
@@ -11,6 +10,10 @@ export interface ReactNodeProps {
 
 export interface BannerProps {
   nodeVersion: string;
+}
+
+export interface SectionHeadingProps {
+  heading: string;
 }
 
 export interface ButtonProps {
@@ -48,10 +51,4 @@ export interface FloatingBadgeProps {
 
 export interface ImageBackgroundProps {
   className?: string;
-}
-
-export interface AboutTextProps {
-  title: string | null;
-  description: string | null;
-  details: AboutTextRowType[];
 }

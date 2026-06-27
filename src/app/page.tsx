@@ -15,13 +15,13 @@ export default function Home() {
       <FloatingMenu />
 
       <Greetings />
-      <About />
-      <Skills />
-      <Experience />
-      <Education />
-      <Portfolio />
-      <Certificates />
-      <Contact />
+      <About title="About me..." />
+      <Skills title="What My Programming Skills Includes?" />
+      <Experience title="Professional journey..." />
+      <Education title="Academic details..." />
+      <Portfolio title="Recent works..." />
+      <Certificates title="Verified training accomplishments..." />
+      <Contact title="Beam me a message..." />
 
       <ScrollButton />
     </main>
