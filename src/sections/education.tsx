@@ -2,10 +2,14 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="z-10 items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] bg-purple-400 px-6 sm:px-10 lg:px-20 xl:px-28 py-20 w-full min-h-screen"
+      className="z-10 px-6 sm:px-10 lg:px-20 xl:px-28 py-16 w-full min-h-screen"
     >
-      <div className="flex justify-center items-center w-full h-full">
-        Education Section
+      <h1 className="after:block md:after:bottom-12 after:bottom-8 after:absolute relative after:bg-primary pb-8 md:pb-12 after:rounded-lg after:w-20 after:h-1.5 font-arima">
+        Academic details...
+      </h1>
+
+      <div className="items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] w-full">
+        Education section contents coming soon...
       </div>
     </section>
   );

@@ -104,13 +104,6 @@ const GreetingsParticles = () => {
     [activeTheme],
   );
 
-  console.log(
-    "Theme:",
-    activeTheme,
-    "Color:",
-    activeTheme === themeConfig.dark ? "#ffffff" : "#000000",
-  );
-
   return (
     <ParticlesProvider init={particlesInit}>
       <Particles
