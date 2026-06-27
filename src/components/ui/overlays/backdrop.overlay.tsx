@@ -3,7 +3,7 @@ import { BackdropOverlayProps } from "@/types/props/common.props.types";
 const BackdropOverlay = ({ when, callback }: BackdropOverlayProps) => {
   return (
     <div
-      className={`fixed z-40 inset-0 bg-black backdrop-blur-md transition-all duration-500 ${
+      className={`fixed z-40 inset-0 bg-black transition-all duration-500 ${
         when
           ? "opacity-60 pointer-events-auto"
           : "opacity-0 pointer-events-none"

@@ -32,7 +32,9 @@ const ThemeToggle = () => {
       >
         <svg
           className={`top-1 left-1 z-1 absolute ${
-            activeTheme === themeConfig.dark ? "fill-[#7e7e7e]" : "fill-white"
+            activeTheme === themeConfig.dark
+              ? "fill-[#7e7e7e]"
+              : "fill-fixed-light"
           } w-4 transition-all duration-500`}
           viewBox="0 0 24 24"
           fill="currentColor"
@@ -43,7 +45,7 @@ const ThemeToggle = () => {
             className={`${
               activeTheme === themeConfig.dark
                 ? "stroke-[#7e7e7e]"
-                : "stroke-white"
+                : "stroke-fixed-light"
             } transition-all duration-500`}
             stroke="currentColor"
             strokeWidth="2"
@@ -54,7 +56,9 @@ const ThemeToggle = () => {
 
         <svg
           className={`top-1 left-11 z-1 absolute ${
-            activeTheme === themeConfig.dark ? "fill-white" : "fill-[#7e7e7e]"
+            activeTheme === themeConfig.dark
+              ? "fill-fixed-light"
+              : "fill-[#7e7e7e]"
           } w-4 transition-all duration-500`}
           viewBox="0 0 24 24"
           fill="currentColor"
@@ -64,7 +68,7 @@ const ThemeToggle = () => {
             d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
             className={`${
               activeTheme === themeConfig.dark
-                ? "stroke-white"
+                ? "stroke-fixed-light"
                 : "stroke-[#7e7e7e]"
             } transition-all duration-500`}
             stroke="currentColor"

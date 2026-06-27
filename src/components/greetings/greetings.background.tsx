@@ -7,23 +7,23 @@ const GreetingsBackground = () => {
       <GreetingsParticles />
 
       <div
-        className={`border-8 z-6 border-greetings-bg-props opacity-20 absolute lg:w-160 lg:h-160 md:w-120 md:h-120 w-80 h-80 block lg:left-[-20%] lg:bottom-[-30%] left-[-5%] bottom-[-10%] ${greetingsStyles.rectangle_transparent}`}
+        className={`border-8 z-6 border-alternate-bg opacity-20 absolute lg:w-160 lg:h-160 md:w-120 md:h-120 w-80 h-80 block lg:left-[-20%] lg:bottom-[-30%] left-[-5%] bottom-[-10%] ${greetingsStyles.rectangle_transparent}`}
       ></div>
 
       <div
-        className={`border-8 z-6 border-greetings-bg-props opacity-20 absolute block lg:w-120 lg:h-120 md:w-140 md:h-140 w-100 h-100 right-[10%] top-[5%] ${greetingsStyles.rectangle_transparent}`}
+        className={`border-8 z-6 border-alternate-bg opacity-20 absolute block lg:w-120 lg:h-120 md:w-140 md:h-140 w-100 h-100 right-[10%] top-[5%] ${greetingsStyles.rectangle_transparent}`}
       ></div>
 
       <div
-        className={`border-2 z-6 border-greetings-bg-props opacity-20 absolute block rounded-full w-20 h-20 left-[5%] top-[50%] ${greetingsStyles.circle}`}
+        className={`border-2 z-6 border-alternate-bg opacity-20 absolute block rounded-full w-20 h-20 left-[5%] top-[50%] ${greetingsStyles.circle}`}
       ></div>
 
       <div
-        className={`border-2 z-6 border-greetings-bg-props opacity-20 absolute block rounded-full w-32 h-32 left-[83%] top-[20%] ${greetingsStyles.circle}`}
+        className={`border-2 z-6 border-alternate-bg opacity-20 absolute block rounded-full w-32 h-32 left-[83%] top-[20%] ${greetingsStyles.circle}`}
       ></div>
 
       <div
-        className={`border-2 z-6 border-greetings-bg-props opacity-20 absolute block rounded-full w-40 h-40 right-[25%] top-[80%] ${greetingsStyles.circle}`}
+        className={`border-2 z-6 border-alternate-bg opacity-20 absolute block rounded-full w-40 h-40 right-[25%] top-[80%] ${greetingsStyles.circle}`}
       ></div>
 
       <div className={`absolute z-6 right-[50%] ${greetingsStyles.triangle_1}`}>
@@ -36,7 +36,7 @@ const GreetingsBackground = () => {
           <polygon
             points="50,5 95,95 5,95"
             fill="none"
-            stroke="var(--greetings-bg-props)"
+            stroke="var(--alternate-bg)"
             strokeWidth="4"
           />
         </svg>
@@ -54,7 +54,7 @@ const GreetingsBackground = () => {
           <polygon
             points="50,5 95,95 5,95"
             fill="none"
-            stroke="var(--greetings-bg-props)"
+            stroke="var(--alternate-bg)"
             strokeWidth="4"
           />
         </svg>
@@ -72,7 +72,7 @@ const GreetingsBackground = () => {
           <polygon
             points="50,5 95,95 5,95"
             fill="none"
-            stroke="var(--greetings-bg-props)"
+            stroke="var(--alternate-bg)"
             strokeWidth="4"
           />
         </svg>
@@ -90,7 +90,7 @@ const GreetingsBackground = () => {
           <polygon
             points="50,5 95,95 5,95"
             fill="none"
-            stroke="var(--greetings-bg-props)"
+            stroke="var(--alternate-bg)"
             strokeWidth="4"
           />
         </svg>

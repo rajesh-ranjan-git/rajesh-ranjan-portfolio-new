@@ -80,7 +80,7 @@ const FloatingBadge = ({
           "--float-duration": `${duration}s`,
         } as React.CSSProperties
       }
-      className={`absolute p-1 rounded-[28px] sm:rounded-[36px] font-arima font-bold text-lg sm:text-xl border border-accent-blue/80 whitespace-nowrap shadow-lg duration-500 ${textColor ? textColor : "text-badge-text"} ${bgColor ? bgColor : "bg-badge-bg"} ${getBadgePosition(position)} ${getBadgeFloatingType(type)} ${className}`}
+      className={`absolute p-1 rounded-[28px] sm:rounded-[36px] font-arima font-bold text-lg sm:text-xl border border-accent-blue/80 whitespace-nowrap shadow-lg duration-500 ${textColor ? textColor : "text-alternate-primary"} ${bgColor ? bgColor : "bg-alternate-bg"} ${getBadgePosition(position)} ${getBadgeFloatingType(type)} ${className}`}
     >
       {children || "Badge"}
     </div>

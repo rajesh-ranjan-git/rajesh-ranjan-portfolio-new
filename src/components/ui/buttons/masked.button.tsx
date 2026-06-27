@@ -13,14 +13,14 @@ const MaskedButton = ({
     <div className="relative shadow-lg rounded-xl overflow-hidden font-semibold active:scale-95 duration-500">
       <span
         style={{ borderColor: color, color: color }}
-        className={`absolute flex bg-white border-2 justify-center items-center m-auto rounded-xl w-full h-full overflow-hidden text-center uppercase ${btnTextSize ? `text-${btnTextSize}` : `text-sm`} ${className}`}
+        className={`absolute flex bg-fixed-light border-2 justify-center items-center m-auto rounded-xl w-full h-full overflow-hidden text-center uppercase ${btnTextSize ? `text-${btnTextSize}` : `text-sm`} ${className}`}
       >
         {children}
       </span>
       <button
         style={{ backgroundColor: color, borderColor: color }}
         onClick={onClick}
-        className={`p-1 border-2 w-full h-full text-white cursor-pointer mask-no-repeat uppercase ${btnTextSize ? `text-${btnTextSize}` : `text-sm`} ${variant === "mask-1" ? buttonStyles.btn_mask_1 : buttonStyles.btn_mask_2} ${className}`}
+        className={`p-1 border-2 w-full h-full text-fixed-light cursor-pointer mask-no-repeat uppercase ${btnTextSize ? `text-${btnTextSize}` : `text-sm`} ${variant === "mask-1" ? buttonStyles.btn_mask_1 : buttonStyles.btn_mask_2} ${className}`}
       >
         {children}
       </button>

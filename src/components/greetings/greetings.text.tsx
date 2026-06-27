@@ -5,7 +5,7 @@ import Typewriter from "@/components/typewriter/typewriter";
 
 const GreetingsText = () => {
   return (
-    <div className="flex flex-col justify-center pt-4 h-full text-white text-2xl md:text-4xl lg:text-5xl leading-12 lg:leading-20">
+    <div className="text-fixed-light flex flex-col justify-center pt-4 h-full text-2xl md:text-4xl lg:text-5xl leading-12 lg:leading-20">
       <h1 className="font-semibold">
         Hi There!&nbsp;
         <span

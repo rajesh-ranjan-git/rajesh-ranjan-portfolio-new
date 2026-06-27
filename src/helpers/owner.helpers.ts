@@ -192,6 +192,8 @@ export const getEducationTimeLine = (
 
   if (startYear && pursuing) return `${startYear} - present}`;
 
+  if (startYear) return startYear;
+
   if (endYear) return endYear;
 
   return null;

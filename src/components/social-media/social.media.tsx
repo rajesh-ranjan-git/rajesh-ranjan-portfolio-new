@@ -8,7 +8,7 @@ const SocialMedia = () => {
   const socials = getSocialLinks();
 
   return (
-    <div className="flex flex-wrap justify-center lg:justify-start items-center gap-2 w-full text-white">
+    <div className="text-fixed-light flex flex-wrap justify-center lg:justify-start items-center gap-2 w-full">
       {socialMediaList.map((social) => {
         const socialLink = socials.find((s) => s?.id === social.id);
 

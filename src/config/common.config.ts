@@ -29,7 +29,7 @@ export const staticImagesConfig = {
     height: 400,
     loading: "eager",
   },
-};
+} as const;
 
 export const timelineConfig = {
   oneHour: 1000 * 60 * 60,

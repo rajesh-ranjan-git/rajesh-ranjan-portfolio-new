@@ -7,7 +7,7 @@ import {
 
 const EducationText = ({ details }: EducationTextProps) => {
   const degree = getDegree();
-  const timeline = getEducationTimeLine(details.startYear);
+  const timeline = getEducationTimeLine(details.startYear, details.endYear);
   const location = getEducationLocation(details.name, details.location);
 
   return (
@@ -17,7 +17,7 @@ const EducationText = ({ details }: EducationTextProps) => {
       ) : null}
 
       {timeline ? (
-        <div className="bg-linear-to-br from-sidebar-bg via-sidebar-bg p-1 px-3 rounded-full w-max font-semibold text-white text-xs bg-accent-blue to-accent-purple">
+        <div className="text-fixed-light bg-linear-to-br from-sidebar-bg via-sidebar-bg p-1 px-3 rounded-full w-max font-semibold text-xs bg-accent-blue to-accent-purple">
           {timeline}
         </div>
       ) : null}

@@ -82,7 +82,7 @@ const AboutImage = () => {
             </div>
             <span className="flex flex-col justify-center items-start text-sm">
               <span className="text-lg">{getFullName()}</span>
-              <span className="text-badge-text-secondary text-xs transition-all ease-in-out group-hover:text-accent-blue">
+              <span className="text-alternate-secondary text-xs transition-all ease-in-out group-hover:text-accent-blue">
                 @{social.userName}
               </span>
             </span>

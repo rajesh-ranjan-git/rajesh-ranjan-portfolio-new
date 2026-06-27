@@ -9,7 +9,7 @@ const EducationImage = ({ imageSrc }: EducationImageProps) => {
         alt="Education Background"
         width={500}
         height={500}
-        className="bg-linear-to-br from-sidebar-bg via-sidebar-bg shadow-lg border-2 border-white rounded-4xl w-full h-full transition-all duration-300 to-accent-blue"
+        className="bg-linear-to-br from-sidebar-bg via-sidebar-bg shadow-lg border-2 border-fixed-light rounded-4xl w-full h-full transition-all duration-300 to-accent-blue"
       />
     </div>
   );
