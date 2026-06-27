@@ -35,7 +35,7 @@ const Skills = ({ title }: SectionProps) => {
             setActiveSkillButton={setActiveSkillButton}
           />
 
-          <div className="relative rounded-2xl w-full h-full">
+          <div className="relative rounded-2xl w-full md:h-full min-h-20">
             <RainSkills icons={icons} />
           </div>
         </div>

@@ -17,7 +17,7 @@ const RainSkills = ({ icons, count = 20, className = "" }: RainSkillsProps) => {
       size: 60,
       duration: 6 + Math.random() * 6,
       delay: Math.random() * -12,
-      drift: (Math.random() - 0.5) * 80,
+      drift: 0,
       rotation: Math.random() * 360,
       opacity: 0.3 + Math.random() * 0.7,
     }));

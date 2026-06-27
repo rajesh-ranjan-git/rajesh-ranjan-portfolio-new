@@ -5,9 +5,9 @@ const SkillsToggle = ({
   setActiveSkillButton,
 }: SkillsToggleProps) => {
   return (
-    <div className="relative flex items-center shadow-lg p-1 border border-accent-blue/60 rounded-full w-max font-semibold">
+    <div className="relative flex items-center shadow-lg p-1 border border-primary rounded-full w-max font-semibold">
       <span
-        className={`absolute left-1.5 top-1.5 bottom-1.5 w-[calc(50%-6px)] rounded-full bg-alternate-bg transition-transform duration-300 ease-in-out ${
+        className={`absolute left-1 top-1 bottom-1 w-[calc(50%-4px)] rounded-full bg-alternate-bg transition-transform duration-300 ease-in-out ${
           activeSkillButton === "tools" ? "translate-x-full" : "translate-x-0"
         }`}
       />
