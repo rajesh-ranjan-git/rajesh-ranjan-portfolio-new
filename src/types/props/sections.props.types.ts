@@ -1,4 +1,5 @@
 import { LocationType, AboutTextRowType } from "@/types/types/sections.types";
+import { Dispatch, SetStateAction } from "react";
 
 export interface SectionProps {
   title: string;
@@ -25,4 +26,15 @@ export interface EducationTextProps {
     startYear?: number;
     endYear?: number;
   };
+}
+
+export interface SkillsToggleProps {
+  activeSkillButton: "skills" | "tools";
+  setActiveSkillButton: Dispatch<SetStateAction<"skills" | "tools">>;
+}
+
+export interface RainSkillsProps {
+  icons: string[];
+  count?: number;
+  className?: string;
 }
