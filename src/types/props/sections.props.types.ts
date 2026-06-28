@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction } from "react";
 
 export interface SectionProps {
   title: string;
+  description?: string;
 }
 
 export interface AboutTextProps {

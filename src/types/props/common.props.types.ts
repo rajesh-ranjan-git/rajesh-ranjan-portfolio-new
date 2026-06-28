@@ -12,10 +12,6 @@ export interface BannerProps {
   nodeVersion: string;
 }
 
-export interface SectionHeadingProps {
-  heading: string;
-}
-
 export interface ButtonProps {
   btnTextSize?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
   variant?: "mask-1" | "mask-2";

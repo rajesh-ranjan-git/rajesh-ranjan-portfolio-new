@@ -21,7 +21,10 @@ export default function Home() {
       <Education title="Academic details..." />
       <Portfolio title="Recent works..." />
       <Certificates title="Verified training accomplishments..." />
-      <Contact title="Beam me a message..." />
+      <Contact
+        title="Beam me a message..."
+        description="Whether you have a question, any suggestion, or just want to say hi, drop me a message and I'll get back to you!"
+      />
 
       <ScrollButton />
     </main>
