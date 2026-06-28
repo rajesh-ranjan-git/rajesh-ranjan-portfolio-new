@@ -11,8 +11,6 @@ import ErrorWrapper from "@/components/errors/error.wrapper";
 import ThemeManager from "@/components/theme/theme.manager";
 import Sidebar from "@/components/sidebar/sidebar";
 import Orb from "@/components/ui/background/orb";
-import { themeConfig } from "@/config/common.config";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -50,36 +48,8 @@ export const viewport: Viewport = {
 };
 
 const RootLayout = ({ children }: Readonly<ReactNodeProps>) => {
-  const themeScript = `
-    (() => {
-      try {
-        const theme = localStorage.getItem("theme");
-
-        if (!theme) return;
-
-        const root = document.documentElement;
-        const isDark = theme === "${themeConfig.dark}";
-
-        root.setAttribute("data-theme", isDark ? "dark" : "light");
-
-        root.classList.remove("${themeConfig.dark}", "${themeConfig.light}");
-        root.classList.add(isDark ? "${themeConfig.dark}" : "${themeConfig.light}");
-      } catch {}
-    })();
-  `;
-
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <head>
-        <Script
-          id="theme-script"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: themeScript,
-          }}
-        />
-      </head>
-
       <body
         className={`${alkatra.variable} ${arima.variable} ${poppins.variable} ${allura.variable} antialiased`}
         suppressHydrationWarning
