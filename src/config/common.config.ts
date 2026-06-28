@@ -31,6 +31,14 @@ export const staticImagesConfig = {
   },
 } as const;
 
+export const propertyConstraintsConfig = {
+  minNameLength: 2,
+  maxNameLength: 100,
+  minStringLength: 2,
+  maxStringLength: 100,
+  phoneLength: 10,
+};
+
 export const timelineConfig = {
   oneHour: 1000 * 60 * 60,
   twoHours: 1000 * 60 * 60 * 2,

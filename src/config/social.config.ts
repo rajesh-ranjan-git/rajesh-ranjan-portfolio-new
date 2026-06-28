@@ -4,12 +4,21 @@ import {
   FaGoogle,
   FaInstagram,
   FaLinkedinIn,
+  FaPhone,
   FaStackOverflow,
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
 
 export const socialMedia = {
+  phone: {
+    id: "phone",
+    label: "Phone",
+    urlPrefix: "tel:",
+    color: "text-social-text",
+    bgColor: "bg-fixed-dark",
+    icon: FaPhone,
+  },
   github: {
     id: "github",
     label: "GitHub",

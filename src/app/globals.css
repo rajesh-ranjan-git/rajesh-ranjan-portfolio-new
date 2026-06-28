@@ -18,6 +18,8 @@
 
   --fixed-dark: #0d0f2b;
   --fixed-light: #f4f7ff;
+  --fixed-light: #f4f7ff;
+  --fixed-secondary: #4b5563;
 
   --image-frame-bg: rgba(4, 11, 20, 0.45);
   --image-frame-border: rgba(255, 255, 255, 0.25);
@@ -104,6 +106,7 @@
 
   --color-fixed-dark: var(--fixed-dark);
   --color-fixed-light: var(--fixed-light);
+  --color-fixed-secondary: var(--fixed-secondary);
 
   --color-image-frame-bg: var(--image-frame-bg);
   --color-image-frame-border: var(--image-frame-border);

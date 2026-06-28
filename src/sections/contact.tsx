@@ -1,6 +1,8 @@
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
+import ContactSocials from "@/components/contact/contact.socials";
+import ContactForm from "@/components/contact/contact.form";
 
 const Contact = ({ title, description }: SectionProps) => {
   return (
@@ -9,8 +11,10 @@ const Contact = ({ title, description }: SectionProps) => {
 
       {description ? <SectionDescription description={description} /> : null}
 
-      <div className="items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] w-full">
-        Contact section contents coming soon...
+      <div className="items-center gap-6 grid grid-cols-1 lg:grid-cols-2 w-full">
+        <ContactSocials />
+
+        <ContactForm />
       </div>
     </section>
   );

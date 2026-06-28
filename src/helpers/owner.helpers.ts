@@ -12,6 +12,13 @@ export const getFullName = () => {
 
 export const getSingleSocialLink = (id: string) => {
   switch (id) {
+    case socialMedia.phone.id:
+      return {
+        id: socialMedia.phone.id,
+        userName: ownerConfig.phone,
+        url: `${socialMedia.phone.urlPrefix}/${ownerConfig.phone}/`,
+      };
+
     case socialMedia.github.id:
       return {
         id: socialMedia.github.id,

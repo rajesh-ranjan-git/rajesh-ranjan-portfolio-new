@@ -2,13 +2,16 @@
 
 import Link from "next/link";
 import { socialMediaList } from "@/config/social.config";
+import { SocialMediaProps } from "@/types/props/common.props.types";
 import { getSocialLinks } from "@/helpers/owner.helpers";
 
-const SocialMedia = () => {
+const SocialMedia = ({ section }: SocialMediaProps) => {
   const socials = getSocialLinks();
 
   return (
-    <div className="text-fixed-light flex flex-wrap justify-center lg:justify-start items-center gap-2 w-full">
+    <div
+      className={`text-fixed-light flex flex-wrap justify-center lg:justify-start items-center gap-2 ${section === "contact" ? "w-max" : "w-full"}`}
+    >
       {socialMediaList.map((social) => {
         const socialLink = socials.find((s) => s?.id === social.id);
 
@@ -21,7 +24,7 @@ const SocialMedia = () => {
           <Link
             key={social.id}
             href={href ?? ""}
-            className={`flex justify-center items-center p-1 rounded-full w-10 h-10 transition-all duration-300 ${social.color ? social.color : "text-social-text"} ${social.bgColor ? social.bgColor : "bg-social-bg"} hover:bg-social-hover`}
+            className={`flex justify-center items-center p-1 rounded-full w-10 h-10 shadow-lg transition-all duration-300 ${social.color ? social.color : "text-social-text"} ${social.bgColor ? social.bgColor : "bg-social-bg"} hover:bg-social-hover`}
             target="_blank"
             rel="noopener noreferrer"
           >

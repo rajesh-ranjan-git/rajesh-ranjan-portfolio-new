@@ -48,3 +48,7 @@ export interface FloatingBadgeProps {
 export interface ImageBackgroundProps {
   className?: string;
 }
+
+export interface SocialMediaProps {
+  section?: "greetings" | "contact";
+}
