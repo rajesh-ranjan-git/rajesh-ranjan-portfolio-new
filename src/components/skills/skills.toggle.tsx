@@ -14,13 +14,13 @@ const SkillsToggle = ({
 
       <button
         onClick={() => setActiveSkillButton("skills")}
-        className={`relative px-8 py-2 rounded-full transition-colors ${activeSkillButton === "skills" ? "text-alternate-primary" : "text-primary"}`}
+        className={`relative px-8 py-2 rounded-full transition-colors cursor-pointer ${activeSkillButton === "skills" ? "text-alternate-primary" : "text-primary"}`}
       >
         Skills
       </button>
       <button
         onClick={() => setActiveSkillButton("tools")}
-        className={`relative px-8 py-2 rounded-full transition-colors ${activeSkillButton === "tools" ? "text-alternate-primary" : "text-primary"}`}
+        className={`relative px-8 py-2 rounded-full transition-colors cursor-pointer ${activeSkillButton === "tools" ? "text-alternate-primary" : "text-primary"}`}
       >
         Tools
       </button>
