@@ -52,3 +52,11 @@ export interface ImageBackgroundProps {
 export interface SocialMediaProps {
   section?: "greetings" | "contact";
 }
+
+export interface CardProps {
+  translate?: "up" | "bottom" | "right" | "left";
+  scale?: "up" | "bottom" | "right" | "left" | "all";
+  animateBorder?: boolean;
+  className?: string;
+  children: ReactNode;
+}

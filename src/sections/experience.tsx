@@ -1,6 +1,7 @@
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
+import Card from "@/components/ui/card/card";
 
 const Experience = ({ title, description }: SectionProps) => {
   return (
@@ -9,9 +10,13 @@ const Experience = ({ title, description }: SectionProps) => {
 
       {description ? <SectionDescription description={description} /> : null}
 
-      <div className="items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] w-full">
-        Experience section contents coming soon...
-      </div>
+      <Card>
+        <h3 className="mb-2 font-semibold text-primary text-lg">Experience</h3>
+
+        <p className="text-secondary text-sm leading-7">
+          This place is reserved for experience section.
+        </p>
+      </Card>
     </section>
   );
 };

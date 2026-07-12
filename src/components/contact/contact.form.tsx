@@ -18,6 +18,7 @@ import FormField from "@/components/ui/forms/form.field";
 import FormInput from "@/components/ui/forms/form.input";
 import FormTextarea from "@/components/ui/forms/form.textarea";
 import FormButton from "@/components/ui/forms/form.button";
+import Card from "../ui/card/card";
 
 const ContactForm = () => {
   const validateName = (val: string): string => {
@@ -129,7 +130,10 @@ const ContactForm = () => {
   const [state, formAction, isPending] = useActionState(action, initialState);
 
   return (
-    <div className="text-fixed-dark bg-fixed-light shadow-lg p-6 rounded-xl w-full h-full md:max-h-108 overflow-y-auto no-scrollbar">
+    <Card
+      animateBorder
+      className="w-full h-full md:max-h-108 overflow-y-auto no-scrollbar"
+    >
       <div className="flex flex-col my-auto w-full">
         <Form action={formAction} autoComplete="false">
           <h5 className="font-bold text-center">Whats on your mind...?</h5>
@@ -227,7 +231,7 @@ const ContactForm = () => {
           </div>
         </Form>
       </div>
-    </div>
+    </Card>
   );
 };
 

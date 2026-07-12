@@ -1,0 +1,31 @@
+import {
+  CARD_SCALE_CLASSES,
+  CARD_TRANSLATE_CLASSES,
+} from "@/constants/common.constants";
+import { CardProps } from "@/types/props/common.props.types";
+
+const Card = ({
+  translate,
+  scale,
+  animateBorder,
+  className,
+  children,
+}: CardProps) => {
+  const animationClasses = [
+    translate && CARD_TRANSLATE_CLASSES[translate],
+    scale && CARD_SCALE_CLASSES[scale],
+    animateBorder && "hover:rounded-3xl",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  return (
+    <div
+      className={`bg-card-bg hover:bg-card-bg-hover shadow-[0_12px_20px_var(--color-card-shadow)] backdrop-blur-xl p-6 border border-card-border hover:border-card-border-active rounded-2xl transition-all duration-300 ${animationClasses} ${className}`}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default Card;

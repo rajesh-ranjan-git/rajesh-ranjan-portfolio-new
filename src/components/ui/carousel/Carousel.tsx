@@ -9,6 +9,7 @@ import React, {
   useState,
 } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import Card from "../card/card";
 
 export interface CarouselSlide {
   id: string | number;
@@ -223,13 +224,11 @@ export default function Carousel({
           {extendedSlides.map((slide) => (
             <div
               key={(slide as CarouselSlide & { _key: string })._key}
-              className="px-2 sm:px-3 hover:scale-102 transition-all duration-300 shrink-0"
+              className="px-2 sm:px-3 shrink-0"
               style={{ flex: `0 0 ${slidePercent}%` }}
             >
-              <div
-                className={`p-2 w-full flex items-center justify-center ${slideHeightClassName} overflow-hidden bg-white/10 backdrop-blur-3xl shadow-lg ring-1 ring-black/5 ${
-                  rounded ? "rounded-2xl" : ""
-                }`}
+              <Card
+                className={`shadow-lg px-2 py-2 hover:scale-102 ${slideHeightClassName}`}
               >
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
@@ -242,6 +241,7 @@ export default function Carousel({
                       rounded ? "rounded-xl" : ""
                     }`}
                   />
+
                   {(slide.content || slide.description) && (
                     <div
                       className={`bottom-0 absolute flex flex-col justify-center items-center w-full bg-white/10 p-2 backdrop-blur-xs ${rounded ? "rounded-b-xl" : ""}`}
@@ -259,7 +259,7 @@ export default function Carousel({
                     </div>
                   )}
                 </div>
-              </div>
+              </Card>
             </div>
           ))}
         </div>

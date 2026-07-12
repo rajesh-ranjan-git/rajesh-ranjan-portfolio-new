@@ -24,7 +24,7 @@ const EducationText = ({ details }: EducationTextProps) => {
 
       {location ? <p className="pt-2 lg:pt-6 text-sm">{location}</p> : null}
 
-      <p className="pt-2 lg:pt-6 text-slate-600 text-sm uppercase">
+      <p className="pt-2 lg:pt-6 text-secondary text-sm uppercase">
         {details.gradingSystem ? (
           <span className="font-semibold">
             {details.gradingSystem === "percent"

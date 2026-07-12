@@ -31,10 +31,10 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
     };
 
     return (
-      <div className="relative w-full">
+      <div className="group relative w-full">
         {startIcon && (
           <div
-            className={`top-1/2 left-4 absolute -translate-y-1/2 ${error ? "text-rose-600" : "text-fixed-secondary/30"}`}
+            className={`top-1/2 right-4 absolute transition-all -translate-y-1/2 duration-300 ${error ? "text-error" : "text-input-placeholder group-focus-within:text-input-border-active"}`}
           >
             {startIcon}
           </div>
@@ -44,12 +44,12 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
           ref={ref}
           {...props}
           onChange={handleChange}
-          className={`disabled:opacity-50 shadow-sm focus:shadow-md focus:shadow-accent-blue/50 focus:border-accent-blue/50 px-4 py-2.5 border border-fixed-secondary/30 rounded-xl outline-none w-full text-text-primary placeholder:text-text-muted text-base transition-all duration-300 disabled:cursor-not-allowed ${startIcon ? "pl-10" : ""} ${endIcon ? "pr-10" : ""} ${error ? "border-rose-600" : ""} ${className}`}
+          className={`bg-input-bg disabled:opacity-50 shadow-sm backdrop-blur-md px-4 py-2.5 border rounded-xl outline-none w-full text-input-text placeholder:text-input-placeholder transition-all duration-300 disabled:cursor-not-allowed ${startIcon ? "pl-10" : ""} ${endIcon ? "pr-10" : ""} ${error ? "focus:shadow-error border-error" : "focus:shadow-md border-input-border hover:border-input-border-active focus:border-input-border-active focus:shadow-input-border-active"} ${className}`}
         />
 
         {endIcon && (
           <div
-            className={`top-1/2 right-4 absolute -translate-y-1/2 ${error ? "text-rose-600" : "text-fixed-secondary/80"}`}
+            className={`top-1/2 right-4 absolute transition-all -translate-y-1/2 duration-300 ${error ? "text-error" : "text-input-placeholder group-focus-within:text-input-border-active"}`}
           >
             {endIcon}
           </div>
