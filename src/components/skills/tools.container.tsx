@@ -18,7 +18,6 @@ const ToolsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
       {techItems.map((item) => (
         <Card
           translate="up"
-          animateBorder
           className="bg-white/80 hover:bg-white/80 px-2 py-2 w-20 h-20 overflow-hidden select-none shrink-0"
           key={technologiesConfig[item].name}
         >

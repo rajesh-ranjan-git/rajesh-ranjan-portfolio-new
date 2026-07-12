@@ -2,7 +2,6 @@
 
 :root {
   --bg: rgba(190, 201, 229, 1);
-  --surface: rgba(255, 255, 255, 1);
   --sidebar-bg: rgba(4, 11, 20, 1);
   --primary: rgba(13, 15, 43, 1);
   --secondary: rgba(75, 85, 99, 1);
@@ -10,24 +9,21 @@
   --accent-blue: rgba(63, 130, 217, 1);
   --accent-purple: rgba(139, 92, 246, 1);
 
-  --alternate-bg: #0d0f2b;
-  --alternate-primary: #f4f7ff;
-  --alternate-secondary: #cbd5e1;
+  --alternate-bg: rgba(13, 15, 43, 1);
+  --alternate-primary: rgba(244, 247, 255, 1);
+  --alternate-secondary: rgba(203, 213, 225, 1);
 
-  --fixed-dark: #0d0f2b;
-  --fixed-light: #f4f7ff;
-  --fixed-light: #f4f7ff;
-  --fixed-secondary: #4b5563;
+  --fixed-dark: rgba(13, 15, 43, 1);
+  --fixed-light: rgba(244, 247, 255, 1);
+  --fixed-secondary: rgba(75, 85, 99, 1);
+
+  --overlay: rgba(0, 0, 0, 0.8);
 
   --card-bg: rgba(255, 255, 255, 0.42);
   --card-bg-hover: rgba(255, 255, 255, 0.52);
-
   --card-border: rgba(255, 255, 255, 0.55);
   --card-border-hover: rgba(255, 255, 255, 0.85);
-
   --card-shadow: rgba(13, 15, 43, 0.08);
-
-  --glass-highlight: rgba(255, 255, 255, 0.75);
 
   --input-bg: rgba(255, 255, 255, 0.65);
   --input-border: rgba(13, 15, 43, 0.12);
@@ -46,17 +42,18 @@
   --image-frame-bg: rgba(4, 11, 20, 0.45);
   --image-frame-border: rgba(255, 255, 255, 0.25);
 
-  --github: #333333;
-  --google: #ea4335;
-  --stack-overflow: #f48024;
-  --linkedin: #0e76a8;
-  --twitter: #000000;
-  --youtube: #ff0000;
-  --facebook: #3b5998;
-  --instagram: #e4405f;
-  --social-bg: #3f82d9;
-  --social-text: #ffffff;
-  --social-hover: #040b14;
+  --github: rgba(51, 51, 51, 1);
+  --google: rgba(234, 67, 53, 1);
+  --stack-overflow: rgba(244, 128, 36, 1);
+  --linkedin: rgba(14, 118, 168, 1);
+  --twitter: rgba(0, 0, 0, 1);
+  --youtube: rgba(255, 0, 0, 1);
+  --facebook: rgba(59, 89, 152, 1);
+  --instagram: rgba(228, 64, 95, 1);
+
+  --social-bg: rgba(63, 130, 217, 1);
+  --social-text: rgba(255, 255, 255, 1);
+  --social-hover: rgba(4, 11, 20, 1);
 
   --fs-h1: clamp(2rem, 4vw, 4rem);
   --fs-h2: clamp(1.75rem, 3.5vw, 3rem);
@@ -79,7 +76,6 @@
 [data-theme="dark"],
 .dark {
   --bg: rgba(13, 15, 43, 1);
-  --surface: rgba(17, 24, 39, 1);
   --primary: rgba(255, 255, 255, 1);
   --secondary: rgba(203, 213, 225, 1);
 
@@ -94,8 +90,6 @@
   --card-border-hover: rgba(255, 255, 255, 0.2);
 
   --card-shadow: rgba(0, 0, 0, 0.35);
-
-  --glass-highlight: rgba(255, 255, 255, 0.08);
 
   --input-bg: rgba(255, 255, 255, 0.05);
   --input-border: rgba(255, 255, 255, 0.08);
@@ -119,23 +113,20 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: rgba(13, 15, 43, 1);
-    --surface: rgba(17, 24, 39, 1);
     --primary: rgba(255, 255, 255, 1);
     --secondary: rgba(203, 213, 225, 1);
 
-    --alternate-bg: #f4f7ff;
-    --alternate-primary: #0d0f2b;
-    --alternate-secondary: #111827;
+    --alternate-bg: rgba(244, 247, 255, 1);
+    --alternate-primary: rgba(13, 15, 43, 1);
+    --alternate-secondary: rgba(17, 24, 39, 1);
 
     --card-bg: rgba(17, 24, 39, 0.42);
     --card-bg-hover: rgba(17, 24, 39, 0.55);
 
     --card-border: rgba(255, 255, 255, 0.08);
-    --card-border-hover: rgba(255, 255, 255, 0.15);
+    --card-border-hover: rgba(255, 255, 255, 0.2);
 
     --card-shadow: rgba(0, 0, 0, 0.35);
-
-    --glass-highlight: rgba(255, 255, 255, 0.08);
 
     --input-bg: rgba(255, 255, 255, 0.05);
     --input-border: rgba(255, 255, 255, 0.08);
@@ -164,7 +155,6 @@
   --font-allura: var(--font-allura);
 
   --color-bg: var(--bg);
-  --color-surface: var(--surface);
   --color-sidebar-bg: var(--sidebar-bg);
 
   --color-primary: var(--primary);
@@ -187,12 +177,13 @@
   --color-fixed-light: var(--fixed-light);
   --color-fixed-secondary: var(--fixed-secondary);
 
+  --color-overlay: var(--overlay);
+
   --color-card-bg: var(--card-bg);
   --color-card-bg-hover: var(--card-bg-hover);
   --color-card-border: var(--card-border);
   --color-card-border-hover: var(--card-border-hover);
   --color-card-shadow: var(--card-shadow);
-  --color-card-highlight: var(--glass-highlight);
 
   --color-input-bg: var(--input-bg);
   --color-input-border: var(--input-border);
@@ -208,17 +199,7 @@
 
   --color-success: var(--success);
 
-  --color-focus-ring: var(--accent-blue);
-
-  --color-selection: var(--accent-blue);
-  --color-selection-text: var(--surface);
-
   --color-divider: var(--card-border);
-  --color-overlay: rgba(0, 0, 0, 0.45);
-
-  --color-button-primary-bg: var(--accent-blue);
-  --color-button-primary-text: var(--surface);
-  --color-button-primary-hover: var(--accent-purple);
 
   --color-link: var(--accent-blue);
   --color-link-hover: var(--accent-purple);
@@ -380,21 +361,6 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    box-shadow: 0 10px 40px var(--card-shadow);
-  }
-
-  .focus-ring {
-    outline: none;
-    box-shadow:
-      0 0 0 4px rgba(63, 130, 217, 0.18),
-      0 8px 30px rgba(63, 130, 217, 0.12);
   }
 
   @media (max-width: 640px) {

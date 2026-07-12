@@ -80,7 +80,7 @@ const ToastItem = ({
         damping: 40,
         mass: 1,
       }}
-      className={`${config.cn} bg-surface text-primary border border-primary/10 shadow-lg backdrop-blur-lg relative flex flex-col min-w-64 max-w-72 overflow-hidden rounded-lg p-0`}
+      className={`relative flex flex-col bg-card-bg shadow-[0_12px_20px_var(--color-card-shadow)] backdrop-blur-lg p-0 border border-primary/10 rounded-lg min-w-64 max-w-72 overflow-hidden text-primary ${config.cn}`}
     >
       {toast.toastProgressPosition === "top" && (
         <div className="h-1" style={progressContainerStyle}>
@@ -97,7 +97,9 @@ const ToastItem = ({
         <Icon className={config.iconColor} size={20} />
 
         <div className="pr-4">
-          <p className="font-semibold text-primary text-sm">{toast.title}</p>
+          <p className={`${config.text} font-semibold text-sm`}>
+            {toast.title}
+          </p>
           <p className={`${config.text} opacity-90 m-0 text-xs`}>
             {toast.message}
           </p>

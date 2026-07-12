@@ -26,7 +26,7 @@ const FormButton = ({
     ghost:
       "active:scale-[0.98] bg-fixed-dark text-fixed-light hover:bg-accent-blue cursor-pointer py-3 transition-all duration-300 ease-in-out",
     danger:
-      "alert alert-error active:scale-[0.98] bg-fixed-dark text-fixed-light hover:bg-accent-blue cursor-pointer py-3 transition-all duration-300 ease-in-out",
+      "active:scale-[0.98] bg-fixed-dark text-fixed-light hover:bg-accent-blue cursor-pointer py-3 transition-all duration-300 ease-in-out",
   };
 
   return (
