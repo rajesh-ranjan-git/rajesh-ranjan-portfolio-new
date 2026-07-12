@@ -14,11 +14,11 @@ import {
   numberRegexPropertiesValidator,
   stringPropertiesValidator,
 } from "@/validators/common.validators";
+import Card from "@/components/ui/card/card";
 import FormField from "@/components/ui/forms/form.field";
 import FormInput from "@/components/ui/forms/form.input";
 import FormTextarea from "@/components/ui/forms/form.textarea";
 import FormButton from "@/components/ui/forms/form.button";
-import Card from "../ui/card/card";
 
 const ContactForm = () => {
   const validateName = (val: string): string => {

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ownerConfig } from "@/config/owner.config";
 import { technologiesConfig } from "@/config/technologies.config";
 import { SkillsToggleProps } from "@/types/props/sections.props.types";
-import Card from "../ui/card/card";
+import Card from "@/components/ui/card/card";
 
 const ToolsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
   const techItems = ownerConfig.tools;

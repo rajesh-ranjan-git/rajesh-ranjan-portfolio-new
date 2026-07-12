@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { socialMedia } from "@/config/social.config";
 import { getSingleSocialLink } from "@/helpers/owner.helpers";
 import SocialMedia from "@/components/social-media/social.media";
-import Card from "../ui/card/card";
+import Card from "@/components/ui/card/card";
 
 const ContactSocials = () => {
   const email = getSingleSocialLink(socialMedia.google.id);
