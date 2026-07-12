@@ -80,7 +80,7 @@ const ToastItem = ({
         damping: 40,
         mass: 1,
       }}
-      className={`relative flex flex-col bg-card-bg shadow-[0_12px_20px_var(--color-card-shadow)] backdrop-blur-lg p-0 border border-primary/10 rounded-lg min-w-64 max-w-72 overflow-hidden text-primary ${config.cn}`}
+      className={`relative flex flex-col bg-card-bg shadow-[0_12px_20px_var(--color-card-shadow)] backdrop-blur-xl p-0 border rounded-lg min-w-64 max-w-72 overflow-hidden text-primary ${config.cn}`}
     >
       {toast.toastProgressPosition === "top" && (
         <div className="h-1" style={progressContainerStyle}>
@@ -168,7 +168,7 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({
       title: config.title,
       message: config.message,
       variant: config.variant || toastVariantsConfig.info,
-      duration: config.duration || 3000,
+      duration: config.duration || 100000000,
       toastProgressPosition:
         config.toastProgressPosition || toastProgressPositionsConfig.bottom,
       toastProgressDirection:

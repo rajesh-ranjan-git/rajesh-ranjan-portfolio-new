@@ -30,28 +30,28 @@ export const toastProgressDirectionConfig = {
 
 export const variantConfig = {
   success: {
-    cn: "",
-    text: "text-emerald-600",
+    cn: "bg-emerald-50 border-emerald-200",
+    text: "text-success",
     icon: FiCheckCircle,
-    iconColor: "text-emerald-500",
-    progress: "bg-emerald-500",
+    iconColor: "text-success",
+    progress: "bg-success",
   },
   error: {
-    cn: "bg-error-bg border-error-border",
+    cn: "bg-rose-50 border-rose-200",
     text: "text-error",
     icon: FiAlertCircle,
     iconColor: "text-error",
     progress: "bg-error",
   },
   warning: {
-    cn: "bg-orange-300 border-orange-200",
+    cn: "bg-orange-50 border-orange-200",
     text: "text-orange-600",
     icon: TbAlertTriangle,
     iconColor: "text-orange-500",
     progress: "bg-orange-500",
   },
   info: {
-    cn: "",
+    cn: "border-accent-blue/50",
     text: "text-accent-blue",
     icon: FaInfoCircle,
     iconColor: "text-accent-blue",
