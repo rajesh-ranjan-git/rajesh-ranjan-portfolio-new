@@ -168,7 +168,7 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({
       title: config.title,
       message: config.message,
       variant: config.variant || toastVariantsConfig.info,
-      duration: config.duration || 100000000,
+      duration: config.duration || 3000,
       toastProgressPosition:
         config.toastProgressPosition || toastProgressPositionsConfig.bottom,
       toastProgressDirection:
