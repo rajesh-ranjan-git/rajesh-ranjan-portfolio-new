@@ -1,7 +1,7 @@
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
-import Carousel, { CarouselSlide } from "@/components/ui/carousel/Carousel";
+import Carousel, { CarouselSlide } from "@/components/ui/carousel/slider";
 
 const slides: CarouselSlide[] = [
   {
