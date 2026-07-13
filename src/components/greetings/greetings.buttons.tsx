@@ -27,7 +27,7 @@ const GreetingsButtons = () => {
         <MaskedButton
           btnTextSize="md"
           variant="mask-2"
-          color="#040b14"
+          color="#3f82d9"
           className="p-3 md:px-6 md:text-lg"
           onClick={() => {
             window.open(

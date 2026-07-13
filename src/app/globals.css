@@ -33,6 +33,8 @@
 
   --label: rgba(13, 15, 43, 0.88);
 
+  --button-bg: rgba(13, 15, 43, 1);
+
   --error: rgba(220, 38, 38, 1);
   --error-bg: rgba(220, 38, 38, 0.08);
   --error-border: rgba(220, 38, 38, 0.18);
@@ -192,9 +194,7 @@
   --color-link: var(--accent-blue);
   --color-link-hover: var(--accent-purple);
 
-  --color-button-secondary-bg: transparent;
-  --color-button-secondary-text: var(--primary);
-  --color-button-secondary-border: var(--card-border);
+  --color-button-bg: var(--button-bg);
 
   --color-link: var(--accent-blue);
   --color-link-hover: var(--accent-purple);

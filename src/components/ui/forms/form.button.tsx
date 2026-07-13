@@ -20,13 +20,13 @@ const FormButton = ({
 
   const variants = {
     primary:
-      "hover:opacity-90 active:scale-[0.98] bg-fixed-dark text-fixed-light hover:bg-accent-blue cursor-pointer py-3 transition-all duration-300 ease-in-out",
+      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-card-border-hover cursor-pointer py-3 transition-all duration-300",
     secondary:
-      "active:scale-[0.98] bg-fixed-dark text-fixed-light hover:bg-accent-blue cursor-pointer py-3 transition-all duration-300 ease-in-out",
+      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-card-border-hover cursor-pointer py-3 transition-all duration-300",
     ghost:
-      "active:scale-[0.98] bg-fixed-dark text-fixed-light hover:bg-accent-blue cursor-pointer py-3 transition-all duration-300 ease-in-out",
+      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-card-border-hover cursor-pointer py-3 transition-all duration-300",
     danger:
-      "active:scale-[0.98] bg-fixed-dark text-fixed-light hover:bg-accent-blue cursor-pointer py-3 transition-all duration-300 ease-in-out",
+      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-card-border-hover cursor-pointer py-3 transition-all duration-300",
   };
 
   return (

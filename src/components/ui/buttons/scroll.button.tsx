@@ -3,8 +3,10 @@
 import { FaHandPointUp } from "react-icons/fa6";
 import { useScrollVisibility } from "@/hooks/useScrollVisibility";
 import MaskedButton from "@/components/ui/buttons/masked.button";
+import { useAppStore } from "@/store/store";
 
 const ScrollButton = () => {
+  const activeTheme = useAppStore((state) => state.activeTheme);
   const isVisible = useScrollVisibility({
     threshold: 0.5,
     useViewportHeight: true,
@@ -30,7 +32,7 @@ const ScrollButton = () => {
       <MaskedButton
         btnTextSize="md"
         variant="mask-2"
-        color="#040b14"
+        color={activeTheme === "dark" ? "#3f82d9" : "#040b14"}
         className="p-2 md:text-2xl"
         onClick={scrollToTop}
       >
