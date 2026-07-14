@@ -13,10 +13,11 @@ import Card from "@/components/ui/card/card";
 
 export interface CarouselSlide {
   id: string | number;
-  imageUrl: string;
+  title: string;
+  description?: string;
+  platform?: string;
+  imageSrc: string;
   alt?: string;
-  content?: React.ReactNode;
-  description?: React.ReactNode;
 }
 
 export interface CarouselProps {
@@ -221,19 +222,20 @@ export default function Carousel({
           }}
           onTransitionEnd={handleTransitionEnd}
         >
-          {extendedSlides.map((slide) => (
+          {extendedSlides.map((slide, index) => (
             <div
-              key={(slide as CarouselSlide & { _key: string })._key}
+              key={`${slide.title}-${index}`}
               className="px-2 sm:px-3 shrink-0"
               style={{ flex: `0 0 ${slidePercent}%` }}
             >
               <Card
-                className={`shadow-lg px-2 py-2 hover:scale-102 ${slideHeightClassName}`}
+                scale="all"
+                className={`shadow-lg group px-2 py-2 ${slideHeightClassName}`}
               >
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src={slide.imageUrl}
-                    alt={slide.alt ?? ""}
+                    src={slide.imageSrc}
+                    alt={slide.alt ?? (slide.title as string)}
                     width={400}
                     height={400}
                     draggable={false}
@@ -242,17 +244,22 @@ export default function Carousel({
                     }`}
                   />
 
-                  {(slide.content || slide.description) && (
+                  {(slide.title || slide.description) && (
                     <div
-                      className={`bottom-0 absolute flex flex-col justify-center items-center w-full bg-white/10 p-2 backdrop-blur-xs ${rounded ? "rounded-b-xl" : ""}`}
+                      className={`bottom-0 absolute flex flex-col justify-center items-center bg-white/10 backdrop-blur-xs p-2 border border-card-border group-hover:border-card-border-hover rounded-t-sm w-full ${rounded ? "rounded-b-xl" : ""}`}
                     >
-                      {slide.content && (
-                        <span className="text-fixed-dark font-semibold text-xl">
-                          {slide.content}
+                      {slide.title && (
+                        <h4 className="text-fixed-dark font-semibold text-xl">
+                          {slide.title}
+                        </h4>
+                      )}
+                      {slide.platform && (
+                        <span className="text-fixed-dark font-semibold text-lg">
+                          {slide.platform}
                         </span>
                       )}
                       {slide.description && (
-                        <span className="text-fixed-secondary">
+                        <span className="text-fixed-secondary text-sm text-center">
                           {slide.description}
                         </span>
                       )}
