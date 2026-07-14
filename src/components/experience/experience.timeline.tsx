@@ -1,33 +1,10 @@
-"use client";
-
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
 import experienceStyles from "@/animations/experience.module.css";
 
 const ExperienceTimeline = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start center", "end center"],
-  });
-
-  const progressBarHeight = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["0%", "100%"],
-  );
-
   return (
-    <div
-      ref={containerRef}
-      className={`${experienceStyles.timeline_component}`}
-    >
+    <div className={`${experienceStyles.timeline_component}`}>
       <div className={`${experienceStyles.timeline_progress}`}>
-        <motion.div
-          className={`${experienceStyles.timeline_progress_bar}`}
-          style={{ height: progressBarHeight }}
-        ></motion.div>
+        <div className={`${experienceStyles.timeline_progress_bar}`}></div>
       </div>
       <div className={`${experienceStyles.timeline_item}`}>
         <div className={`${experienceStyles.timeline_left}`}>
