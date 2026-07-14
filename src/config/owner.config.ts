@@ -114,6 +114,7 @@ export const ownerConfig = {
   ],
   certificates: [
     {
+      id: "mern-gfg-1",
       title: "MERN GFG Certificate",
       platform: "GeeksForGeeks",
       description:
@@ -121,6 +122,7 @@ export const ownerConfig = {
       imageSrc: "/assets/certificates/mern-gfg-certificate.jpg",
     },
     {
+      id: "react-gfg-1",
       title: "MERN GFG Certificate",
       platform: "GeeksForGeeks",
       description:
@@ -128,6 +130,7 @@ export const ownerConfig = {
       imageSrc: "/assets/certificates/react-gfg-certificate.jpg",
     },
     {
+      id: "mern-gfg-2",
       title: "MERN GFG Certificate",
       platform: "GeeksForGeeks",
       description:
@@ -135,6 +138,7 @@ export const ownerConfig = {
       imageSrc: "/assets/certificates/mern-gfg-certificate.jpg",
     },
     {
+      id: "react-gfg-2",
       title: "MERN GFG Certificate",
       platform: "GeeksForGeeks",
       description:

@@ -12,7 +12,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import Card from "@/components/ui/card/card";
 
 export interface CarouselSlide {
-  id: string | number;
   title: string;
   description?: string;
   platform?: string;
@@ -21,7 +20,7 @@ export interface CarouselSlide {
 }
 
 export interface CarouselProps {
-  slides: CarouselSlide[];
+  slides: readonly CarouselSlide[];
   slideHeightClassName?: string;
   autoPlay?: boolean;
   autoPlayInterval?: number;
@@ -58,15 +57,11 @@ export default function Carousel({
 
   const extendedSlides = useMemo(() => {
     if (realCount === 0) return [];
-    const head = slides.slice(0, cloneCount).map((s, i) => ({
-      ...s,
-      _key: `clone-head-${i}-${s.id}`,
-    }));
-    const tail = slides.slice(realCount - cloneCount).map((s, i) => ({
-      ...s,
-      _key: `clone-tail-${i}-${s.id}`,
-    }));
-    const middle = slides.map((s) => ({ ...s, _key: `real-${s.id}` }));
+    const head = slides.slice(0, cloneCount).map((slide) => ({ ...slide }));
+    const tail = slides
+      .slice(realCount - cloneCount)
+      .map((slide) => ({ ...slide }));
+    const middle = slides.map((slide) => ({ ...slide }));
     return [...tail, ...middle, ...head];
   }, [slides, realCount, cloneCount]);
 
@@ -295,14 +290,14 @@ export default function Carousel({
 
       {showDots && realCount > slidesPerView && (
         <div className="flex justify-center items-center gap-2 mt-8">
-          {slides.map((s, i) => (
+          {slides.map((slide, index) => (
             <button
-              key={s.id}
+              key={`${slide.title}-${index}`}
               type="button"
-              aria-label={`Go to slide ${i + 1}`}
-              onClick={() => goTo(i + cloneCount)}
+              aria-label={`Go to slide ${index + 1}`}
+              onClick={() => goTo(index + cloneCount)}
               className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-blue cursor-pointer ${
-                i === activeDot
+                index === activeDot
                   ? "w-6 bg-accent-blue"
                   : "w-2 bg-gray-300 hover:bg-gray-400"
               }`}
