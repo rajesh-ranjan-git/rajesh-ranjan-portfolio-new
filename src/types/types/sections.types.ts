@@ -31,6 +31,7 @@ export type EducationTextDetailsType = {
   score?: number;
   startYear?: number;
   endYear?: number;
+  imageSrc?: string;
 };
 
 export type DegreeType = "Bachelor of Technology" | "Senior Secondary (XII)";
@@ -45,7 +46,7 @@ export type ExperienceType = {
   endYear?: number;
   company: string;
   companyImage?: string;
-  details?: ExperienceDetailsType[];
+  details?: readonly ExperienceDetailsType[];
 };
 
 export type ExperienceDetailsType = { title: string; description?: string };
