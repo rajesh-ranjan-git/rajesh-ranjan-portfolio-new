@@ -3,6 +3,7 @@ import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
 import ExperienceCard from "@/components/experience/experience.card";
+import ExperienceTimeline from "@/components/experience/experience.timeline";
 
 const Experience = ({ title, description }: SectionProps) => {
   return (
@@ -11,9 +12,11 @@ const Experience = ({ title, description }: SectionProps) => {
 
       {description ? <SectionDescription description={description} /> : null}
 
-      {ownerConfig.professionalExperience.map((experience) => (
+      <ExperienceTimeline />
+
+      {/* {ownerConfig.professionalExperience.map((experience) => (
         <ExperienceCard key={experience.designation} experience={experience} />
-      ))}
+      ))} */}
     </section>
   );
 };
