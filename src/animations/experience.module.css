@@ -41,6 +41,10 @@
   margin-right: auto;
 }
 
+.section_experience {
+  overflow: visible;
+}
+
 .timeline_component {
   display: flex;
   flex-direction: column;

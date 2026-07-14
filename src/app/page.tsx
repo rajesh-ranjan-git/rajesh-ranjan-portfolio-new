@@ -11,7 +11,7 @@ import ScrollButton from "@/components/ui/buttons/scroll.button";
 
 export default function Home() {
   return (
-    <main className="relative pl-0 md:pl-16 min-h-screen overflow-x-hidden">
+    <main className="relative pl-0 md:pl-16 min-h-screen">
       <FloatingMenu />
 
       <Greetings />
