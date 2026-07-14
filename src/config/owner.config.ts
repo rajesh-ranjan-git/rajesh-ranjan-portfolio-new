@@ -35,6 +35,7 @@ export const ownerConfig = {
     "https://drive.google.com/file/d/1L73b_IyVJpdDCkDk1t9dBPB6kEnEHGrW/view?usp=drive_link",
   education: {
     college: {
+      id: "college",
       name: "JP Institute of Engineering & Technology",
       location: { city: "Meerut", state: "Uttar Pradesh", country: "India" },
       degree: "Bachelor of Technology",
@@ -43,8 +44,10 @@ export const ownerConfig = {
       score: 72.8,
       startYear: 2014,
       endYear: 2018,
+      imageSrc: "/assets/education/education-1.svg",
     },
     highSchool: {
+      id: "highSchool",
       name: "Indian School of Learning",
       location: { city: "Dhanbad", state: "Jharkhand", country: "India" },
       degree: "Senior Secondary (XII)",
@@ -53,9 +56,9 @@ export const ownerConfig = {
       score: 78,
       startYear: 2013,
       endYear: 2014,
+      imageSrc: "/assets/education/education-2.svg",
     },
   },
-
   skills: [
     "html",
     "css",
@@ -87,5 +90,26 @@ export const ownerConfig = {
     "redis",
     "slack",
     "ubuntu",
+  ],
+  professionalExperience: [
+    {
+      designation: "Full Stack Developer",
+      startMonth: "April",
+      startYear: 2025,
+      company: "India Today Group",
+      companyImage: "/assets/companies/itg.png",
+      details: [
+        {
+          title: "Full-Stack Application Development",
+          description:
+            "Built and maintained scalable web applications using Next.js, React.js, Node.js, and Python (Flask), accelerating feature delivery by 35% through modular architecture and reusable component systems.",
+        },
+        {
+          title: "Performance Optimization & Rendering Strategies",
+          description:
+            "Improved application speed by up to 40% by implementing Server-Side Rendering (SSR), CDN caching, lazy loading, and optimized API response handling.",
+        },
+      ],
+    },
   ],
 } as const;

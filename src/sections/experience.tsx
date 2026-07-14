@@ -1,7 +1,8 @@
+import { ownerConfig } from "@/config/owner.config";
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
-import Card from "@/components/ui/card/card";
+import ExperienceCard from "@/components/experience/experience.card";
 
 const Experience = ({ title, description }: SectionProps) => {
   return (
@@ -10,13 +11,9 @@ const Experience = ({ title, description }: SectionProps) => {
 
       {description ? <SectionDescription description={description} /> : null}
 
-      <Card>
-        <h3 className="mb-2 font-semibold text-primary text-lg">Experience</h3>
-
-        <p className="text-secondary text-sm leading-7">
-          This place is reserved for experience section.
-        </p>
-      </Card>
+      {ownerConfig.professionalExperience.map((experience) => (
+        <ExperienceCard key={experience.designation} experience={experience} />
+      ))}
     </section>
   );
 };

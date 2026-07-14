@@ -219,3 +219,29 @@ export const getEducationLocation = (
 
   return null;
 };
+
+export const getExperienceTimeLine = (
+  startMonth?: string,
+  startYear?: number,
+  endMonth?: string,
+  endYear?: number,
+  pursuing?: boolean,
+): string | null => {
+  const start = startYear
+    ? `${startMonth ? `${startMonth} ` : ""}${startYear}`
+    : null;
+
+  const end = pursuing
+    ? "Present"
+    : endYear
+      ? `${endMonth ? `${endMonth} ` : ""}${endYear}`
+      : null;
+
+  if (start && end) return `${start} - ${end}`;
+
+  if (start) return start;
+
+  if (end) return end;
+
+  return null;
+};

@@ -1,5 +1,13 @@
-import { LocationType, AboutTextRowType } from "@/types/types/sections.types";
 import { Dispatch, SetStateAction } from "react";
+import {
+  AboutTextRowType,
+  LocationType,
+  DegreeType,
+  GradingSystemType,
+  ExperienceDetailsType,
+  ExperienceType,
+  EducationTextDetailsType,
+} from "@/types/types/sections.types";
 
 export interface SectionProps {
   title: string;
@@ -12,21 +20,16 @@ export interface AboutTextProps {
   details: AboutTextRowType[];
 }
 
+export interface EducationCardProps {
+  education: EducationTextDetailsType;
+}
+
 export interface EducationImageProps {
   imageSrc: string;
 }
 
 export interface EducationTextProps {
-  details: {
-    name?: string;
-    location?: LocationType;
-    degree?: string;
-    stream?: string;
-    gradingSystem?: "percent" | "cgpa";
-    score?: number;
-    startYear?: number;
-    endYear?: number;
-  };
+  details: EducationTextDetailsType;
 }
 
 export interface SkillsToggleProps {
@@ -38,4 +41,8 @@ export interface RainSkillsProps {
   icons: string[];
   count?: number;
   className?: string;
+}
+
+export interface ExperienceCardProps {
+  experience: ExperienceType;
 }

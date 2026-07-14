@@ -52,9 +52,9 @@ export const CARD_TRANSLATE_CLASSES = {
 } as const;
 
 export const CARD_SCALE_CLASSES = {
-  up: "hover:scale-y-105",
-  bottom: "hover:scale-y-95",
-  left: "hover:scale-x-95",
-  right: "hover:scale-x-105",
-  all: "hover:scale-105",
+  up: "hover:scale-y-102",
+  bottom: "hover:scale-y-98",
+  left: "hover:scale-x-98",
+  right: "hover:scale-x-102",
+  all: "hover:scale-102",
 } as const;
