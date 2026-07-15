@@ -1,109 +1,49 @@
 import experienceStyles from "@/animations/experience.module.css";
+import { ownerConfig } from "@/config/owner.config";
+import { getExperienceTimeLine } from "@/helpers/owner.helpers";
+import ExperienceCard from "@/components/experience/experience.card";
 
 const ExperienceTimeline = () => {
   return (
-    <div className={`${experienceStyles.timeline_component}`}>
-      <div className={`${experienceStyles.timeline_progress}`}>
-        <div className={`${experienceStyles.timeline_progress_bar}`}></div>
-      </div>
-      <div className={`${experienceStyles.timeline_item}`}>
-        <div className={`${experienceStyles.timeline_left}`}>
-          <div className={`${experienceStyles.timeline_date_text}`}>
-            January 2026
-          </div>
-        </div>
-        <div className={`${experienceStyles.timeline_center}`}>
-          <div className={`${experienceStyles.timeline_circle}`}></div>
-        </div>
-        <div className={`${experienceStyles.timeline_right}`}>
-          <div className={`${experienceStyles.margin_bottom_xlarge}`}>
-            <div className={`${experienceStyles.timeline_text}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              animi voluptate quae, neque veniam quaerat, eius distinctio porro
-              dolorem ex sapiente illo sunt impedit eos consequuntur ipsa,
-              soluta quasi sequi! Iusto explicabo quibusdam unde porro, ex
-              nesciunt animi aliquid voluptas minima sit saepe voluptatem
-              accusamus temporibus reprehenderit minus odio dolor distinctio.
-              Modi ratione quaerat praesentium architecto. Modi soluta incidunt
-              iusto.
-            </div>
-          </div>
-          <div className={`${experienceStyles.timeline_image_wrapper}`}>
-            <img
-              src="https://imageio.forbes.com/specials-images/imageserve/6335d236f4ddc58b72592c39/960x0.jpg"
-              loading="lazy"
-              width="480"
-              alt="Tesla Roadster"
-            />
-          </div>
-        </div>
+    <div className="relative flex flex-col justify-center items-center">
+      <div
+        className={`absolute bg-fixed-secondary w-1 h-full ${experienceStyles.timeline_progress}`}
+      >
+        <div
+          className={`absolute w-1 origin-top ${experienceStyles.timeline_progress_bar}`}
+        ></div>
       </div>
 
-      <div className={`${experienceStyles.timeline_item}`}>
-        <div className={`${experienceStyles.timeline_left}`}>
-          <div className={`${experienceStyles.margin_bottom_xlarge}`}>
-            <div className={`${experienceStyles.timeline_text}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              animi voluptate quae, neque veniam quaerat, eius distinctio porro
-              dolorem ex sapiente illo sunt impedit eos consequuntur ipsa,
-              soluta quasi sequi! Iusto explicabo quibusdam unde porro, ex
-              nesciunt animi aliquid voluptas minima sit saepe voluptatem
-              accusamus temporibus reprehenderit minus odio dolor distinctio.
-              Modi ratione quaerat praesentium architecto. Modi soluta incidunt
-              iusto.
-            </div>
-          </div>
-          <div className={`${experienceStyles.timeline_image_wrapper}`}>
-            <img
-              src="https://imageio.forbes.com/specials-images/imageserve/6335d236f4ddc58b72592c39/960x0.jpg"
-              loading="lazy"
-              width="480"
-              alt="Tesla Roadster"
-            />
-          </div>
-        </div>
-        <div className={`${experienceStyles.timeline_center}`}>
-          <div className={`${experienceStyles.timeline_circle}`}></div>
-        </div>
-        <div className={`${experienceStyles.timeline_right}`}>
-          <div className={`${experienceStyles.timeline_date_text}`}>
-            January 2026
-          </div>
-        </div>
-      </div>
+      {ownerConfig.professionalExperience.map((experience) => {
+        const timeline = getExperienceTimeLine(
+          experience.startMonth,
+          experience.startYear,
+          experience.endMonth,
+          experience.endYear,
+          true,
+        );
 
-      <div className={`${experienceStyles.timeline_item}`}>
-        <div className={`${experienceStyles.timeline_left}`}>
-          <div className={`${experienceStyles.timeline_date_text}`}>
-            January 2026
-          </div>
-        </div>
-        <div className={`${experienceStyles.timeline_center}`}>
-          <div className={`${experienceStyles.timeline_circle}`}></div>
-        </div>
-        <div className={`${experienceStyles.timeline_right}`}>
-          <div className={`${experienceStyles.margin_bottom_xlarge}`}>
-            <div className={`${experienceStyles.timeline_text}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              animi voluptate quae, neque veniam quaerat, eius distinctio porro
-              dolorem ex sapiente illo sunt impedit eos consequuntur ipsa,
-              soluta quasi sequi! Iusto explicabo quibusdam unde porro, ex
-              nesciunt animi aliquid voluptas minima sit saepe voluptatem
-              accusamus temporibus reprehenderit minus odio dolor distinctio.
-              Modi ratione quaerat praesentium architecto. Modi soluta incidunt
-              iusto.
+        return (
+          <div
+            key={experience.designation}
+            className="relative gap-0 grid grid-cols-[64px_1fr] md:grid-cols-[1fr_100px_1fr] auto-cols-fr py-20 w-full"
+          >
+            <div className="justify-end items-stretch text-left md:text-right [grid-area:1/2/2/3] md:[grid-area:auto]">
+              <h3 className="top-[50vh] sticky font-alkatra">
+                {timeline || "2026"}
+              </h3>
+            </div>
+            <div className="flex justify-start md:justify-center [grid-area:1/1/3/2] md:[grid-area:auto]">
+              <div
+                className={`top-[50vh] sticky bg-alternate-secondary border-4 border-alternate-bg rounded-full w-6 h-6 ${experienceStyles.timeline_circle}`}
+              ></div>
+            </div>
+            <div className={`${experienceStyles.timeline_right}`}>
+              <ExperienceCard experience={experience} />
             </div>
           </div>
-          <div className={`${experienceStyles.timeline_image_wrapper}`}>
-            <img
-              src="https://imageio.forbes.com/specials-images/imageserve/6335d236f4ddc58b72592c39/960x0.jpg"
-              loading="lazy"
-              width="480"
-              alt="Tesla Roadster"
-            />
-          </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 };

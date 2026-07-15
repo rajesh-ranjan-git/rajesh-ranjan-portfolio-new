@@ -1,17 +1,8 @@
 import Image from "next/image";
 import { ExperienceCardProps } from "@/types/props/sections.props.types";
-import { getExperienceTimeLine } from "@/helpers/owner.helpers";
 import Card from "@/components/ui/card/card";
 
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
-  const timeline = getExperienceTimeLine(
-    experience.startMonth,
-    experience.startYear,
-    experience.endMonth,
-    experience.endYear,
-    true,
-  );
-
   return (
     <Card className="group px-0 py-0" scale="all" animateBorder>
       <div className="text-fixed-light items-center gap-4 sm:gap-5 lg:gap-6 grid grid-cols-[auto_1fr] bg-linear-to-br from-0% via-25% to-100% to-sidebar-bg shadow-[0_12px_20px_var(--color-card-shadow)] px-4 sm:px-5 lg:px-6 py-2 sm:py-3 lg:py-4 rounded-t-2xl group-hover:rounded-t-3xl w-full min-h-20 transition-all duration-300 from-accent-purple via-accent-blue">
@@ -40,12 +31,6 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
               </>
             ) : null}
           </h5>
-
-          {timeline ? (
-            <span className="font-arima font-semibold tracking-wider">
-              {timeline}
-            </span>
-          ) : null}
         </div>
       </div>
       <div className="px-4 sm:px-5 lg:px-6 py-2 sm:py-3 lg:py-4">

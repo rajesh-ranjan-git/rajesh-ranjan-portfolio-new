@@ -111,6 +111,44 @@ export const ownerConfig = {
         },
       ],
     },
+    {
+      designation: "Analyst (UI Developer)",
+      startMonth: "November",
+      startYear: 2020,
+      company: "NTT Data Services",
+      companyImage: "/assets/companies/ntt.jpeg",
+      details: [
+        {
+          title: "Full-Stack Application Development",
+          description:
+            "Built and maintained scalable web applications using Next.js, React.js, Node.js, and Python (Flask), accelerating feature delivery by 35% through modular architecture and reusable component systems.",
+        },
+        {
+          title: "Performance Optimization & Rendering Strategies",
+          description:
+            "Improved application speed by up to 40% by implementing Server-Side Rendering (SSR), CDN caching, lazy loading, and optimized API response handling.",
+        },
+      ],
+    },
+    {
+      designation: "Advisor",
+      startMonth: "August",
+      startYear: 2018,
+      company: "iEnergizer IT Services Pvt. Ltd.",
+      companyImage: "/assets/companies/ie.jpeg",
+      details: [
+        {
+          title: "Full-Stack Application Development",
+          description:
+            "Built and maintained scalable web applications using Next.js, React.js, Node.js, and Python (Flask), accelerating feature delivery by 35% through modular architecture and reusable component systems.",
+        },
+        {
+          title: "Performance Optimization & Rendering Strategies",
+          description:
+            "Improved application speed by up to 40% by implementing Server-Side Rendering (SSR), CDN caching, lazy loading, and optimized API response handling.",
+        },
+      ],
+    },
   ],
   certificates: [
     {

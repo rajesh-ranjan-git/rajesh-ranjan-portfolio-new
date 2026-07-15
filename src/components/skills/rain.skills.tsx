@@ -1,6 +1,6 @@
 "use client";
 
-import { CSSProperties, useEffect, useMemo, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import Image from "next/image";
 import skillsStyles from "@/animations/skills.module.css";
 import { RainItem } from "@/types/types/sections.types";
