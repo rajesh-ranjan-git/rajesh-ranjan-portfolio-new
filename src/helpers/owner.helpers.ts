@@ -194,11 +194,11 @@ export const getAboutDetails = () => {
 export const getEducationTimeLine = (
   startYear?: number,
   endYear?: number,
-  pursuing?: boolean,
+  isCurrent?: boolean,
 ) => {
   if (startYear && endYear) return `${startYear} - ${endYear}`;
 
-  if (startYear && pursuing) return `${startYear} - present}`;
+  if (startYear && isCurrent) return `${startYear} - present}`;
 
   if (startYear) return startYear;
 
@@ -225,13 +225,13 @@ export const getExperienceTimeLine = (
   startYear?: number,
   endMonth?: string,
   endYear?: number,
-  pursuing?: boolean,
+  isCurrent?: boolean,
 ): string | null => {
   const start = startYear
     ? `${startMonth ? `${startMonth} ` : ""}${startYear}`
     : null;
 
-  const end = pursuing
+  const end = isCurrent
     ? "Present"
     : endYear
       ? `${endMonth ? `${endMonth} ` : ""}${endYear}`

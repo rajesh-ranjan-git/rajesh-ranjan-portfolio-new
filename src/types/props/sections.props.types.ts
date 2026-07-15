@@ -43,6 +43,11 @@ export interface RainSkillsProps {
   className?: string;
 }
 
+export interface ExperienceCardWrapperProps {
+  isReversed: boolean;
+  experience: ExperienceType;
+}
+
 export interface ExperienceCardProps {
   experience: ExperienceType;
 }

@@ -94,6 +94,7 @@ export const ownerConfig = {
   professionalExperience: [
     {
       designation: "Full Stack Developer",
+      isCurrent: true,
       startMonth: "April",
       startYear: 2025,
       company: "India Today Group",
@@ -113,8 +114,11 @@ export const ownerConfig = {
     },
     {
       designation: "Analyst (UI Developer)",
+      isCurrent: false,
       startMonth: "November",
       startYear: 2020,
+      endMonth: "April",
+      endYear: 2025,
       company: "NTT Data Services",
       companyImage: "/assets/companies/ntt.jpeg",
       details: [
@@ -132,8 +136,11 @@ export const ownerConfig = {
     },
     {
       designation: "Advisor",
+      isCurrent: false,
       startMonth: "August",
       startYear: 2018,
+      endMonth: "October",
+      endYear: 2020,
       company: "iEnergizer IT Services Pvt. Ltd.",
       companyImage: "/assets/companies/ie.jpeg",
       details: [

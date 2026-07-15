@@ -40,6 +40,7 @@ export type GradingSystemType = "percent" | "cgpa" | "gpa";
 
 export type ExperienceType = {
   designation: string;
+  isCurrent?: boolean;
   startMonth: string;
   startYear: number;
   endMonth?: string;
