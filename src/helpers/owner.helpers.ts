@@ -245,3 +245,35 @@ export const getExperienceTimeLine = (
 
   return null;
 };
+
+export const getExperienceDuration = (
+  startMonth?: string,
+  startYear?: number,
+  endMonth?: string,
+  endYear?: number,
+  isCurrent?: boolean,
+): string | null => {
+  if (!startYear) return null;
+
+  const start = new Date(`${startMonth ?? "Jan"} 1, ${startYear}`);
+
+  const end = isCurrent
+    ? new Date()
+    : endYear
+      ? new Date(`${endMonth ?? "Jan"} 1, ${endYear}`)
+      : null;
+
+  if (!end) return null;
+
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  if (years && months) return `${years}y ${months}m`;
+  if (years) return `${years}y`;
+  return `${months}m`;
+};

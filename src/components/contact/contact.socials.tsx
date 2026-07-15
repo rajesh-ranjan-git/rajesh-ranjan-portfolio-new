@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FaPhone, FaShareNodes } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa6";
+import { RiShareFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import { socialMedia } from "@/config/social.config";
 import { getSingleSocialLink } from "@/helpers/owner.helpers";
@@ -17,7 +18,7 @@ const ContactSocials = () => {
         className="group flex flex-col justify-center items-center gap-2 md:col-span-2 w-full h-full min-h-48"
       >
         <Card className="px-4 py-4 rounded-full group-hover:scale-110">
-          <FaShareNodes size={20} className="-translate-x-0.5" />
+          <RiShareFill size={24} />
         </Card>
 
         <h4 className="font-bold">Social Profiles</h4>

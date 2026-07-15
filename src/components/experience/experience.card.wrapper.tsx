@@ -1,5 +1,8 @@
 import experienceStyles from "@/animations/experience.module.css";
-import { getExperienceTimeLine } from "@/helpers/owner.helpers";
+import {
+  getExperienceDuration,
+  getExperienceTimeLine,
+} from "@/helpers/owner.helpers";
 import { ExperienceCardWrapperProps } from "@/types/props/sections.props.types";
 import ExperienceCard from "@/components/experience/experience.card";
 
@@ -14,15 +17,27 @@ const ExperienceCardWrapper = ({
     experience.endYear,
     experience.isCurrent,
   );
+  const duration = getExperienceDuration(
+    experience.startMonth,
+    experience.startYear,
+    experience.endMonth,
+    experience.endYear,
+    experience.isCurrent,
+  );
 
   return (
     <div className="relative gap-0 grid grid-cols-[40px_1fr] md:grid-cols-[1fr_72px_1fr] auto-cols-fr py-12 w-full">
       <div
         className={`justify-end items-stretch text-left [grid-area:1/2/2/3] md:[grid-area:auto] ${isReversed ? "md:order-3 md:text-left" : "md:order-1 md:text-right"}`}
       >
-        <h4 className="top-[50vh] sticky mb-4 md:mb-0 font-alkatra">
-          {timeline || "2026"}
-        </h4>
+        <div className="top-[50vh] sticky mb-4 md:mb-0">
+          <h4 className="font-alkatra">{timeline || "2026"}</h4>
+          {duration ? (
+            <h6 className="font-arima font-bold text-secondary">
+              &#40;{duration}&#41;
+            </h6>
+          ) : null}
+        </div>
       </div>
       <div className="flex justify-start md:justify-center md:order-2 [grid-area:1/1/3/2] md:[grid-area:auto]">
         <div
