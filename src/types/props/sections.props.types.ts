@@ -52,6 +52,14 @@ export interface ExperienceCardProps {
   experience: ExperienceType;
 }
 
+export interface PortfolioFiltersProps {
+  filters: string[];
+  activeFilter: string;
+  handleFilter: (item: string) => void;
+}
+
 export interface PortfolioFiltersItemProps {
   item: string;
+  isActive: boolean;
+  handleFilter: (item: string) => void;
 }

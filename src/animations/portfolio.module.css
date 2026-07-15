@@ -14,3 +14,7 @@
 .link_mask:hover {
   background-position: 0;
 }
+
+.link_mask_active {
+  background-position: 0;
+}
