@@ -196,7 +196,7 @@ export default function Carousel({
     >
       <div
         ref={trackWrapperRef}
-        className="m-4 overflow-hidden touch-pan-y"
+        className="overflow-hidden touch-pan-y"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
