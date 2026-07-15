@@ -14,7 +14,7 @@ const PortfolioCard = () => {
           height={400}
           className="w-full h-full object-cover object-top group-hover/image:scale-300 origin-top-left transition-all duration-1200 pointer-events-none"
         />
-        <div className="text-fixed-light absolute bg-fixed-dark/90 p-6 w-full h-full transition-all group-hover/image:-translate-y-full duration-1200">
+        <div className="text-fixed-light absolute bg-fixed-dark/90 opacity-0 group-hover/image:opacity-100 p-6 w-full h-full transition-all group-hover/image:-translate-y-full duration-1200">
           <h5 className="font-normal scale-20 group-hover/image:scale-100 origin-left transition-all duration-1200">
             Description of project
           </h5>
