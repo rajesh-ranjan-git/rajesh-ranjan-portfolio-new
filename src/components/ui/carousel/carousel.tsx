@@ -241,20 +241,20 @@ export default function Carousel({
 
                   {(slide.title || slide.description) && (
                     <div
-                      className={`bottom-0 absolute flex flex-col justify-center items-center bg-linear-to-b from-black/0 via-black/40 to-black/90 backdrop-blur-xs p-2 rounded-t-lg w-full ${rounded ? "rounded-b-xl" : ""}`}
+                      className={`bottom-0 absolute flex flex-col gap-0.5 justify-center items-center bg-linear-to-b from-bg/0 via-bg/70 to-bg/95 backdrop-blur-md p-4 rounded-t-lg w-full ${rounded ? "rounded-b-xl" : ""}`}
                     >
                       {slide.title && (
-                        <h4 className="text-fixed-dark font-semibold text-xl">
+                        <h4 className="font-semibold text-primary text-xl">
                           {slide.title}
                         </h4>
                       )}
                       {slide.platform && (
-                        <span className="text-fixed-dark font-semibold text-lg">
+                        <span className="font-semibold text-primary text-lg">
                           {slide.platform}
                         </span>
                       )}
                       {slide.description && (
-                        <span className="text-fixed-secondary text-sm text-center">
+                        <span className="text-secondary text-sm text-center">
                           {slide.description}
                         </span>
                       )}
@@ -296,7 +296,7 @@ export default function Carousel({
               type="button"
               aria-label={`Go to slide ${index + 1}`}
               onClick={() => goTo(index + cloneCount)}
-              className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-blue cursor-pointer ${
+              className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-blue cursor-pointer shadow-sm shadow-card-shadow-dark ${
                 index === activeDot
                   ? "w-6 bg-accent-blue"
                   : "w-2 bg-gray-300 hover:bg-gray-400"
