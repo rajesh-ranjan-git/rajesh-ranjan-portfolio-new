@@ -51,3 +51,7 @@ export interface ExperienceCardWrapperProps {
 export interface ExperienceCardProps {
   experience: ExperienceType;
 }
+
+export interface PortfolioFiltersItemProps {
+  item: string;
+}
