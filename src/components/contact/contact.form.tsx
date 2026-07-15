@@ -19,6 +19,7 @@ import FormField from "@/components/ui/forms/form.field";
 import FormInput from "@/components/ui/forms/form.input";
 import FormTextarea from "@/components/ui/forms/form.textarea";
 import FormButton from "@/components/ui/forms/form.button";
+import { TbSendFilled } from "react-icons/tb";
 
 const ContactForm = () => {
   const validateName = (val: string): string => {
@@ -226,7 +227,8 @@ const ContactForm = () => {
               disabled={isPending}
               className="rounded-xl w-full"
             >
-              Send Message
+              <span>Send Message</span>
+              <TbSendFilled size={18} />
             </FormButton>
           </div>
         </Form>
