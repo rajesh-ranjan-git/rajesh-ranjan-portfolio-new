@@ -16,15 +16,17 @@ const ExperienceCardWrapper = ({
   );
 
   return (
-    <div className="relative gap-0 grid grid-cols-[64px_1fr] md:grid-cols-[1fr_100px_1fr] auto-cols-fr py-20 w-full">
+    <div className="relative gap-0 grid grid-cols-[40px_1fr] md:grid-cols-[1fr_72px_1fr] auto-cols-fr py-12 w-full">
       <div
         className={`justify-end items-stretch text-left [grid-area:1/2/2/3] md:[grid-area:auto] ${isReversed ? "md:order-3 md:text-left" : "md:order-1 md:text-right"}`}
       >
-        <h3 className="top-[50vh] sticky font-alkatra">{timeline || "2026"}</h3>
+        <h4 className="top-[50vh] sticky mb-4 md:mb-0 font-alkatra">
+          {timeline || "2026"}
+        </h4>
       </div>
       <div className="flex justify-start md:justify-center md:order-2 [grid-area:1/1/3/2] md:[grid-area:auto]">
         <div
-          className={`top-[50vh] sticky bg-alternate-secondary border-4 border-alternate-bg rounded-full w-6 h-6 ${experienceStyles.timeline_circle}`}
+          className={`top-[50vh] sticky bg-alternate-secondary border-4 border-alternate-bg rounded-full w-6 h-6 hover:scale-105 transition-all duration-300 ${experienceStyles.timeline_circle}`}
         ></div>
       </div>
       <div
