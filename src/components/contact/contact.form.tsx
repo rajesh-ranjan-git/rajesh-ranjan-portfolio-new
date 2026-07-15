@@ -132,7 +132,7 @@ const ContactForm = () => {
   return (
     <Card
       animateBorder
-      className="w-full h-full md:max-h-108 overflow-y-auto no-scrollbar"
+      className="w-full h-full md:max-h-110 overflow-y-auto no-scrollbar"
     >
       <div className="flex flex-col my-auto w-full">
         <Form action={formAction} autoComplete="false">

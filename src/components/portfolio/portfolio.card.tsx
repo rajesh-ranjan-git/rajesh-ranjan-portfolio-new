@@ -1,20 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import portfolioStyles from "@/animations/portfolio.module.css";
-import Card from "@/components/ui/card/card";
 
 const PortfolioCard = () => {
   return (
-    <Card className="bg-fixed-dark px-0 py-0 w-full">
+    <div className="group bg-fixed-dark shadow-[0_12px_20px_var(--color-card-shadow)] border border-card-border hover:border-card-border-active rounded-2xl w-full overflow-hidden transition-all duration-300">
       <div className="group/image relative bg-fixed-dark rounded-b-xl hover:rounded-b-none overflow-hidden transition-all duration-500">
         <Image
           src="/assets/certificates/mern-gfg-certificate.jpg"
           alt="Project 1"
           width={400}
           height={400}
-          className="w-full h-full object-cover object-top group-hover/image:scale-300 origin-top-left transition-all duration-1200 pointer-events-none"
+          className="w-full h-full object-cover object-top group-hover/image:scale-300 origin-top transition-all duration-1200 pointer-events-none"
         />
-        <div className="text-fixed-light absolute bg-fixed-dark/90 opacity-0 group-hover/image:opacity-100 p-6 w-full h-full transition-all group-hover/image:-translate-y-full duration-1200">
+        <div className="text-fixed-light absolute bg-fixed-dark/90 opacity-0 group-hover/image:opacity-100 px-4 py-10 w-[110%] h-[110%] transition-all group-hover/image:-translate-y-full duration-1200">
           <h5 className="font-normal scale-20 group-hover/image:scale-100 origin-left transition-all duration-1200">
             Description of project
           </h5>
@@ -34,7 +33,7 @@ const PortfolioCard = () => {
           View more
         </Link>
       </div>
-    </Card>
+    </div>
   );
 };
 

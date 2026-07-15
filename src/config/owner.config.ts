@@ -157,6 +157,48 @@ export const ownerConfig = {
       ],
     },
   ],
+  portfolio: [
+    {
+      title: "Project 1",
+      description:
+        "Successfully completed 2 months MERN Stack certification course by GFG.",
+      thumbnail: "/assets/certificates/mern-gfg-certificate.jpg",
+      primaryTech: "next js",
+      techStack: ["next js"],
+    },
+    {
+      title: "Project 2",
+      description:
+        "Successfully completed 2 months MERN Stack certification course by GFG.",
+      thumbnail: "/assets/certificates/mern-gfg-certificate.jpg",
+      primaryTech: "react js",
+      techStack: ["react js"],
+    },
+    {
+      title: "Project 3",
+      description:
+        "Successfully completed 2 months MERN Stack certification course by GFG.",
+      thumbnail: "/assets/certificates/mern-gfg-certificate.jpg",
+      primaryTech: "vanilla js",
+      techStack: ["vanilla js"],
+    },
+    {
+      title: "Project 4",
+      description:
+        "Successfully completed 2 months MERN Stack certification course by GFG.",
+      thumbnail: "/assets/certificates/mern-gfg-certificate.jpg",
+      primaryTech: "frontend",
+      techStack: ["frontend"],
+    },
+    {
+      title: "Project 5",
+      description:
+        "Successfully completed 2 months MERN Stack certification course by GFG.",
+      thumbnail: "/assets/certificates/mern-gfg-certificate.jpg",
+      primaryTech: "next js",
+      techStack: ["next js"],
+    },
+  ],
   certificates: [
     {
       id: "mern-gfg-1",
