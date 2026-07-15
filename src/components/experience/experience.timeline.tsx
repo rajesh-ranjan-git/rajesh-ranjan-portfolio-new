@@ -104,9 +104,6 @@ const ExperienceTimeline = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className={`${experienceStyles.overlay_fade_top}`}></div>
-      <div className={`${experienceStyles.overlay_fade_bottom}`}></div> */}
     </div>
   );
 };
