@@ -1,32 +1,16 @@
 .link_mask {
-  background-image: linear-gradient(to right, #f54568, #f54568 50%, beige 50%);
+  background-image: linear-gradient(
+    to right,
+    var(--accent-pink),
+    var(--accent-pink) 50%,
+    var(--fixed-light) 50%
+  );
   background-size: 200% 100%;
   background-position: -100%;
-  display: inline-block;
-  padding: 0px 0;
-  position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.link_mask::before {
-  content: "";
-  background: #f54568;
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  border-radius: 1rem;
-  left: 0;
-  width: 0;
-  height: 3px;
-  transition: all 0.3s ease-in-out;
 }
 
 .link_mask:hover {
   background-position: 0;
-}
-
-.link_mask:hover::before {
-  width: 100%;
 }

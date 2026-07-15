@@ -13,8 +13,8 @@ const Portfolio = ({ title, description }: SectionProps) => {
 
       {description ? <SectionDescription description={description} /> : null}
 
-      <Card className="px-0 py-0 w-max" animateBorder>
-        <div className="rounded-2xl group-hover:rounded-3xl overflow-hidden transition-all duration-300">
+      <Card className="px-0 py-0 w-max">
+        <div className="rounded-b-xl overflow-hidden transition-all duration-300">
           <Image
             src="/assets/certificates/mern-gfg-certificate.jpg"
             alt="Project 1"
@@ -23,18 +23,12 @@ const Portfolio = ({ title, description }: SectionProps) => {
             className="hover:scale-300 origin-top-left transition-all duration-500"
           />
         </div>
-        <div className="flex justify-between items-center bg-fixed-dark px-4 py-2 rounded-b-2xl group-hover:rounded-b-3xl w-full">
+        <div className="flex justify-between items-center bg-fixed-dark px-4 py-2 w-full">
           <Link
             href="/"
-            className={`uppercase font-bold ${portfolioStyles.link_mask}`}
+            className={`inline-block before:-bottom-px before:left-0 before:absolute relative before:rounded-lg before:w-0 hover:before:w-full before:h-0.75 font-bold uppercase transition-all before:transition-all duration-300 before:duration-300 before:bg-accent-pink ${portfolioStyles.link_mask}`}
           >
             Project
-          </Link>
-          <Link
-            href="/"
-            className={`font-semibold ${portfolioStyles.link_mask}`}
-          >
-            View more
           </Link>
         </div>
       </Card>
