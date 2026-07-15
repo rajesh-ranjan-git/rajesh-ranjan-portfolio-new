@@ -1,3 +1,5 @@
+import { ownerConfig } from "@/config/owner.config";
+
 export type LocationType = {
   city: string;
   state: string;
@@ -51,3 +53,5 @@ export type ExperienceType = {
 };
 
 export type ExperienceDetailsType = { title: string; description?: string };
+
+export type PortfolioItem = (typeof ownerConfig.portfolio)[number];

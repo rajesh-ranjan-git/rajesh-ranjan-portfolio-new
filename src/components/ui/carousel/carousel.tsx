@@ -241,7 +241,7 @@ export default function Carousel({
 
                   {(slide.title || slide.description) && (
                     <div
-                      className={`bottom-0 absolute flex flex-col justify-center items-center bg-white/10 backdrop-blur-xs p-2 border border-card-border group-hover:border-card-border-hover rounded-t-sm w-full ${rounded ? "rounded-b-xl" : ""}`}
+                      className={`bottom-0 absolute flex flex-col justify-center items-center bg-linear-to-b from-black/0 via-black/40 to-black/90 backdrop-blur-xs p-2 rounded-t-lg w-full ${rounded ? "rounded-b-xl" : ""}`}
                     >
                       {slide.title && (
                         <h4 className="text-fixed-dark font-semibold text-xl">
