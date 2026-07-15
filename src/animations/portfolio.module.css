@@ -1,0 +1,48 @@
+.link_mask::after {
+  content: "";
+
+  -webkit-mask-image: linear-gradient(to right, #000 50%, transparent 50%);
+  mask-image: linear-gradient(to right, #000 50%, transparent 50%);
+
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+
+  -webkit-mask-position: 100% 0%;
+  mask-position: 100% 0%;
+
+  transition:
+    mask-position 0.3s ease,
+    -webkit-mask-position 0.3s ease;
+}
+
+.link_mask:hover::after {
+  -webkit-mask-position: 0% 0%;
+  mask-position: 0% 0%;
+}
+
+.link_mask_text {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  -webkit-mask-image: linear-gradient(to left, #000 50%, transparent 50%);
+  mask-image: linear-gradient(to left, #000 50%, transparent 50%);
+
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+
+  -webkit-mask-position: 0% 0%;
+  mask-position: 0% 0%;
+
+  transition:
+    -webkit-mask-position 0.3s ease,
+    mask-position 0.3s ease;
+}
+
+.link_mask:hover .link_mask_text {
+  -webkit-mask-position: 100% 0%;
+  mask-position: 100% 0%;
+}

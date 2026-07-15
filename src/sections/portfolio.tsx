@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+import portfolioStyles from "@/animations/portfolio.module.css";
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
@@ -10,12 +13,31 @@ const Portfolio = ({ title, description }: SectionProps) => {
 
       {description ? <SectionDescription description={description} /> : null}
 
-      <Card>
-        <h3 className="mb-2 font-semibold text-primary text-lg">Portfolio</h3>
+      <Card className="px-0 py-0 w-max" animateBorder>
+        <div className="rounded-2xl group-hover:rounded-3xl overflow-hidden transition-all duration-300">
+          <Image
+            src="/assets/certificates/mern-gfg-certificate.jpg"
+            alt="Project 1"
+            width={400}
+            height={400}
+            className="hover:scale-300 origin-top-left transition-all duration-500"
+          />
+        </div>
+        <div className="flex justify-between items-center bg-fixed-dark px-4 py-2 rounded-b-2xl group-hover:rounded-b-3xl w-full">
+          <Link
+            href="/"
+            className={`inline-block relative after:absolute after:left-0 after:-bottom-1 after:h-0.75 after:w-full after:rounded-2xl after:bg-accent-pink after:content-[''] text-white ${portfolioStyles.link_mask}`}
+          >
+            <span className="text-white">Project</span>
 
-        <p className="text-secondary text-sm leading-7">
-          This place is reserved for portfolio section.
-        </p>
+            <span
+              aria-hidden
+              className={`text-accent-pink ${portfolioStyles.link_mask_text}`}
+            >
+              Project
+            </span>
+          </Link>
+        </div>
       </Card>
     </section>
   );

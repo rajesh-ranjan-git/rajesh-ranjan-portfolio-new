@@ -21,7 +21,7 @@ const Card = ({
 
   return (
     <div
-      className={`bg-card-bg hover:bg-card-bg-hover shadow-[0_12px_20px_var(--color-card-shadow)] backdrop-blur-xl p-6 border border-card-border hover:border-card-border-active rounded-2xl transition-all duration-300 ${animationClasses} ${className}`}
+      className={`group bg-card-bg hover:bg-card-bg-hover shadow-[0_12px_20px_var(--color-card-shadow)] backdrop-blur-xl p-6 border border-card-border hover:border-card-border-active rounded-2xl overflow-hidden transition-all duration-300 ${animationClasses} ${className}`}
     >
       {children}
     </div>
