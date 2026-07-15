@@ -41,14 +41,6 @@ const ExperienceTimeline = () => {
 
       <div className={`${experienceStyles.timeline_item}`}>
         <div className={`${experienceStyles.timeline_left}`}>
-          <div className={`${experienceStyles.timeline_date_text}`}>
-            January 2026
-          </div>
-        </div>
-        <div className={`${experienceStyles.timeline_center}`}>
-          <div className={`${experienceStyles.timeline_circle}`}></div>
-        </div>
-        <div className={`${experienceStyles.timeline_right}`}>
           <div className={`${experienceStyles.margin_bottom_xlarge}`}>
             <div className={`${experienceStyles.timeline_text}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
@@ -68,6 +60,14 @@ const ExperienceTimeline = () => {
               width="480"
               alt="Tesla Roadster"
             />
+          </div>
+        </div>
+        <div className={`${experienceStyles.timeline_center}`}>
+          <div className={`${experienceStyles.timeline_circle}`}></div>
+        </div>
+        <div className={`${experienceStyles.timeline_right}`}>
+          <div className={`${experienceStyles.timeline_date_text}`}>
+            January 2026
           </div>
         </div>
       </div>
