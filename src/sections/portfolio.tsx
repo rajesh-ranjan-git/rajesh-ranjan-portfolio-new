@@ -26,16 +26,15 @@ const Portfolio = ({ title, description }: SectionProps) => {
         <div className="flex justify-between items-center bg-fixed-dark px-4 py-2 rounded-b-2xl group-hover:rounded-b-3xl w-full">
           <Link
             href="/"
-            className={`inline-block relative after:absolute after:left-0 after:-bottom-1 after:h-0.75 after:w-full after:rounded-2xl after:bg-accent-pink after:content-[''] text-white ${portfolioStyles.link_mask}`}
+            className={`uppercase font-bold ${portfolioStyles.link_mask}`}
           >
-            <span className="text-white">Project</span>
-
-            <span
-              aria-hidden
-              className={`text-accent-pink ${portfolioStyles.link_mask_text}`}
-            >
-              Project
-            </span>
+            Project
+          </Link>
+          <Link
+            href="/"
+            className={`font-semibold ${portfolioStyles.link_mask}`}
+          >
+            View more
           </Link>
         </div>
       </Card>
