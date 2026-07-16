@@ -12,8 +12,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import Card from "@/components/ui/card/card";
 
 export interface CarouselSlide {
-  title: string;
-  description?: string;
+  name: string;
   platform?: string;
   imageSrc: string;
   alt?: string;
@@ -219,7 +218,7 @@ export default function Carousel({
         >
           {extendedSlides.map((slide, index) => (
             <div
-              key={`${slide.title}-${index}`}
+              key={`${slide.name}-${index}`}
               className="px-2 sm:px-3 shrink-0"
               style={{ flex: `0 0 ${slidePercent}%` }}
             >
@@ -230,7 +229,7 @@ export default function Carousel({
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
                     src={slide.imageSrc}
-                    alt={slide.alt ?? (slide.title as string)}
+                    alt={slide.alt ?? (slide.name as string)}
                     width={400}
                     height={400}
                     draggable={false}
@@ -239,23 +238,18 @@ export default function Carousel({
                     }`}
                   />
 
-                  {(slide.title || slide.description) && (
+                  {slide.name && (
                     <div
                       className={`bottom-0 absolute flex flex-col gap-0.5 justify-center items-center bg-linear-to-b from-bg/0 via-bg/70 to-bg/95 backdrop-blur-md p-4 rounded-t-lg w-full ${rounded ? "rounded-b-xl" : ""}`}
                     >
-                      {slide.title && (
-                        <h4 className="font-semibold text-primary text-xl">
-                          {slide.title}
-                        </h4>
+                      {slide.name && (
+                        <h6 className="font-semibold text-primary text-xl text-center">
+                          {slide.name}
+                        </h6>
                       )}
                       {slide.platform && (
-                        <span className="font-semibold text-primary text-lg">
+                        <span className="font-semibold text-md text-secondary">
                           {slide.platform}
-                        </span>
-                      )}
-                      {slide.description && (
-                        <span className="text-secondary text-sm text-center">
-                          {slide.description}
                         </span>
                       )}
                     </div>
@@ -292,7 +286,7 @@ export default function Carousel({
         <div className="flex justify-center items-center gap-2 mt-8">
           {slides.map((slide, index) => (
             <button
-              key={`${slide.title}-${index}`}
+              key={`${slide.name}-${index}`}
               type="button"
               aria-label={`Go to slide ${index + 1}`}
               onClick={() => goTo(index + cloneCount)}

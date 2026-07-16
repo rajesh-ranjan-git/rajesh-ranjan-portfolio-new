@@ -295,12 +295,11 @@ export const portfolio = projects.map(([folderName, screenshot], index) => {
 });
 
 export const certificates = certificateFiles.map((fileName) => {
-  const name = fileName.replace(/\.[^.]+$/, "");
-  const title = toTitleCase(name);
+  const name = toTitleCase(fileName.replace(/\.[^.]+$/, ""));
+
   return {
     id: name,
-    title,
-    description: title,
+    name,
     platform: "GeeksForGeeks",
     imageSrc: `/assets/certificates/${fileName}`,
   };
