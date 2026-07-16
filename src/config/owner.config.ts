@@ -204,32 +204,32 @@ export const ownerConfig = {
       id: "mern-gfg-1",
       title: "MERN GFG Certificate",
       platform: "GeeksForGeeks",
-      description:
-        "Successfully completed 2 months MERN Stack certification course by GFG.",
+      // description:
+      //   "Successfully completed 2 months MERN Stack certification course by GFG.",
       imageSrc: "/assets/certificates/mern-gfg-certificate.jpg",
     },
     {
       id: "react-gfg-1",
       title: "MERN GFG Certificate",
       platform: "GeeksForGeeks",
-      description:
-        "Successfully completed 2 months React JS certification course by GFG.",
+      // description:
+      //   "Successfully completed 2 months React JS certification course by GFG.",
       imageSrc: "/assets/certificates/react-gfg-certificate.jpg",
     },
     {
       id: "mern-gfg-2",
       title: "MERN GFG Certificate",
       platform: "GeeksForGeeks",
-      description:
-        "Successfully completed 2 months MERN Stack certification course by GFG.",
+      // description:
+      //   "Successfully completed 2 months MERN Stack certification course by GFG.",
       imageSrc: "/assets/certificates/mern-gfg-certificate.jpg",
     },
     {
       id: "react-gfg-2",
       title: "MERN GFG Certificate",
       platform: "GeeksForGeeks",
-      description:
-        "Successfully completed 2 months React JS certification course by GFG.",
+      // description:
+      //   "Successfully completed 2 months React JS certification course by GFG.",
       imageSrc: "/assets/certificates/react-gfg-certificate.jpg",
     },
   ],
