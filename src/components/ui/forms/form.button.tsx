@@ -11,7 +11,7 @@ const FormButton = ({
   ...props
 }: FormButtonProps) => {
   const base =
-    "inline-flex items-center justify-center gap-2 font-medium transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none shadow-[0_12px_20px_var(--color-card-shadow)]";
+    "inline-flex items-center justify-center gap-2 font-medium transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none shadow-[0_12px_20px_var(--color-surface-shadow)]";
 
   const sizes = {
     sm: "px-3 py-1.5 text-xs rounded-md",
@@ -20,13 +20,13 @@ const FormButton = ({
 
   const variants = {
     primary:
-      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-card-border-hover cursor-pointer py-3 transition-all duration-300",
+      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-surface-border-hover cursor-pointer py-3 transition-all duration-300",
     secondary:
-      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-card-border-hover cursor-pointer py-3 transition-all duration-300",
+      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-surface-border-hover cursor-pointer py-3 transition-all duration-300",
     ghost:
-      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-card-border-hover cursor-pointer py-3 transition-all duration-300",
+      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-surface-border-hover cursor-pointer py-3 transition-all duration-300",
     danger:
-      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-card-border-hover cursor-pointer py-3 transition-all duration-300",
+      "active:scale-[0.98] bg-button-bg text-fixed-light hover:bg-accent-blue border border-surface-border-hover cursor-pointer py-3 transition-all duration-300",
   };
 
   return (

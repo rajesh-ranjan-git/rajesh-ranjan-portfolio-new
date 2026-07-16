@@ -4,7 +4,7 @@ import portfolioStyles from "@/animations/portfolio.module.css";
 
 const PortfolioCard = () => {
   return (
-    <div className="group bg-fixed-dark shadow-[0_12px_20px_var(--color-card-shadow)] border border-card-border hover:border-card-border-active rounded-2xl w-full overflow-hidden transition-all duration-300">
+    <div className="group bg-fixed-dark shadow-[0_12px_20px_var(--color-surface-shadow)] border border-surface-border hover:border-surface-border-active rounded-2xl w-full overflow-hidden transition-all duration-300">
       <div className="group/image relative bg-fixed-dark rounded-b-xl hover:rounded-b-none overflow-hidden transition-all duration-500">
         <Image
           src="/assets/certificates/mern-gfg-certificate.jpg"

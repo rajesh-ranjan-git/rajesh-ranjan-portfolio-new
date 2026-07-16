@@ -2,7 +2,7 @@
 
 :root {
   --bg: rgba(190, 201, 229, 1);
-  --sidebar-bg: rgba(4, 11, 20, 1);
+  --ink: rgba(4, 11, 20, 1);
   --primary: rgba(13, 15, 43, 1);
   --secondary: rgba(75, 85, 99, 1);
   --sidebar-text: rgba(255, 255, 255, 1);
@@ -20,12 +20,12 @@
 
   --overlay: rgba(0, 0, 0, 0.8);
 
-  --card-bg: rgba(255, 255, 255, 0.42);
-  --card-bg-hover: rgba(255, 255, 255, 0.52);
-  --card-border: rgba(255, 255, 255, 0.55);
-  --card-border-hover: rgba(255, 255, 255, 0.85);
-  --card-shadow: rgba(13, 15, 43, 0.08);
-  --card-shadow-dark: rgba(13, 15, 43, 0.8);
+  --surface-bg: rgba(255, 255, 255, 0.42);
+  --surface-bg-hover: rgba(255, 255, 255, 0.52);
+  --surface-border: rgba(255, 255, 255, 0.55);
+  --surface-border-hover: rgba(255, 255, 255, 0.85);
+  --surface-shadow: rgba(13, 15, 43, 0.08);
+  --surface-shadow-strong: rgba(13, 15, 43, 0.8);
 
   --input-bg: rgba(255, 255, 255, 0.65);
   --input-border: rgba(13, 15, 43, 0.12);
@@ -38,8 +38,6 @@
   --button-bg: rgba(13, 15, 43, 1);
 
   --error: rgba(220, 38, 38, 1);
-  --error-bg: rgba(220, 38, 38, 0.08);
-  --error-border: rgba(220, 38, 38, 0.18);
 
   --success: rgba(22, 163, 74, 1);
 
@@ -80,14 +78,12 @@
   --alternate-primary: #0d0f2b;
   --alternate-secondary: #111827;
 
-  --card-bg: rgba(17, 24, 39, 0.42);
-  --card-bg-hover: rgba(17, 24, 39, 0.55);
-
-  --card-border: rgba(255, 255, 255, 0.08);
-  --card-border-hover: rgba(255, 255, 255, 0.2);
-
-  --card-shadow: rgba(0, 0, 0, 0.35);
-  --card-shadow-dark: rgba(0, 0, 0, 0.6);
+  --surface-bg: rgba(17, 24, 39, 0.42);
+  --surface-bg-hover: rgba(17, 24, 39, 0.55);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --surface-border-hover: rgba(255, 255, 255, 0.2);
+  --surface-shadow: rgba(0, 0, 0, 0.35);
+  --surface-shadow-strong: rgba(0, 0, 0, 0.6);
 
   --input-bg: rgba(255, 255, 255, 0.05);
   --input-border: rgba(255, 255, 255, 0.08);
@@ -109,14 +105,14 @@
     --alternate-primary: rgba(13, 15, 43, 1);
     --alternate-secondary: rgba(17, 24, 39, 1);
 
-    --card-bg: rgba(17, 24, 39, 0.42);
-    --card-bg-hover: rgba(17, 24, 39, 0.55);
+    --surface-bg: rgba(17, 24, 39, 0.42);
+    --surface-bg-hover: rgba(17, 24, 39, 0.55);
 
-    --card-border: rgba(255, 255, 255, 0.08);
-    --card-border-hover: rgba(255, 255, 255, 0.2);
+    --surface-border: rgba(255, 255, 255, 0.08);
+    --surface-border-hover: rgba(255, 255, 255, 0.2);
 
-    --card-shadow: rgba(0, 0, 0, 0.35);
-    --card-shadow-dark: rgba(0, 0, 0, 0.6);
+    --surface-shadow: rgba(0, 0, 0, 0.35);
+    --surface-shadow-strong: rgba(0, 0, 0, 0.6);
 
     --input-bg: rgba(255, 255, 255, 0.05);
     --input-border: rgba(255, 255, 255, 0.08);
@@ -136,7 +132,7 @@
   --font-allura: var(--font-allura);
 
   --color-bg: var(--bg);
-  --color-sidebar-bg: var(--sidebar-bg);
+  --color-ink: var(--ink);
 
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
@@ -145,9 +141,6 @@
   --color-accent-blue: var(--accent-blue);
   --color-accent-purple: var(--accent-purple);
   --color-accent-pink: var(--accent-pink);
-
-  --color-accent: var(--accent-blue);
-  --color-accent-hover: var(--accent-purple);
 
   --color-alternate-bg: var(--alternate-bg);
   --color-alternate-primary: var(--alternate-primary);
@@ -159,12 +152,12 @@
 
   --color-overlay: var(--overlay);
 
-  --color-card-bg: var(--card-bg);
-  --color-card-bg-hover: var(--card-bg-hover);
-  --color-card-border: var(--card-border);
-  --color-card-border-hover: var(--card-border-hover);
-  --color-card-shadow: var(--card-shadow);
-  --color-card-shadow-dark: var(--card-shadow-dark);
+  --color-surface-bg: var(--surface-bg);
+  --color-surface-bg-hover: var(--surface-bg-hover);
+  --color-surface-border: var(--surface-border);
+  --color-surface-border-hover: var(--surface-border-hover);
+  --color-surface-shadow: var(--surface-shadow);
+  --color-surface-shadow-strong: var(--surface-shadow-strong);
 
   --color-input-bg: var(--input-bg);
   --color-input-border: var(--input-border);

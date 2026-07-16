@@ -9,7 +9,7 @@ const AboutImage = () => {
   const social = getSingleSocialLink(ownerConfig.socialBadge);
 
   return (
-    <div className="isolate relative flex justify-center justify-self-center items-center order-2 lg:order-1 bg-card-bg hover:bg-card-bg-hover shadow-[0_8px_32px_rgba(13,15,43,0.08),0_2px_8px_rgba(13,15,43,0.04)] backdrop-blur-xl p-3 sm:p-4 border border-card-border hover:border-card-border-hover rounded-[64px] sm:rounded-[84px] w-full md:w-1/2 lg:w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-none min-h-108">
+    <div className="isolate relative flex justify-center justify-self-center items-center order-2 lg:order-1 bg-surface-bg hover:bg-surface-bg-hover shadow-[0_8px_32px_rgba(13,15,43,0.08),0_2px_8px_rgba(13,15,43,0.04)] backdrop-blur-xl p-3 sm:p-4 border border-surface-border hover:border-surface-border-hover rounded-[64px] sm:rounded-[84px] w-full md:w-1/2 lg:w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-none min-h-108">
       <ImageBackground className="top-0 left-0 -rotate-6" />
       <ImageBackground className="top-0 left-0 -rotate-12" />
 
@@ -64,7 +64,7 @@ const AboutImage = () => {
             duration={3}
             className="flex justify-between items-center gap-1 pr-4"
           >
-            <div className="bg-linear-to-r border border-card-border hover:border-card-border-hover rounded-full w-12 h-12 overflow-hidden from-accent-purple to-accent-blue shrink-0">
+            <div className="bg-linear-to-r border border-surface-border hover:border-surface-border-hover rounded-full w-12 h-12 overflow-hidden from-accent-purple to-accent-blue shrink-0">
               {ownerConfig.images.profileImage ? (
                 <Image
                   src={ownerConfig.images.profileImage}
@@ -75,7 +75,7 @@ const AboutImage = () => {
                   className="rounded-full w-full h-auto"
                 />
               ) : (
-                <div className="flex justify-center items-center bg-card-bg hover:bg-card-bg-hover border border-card-border hover:border-card-border-hover rounded-3xl w-full h-full translate-y-0.5">
+                <div className="flex justify-center items-center bg-surface-bg hover:bg-surface-bg-hover border border-surface-border hover:border-surface-border-hover rounded-3xl w-full h-full translate-y-0.5">
                   {ownerConfig.initials ? ownerConfig.initials : "JD"}
                 </div>
               )}

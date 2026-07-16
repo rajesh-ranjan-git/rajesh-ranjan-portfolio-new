@@ -15,7 +15,7 @@ const GreetingsImage = () => {
           className="rounded-br-[50%] w-full h-auto object-cover"
         />
       ) : (
-        <div className="flex justify-center items-center bg-card-bg hover:bg-card-bg-hover border border-card-border hover:border-card-border-hover rounded-3xl w-full h-40">
+        <div className="flex justify-center items-center bg-surface-bg hover:bg-surface-bg-hover border border-surface-border hover:border-surface-border-hover rounded-3xl w-full h-40">
           Your Greetings Image goes here..
         </div>
       )}

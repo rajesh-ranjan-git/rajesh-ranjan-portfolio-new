@@ -296,7 +296,7 @@ export default function Carousel({
               type="button"
               aria-label={`Go to slide ${index + 1}`}
               onClick={() => goTo(index + cloneCount)}
-              className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-blue cursor-pointer shadow-sm shadow-card-shadow-dark ${
+              className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-blue cursor-pointer shadow-sm shadow-surface-shadow-strong ${
                 index === activeDot
                   ? "w-6 bg-accent-blue"
                   : "w-2 bg-gray-300 hover:bg-gray-400"

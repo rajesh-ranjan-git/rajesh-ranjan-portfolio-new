@@ -24,7 +24,7 @@ const SocialMedia = ({ section }: SocialMediaProps) => {
           <Link
             key={social.id}
             href={href ?? ""}
-            className={`flex justify-center items-center p-1 rounded-full w-10 h-10 shadow-[0_12px_20px_var(--color-card-shadow)] transition-all duration-300 ${social.color ? social.color : "text-social-text"} ${social.bgColor ? social.bgColor : "bg-social-bg"} hover:bg-social-hover`}
+            className={`flex justify-center items-center p-1 rounded-full w-10 h-10 shadow-[0_12px_20px_var(--color-surface-shadow)] transition-all duration-300 ${social.color ? social.color : "text-social-text"} ${social.bgColor ? social.bgColor : "bg-social-bg"} hover:bg-social-hover`}
             target="_blank"
             rel="noopener noreferrer"
           >

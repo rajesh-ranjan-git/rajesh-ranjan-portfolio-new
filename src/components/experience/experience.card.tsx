@@ -5,7 +5,7 @@ import Card from "@/components/ui/card/card";
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   return (
     <Card className="group px-0 py-0" scale="all" animateBorder>
-      <div className="text-fixed-light items-center gap-4 sm:gap-5 lg:gap-6 grid grid-cols-[auto_1fr] bg-linear-to-br from-0% via-25% to-100% to-sidebar-bg shadow-[0_12px_20px_var(--color-card-shadow)] px-4 sm:px-5 lg:px-6 py-2 sm:py-3 lg:py-4 rounded-t-2xl group-hover:rounded-t-3xl w-full min-h-20 transition-all duration-300 from-accent-purple via-accent-blue">
+      <div className="text-fixed-light items-center gap-4 sm:gap-5 lg:gap-6 grid grid-cols-[auto_1fr] bg-linear-to-br from-0% via-25% to-100% to-ink shadow-[0_12px_20px_var(--color-surface-shadow)] px-4 sm:px-5 lg:px-6 py-2 sm:py-3 lg:py-4 rounded-t-2xl group-hover:rounded-t-3xl w-full min-h-20 transition-all duration-300 from-accent-purple via-accent-blue">
         <Image
           src={
             experience?.companyImage ||
@@ -25,7 +25,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             {experience.company ? (
               <>
                 &nbsp;&#124;&nbsp;
-                <span className="text-shadow-[2px_2px_var(--color-card-shadow-dark)] text-accent-pink">
+                <span className="text-shadow-[2px_2px_var(--color-surface-shadow-strong)] text-accent-pink">
                   {experience.company}
                 </span>
               </>

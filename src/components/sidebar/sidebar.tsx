@@ -44,7 +44,7 @@ const Sidebar = () => {
   return (
     <>
       <aside
-        className={`fixed inset-y-0 flex flex-col bg-sidebar-bg rounded-r-md h-dvh max-h-dvh text-sidebar-text overflow-hidden transition-all ease-in-out duration-700 z-50 ${
+        className={`fixed inset-y-0 flex flex-col bg-ink rounded-r-md h-dvh max-h-dvh text-sidebar-text overflow-hidden transition-all ease-in-out duration-700 z-50 ${
           sidebarToggle ? "w-72 p-2" : "w-0 p-0 md:w-16 md:p-2"
         }`}
         ref={sidebarRef}

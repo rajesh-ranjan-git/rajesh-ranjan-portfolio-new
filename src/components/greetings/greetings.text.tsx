@@ -19,7 +19,7 @@ const GreetingsText = () => {
 
       <h1 className="text-nowrap">
         I'm
-        <span className="text-shadow-[2px_2px_var(--color-card-shadow-dark)] ml-4 font-alkatra font-bold uppercase text-accent-blue">
+        <span className="text-shadow-[2px_2px_var(--color-surface-shadow-strong)] ml-4 font-alkatra font-bold uppercase text-accent-blue">
           {getFullName()}
         </span>
       </h1>
@@ -30,7 +30,7 @@ const GreetingsText = () => {
           typingSpeed={120}
           deletingSpeed={60}
           delayBetweenWords={1000}
-          className="text-shadow-[1px_1px_var(--color-card-shadow-dark)] font-semibold text-xl md:text-3xl lg:text-4xl text-accent-blue"
+          className="text-shadow-[1px_1px_var(--color-surface-shadow-strong)] font-semibold text-xl md:text-3xl lg:text-4xl text-accent-blue"
         />
       ) : null}
     </div>

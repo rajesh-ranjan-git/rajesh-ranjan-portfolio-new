@@ -28,7 +28,7 @@ const ThemeToggle = () => {
       />
       <label
         htmlFor="theme-toggle"
-        className="block after:top-0.5 after:left-0.5 peer-checked:after:left-15.5 after:absolute relative bg-[#242424] after:bg-[linear-gradient(180deg,#ffcc89,#d8860b)] peer-checked:after:bg-[linear-gradient(180deg,#777,#3a3a3a)] peer-checked:bg-[#ebebeb] shadow-[inset_0_5px_15px_rgba(0,0,0,0.4),inset_0_-5px_15px_rgba(255,255,255,0.4)] after:shadow-[0_12px_20px_var(--color-card-shadow)] after:shadow-black/20 rounded-4xl after:rounded-full w-16 after:w-5 active:after:w-10 h-6 after:h-5 after:content-[''] transition-all after:transition-all peer-checked:after:-translate-x-full duration-500 after:duration-500 cursor-pointer"
+        className="block after:top-0.5 after:left-0.5 peer-checked:after:left-15.5 after:absolute relative bg-[#242424] after:bg-[linear-gradient(180deg,#ffcc89,#d8860b)] peer-checked:after:bg-[linear-gradient(180deg,#777,#3a3a3a)] peer-checked:bg-[#ebebeb] shadow-[inset_0_5px_15px_rgba(0,0,0,0.4),inset_0_-5px_15px_rgba(255,255,255,0.4)] after:shadow-[0_12px_20px_var(--color-surface-shadow)] after:shadow-black/20 rounded-4xl after:rounded-full w-16 after:w-5 active:after:w-10 h-6 after:h-5 after:content-[''] transition-all after:transition-all peer-checked:after:-translate-x-full duration-500 after:duration-500 cursor-pointer"
       >
         <svg
           className={`top-1 left-1 z-1 absolute ${
