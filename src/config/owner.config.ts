@@ -2,7 +2,7 @@ export const basicDetails = {
   initials: "RR",
   firstName: "Rajesh",
   lastName: "Ranjan",
-  experience: { years: 7, months: 10 },
+  totalExperience: { years: 7, months: 10 },
   designation: "Full Stack Developer",
   company: "Business Today Technology",
   organization: "India Today Group",

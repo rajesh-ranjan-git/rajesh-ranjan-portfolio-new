@@ -13,7 +13,8 @@ const AboutImage = () => {
       <ImageBackground className="top-0 left-0 -rotate-6" />
       <ImageBackground className="top-0 left-0 -rotate-12" />
 
-      {basicDetails.experience.years && basicDetails.experience.years > 0 ? (
+      {basicDetails.totalExperience.years &&
+      basicDetails.totalExperience.years > 0 ? (
         <FloatingBadge
           position="top-right"
           type="float-diagonal-reverse"
@@ -22,7 +23,7 @@ const AboutImage = () => {
         >
           <div className="flex justify-between items-center gap-1 w-full h-full">
             <span className="font-alkatra text-4xl text-accent-blue shrink-0">
-              {basicDetails.experience.years}
+              {basicDetails.totalExperience.years}
               <span className="text-2xl align-super">+</span>
             </span>
             <span className="flex flex-col justify-center items-start text-sm">
@@ -31,7 +32,8 @@ const AboutImage = () => {
             </span>
           </div>
         </FloatingBadge>
-      ) : basicDetails.experience.months && basicDetails.experience.months > 0 ? (
+      ) : basicDetails.totalExperience.months &&
+        basicDetails.totalExperience.months > 0 ? (
         <FloatingBadge
           position="top-right"
           type="float-diagonal-reverse"
@@ -40,7 +42,7 @@ const AboutImage = () => {
         >
           <div className="flex justify-between items-center gap-1 w-full h-full">
             <span className="font-alkatra text-4xl text-accent-blue shrink-0">
-              {basicDetails.experience.months}
+              {basicDetails.totalExperience.months}
               <span className="text-2xl align-super">+</span>
             </span>
             <span className="flex flex-col justify-center items-start text-sm">
