@@ -64,7 +64,7 @@ const AboutImage = () => {
             duration={3}
             className="flex justify-between items-center gap-1 pr-4"
           >
-            <div className="bg-linear-to-r border border-image-frame-border rounded-full w-12 h-12 overflow-hidden from-accent-purple to-accent-blue shrink-0">
+            <div className="bg-linear-to-r border border-card-border hover:border-card-border-hover rounded-full w-12 h-12 overflow-hidden from-accent-purple to-accent-blue shrink-0">
               {ownerConfig.images.profileImage ? (
                 <Image
                   src={ownerConfig.images.profileImage}
@@ -75,7 +75,7 @@ const AboutImage = () => {
                   className="rounded-full w-full h-auto"
                 />
               ) : (
-                <div className="flex justify-center items-center bg-image-frame-bg border border-image-frame-border rounded-3xl w-full h-full translate-y-0.5">
+                <div className="flex justify-center items-center bg-card-bg hover:bg-card-bg-hover border border-card-border hover:border-card-border-hover rounded-3xl w-full h-full translate-y-0.5">
                   {ownerConfig.initials ? ownerConfig.initials : "JD"}
                 </div>
               )}
