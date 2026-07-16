@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { ownerConfig } from "@/config/owner.config";
+import { basicDetails } from "@/config/owner.config";
 import { technologiesConfig } from "@/config/technologies.config";
 import { SkillsToggleProps } from "@/types/props/sections.props.types";
 import Card from "@/components/ui/card/card";
 
 const SkillsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
-  const techItems = ownerConfig.skills;
+  const techItems = basicDetails.skills;
 
   return (
     <div

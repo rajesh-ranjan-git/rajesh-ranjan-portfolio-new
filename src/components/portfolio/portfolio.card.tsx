@@ -1,21 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import portfolioStyles from "@/animations/portfolio.module.css";
+import { PortfolioItem } from "@/types/types/sections.types";
 
-const PortfolioCard = () => {
+interface PortfolioCardProps {
+  portfolioItem: PortfolioItem;
+}
+
+const PortfolioCard = ({ portfolioItem }: PortfolioCardProps) => {
   return (
     <div className="group bg-fixed-dark shadow-[0_12px_20px_var(--color-surface-shadow)] border border-surface-border hover:border-surface-border-active rounded-2xl w-full overflow-hidden transition-all duration-300">
       <div className="group/image relative bg-fixed-dark rounded-b-xl hover:rounded-b-none overflow-hidden transition-all duration-500">
         <Image
-          src="/assets/certificates/mern-gfg-certificate.jpg"
-          alt="Project 1"
+          src={portfolioItem.thumbnail}
+          alt={portfolioItem.title}
           width={400}
           height={400}
           className="w-full h-full object-cover object-top group-hover/image:scale-300 origin-top transition-all duration-1200 pointer-events-none"
         />
         <div className="text-fixed-light absolute bg-fixed-dark/90 opacity-0 group-hover/image:opacity-100 px-4 py-10 w-[110%] h-[110%] transition-all group-hover/image:-translate-y-full duration-1200">
           <h5 className="font-normal scale-20 group-hover/image:scale-100 origin-left transition-all duration-1200">
-            Description of project
+            {portfolioItem.description}
           </h5>
         </div>
       </div>
@@ -24,7 +29,7 @@ const PortfolioCard = () => {
           href="/"
           className={`inline-block before:-bottom-px before:left-0 before:absolute relative before:rounded-lg before:w-0 hover:before:w-full before:h-0.75 font-semibold uppercase transition-all before:transition-all duration-300 before:duration-300 before:bg-accent-pink ${portfolioStyles.link_mask}`}
         >
-          Project
+          {portfolioItem.title}
         </Link>
         <Link
           href="/"

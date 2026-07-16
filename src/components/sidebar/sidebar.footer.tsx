@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ownerConfig } from "@/config/owner.config";
+import { basicDetails } from "@/config/owner.config";
 import { useAppStore } from "@/store/store";
 import { getFullName } from "@/helpers/owner.helpers";
 
@@ -33,13 +33,13 @@ const SidebarFooter = () => {
             <p className="w-full font-alkatra font-bold text-md whitespace-nowrap translate-y-1">
               {getFullName()}
             </p>
-            {ownerConfig.social.google ? (
+            {basicDetails.social.google ? (
               <Link
                 href="mailto:rajeshranjan8271@gmail.com"
                 target="_blank"
                 className="font-semibold text-slate-400 hover:text-white text-xs transition-all ease-in-out"
               >
-                {ownerConfig.social.google}
+                {basicDetails.social.google}
               </Link>
             ) : null}
           </div>

@@ -1,4 +1,4 @@
-import { ownerConfig } from "@/config/owner.config";
+import { education } from "@/config/owner.config";
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
@@ -12,9 +12,9 @@ const Education = ({ title, description }: SectionProps) => {
       {description ? <SectionDescription description={description} /> : null}
 
       <div className="justify-center items-center gap-8 grid grid-cols-1 lg:grid-cols-2 w-full">
-        {ownerConfig.education &&
-          Object.values(ownerConfig.education).map((education) => (
-            <EducationCard key={education.id} education={education} />
+        {education &&
+          Object.values(education).map((educationItem) => (
+            <EducationCard key={educationItem.id} education={educationItem} />
           ))}
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { ownerConfig } from "@/config/owner.config";
+import { portfolio } from "@/helpers/owner.helpers";
 
 export type LocationType = {
   city: string;
@@ -54,4 +54,4 @@ export type ExperienceType = {
 
 export type ExperienceDetailsType = { title: string; description?: string };
 
-export type PortfolioItem = (typeof ownerConfig.portfolio)[number];
+export type PortfolioItem = (typeof portfolio)[number];

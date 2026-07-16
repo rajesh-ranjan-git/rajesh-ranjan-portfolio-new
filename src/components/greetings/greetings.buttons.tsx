@@ -1,6 +1,6 @@
 "use client";
 
-import { ownerConfig } from "@/config/owner.config";
+import { basicDetails } from "@/config/owner.config";
 import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 import MaskedButton from "@/components/ui/buttons/masked.button";
 
@@ -23,7 +23,7 @@ const GreetingsButtons = () => {
         Contact Me
       </MaskedButton>
 
-      {ownerConfig.resumeLink ? (
+      {basicDetails.resumeLink ? (
         <MaskedButton
           btnTextSize="md"
           variant="mask-2"
@@ -31,7 +31,7 @@ const GreetingsButtons = () => {
           className="p-3 md:px-6 md:text-lg"
           onClick={() => {
             window.open(
-              ownerConfig.resumeLink,
+              basicDetails.resumeLink,
               "_blank",
               "noopener,noreferrer",
             );

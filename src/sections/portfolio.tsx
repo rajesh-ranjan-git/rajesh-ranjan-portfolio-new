@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ownerConfig } from "@/config/owner.config";
+import { useState } from "react";
+import { portfolio } from "@/helpers/owner.helpers";
 import { PortfolioItem } from "@/types/types/sections.types";
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
@@ -11,27 +11,18 @@ import PortfolioCard from "@/components/portfolio/portfolio.card";
 
 const Portfolio = ({ title, description }: SectionProps) => {
   const [activeFilter, setActiveFilter] = useState<string>("all");
-  const [filteredCards, setFilteredCards] = useState<PortfolioItem[]>([
-    ...ownerConfig.portfolio,
-  ]);
-
   const filterSet = new Set(
-    ownerConfig.portfolio.map((item) => item.primaryTech),
+    portfolio.map((item) => item.primaryTech),
   );
 
   const handleFilter = (item: string) => {
     setActiveFilter(item);
   };
 
-  useEffect(() => {
-    setFilteredCards(
-      activeFilter === "all"
-        ? [...ownerConfig.portfolio]
-        : ownerConfig.portfolio.filter(
-            (item) => item.primaryTech === activeFilter,
-          ),
-    );
-  }, [activeFilter]);
+  const filteredCards: PortfolioItem[] =
+    activeFilter === "all"
+      ? [...portfolio]
+      : portfolio.filter((item) => item.primaryTech === activeFilter);
 
   return (
     <section id="portfolio">
@@ -47,7 +38,7 @@ const Portfolio = ({ title, description }: SectionProps) => {
 
       <div className="justify-between items-center gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
         {filteredCards.map((item, index) => (
-          <PortfolioCard key={`${item.title}-${index}`} />
+          <PortfolioCard key={`${item.title}-${index}`} portfolioItem={item} />
         ))}
       </div>
     </section>

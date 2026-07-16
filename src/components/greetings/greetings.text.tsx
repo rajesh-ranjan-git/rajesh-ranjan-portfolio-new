@@ -1,5 +1,5 @@
 import greetingsStyles from "@/animations/greetings.module.css";
-import { ownerConfig } from "@/config/owner.config";
+import { basicDetails } from "@/config/owner.config";
 import { getFullName } from "@/helpers/owner.helpers";
 import Typewriter from "@/components/typewriter/typewriter";
 
@@ -24,9 +24,9 @@ const GreetingsText = () => {
         </span>
       </h1>
 
-      {ownerConfig.typewriterTexts.length ? (
+      {basicDetails.typewriterTexts.length ? (
         <Typewriter
-          words={ownerConfig.typewriterTexts}
+          words={basicDetails.typewriterTexts}
           typingSpeed={120}
           deletingSpeed={60}
           delayBetweenWords={1000}

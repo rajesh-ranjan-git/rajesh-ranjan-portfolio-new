@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { ownerConfig } from "@/config/owner.config";
+import { basicDetails } from "@/config/owner.config";
 
 const GreetingsImage = () => {
   return (
     <div className="z-10 flex justify-center items-center w-full lg:w-[40%] h-full grow">
-      {ownerConfig.images.greetingsImage ? (
+      {basicDetails.images.greetingsImage ? (
         <Image
-          src={ownerConfig.images.greetingsImage}
+          src={basicDetails.images.greetingsImage}
           alt="profile-img-3d-cartoon"
           title="3D Cartoon Profile Image"
           width={1024}

@@ -1,4 +1,4 @@
-import { ownerConfig } from "@/config/owner.config";
+import { experience } from "@/config/owner.config";
 import ExperienceProgress from "@/components/experience/experience.progress";
 import ExperienceCardWrapper from "@/components/experience/experience.card.wrapper";
 
@@ -7,14 +7,14 @@ const ExperienceTimeline = () => {
     <div className="relative flex flex-col justify-center items-center">
       <ExperienceProgress />
 
-      {ownerConfig.professionalExperience.map((experience, index) => {
+      {experience.map((experienceItem, index) => {
         const isReversed = index % 2 === 1;
 
         return (
           <ExperienceCardWrapper
-            key={experience.designation}
+            key={experienceItem.designation}
             isReversed={isReversed}
-            experience={experience}
+            experience={experienceItem}
           />
         );
       })}

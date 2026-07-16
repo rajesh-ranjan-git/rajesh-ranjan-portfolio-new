@@ -1,19 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ownerConfig } from "@/config/owner.config";
+import { basicDetails } from "@/config/owner.config";
 import { getFullName, getSingleSocialLink } from "@/helpers/owner.helpers";
 import ImageBackground from "@/components/ui/background/image.background";
 import FloatingBadge from "@/components/ui/floating/floating.badge";
 
 const AboutImage = () => {
-  const social = getSingleSocialLink(ownerConfig.socialBadge);
+  const social = getSingleSocialLink(basicDetails.socialBadge);
 
   return (
     <div className="isolate relative flex justify-center justify-self-center items-center order-2 lg:order-1 bg-surface-bg hover:bg-surface-bg-hover shadow-[0_8px_32px_rgba(13,15,43,0.08),0_2px_8px_rgba(13,15,43,0.04)] backdrop-blur-xl p-3 sm:p-4 border border-surface-border hover:border-surface-border-hover rounded-[64px] sm:rounded-[84px] w-full md:w-1/2 lg:w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-none min-h-108">
       <ImageBackground className="top-0 left-0 -rotate-6" />
       <ImageBackground className="top-0 left-0 -rotate-12" />
 
-      {ownerConfig.experience.years && ownerConfig.experience.years > 0 ? (
+      {basicDetails.experience.years && basicDetails.experience.years > 0 ? (
         <FloatingBadge
           position="top-right"
           type="float-diagonal-reverse"
@@ -22,7 +22,7 @@ const AboutImage = () => {
         >
           <div className="flex justify-between items-center gap-1 w-full h-full">
             <span className="font-alkatra text-4xl text-accent-blue shrink-0">
-              {ownerConfig.experience.years}
+              {basicDetails.experience.years}
               <span className="text-2xl align-super">+</span>
             </span>
             <span className="flex flex-col justify-center items-start text-sm">
@@ -31,7 +31,7 @@ const AboutImage = () => {
             </span>
           </div>
         </FloatingBadge>
-      ) : ownerConfig.experience.months && ownerConfig.experience.months > 0 ? (
+      ) : basicDetails.experience.months && basicDetails.experience.months > 0 ? (
         <FloatingBadge
           position="top-right"
           type="float-diagonal-reverse"
@@ -40,7 +40,7 @@ const AboutImage = () => {
         >
           <div className="flex justify-between items-center gap-1 w-full h-full">
             <span className="font-alkatra text-4xl text-accent-blue shrink-0">
-              {ownerConfig.experience.months}
+              {basicDetails.experience.months}
               <span className="text-2xl align-super">+</span>
             </span>
             <span className="flex flex-col justify-center items-start text-sm">
@@ -65,9 +65,9 @@ const AboutImage = () => {
             className="flex justify-between items-center gap-1 pr-4"
           >
             <div className="bg-linear-to-r border border-surface-border hover:border-surface-border-hover rounded-full w-12 h-12 overflow-hidden from-accent-purple to-accent-blue shrink-0">
-              {ownerConfig.images.profileImage ? (
+              {basicDetails.images.profileImage ? (
                 <Image
-                  src={ownerConfig.images.profileImage}
+                  src={basicDetails.images.profileImage}
                   alt="Rajesh Ranjan profile illustration"
                   width={100}
                   height={100}
@@ -76,7 +76,7 @@ const AboutImage = () => {
                 />
               ) : (
                 <div className="flex justify-center items-center bg-surface-bg hover:bg-surface-bg-hover border border-surface-border hover:border-surface-border-hover rounded-3xl w-full h-full translate-y-0.5">
-                  {ownerConfig.initials ? ownerConfig.initials : "JD"}
+                  {basicDetails.initials ? basicDetails.initials : "JD"}
                 </div>
               )}
             </div>
@@ -90,7 +90,7 @@ const AboutImage = () => {
         </Link>
       ) : null}
 
-      {ownerConfig.images.aboutImage ? (
+      {basicDetails.images.aboutImage ? (
         <Image
           src="/assets/personal-img/profile_photo_3d_cartoon.png"
           alt="Rajesh Ranjan profile illustration"

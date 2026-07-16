@@ -1,11 +1,18 @@
-import { ownerConfig } from "@/config/owner.config";
+import {
+  basicDetails,
+  education,
+  primaryTechnologies,
+  projects,
+  certificateFiles,
+} from "@/config/owner.config";
 import { socialMedia } from "@/config/social.config";
+import { toTitleCase } from "@/utils/common.utils";
 
 export const getFullName = () => {
-  if (ownerConfig.firstName && ownerConfig.lastName)
-    return `${ownerConfig.firstName} ${ownerConfig.lastName}`;
+  if (basicDetails.firstName && basicDetails.lastName)
+    return `${basicDetails.firstName} ${basicDetails.lastName}`;
 
-  if (ownerConfig.firstName) return ownerConfig.firstName;
+  if (basicDetails.firstName) return basicDetails.firstName;
 
   return "John Doe";
 };
@@ -15,64 +22,64 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.phone.id:
       return {
         id: socialMedia.phone.id,
-        userName: ownerConfig.phone,
-        url: `${socialMedia.phone.urlPrefix}/${ownerConfig.phone}/`,
+        userName: basicDetails.phone,
+        url: `${socialMedia.phone.urlPrefix}/${basicDetails.phone}/`,
       };
 
     case socialMedia.github.id:
       return {
         id: socialMedia.github.id,
-        userName: ownerConfig.social.github,
-        url: `${socialMedia.github.urlPrefix}/${ownerConfig.social.github}/`,
+        userName: basicDetails.social.github,
+        url: `${socialMedia.github.urlPrefix}/${basicDetails.social.github}/`,
       };
 
     case socialMedia.google.id:
       return {
         id: socialMedia.google.id,
-        userName: ownerConfig.social.google,
-        url: `${socialMedia.google.urlPrefix}${ownerConfig.social.google}`,
+        userName: basicDetails.social.google,
+        url: `${socialMedia.google.urlPrefix}${basicDetails.social.google}`,
       };
 
     case socialMedia.stackOverflow.id:
       return {
         id: socialMedia.stackOverflow.id,
-        userName: ownerConfig.social.stackOverflow,
-        url: `${socialMedia.stackOverflow.urlPrefix}/${ownerConfig.social.stackOverflow}/`,
+        userName: basicDetails.social.stackOverflow,
+        url: `${socialMedia.stackOverflow.urlPrefix}/${basicDetails.social.stackOverflow}/`,
       };
 
     case socialMedia.linkedin.id:
       return {
         id: socialMedia.linkedin.id,
-        userName: ownerConfig.social.linkedin,
-        url: `${socialMedia.linkedin.urlPrefix}/${ownerConfig.social.linkedin}/`,
+        userName: basicDetails.social.linkedin,
+        url: `${socialMedia.linkedin.urlPrefix}/${basicDetails.social.linkedin}/`,
       };
 
     case socialMedia.twitter.id:
       return {
         id: socialMedia.twitter.id,
-        userName: ownerConfig.social.twitter,
-        url: `${socialMedia.twitter.urlPrefix}/${ownerConfig.social.twitter}/`,
+        userName: basicDetails.social.twitter,
+        url: `${socialMedia.twitter.urlPrefix}/${basicDetails.social.twitter}/`,
       };
 
     case socialMedia.youtube.id:
       return {
         id: socialMedia.youtube.id,
-        userName: ownerConfig.social.youtube,
-        url: `${socialMedia.youtube.urlPrefix}${ownerConfig.social.youtube}/`,
+        userName: basicDetails.social.youtube,
+        url: `${socialMedia.youtube.urlPrefix}${basicDetails.social.youtube}/`,
       };
 
     case socialMedia.facebook.id:
       return {
         id: socialMedia.facebook.id,
-        userName: ownerConfig.social.facebook,
-        url: `${socialMedia.facebook.urlPrefix}/${ownerConfig.social.facebook}/`,
+        userName: basicDetails.social.facebook,
+        url: `${socialMedia.facebook.urlPrefix}/${basicDetails.social.facebook}/`,
       };
 
     case socialMedia.instagram.id:
       return {
         id: socialMedia.instagram.id,
-        userName: ownerConfig.social.instagram,
-        url: `${socialMedia.instagram.urlPrefix}/${ownerConfig.social.instagram}/`,
+        userName: basicDetails.social.instagram,
+        url: `${socialMedia.instagram.urlPrefix}/${basicDetails.social.instagram}/`,
       };
 
     default:
@@ -81,30 +88,30 @@ export const getSingleSocialLink = (id: string) => {
 };
 
 export const getSocialLinks = () => {
-  let socialLinks = [];
+  const socialLinks = [];
 
-  if (ownerConfig.social.github)
+  if (basicDetails.social.github)
     socialLinks.push(getSingleSocialLink(socialMedia.github.id));
 
-  if (ownerConfig.social.google)
+  if (basicDetails.social.google)
     socialLinks.push(getSingleSocialLink(socialMedia.google.id));
 
-  if (ownerConfig.social.stackOverflow)
+  if (basicDetails.social.stackOverflow)
     socialLinks.push(getSingleSocialLink(socialMedia.stackOverflow.id));
 
-  if (ownerConfig.social.linkedin)
+  if (basicDetails.social.linkedin)
     socialLinks.push(getSingleSocialLink(socialMedia.linkedin.id));
 
-  if (ownerConfig.social.twitter)
+  if (basicDetails.social.twitter)
     socialLinks.push(getSingleSocialLink(socialMedia.twitter.id));
 
-  if (ownerConfig.social.youtube)
+  if (basicDetails.social.youtube)
     socialLinks.push(getSingleSocialLink(socialMedia.youtube.id));
 
-  if (ownerConfig.social.facebook)
+  if (basicDetails.social.facebook)
     socialLinks.push(getSingleSocialLink(socialMedia.facebook.id));
 
-  if (ownerConfig.social.instagram)
+  if (basicDetails.social.instagram)
     socialLinks.push(getSingleSocialLink(socialMedia.instagram.id));
 
   return socialLinks;
@@ -116,13 +123,13 @@ export const getLocation = (location?: {
   country?: string;
 }) => {
   const city =
-    location && location.city ? location.city : ownerConfig.location.city;
+    location && location.city ? location.city : basicDetails.location.city;
   const state =
-    location && location.state ? location.state : ownerConfig.location.state;
+    location && location.state ? location.state : basicDetails.location.state;
   const country =
     location && location.country
       ? location.country
-      : ownerConfig.location.country;
+      : basicDetails.location.country;
 
   if (city && state && country) return `${city}, ${state}, ${country}`;
 
@@ -148,17 +155,14 @@ export const getDegree = (degree?: string, stream?: string) => {
 };
 
 export const getAboutDetails = () => {
-  const designation = ownerConfig.designation;
-  const company = ownerConfig.company;
-  const organization = ownerConfig.organization;
-  const description = ownerConfig.description;
+  const designation = basicDetails.designation;
+  const company = basicDetails.company;
+  const organization = basicDetails.organization;
+  const description = basicDetails.description;
   const location = getLocation();
-  const email = ownerConfig.social.google;
-  const phone = ownerConfig.phone;
-  const degree = getDegree(
-    ownerConfig.education.college.degree,
-    ownerConfig.education.college.stream,
-  );
+  const email = basicDetails.social.google;
+  const phone = basicDetails.phone;
+  const degree = getDegree(education.college.degree, education.college.stream);
   const details = [];
 
   if (organization)
@@ -277,3 +281,27 @@ export const getExperienceDuration = (
   if (years) return `${years}y`;
   return `${months}m`;
 };
+
+export const portfolio = projects.map(([folderName, screenshot], index) => {
+  const primaryTech = primaryTechnologies[index % primaryTechnologies.length];
+  const title = toTitleCase(folderName);
+  return {
+    title,
+    description: title,
+    thumbnail: `/assets/portfolio/${folderName}/${screenshot}`,
+    primaryTech,
+    techStack: [primaryTech],
+  };
+});
+
+export const certificates = certificateFiles.map((fileName) => {
+  const name = fileName.replace(/\.[^.]+$/, "");
+  const title = toTitleCase(name);
+  return {
+    id: name,
+    title,
+    description: title,
+    platform: "GeeksForGeeks",
+    imageSrc: `/assets/certificates/${fileName}`,
+  };
+});

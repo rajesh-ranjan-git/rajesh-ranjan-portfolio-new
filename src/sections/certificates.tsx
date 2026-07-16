@@ -1,4 +1,4 @@
-import { ownerConfig } from "@/config/owner.config";
+import { certificates } from "@/helpers/owner.helpers";
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
@@ -13,7 +13,7 @@ const Certificates = ({ title, description }: SectionProps) => {
 
       <div className="w-full">
         <Carousel
-          slides={ownerConfig.certificates}
+          slides={certificates}
           autoPlay
           autoPlayInterval={3000}
           showArrows={false}
