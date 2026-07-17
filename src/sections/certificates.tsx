@@ -1,4 +1,4 @@
-import { certificates } from "@/helpers/owner.helpers";
+import { certificates } from "@/config/owner.config";
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";

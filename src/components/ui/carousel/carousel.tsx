@@ -228,7 +228,9 @@ export default function Carousel({
               >
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src={slide.imageSrc}
+                    src={
+                      slide.imageSrc || "/assets/error/image-not-available.webp"
+                    }
                     alt={slide.alt ?? (slide.name as string)}
                     width={400}
                     height={400}

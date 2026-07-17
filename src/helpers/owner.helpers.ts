@@ -3,7 +3,6 @@ import {
   education,
   primaryTechnologies,
   projects,
-  certificateFiles,
 } from "@/config/owner.config";
 import { socialMedia } from "@/config/social.config";
 import { toTitleCase } from "@/utils/common.utils";
@@ -291,16 +290,5 @@ export const portfolio = projects.map(([folderName, screenshot], index) => {
     thumbnail: `/assets/portfolio/${folderName}/${screenshot}`,
     primaryTech,
     techStack: [primaryTech],
-  };
-});
-
-export const certificates = certificateFiles.map((fileName) => {
-  const name = toTitleCase(fileName.replace(/\.[^.]+$/, ""));
-
-  return {
-    id: name,
-    name,
-    platform: "GeeksForGeeks",
-    imageSrc: `/assets/certificates/${fileName}`,
   };
 });
