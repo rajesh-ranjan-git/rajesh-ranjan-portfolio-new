@@ -1,11 +1,5 @@
-import {
-  basicDetails,
-  education,
-  primaryTechnologies,
-  projects,
-} from "@/config/owner.config";
+import { basicDetails, education } from "@/config/owner.config";
 import { socialMedia } from "@/config/social.config";
-import { toTitleCase } from "@/utils/common.utils";
 
 export const getFullName = () => {
   if (basicDetails.firstName && basicDetails.lastName)
@@ -280,15 +274,3 @@ export const getExperienceDuration = (
   if (years) return `${years}y`;
   return `${months}m`;
 };
-
-export const portfolio = projects.map(([folderName, screenshot], index) => {
-  const primaryTech = primaryTechnologies[index % primaryTechnologies.length];
-  const title = toTitleCase(folderName);
-  return {
-    title,
-    description: title,
-    thumbnail: `/assets/portfolio/${folderName}/${screenshot}`,
-    primaryTech,
-    techStack: [primaryTech],
-  };
-});

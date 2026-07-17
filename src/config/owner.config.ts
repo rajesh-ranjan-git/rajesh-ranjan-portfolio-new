@@ -65,7 +65,7 @@ export const basicDetails = {
     "slack",
     "ubuntu",
   ],
-} as const;
+};
 
 export const education = {
   college: {
@@ -102,7 +102,7 @@ export const experience = [
     startYear: 2025,
     company: "India Today Group",
     companyImage: "/assets/companies/itg.png",
-    techStacks: [
+    techStack: [
       "Next JS",
       "React JS",
       "TypeScript",
@@ -211,7 +211,7 @@ export const experience = [
     endYear: 2025,
     company: "CYBERED (Internship | Remote)",
     companyImage: "/assets/companies/cybered.jpeg",
-    techStacks: [
+    techStack: [
       "React Native",
       "Expo",
       "JavaScript",
@@ -273,7 +273,7 @@ export const experience = [
     endYear: 2025,
     company: "NTT Data Services",
     companyImage: "/assets/companies/ntt.jpeg",
-    techStacks: [
+    techStack: [
       "React JS",
       "JavaScript",
       "TypeScript",
@@ -380,14 +380,7 @@ export const experience = [
     endYear: 2017,
     company: "Digital Web Solutions Pvt. Ltd.",
     companyImage: "/assets/companies/dws.jpeg",
-    techStacks: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Bootstrap",
-      "PHP",
-      "WordPress",
-    ],
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "PHP", "WordPress"],
     details: [
       {
         title: "Frontend Web Development",
@@ -418,37 +411,251 @@ export const experience = [
   },
 ];
 
-export const primaryTechnologies = [
-  "next js",
-  "react js",
-  "vanilla js",
-  "frontend",
-] as const;
+export const categories = [
+  "Next JS",
+  "React JS",
+  "Vanilla JS",
+  "Frontend (HTML & CSS)",
+];
 
-export const projects = [
-  ["amazon-clone", "amazon-clone-1.png"],
-  ["bancardify-me", "bancardify-me-banks.png"],
-  ["bitcoin-journal", "bitcoin-journal-landing-page-1.png"],
-  ["car-removal", "car-removal-1.png"],
-  ["commercial-cleaning", "commercial-cleaning-1.png"],
-  ["currency-converter", "currency-converter.png"],
-  ["exterior-water-blaster", "exterior-water-blaster-1.png"],
-  ["flipkart-clone", "flipkart-clone-1.png"],
-  ["fqs-painting", "fqs-painting-about-page.png"],
-  ["get-kart", "get-kart-cart-page.png"],
-  ["ironing", "ironing-1.png"],
-  ["jonestree", "jonestree-landing-page-1.png"],
-  ["jp-tech-fest", "jp-tech-fest-about.png"],
-  ["make-my-trip", "make-my-trip.png"],
-  ["movie-mania", "movie-mania-home-page.png"],
-  ["photo-phlix", "photo-phlix-after-search.png"],
-  ["shopprixity", "shopprixity-accountaddress.png"],
-  ["sky-painting", "sky-painting-landing-page-1.png"],
-  ["task-manager", "task-manager-add-tasks.png"],
-  ["tic-tac-toe", "tic-tac-toe-draw-page.png"],
-  ["tic-tac-toe-react", "tic-tac-toe-react-draw-page.png"],
-  ["to-do-app", "to-do-app-adding-description.png"],
-] as const;
+export const portfolio = [
+  {
+    id: 1,
+    title: "Make My Trip",
+    description: "Make My Trip",
+    thumbnail: "/assets/portfolio/make-my-trip/make-my-trip.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 2,
+    title: "Ironing",
+    description: "Ironing",
+    thumbnail: "/assets/portfolio/ironing/ironing-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 3,
+    title: "Bitcoin Journal",
+    description: "Bitcoin Journal",
+    thumbnail:
+      "/assets/portfolio/bitcoin-journal/bitcoin-journal-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 4,
+    title: "Commercial Cleaning",
+    description: "Commercial Cleaning",
+    thumbnail:
+      "/assets/portfolio/commercial-cleaning/commercial-cleaning-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 5,
+    title: "JonesTree",
+    description: "JonesTree",
+    thumbnail: "/assets/portfolio/jonestree/jonestree-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 6,
+    title: "Flipkart Clone",
+    description: "Flipkart Clone",
+    thumbnail: "/assets/portfolio/flipkart-clone/flipkart-clone-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 7,
+    title: "Amazon Clone",
+    description: "Amazon Clone",
+    thumbnail: "/assets/portfolio/amazon-clone/amazon-clone-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 8,
+    title: "Currency Converter",
+    description: "Currency Converter",
+    thumbnail: "/assets/portfolio/currency-converter/currency-converter.png",
+    category: "Vanilla JS",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+  },
+  {
+    id: 9,
+    title: "JP Tech Fest",
+    description: "JP Tech Fest",
+    thumbnail: "/assets/portfolio/jp-tech-fest/jp-tech-fest-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 10,
+    title: "Tic Tac Toe",
+    description: "Tic Tac Toe",
+    thumbnail: "/assets/portfolio/tic-tac-toe/tic-tac-toe-thumbnail.png",
+    category: "Vanilla JS",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+  },
+  {
+    id: 11,
+    title: "Car Removal",
+    description: "Car Removal",
+    thumbnail: "/assets/portfolio/car-removal/car-removal-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 12,
+    title: "Exterior Water Blaster",
+    description: "Exterior Water Blaster",
+    thumbnail:
+      "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 13,
+    title: "To Do App",
+    description: "To Do App",
+    thumbnail: "/assets/portfolio/to-do-app/to-do-app-thumbnail.png",
+    category: "Vanilla JS",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+  },
+  {
+    id: 14,
+    title: "Task Manager",
+    description: "Task Manager",
+    thumbnail: "/assets/portfolio/task-manager/task-manager-thumbnail.png",
+    category: "Vanilla JS",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+  },
+  {
+    id: 15,
+    title: "Tic Tac Toe React",
+    description: "Tic Tac Toe React",
+    thumbnail:
+      "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-thumbnail.png",
+    category: "React JS",
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Tailwind CSS",
+      "React JS",
+      "Vite",
+    ],
+  },
+  {
+    id: 16,
+    title: "FQS Painting",
+    description: "FQS Painting",
+    thumbnail: "/assets/portfolio/fqs-painting/fqs-painting-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 17,
+    title: "Sky Painting",
+    description: "Sky Painting",
+    thumbnail: "/assets/portfolio/sky-painting/sky-painting-thumbnail.png",
+    category: "Frontend (HTML & CSS)",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+  },
+  {
+    id: 18,
+    title: "Photo Phlix",
+    description: "Photo Phlix",
+    thumbnail: "/assets/portfolio/photo-phlix/photo-phlix-thumbnail.png",
+    category: "React JS",
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "JavaScript",
+      "React JS",
+      "Vite",
+    ],
+  },
+  {
+    id: 19,
+    title: "Get Kart",
+    description: "Get Kart",
+    thumbnail: "/assets/portfolio/get-kart/get-kart-thumbnail.png",
+    category: "React JS",
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "JavaScript",
+      "Node JS",
+      "React JS",
+      "Vite",
+      "MongoDB",
+      "Express JS",
+    ],
+  },
+  {
+    id: 20,
+    title: "Bancardify Me",
+    description: "Bancardify Me",
+    thumbnail: "/assets/portfolio/bancardify-me/bancardify-me-thumbnail.png",
+    category: "Next JS",
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "TypeScript",
+      "Node JS",
+      "Next JS",
+      "Shadcn UI",
+      "Appwrite",
+      "Plaid",
+      "Dwolla",
+    ],
+  },
+  {
+    id: 21,
+    title: "Movie Mania",
+    description: "Movie Mania",
+    thumbnail: "/assets/portfolio/movie-mania/movie-mania-thumbnail.png",
+    category: "React JS",
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "JavaScript",
+      "React JS",
+      "Vite",
+    ],
+  },
+  {
+    id: 22,
+    title: "Shopprixity",
+    description: "Shopprixity",
+    thumbnail: "/assets/portfolio/shopprixity/shopprixity-thumbnail.png",
+    category: "React JS",
+    techStack: [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "JavaScript",
+      "React JS",
+      "Node JS",
+      "Express JS",
+      "MongoDB",
+      "Shadcn UI",
+      "Prisma",
+      "Paypal",
+      "Firebase",
+      "Vercel",
+    ],
+  },
+];
 
 export const certificates = [
   {

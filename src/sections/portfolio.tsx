@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { portfolio } from "@/helpers/owner.helpers";
+import { portfolio } from "@/config/owner.config";
 import { PortfolioItem } from "@/types/types/sections.types";
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
@@ -11,9 +11,7 @@ import PortfolioCard from "@/components/portfolio/portfolio.card";
 
 const Portfolio = ({ title, description }: SectionProps) => {
   const [activeFilter, setActiveFilter] = useState<string>("all");
-  const filterSet = new Set(
-    portfolio.map((item) => item.primaryTech),
-  );
+  const filterSet = new Set(portfolio.map((item) => item.category));
 
   const handleFilter = (item: string) => {
     setActiveFilter(item);
@@ -22,7 +20,7 @@ const Portfolio = ({ title, description }: SectionProps) => {
   const filteredCards: PortfolioItem[] =
     activeFilter === "all"
       ? [...portfolio]
-      : portfolio.filter((item) => item.primaryTech === activeFilter);
+      : portfolio.filter((item) => item.category === activeFilter);
 
   return (
     <section id="portfolio">
