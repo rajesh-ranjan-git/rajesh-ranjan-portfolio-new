@@ -21,6 +21,10 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
+export interface BackButtonProps {
+  back: boolean;
+}
+
 export interface TypewriterProps {
   words: readonly string[];
   loop?: boolean;

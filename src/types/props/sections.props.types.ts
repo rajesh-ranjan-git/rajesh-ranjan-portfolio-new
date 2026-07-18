@@ -3,6 +3,7 @@ import {
   AboutTextRowType,
   ExperienceType,
   EducationTextDetailsType,
+  PortfolioItemType,
 } from "@/types/types/sections.types";
 
 export interface SectionProps {
@@ -58,4 +59,8 @@ export interface PortfolioFiltersItemProps {
   item: string;
   isActive: boolean;
   handleFilter: (item: string) => void;
+}
+
+export interface PortfolioCardProps {
+  portfolioItem: PortfolioItemType;
 }

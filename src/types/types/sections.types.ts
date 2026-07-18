@@ -51,3 +51,14 @@ export type ExperienceType = {
 };
 
 export type ExperienceDetailsType = { title: string; description?: string };
+
+export type PortfolioItemType = {
+  id: number;
+  title: string;
+  description?: string;
+  thumbnail?: string;
+  category?: string;
+  techStack?: string[];
+  liveUrl?: string;
+  githubUrl: string;
+};

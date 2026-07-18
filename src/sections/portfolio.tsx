@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { categories, portfolio } from "@/config/owner.config";
-import { PortfolioItem } from "@/types/types/sections.types";
+import { PortfolioItemType } from "@/types/types/sections.types";
 import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
@@ -18,7 +18,7 @@ const Portfolio = ({ title, description }: SectionProps) => {
 
   const sortedPortfolio = portfolio.sort((a, b) => b.id - a.id);
 
-  const filteredCards: PortfolioItem[] =
+  const filteredCards: PortfolioItemType[] =
     activeFilter === "all"
       ? sortedPortfolio
       : sortedPortfolio.filter((item) => item.category === activeFilter);

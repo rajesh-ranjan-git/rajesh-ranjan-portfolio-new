@@ -1,12 +1,23 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { IoIosWarning } from "react-icons/io";
 import { staticImagesConfig } from "@/config/common.config";
 import FloatingMenu from "@/components/ui/floating/floating.menu";
-import GoBackButton from "@/components/ui/buttons/go.back.button";
+import BackButton from "@/components/ui/buttons/back.button";
 
 const NotFound = () => {
+  const [isBackAvailable, setIsBackAvailable] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (window && window?.history?.length > 1) {
+      setIsBackAvailable(true);
+    } else {
+      setIsBackAvailable(false);
+    }
+  }, []);
+
   return (
     <div className="flex flex-col bg-amber-100 w-full h-dvh overflow-hidden text-slate-900">
       <FloatingMenu />
@@ -31,7 +42,7 @@ const NotFound = () => {
             </h3>
           </div>
 
-          <GoBackButton />
+          <BackButton back={isBackAvailable} />
         </div>
       </main>
     </div>
