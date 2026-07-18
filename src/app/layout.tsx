@@ -11,6 +11,8 @@ import ErrorWrapper from "@/components/errors/error.wrapper";
 import ThemeManager from "@/components/theme/theme.manager";
 import Sidebar from "@/components/sidebar/sidebar";
 import Orb from "@/components/ui/background/orb";
+import FloatingMenu from "@/components/ui/floating/floating.menu";
+import ScrollButton from "@/components/ui/buttons/scroll.button";
 
 export const metadata: Metadata = {
   title: {
@@ -61,7 +63,16 @@ const RootLayout = ({ children }: Readonly<ReactNodeProps>) => {
           <Banner nodeVersion={process.version} />
           <ThemeManager />
           <Sidebar />
-          <ErrorWrapper>{children}</ErrorWrapper>
+
+          <ErrorWrapper>
+            <>
+              <FloatingMenu />
+
+              {children}
+
+              <ScrollButton />
+            </>
+          </ErrorWrapper>
         </ToastProvider>
       </body>
     </html>

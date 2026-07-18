@@ -6,14 +6,10 @@ import Education from "@/sections/education";
 import Portfolio from "@/sections/portfolio";
 import Certificates from "@/sections/certificates";
 import Contact from "@/sections/contact";
-import FloatingMenu from "@/components/ui/floating/floating.menu";
-import ScrollButton from "@/components/ui/buttons/scroll.button";
 
 export default function Home() {
   return (
     <main className="relative pl-0 md:pl-16 min-h-screen">
-      <FloatingMenu />
-
       <Greetings />
       <About title="About me..." />
       <Skills title="What My Programming Skills Includes?" />
@@ -25,8 +21,6 @@ export default function Home() {
         title="Beam me a message..."
         description="Whether you have a question, any suggestion, or just want to say hi, drop me a message and I'll get back to you!"
       />
-
-      <ScrollButton />
     </main>
   );
 }
