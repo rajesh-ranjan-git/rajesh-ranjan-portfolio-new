@@ -2,7 +2,9 @@ import Image from "next/image";
 import { basicDetails } from "@/config/owner.config";
 import { technologiesConfig } from "@/config/technologies.config";
 import { SkillsToggleProps } from "@/types/props/sections.props.types";
+import { toTitleCase } from "@/utils/common.utils";
 import Card from "@/components/ui/card/card";
+import Tooltip from "@/components/ui/tooltip/tooltip";
 
 const ToolsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
   const techItems = basicDetails.tools;
@@ -16,23 +18,29 @@ const ToolsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
       }`}
     >
       {techItems.map((item) => {
-        const technology =
+        const tool =
           technologiesConfig[item as keyof typeof technologiesConfig];
 
         return (
-          <Card
-            translate="up"
-            className="bg-white/80 hover:bg-white/80 px-2 py-2 w-20 h-20 overflow-hidden select-none shrink-0"
-            key={technology.name}
+          <Tooltip
+            key={tool.name}
+            content={toTitleCase(tool.name)}
+            position="top"
+            delay={0}
           >
-            <Image
-              src={technology.src}
-              alt={technology.name}
-              width="100"
-              height="100"
-              className="w-full h-full object-contain pointer-events-none"
-            />
-          </Card>
+            <Card
+              translate="bottom"
+              className="bg-white/80 hover:bg-white/80 px-2 py-2 w-20 h-20 overflow-hidden select-none shrink-0"
+            >
+              <Image
+                src={tool.src}
+                alt={tool.name}
+                width="100"
+                height="100"
+                className="w-full h-full object-contain pointer-events-none"
+              />
+            </Card>
+          </Tooltip>
         );
       })}
     </div>

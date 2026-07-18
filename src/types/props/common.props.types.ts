@@ -54,8 +54,8 @@ export interface SocialMediaProps {
 }
 
 export interface CardProps {
-  translate?: "up" | "bottom" | "right" | "left";
-  scale?: "up" | "bottom" | "right" | "left" | "all";
+  translate?: "top" | "bottom" | "right" | "left";
+  scale?: "top" | "bottom" | "right" | "left" | "all";
   animateBorder?: boolean;
   className?: string;
   children: ReactNode;
