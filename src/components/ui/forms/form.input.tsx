@@ -31,10 +31,10 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
     };
 
     return (
-      <div className="group relative w-full">
+      <div className="group/input relative w-full">
         {startIcon && (
           <div
-            className={`top-1/2 right-4 absolute transition-all -translate-y-1/2 duration-300 ${error ? "text-[#e94335]" : "text-input-placeholder group-focus-within:text-accent-blue"}`}
+            className={`top-1/2 left-4 absolute transition-all -translate-y-1/2 duration-300 ${error ? "text-[#e94335]" : "text-input-placeholder group-focus-within/input:text-accent-blue"}`}
           >
             {startIcon}
           </div>
@@ -49,7 +49,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
 
         {endIcon && (
           <div
-            className={`top-1/2 right-4 absolute transition-all -translate-y-1/2 duration-300 ${error ? "text-[#e94335]" : "text-input-placeholder group-focus-within:text-accent-blue"}`}
+            className={`top-1/2 right-4 absolute transition-all -translate-y-1/2 duration-300 ${error ? "text-[#e94335]" : "text-input-placeholder group-focus-within/input:text-accent-blue"}`}
           >
             {endIcon}
           </div>
