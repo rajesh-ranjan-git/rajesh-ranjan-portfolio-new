@@ -69,7 +69,7 @@ const Tooltip = ({
           className={`absolute z-20 ${tooltipPositionClassesConfig[position]} ${tooltipOriginClassesConfig[position]} ${styles.tooltip} ${isVisible ? `${styles.visible} pointer-events-auto` : "pointer-events-none"}`}
         >
           <span
-            className={`block relative bg-alternate-bg shadow-lg shadow-surface-shadow px-3 py-1.5 border border-surface-border rounded-lg w-max max-w-64 text-alternate-primary text-xs transition-colors duration-200 ${className}`}
+            className={`block relative bg-alternate-bg shadow-lg shadow-surface-shadow px-3 py-1.5 border border-surface-border rounded-lg w-max max-w-64 text-alternate-primary text-xs font-semibold transition-colors duration-200 ${className}`}
           >
             {content}
           </span>

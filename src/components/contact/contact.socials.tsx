@@ -39,7 +39,7 @@ const ContactSocials = () => {
         {email ? (
           <Link
             href={email?.url}
-            className="transition-colors duration-300 hover:text-accent-blue"
+            className="transition-colors duration-300 hover:text-accent-pink"
           >
             {email?.userName}
           </Link>
@@ -61,7 +61,7 @@ const ContactSocials = () => {
         {phone ? (
           <Link
             href={phone?.url}
-            className="transition-colors duration-300 hover:text-accent-blue"
+            className="transition-colors duration-300 hover:text-accent-pink"
           >
             {phone?.userName}
           </Link>

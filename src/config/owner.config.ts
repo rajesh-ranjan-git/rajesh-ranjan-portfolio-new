@@ -201,13 +201,13 @@ export const experience = [
     ],
   },
   {
-    designation: "React Native Developer",
+    designation: "React Native Developer Intern",
     isCurrent: false,
     startMonth: "February",
     startYear: 2025,
     endMonth: "March",
     endYear: 2025,
-    company: "CYBERED (Internship | Remote)",
+    company: "CYBERED",
     companyImage: "/assets/companies/cybered.jpeg",
     techStack: [
       "React Native",
