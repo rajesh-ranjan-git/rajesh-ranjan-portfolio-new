@@ -52,7 +52,7 @@ export const useSectionNavigation = ({
       showToast({
         title: "SECTION NOT FOUND",
         message: `${toTitleCase(sectionId)} is not available!`,
-        variant: toastVariantsConfig.warning,
+        variant: toastVariantsConfig.error,
       });
       return;
     }

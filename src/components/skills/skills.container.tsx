@@ -4,7 +4,6 @@ import { technologiesConfig } from "@/config/technologies.config";
 import { SkillsToggleProps } from "@/types/props/sections.props.types";
 import Card from "@/components/ui/card/card";
 import Tooltip from "@/components/ui/tooltip/tooltip";
-import { toTitleCase } from "@/utils/common.utils";
 
 const SkillsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
   const techItems = basicDetails.skills;
@@ -18,24 +17,24 @@ const SkillsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
       }`}
     >
       {techItems.map((item) => {
-        const skill =
-          technologiesConfig[item as keyof typeof technologiesConfig];
+        const skill = technologiesConfig.find((tech) => tech.id === item);
+
+        if (!skill || !skill.src) return;
 
         return (
           <Tooltip
-            key={skill.name}
-            content={toTitleCase(skill.name)}
+            key={skill?.id}
+            content={skill?.label}
             position="top"
             delay={0}
           >
             <Card
               translate="bottom"
               className="bg-white/80 hover:bg-white/80 px-2 py-2 w-20 h-20 overflow-hidden select-none shrink-0"
-              key={skill.name}
             >
               <Image
-                src={skill.src ?? ""}
-                alt={skill.name ?? "tech-img"}
+                src={skill?.src ?? ""}
+                alt={skill?.id ?? "skill-img"}
                 width="100"
                 height="100"
                 className="w-full h-full object-contain pointer-events-none"

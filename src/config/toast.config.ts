@@ -37,11 +37,11 @@ export const variantConfig = {
     progress: "bg-emerald-600",
   },
   error: {
-    cn: "bg-rose-50 border-rose-500",
-    text: "text-rose-500",
+    cn: "bg-rose-50 border-[#e94335]",
+    text: "text-[#e94335]",
     icon: FiAlertCircle,
-    iconColor: "text-rose-500",
-    progress: "bg-rose-500",
+    iconColor: "text-[#e94335]",
+    progress: "bg-[#e94335]",
   },
   warning: {
     cn: "bg-orange-50 border-orange-600",

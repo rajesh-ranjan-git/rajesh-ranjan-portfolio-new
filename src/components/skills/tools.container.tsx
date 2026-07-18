@@ -18,13 +18,14 @@ const ToolsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
       }`}
     >
       {techItems.map((item) => {
-        const tool =
-          technologiesConfig[item as keyof typeof technologiesConfig];
+        const tool = technologiesConfig.find((tech) => tech.id === item);
+
+        if (!tool) return;
 
         return (
           <Tooltip
-            key={tool.name}
-            content={toTitleCase(tool.name)}
+            key={tool?.id}
+            content={tool?.label}
             position="top"
             delay={0}
           >
@@ -33,8 +34,8 @@ const ToolsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
               className="bg-white/80 hover:bg-white/80 px-2 py-2 w-20 h-20 overflow-hidden select-none shrink-0"
             >
               <Image
-                src={tool.src}
-                alt={tool.name}
+                src={tool?.src ?? ""}
+                alt={tool?.id ?? "tool"}
                 width="100"
                 height="100"
                 className="w-full h-full object-contain pointer-events-none"

@@ -15,6 +15,7 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.phone.id:
       return {
         id: socialMedia.phone.id,
+        label: socialMedia.phone.label,
         userName: basicDetails.phone,
         url: `${socialMedia.phone.urlPrefix}/${basicDetails.phone}/`,
       };
@@ -22,6 +23,7 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.github.id:
       return {
         id: socialMedia.github.id,
+        label: socialMedia.github.label,
         userName: basicDetails.social.github,
         url: `${socialMedia.github.urlPrefix}/${basicDetails.social.github}/`,
       };
@@ -29,6 +31,7 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.google.id:
       return {
         id: socialMedia.google.id,
+        label: socialMedia.google.label,
         userName: basicDetails.social.google,
         url: `${socialMedia.google.urlPrefix}${basicDetails.social.google}`,
       };
@@ -36,6 +39,7 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.stackOverflow.id:
       return {
         id: socialMedia.stackOverflow.id,
+        label: socialMedia.stackOverflow.label,
         userName: basicDetails.social.stackOverflow,
         url: `${socialMedia.stackOverflow.urlPrefix}/${basicDetails.social.stackOverflow}/`,
       };
@@ -43,6 +47,7 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.linkedin.id:
       return {
         id: socialMedia.linkedin.id,
+        label: socialMedia.linkedin.label,
         userName: basicDetails.social.linkedin,
         url: `${socialMedia.linkedin.urlPrefix}/${basicDetails.social.linkedin}/`,
       };
@@ -50,6 +55,7 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.twitter.id:
       return {
         id: socialMedia.twitter.id,
+        label: socialMedia.twitter.label,
         userName: basicDetails.social.twitter,
         url: `${socialMedia.twitter.urlPrefix}/${basicDetails.social.twitter}/`,
       };
@@ -57,6 +63,7 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.youtube.id:
       return {
         id: socialMedia.youtube.id,
+        label: socialMedia.youtube.label,
         userName: basicDetails.social.youtube,
         url: `${socialMedia.youtube.urlPrefix}${basicDetails.social.youtube}/`,
       };
@@ -64,6 +71,7 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.facebook.id:
       return {
         id: socialMedia.facebook.id,
+        label: socialMedia.facebook.label,
         userName: basicDetails.social.facebook,
         url: `${socialMedia.facebook.urlPrefix}/${basicDetails.social.facebook}/`,
       };
@@ -71,6 +79,7 @@ export const getSingleSocialLink = (id: string) => {
     case socialMedia.instagram.id:
       return {
         id: socialMedia.instagram.id,
+        label: socialMedia.instagram.label,
         userName: basicDetails.social.instagram,
         url: `${socialMedia.instagram.urlPrefix}/${basicDetails.social.instagram}/`,
       };

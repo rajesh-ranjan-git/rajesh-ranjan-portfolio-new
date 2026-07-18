@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { basicDetails } from "@/config/owner.config";
 import { getFullName, getSingleSocialLink } from "@/helpers/owner.helpers";
+import { toTitleCase } from "@/utils/common.utils";
 import ImageBackground from "@/components/ui/background/image.background";
 import FloatingBadge from "@/components/ui/floating/floating.badge";
+import Tooltip from "@/components/ui/tooltip/tooltip";
 
 const AboutImage = () => {
   const social = getSingleSocialLink(basicDetails.socialBadge);
@@ -66,28 +68,34 @@ const AboutImage = () => {
             duration={3}
             className="flex justify-between items-center gap-1 pr-4"
           >
-            <div className="bg-linear-to-r border border-surface-border hover:border-surface-border-hover rounded-full w-12 h-12 overflow-hidden from-accent-purple to-accent-blue shrink-0">
-              {basicDetails.images.profileImage ? (
-                <Image
-                  src={basicDetails.images.profileImage}
-                  alt="Rajesh Ranjan profile illustration"
-                  width={100}
-                  height={100}
-                  loading="eager"
-                  className="rounded-full w-full h-auto"
-                />
-              ) : (
-                <div className="flex justify-center items-center bg-surface-bg hover:bg-surface-bg-hover border border-surface-border hover:border-surface-border-hover rounded-3xl w-full h-full translate-y-0.5">
-                  {basicDetails.initials ? basicDetails.initials : "JD"}
-                </div>
-              )}
-            </div>
-            <span className="flex flex-col justify-center items-start text-sm">
-              <span className="text-lg">{getFullName()}</span>
-              <span className="text-alternate-secondary text-xs transition-all ease-in-out group-hover:text-accent-blue">
-                @{social.userName}
+            <Tooltip
+              content={toTitleCase(social.label)}
+              position="bottom"
+              delay={0}
+            >
+              <div className="bg-linear-to-r border border-surface-border hover:border-surface-border-hover rounded-full w-12 h-12 overflow-hidden from-accent-purple to-accent-blue shrink-0">
+                {basicDetails.images.profileImage ? (
+                  <Image
+                    src={basicDetails.images.profileImage}
+                    alt="Rajesh Ranjan profile illustration"
+                    width={100}
+                    height={100}
+                    loading="eager"
+                    className="rounded-full w-full h-auto"
+                  />
+                ) : (
+                  <div className="flex justify-center items-center bg-surface-bg hover:bg-surface-bg-hover border border-surface-border hover:border-surface-border-hover rounded-3xl w-full h-full translate-y-0.5">
+                    {basicDetails.initials ? basicDetails.initials : "JD"}
+                  </div>
+                )}
+              </div>
+              <span className="flex flex-col justify-center items-start text-sm">
+                <span className="text-lg">{getFullName()}</span>
+                <span className="text-alternate-secondary text-xs transition-all ease-in-out group-hover:text-accent-blue">
+                  @{social.userName}
+                </span>
               </span>
-            </span>
+            </Tooltip>
           </FloatingBadge>
         </Link>
       ) : null}

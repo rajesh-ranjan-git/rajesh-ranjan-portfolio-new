@@ -48,4 +48,9 @@ export const menuItems = [
     label: "Contact Me",
     icon: FaIdCard,
   },
+  {
+    id: "contactds",
+    label: "Contact Me",
+    icon: FaIdCard,
+  },
 ];
