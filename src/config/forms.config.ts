@@ -1,6 +1,4 @@
-import { FormStateType } from "@/types/types/actions.types";
-
-export const initialState: FormStateType = {
+export const initialState = {
   success: false,
   status: "IDLE",
   code: "INITIAL",

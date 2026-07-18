@@ -4,6 +4,7 @@ import { useActionState } from "react";
 import Form from "next/form";
 import { FaPhone, FaUserTie } from "react-icons/fa6";
 import { MdEmail, MdSubject } from "react-icons/md";
+import { TbSendFilled } from "react-icons/tb";
 import { PHONE_REGEX } from "@/constants/regex.constants";
 import { propertyConstraintsConfig } from "@/config/common.config";
 import { initialState } from "@/config/forms.config";
@@ -19,7 +20,6 @@ import FormField from "@/components/ui/forms/form.field";
 import FormInput from "@/components/ui/forms/form.input";
 import FormTextarea from "@/components/ui/forms/form.textarea";
 import FormButton from "@/components/ui/forms/form.button";
-import { TbSendFilled } from "react-icons/tb";
 
 const ContactForm = () => {
   const validateName = (val: string): string => {

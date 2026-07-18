@@ -15,7 +15,7 @@ const ToolsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
           : "opacity-0 scale-95 absolute inset-0 pointer-events-none"
       }`}
     >
-      {techItems.map((item) => (
+      {techItems.map((item: string) => (
         <Card
           translate="up"
           className="bg-white/80 hover:bg-white/80 px-2 py-2 w-20 h-20 overflow-hidden select-none shrink-0"

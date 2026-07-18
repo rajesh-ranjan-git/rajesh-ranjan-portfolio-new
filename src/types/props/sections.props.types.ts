@@ -1,10 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import {
   AboutTextRowType,
-  LocationType,
-  DegreeType,
-  GradingSystemType,
-  ExperienceDetailsType,
   ExperienceType,
   EducationTextDetailsType,
 } from "@/types/types/sections.types";

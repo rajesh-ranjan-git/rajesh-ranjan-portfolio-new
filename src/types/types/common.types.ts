@@ -1,4 +1,3 @@
-import { IconType } from "react-icons";
 import { storageConfig, themeConfig } from "@/config/common.config";
 
 export type ThemeType = keyof typeof themeConfig;

@@ -1,5 +1,5 @@
-import { FormErrorMessageProps } from "@/types/props/forms.props.types";
 import { motion, AnimatePresence } from "motion/react";
+import { FormErrorMessageProps } from "@/types/props/forms.props.types";
 
 const FormErrorMessage = ({ error, className }: FormErrorMessageProps) => {
   return (

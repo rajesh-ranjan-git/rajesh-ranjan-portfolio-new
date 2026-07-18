@@ -9,25 +9,8 @@ import React, {
   useState,
 } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { CarouselProps } from "@/types/props/carouse.props.types";
 import Card from "@/components/ui/card/card";
-
-export interface CarouselSlide {
-  name: string;
-  platform?: string;
-  imageSrc: string;
-  alt?: string;
-}
-
-export interface CarouselProps {
-  slides: readonly CarouselSlide[];
-  slideHeightClassName?: string;
-  autoPlay?: boolean;
-  autoPlayInterval?: number;
-  showArrows?: boolean;
-  showDots?: boolean;
-  rounded?: boolean;
-  className?: string;
-}
 
 const BREAKPOINTS = { md: 768, lg: 1024, xl: 1200 };
 
@@ -40,7 +23,7 @@ function getSlidesPerView(width: number): number {
 const DRAG_THRESHOLD_RATIO = 0.15;
 const TRANSITION_MS = 500;
 
-export default function Carousel({
+const Carousel = ({
   slides,
   slideHeightClassName = "h-56 sm:h-64 md:h-72 lg:h-80",
   autoPlay = false,
@@ -49,7 +32,7 @@ export default function Carousel({
   showDots = true,
   rounded = true,
   className = "",
-}: CarouselProps) {
+}: CarouselProps) => {
   const realCount = slides.length;
   const [slidesPerView, setSlidesPerView] = useState(1);
   const cloneCount = Math.min(realCount, 3);
@@ -303,4 +286,6 @@ export default function Carousel({
       )}
     </div>
   );
-}
+};
+
+export default Carousel;

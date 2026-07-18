@@ -1,9 +1,9 @@
 "use client";
 
 import { FaHandPointUp } from "react-icons/fa6";
+import { useAppStore } from "@/store/store";
 import { useScrollVisibility } from "@/hooks/useScrollVisibility";
 import MaskedButton from "@/components/ui/buttons/masked.button";
-import { useAppStore } from "@/store/store";
 
 const ScrollButton = () => {
   const activeTheme = useAppStore((state) => state.activeTheme);
