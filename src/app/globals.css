@@ -37,10 +37,6 @@
 
   --button-bg: rgba(13, 15, 43, 1);
 
-  --error: rgba(220, 38, 38, 1);
-
-  --success: rgba(22, 163, 74, 1);
-
   --github: rgba(51, 51, 51, 1);
   --google: rgba(234, 67, 53, 1);
   --stack-overflow: rgba(244, 128, 36, 1);
@@ -166,10 +162,6 @@
 
   --color-label: var(--label);
 
-  --color-error: var(--error);
-
-  --color-success: var(--success);
-
   --color-button-bg: var(--button-bg);
 
   --color-github: var(--github);
@@ -184,6 +176,8 @@
   --color-social-text: var(--social-text);
   --color-social-hover: var(--social-hover);
 }
+
+@custom-variant dark (&:where(.dark, .dark *, [data-theme=dark], [data-theme=dark] *));
 
 @layer base {
   *,

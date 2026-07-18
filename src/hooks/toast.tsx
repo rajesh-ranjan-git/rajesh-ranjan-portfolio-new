@@ -70,7 +70,7 @@ const ToastItem = ({
   return (
     <div
       style={{ "--toast-x": `${offsetX}px` } as React.CSSProperties}
-      className={`relative flex flex-col bg-surface-bg shadow-[0_12px_20px_var(--color-surface-shadow)] backdrop-blur-xl p-0 border rounded-lg min-w-64 max-w-72 overflow-hidden text-primary ${config.cn} ${styles.toastItem} ${shouldExit ? styles.toastExit : ""}`}
+      className={`relative flex flex-col shadow-[0_12px_20px_var(--color-surface-shadow)] backdrop-blur-xl p-0 border rounded-lg min-w-64 max-w-72 overflow-hidden text-primary ${config.cn} ${styles.toastItem} ${shouldExit ? styles.toastExit : ""}`}
     >
       {toast.toastProgressPosition === "top" && (
         <div className="h-1" style={progressContainerStyle}>
