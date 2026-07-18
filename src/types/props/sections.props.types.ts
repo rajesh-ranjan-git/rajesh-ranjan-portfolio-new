@@ -64,3 +64,7 @@ export interface PortfolioFiltersItemProps {
 export interface PortfolioCardProps {
   portfolioItem: PortfolioItemType;
 }
+
+export interface ProjectDetailsPageProps {
+  params: { id: string };
+}

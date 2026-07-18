@@ -25,12 +25,14 @@ const TRANSITION_MS = 500;
 
 const Carousel = ({
   slides,
+  slidesPerViewOverride,
   slideHeightClassName = "h-56 sm:h-64 md:h-72 lg:h-80",
   autoPlay = false,
   autoPlayInterval = 3500,
   showArrows = true,
   showDots = true,
   rounded = true,
+  scale,
   className = "",
 }: CarouselProps) => {
   const realCount = slides.length;
@@ -61,7 +63,12 @@ const Carousel = ({
   useEffect(() => setIsPlaying(autoPlay), [autoPlay]);
 
   useEffect(() => {
-    const update = () => setSlidesPerView(getSlidesPerView(window.innerWidth));
+    const update = () =>
+      setSlidesPerView(
+        slidesPerViewOverride
+          ? slidesPerViewOverride
+          : getSlidesPerView(window.innerWidth),
+      );
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
@@ -206,7 +213,7 @@ const Carousel = ({
               style={{ flex: `0 0 ${slidePercent}%` }}
             >
               <Card
-                scale="all"
+                scale={scale}
                 className={`shadow-lg group px-2 py-2 ${slideHeightClassName}`}
               >
                 <div className="relative w-full h-full overflow-hidden">

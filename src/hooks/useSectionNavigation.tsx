@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { toastVariantsConfig } from "@/config/toast.config";
 import { UseSectionNavigationProps } from "@/types/props/hooks.props.types";
 import { useToast } from "@/hooks/toast";
@@ -12,6 +13,9 @@ export const useSectionNavigation = ({
   threshold = 0,
 }: UseSectionNavigationProps) => {
   const [activeSection, setActiveSection] = useState(sectionIds[0] || "");
+
+  const pathname = usePathname();
+  const router = useRouter();
 
   const { showToast } = useToast();
 
@@ -45,6 +49,11 @@ export const useSectionNavigation = ({
   }, [sectionIds, rootMargin, threshold]);
 
   const scrollToSection = (sectionId: string) => {
+    if (pathname !== "/") {
+      router.push(sectionId ? `/#${sectionId}` : "/");
+      return;
+    }
+
     const element = document.getElementById(sectionId);
 
     if (!element) {

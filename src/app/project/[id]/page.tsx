@@ -1,28 +1,32 @@
-import { certificates } from "@/config/owner.config";
+import { certificates, portfolio } from "@/config/owner.config";
+import { ProjectDetailsPageProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
-import SectionDescription from "@/components/sections/section.description";
 import Carousel from "@/components/ui/carousel/carousel";
 
-const ProjectDetailsPage = () => {
-  const title = "Project Details Page";
-  const description = "project details will be visible here.";
+const ProjectDetailsPage = async ({ params }: ProjectDetailsPageProps) => {
+  const { id } = await params;
+
+  const project = portfolio.find((item) => item.id === Number(id));
 
   return (
-    <section>
-      {title ? <SectionHeading title={title} /> : null}
+    <main className="relative pl-0 md:pl-16 min-h-screen">
+      <section>
+        {project?.title ? (
+          <SectionHeading title={`${project?.title} Details`} />
+        ) : null}
 
-      {description ? <SectionDescription description={description} /> : null}
-
-      <div className="w-full">
-        <Carousel
-          slides={certificates}
-          autoPlay
-          autoPlayInterval={3000}
-          showArrows={false}
-          slideHeightClassName="h-72 sm:h-80 md:h-96 lg:h-104"
-        />
-      </div>
-    </section>
+        <div className="w-full">
+          <Carousel
+            slides={certificates}
+            slidesPerViewOverride={1}
+            autoPlay
+            autoPlayInterval={3000}
+            showArrows={false}
+            slideHeightClassName="h-72 sm:h-80 md:h-124"
+          />
+        </div>
+      </section>
+    </main>
   );
 };
 
