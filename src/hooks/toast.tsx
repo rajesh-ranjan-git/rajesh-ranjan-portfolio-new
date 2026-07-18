@@ -7,8 +7,8 @@ import {
   useCallback,
   useEffect,
 } from "react";
-import { motion } from "motion/react";
 import { IoClose } from "react-icons/io5";
+import styles from "@/animations/toast.module.css";
 import {
   positionStylesConfig,
   toastPositionsConfig,
@@ -24,7 +24,7 @@ import {
   ToastType,
 } from "@/types/types/toast.types";
 import { ToastProps } from "@/types/props/toast.props.types";
-import { getAnimationVariants } from "@/helpers/toast.helpers";
+import { getToastOffsetX } from "@/helpers/toast.helpers";
 import useScreenWidthCheck from "@/hooks/useScreenWidthCheck";
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
@@ -65,30 +65,18 @@ const ToastItem = ({
     ? { justifyContent: "flex-start" }
     : { justifyContent: "flex-end" };
 
-  const animationVariants = getAnimationVariants(position);
+  const offsetX = getToastOffsetX(position);
 
   return (
-    <motion.div
-      layout
-      initial="initial"
-      animate={shouldExit ? "exit" : "animate"}
-      exit="exit"
-      variants={animationVariants}
-      transition={{
-        type: "spring",
-        stiffness: 500,
-        damping: 40,
-        mass: 1,
-      }}
-      className={`relative flex flex-col bg-surface-bg shadow-[0_12px_20px_var(--color-surface-shadow)] backdrop-blur-xl p-0 border rounded-lg min-w-64 max-w-72 overflow-hidden text-primary ${config.cn}`}
+    <div
+      style={{ "--toast-x": `${offsetX}px` } as React.CSSProperties}
+      className={`relative flex flex-col bg-surface-bg shadow-[0_12px_20px_var(--color-surface-shadow)] backdrop-blur-xl p-0 border rounded-lg min-w-64 max-w-72 overflow-hidden text-primary ${config.cn} ${styles.toastItem} ${shouldExit ? styles.toastExit : ""}`}
     >
       {toast.toastProgressPosition === "top" && (
         <div className="h-1" style={progressContainerStyle}>
-          <motion.div
+          <div
             className={`h-full ${config.progress}`}
-            initial={{ width: "100%" }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.1, ease: "linear" }}
+            style={{ width: `${progress}%` }}
           />
         </div>
       )}
@@ -118,15 +106,13 @@ const ToastItem = ({
 
       {toast.toastProgressPosition === "bottom" && (
         <div className="bottom-0 absolute rounded-full w-full h-1">
-          <motion.div
+          <div
             className={`h-full ${config.progress}`}
-            initial={{ width: "100%" }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.1, ease: "linear" }}
+            style={{ width: `${progress}%` }}
           />
         </div>
       )}
-    </motion.div>
+    </div>
   );
 };
 
