@@ -69,7 +69,6 @@ export const basicDetails = {
 
 export const education = {
   college: {
-    id: "college",
     name: "JP Institute of Engineering & Technology",
     location: { city: "Meerut", state: "Uttar Pradesh", country: "India" },
     degree: "Bachelor of Technology",
@@ -81,7 +80,6 @@ export const education = {
     imageSrc: "/assets/education/education-1.svg",
   },
   highSchool: {
-    id: "highSchool",
     name: "Indian School of Learning",
     location: { city: "Dhanbad", state: "Jharkhand", country: "India" },
     degree: "Senior Secondary (XII)",
@@ -92,7 +90,7 @@ export const education = {
     endYear: 2014,
     imageSrc: "/assets/education/education-2.svg",
   },
-};
+} as const;
 
 export const experience = [
   {
@@ -736,9 +734,11 @@ export const certificates = [
   {
     name: "Industrial Training - Java",
     platform: "Ducat",
+    imageSrc: "/assets/error/image-not-available.webp",
   },
   {
     name: "Industrial Training - Python",
     platform: "Ducat",
+    imageSrc: "/assets/error/image-not-available.webp",
   },
-];
+] as const;

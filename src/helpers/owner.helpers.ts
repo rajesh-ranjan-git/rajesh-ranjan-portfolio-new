@@ -204,19 +204,6 @@ export const getEducationTimeLine = (
   return null;
 };
 
-export const getEducationLocation = (
-  name?: string,
-  location?: { city?: string; state?: string; country?: string },
-) => {
-  const educationLocation = getLocation(location);
-
-  if (name && educationLocation) return `${name}, ${educationLocation}`;
-
-  if (name) return name;
-
-  return null;
-};
-
 export const getExperienceTimeLine = (
   startMonth?: string,
   startYear?: number,

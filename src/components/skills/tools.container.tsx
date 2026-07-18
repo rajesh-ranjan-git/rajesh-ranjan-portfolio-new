@@ -15,21 +15,26 @@ const ToolsContainer = ({ activeSkillButton }: Partial<SkillsToggleProps>) => {
           : "opacity-0 scale-95 absolute inset-0 pointer-events-none"
       }`}
     >
-      {techItems.map((item: string) => (
-        <Card
-          translate="up"
-          className="bg-white/80 hover:bg-white/80 px-2 py-2 w-20 h-20 overflow-hidden select-none shrink-0"
-          key={technologiesConfig[item].name}
-        >
-          <Image
-            src={technologiesConfig[item].src ?? ""}
-            alt={technologiesConfig[item].name ?? "tech-img"}
-            width="100"
-            height="100"
-            className="w-full h-full object-contain pointer-events-none"
-          />
-        </Card>
-      ))}
+      {techItems.map((item) => {
+        const technology =
+          technologiesConfig[item as keyof typeof technologiesConfig];
+
+        return (
+          <Card
+            translate="up"
+            className="bg-white/80 hover:bg-white/80 px-2 py-2 w-20 h-20 overflow-hidden select-none shrink-0"
+            key={technology.name}
+          >
+            <Image
+              src={technology.src}
+              alt={technology.name}
+              width="100"
+              height="100"
+              className="w-full h-full object-contain pointer-events-none"
+            />
+          </Card>
+        );
+      })}
     </div>
   );
 };

@@ -1,14 +1,14 @@
 import { EducationTextProps } from "@/types/props/sections.props.types";
 import {
   getDegree,
-  getEducationLocation,
   getEducationTimeLine,
+  getLocation,
 } from "@/helpers/owner.helpers";
 
 const EducationText = ({ details }: EducationTextProps) => {
-  const degree = getDegree(details.degree, details.stream);
-  const timeline = getEducationTimeLine(details.startYear, details.endYear);
-  const location = getEducationLocation(details.name, details.location);
+  const degree = getDegree(details?.degree, details?.stream);
+  const timeline = getEducationTimeLine(details?.startYear, details?.endYear);
+  const location = getLocation(details?.location);
 
   return (
     <div className="z-10 flex flex-col justify-center gap-2 min-h-48">
@@ -22,9 +22,12 @@ const EducationText = ({ details }: EducationTextProps) => {
         </div>
       ) : null}
 
-      {location ? <p className="pt-2 lg:pt-6 text-sm">{location}</p> : null}
+      {details?.name ? (
+        <p className="pt-2 lg:pt-4 font-bold">{details?.name}</p>
+      ) : null}
+      {location ? <p className="text-sm">{location}</p> : null}
 
-      <p className="pt-2 lg:pt-6 text-secondary text-sm uppercase">
+      <p className="pt-2 lg:pt-4 text-secondary text-sm uppercase">
         {details.gradingSystem ? (
           <span className="font-semibold">
             {details.gradingSystem === "percent"

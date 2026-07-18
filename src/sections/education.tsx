@@ -12,10 +12,9 @@ const Education = ({ title, description }: SectionProps) => {
       {description ? <SectionDescription description={description} /> : null}
 
       <div className="justify-center items-center gap-8 grid grid-cols-1 lg:grid-cols-2 w-full">
-        {education &&
-          Object.values(education).map((educationItem) => (
-            <EducationCard key={educationItem.id} education={educationItem} />
-          ))}
+        {Object.values(education).map((educationItem) => (
+          <EducationCard key={educationItem.name} education={educationItem} />
+        ))}
       </div>
     </section>
   );
