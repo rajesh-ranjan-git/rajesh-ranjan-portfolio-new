@@ -6,7 +6,6 @@ import { useAppStore } from "@/store/store";
 import { menuItems } from "@/config/sidebar.config";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import { useSectionNavigation } from "@/hooks/useSectionNavigation";
-import Tooltip from "@/components/ui/tooltip/tooltip";
 import SidebarFooter from "@/components/sidebar/sidebar.footer";
 import SidebarHeader from "@/components/sidebar/sidebar.header";
 import BackdropOverlay from "@/components/ui/overlays/backdrop.overlay";
@@ -59,52 +58,43 @@ const Sidebar = () => {
                 const Icon = item?.icon;
 
                 return (
-                  <Tooltip
+                  <li
+                    className={`flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all duration-500 hover:bg-accent-blue cursor-pointer shrink-0 ${activeSection === item.id ? "bg-accent-blue" : ""}`}
                     key={item.id}
-                    content={item.label}
-                    position="right"
-                    delay={500}
                   >
-                    <li
-                      className={`flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all duration-500 hover:bg-accent-blue cursor-pointer shrink-0 ${activeSection === item.id ? "bg-accent-blue" : ""}`}
-                      key={item.id}
+                    <button
+                      type="button"
+                      className="flex items-center w-full cursor-pointer"
+                      onClick={() => {
+                        scrollToSection(item.id);
+                        handleListItemAction();
+                      }}
                     >
-                      <button
-                        type="button"
-                        className="flex items-center w-full cursor-pointer"
-                        onClick={() => {
-                          scrollToSection(item.id);
-                          handleListItemAction();
-                        }}
-                      >
-                        <div className="flex justify-center items-center w-6 min-w-6">
-                          <Icon />
-                        </div>
+                      <div className="flex justify-center items-center w-6 min-w-6">
+                        <Icon />
+                      </div>
 
-                        {sidebarToggle && (
-                          <div className="px-3 w-full text-lg whitespace-nowrap">
-                            <p className="w-full text-left">{item?.label}</p>
-                          </div>
-                        )}
-                      </button>
-                    </li>
-                  </Tooltip>
+                      {sidebarToggle && (
+                        <div className="px-3 w-full text-lg whitespace-nowrap">
+                          <p className="w-full text-left">{item?.label}</p>
+                        </div>
+                      )}
+                    </button>
+                  </li>
                 );
               })
             ) : (
-              <Tooltip content="Home" position="top" delay={500}>
-                <li className="flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out bg-accent-blue cursor-pointer shrink-0">
-                  <div className="flex justify-center items-center w-6 min-w-6">
-                    <FaHouse />
-                  </div>
+              <li className="flex justify-start items-center gap-4 p-2 px-3 rounded-md w-full h-10 overflow-hidden text-xl transition-all ease-in-out bg-accent-blue cursor-pointer shrink-0">
+                <div className="flex justify-center items-center w-6 min-w-6">
+                  <FaHouse />
+                </div>
 
-                  {sidebarToggle && (
-                    <div className="px-3 w-full text-lg whitespace-nowrap">
-                      <p className="w-full text-left">Home</p>
-                    </div>
-                  )}
-                </li>
-              </Tooltip>
+                {sidebarToggle && (
+                  <div className="px-3 w-full text-lg whitespace-nowrap">
+                    <p className="w-full text-left">Home</p>
+                  </div>
+                )}
+              </li>
             )}
           </ul>
         </nav>
