@@ -102,7 +102,7 @@ const AboutImage = () => {
 
       {basicDetails.images.aboutImage ? (
         <Image
-          src="/assets/personal-img/profile_photo_3d_cartoon.png"
+          src={basicDetails.images.aboutImage}
           alt="Rajesh Ranjan profile illustration"
           width={1024}
           height={1536}

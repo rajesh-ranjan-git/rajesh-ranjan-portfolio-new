@@ -11,9 +11,9 @@ export const basicDetails = {
   location: { city: "Noida", state: "Uttar Pradesh", country: "India" },
   phone: "+91-9999340771",
   images: {
-    profileImage: "/assets/personal-img/profile_photo_3d_cartoon.png",
-    greetingsImage: "/assets/personal-img/profile_photo_3d_cartoon.png",
-    aboutImage: "/assets/personal-img/profile_photo_3d_cartoon.png",
+    profileImage: "/assets/personal-img/profile-photo-3d-cartoon-square.webp",
+    greetingsImage: "/assets/personal-img/profile-photo-3d-cartoon.webp",
+    aboutImage: "/assets/personal-img/profile-photo-3d-cartoon.webp",
   },
   typewriterTexts: [
     "Full Stack Developer",
@@ -99,7 +99,7 @@ export const experience = [
     startMonth: "April",
     startYear: 2025,
     company: "India Today Group",
-    companyImage: "/assets/companies/itg.png",
+    companyImage: "/assets/companies/itg.webp",
     techStack: [
       "Next JS",
       "React JS",
@@ -208,7 +208,7 @@ export const experience = [
     endMonth: "March",
     endYear: 2025,
     company: "CYBERED",
-    companyImage: "/assets/companies/cybered.jpeg",
+    companyImage: "/assets/companies/cybered.webp",
     techStack: [
       "React Native",
       "Expo",
@@ -270,7 +270,7 @@ export const experience = [
     endMonth: "April",
     endYear: 2025,
     company: "NTT Data Services",
-    companyImage: "/assets/companies/ntt.jpeg",
+    companyImage: "/assets/companies/ntt.webp",
     techStack: [
       "React JS",
       "JavaScript",
@@ -328,7 +328,7 @@ export const experience = [
     endMonth: "October",
     endYear: 2020,
     company: "iEnergizer IT Services Pvt. Ltd.",
-    companyImage: "/assets/companies/ie.jpeg",
+    companyImage: "/assets/companies/ie.webp",
     details: [
       {
         title: "Digital Content Moderation",
@@ -355,7 +355,7 @@ export const experience = [
     endMonth: "May",
     endYear: 2018,
     company: "Concentrix Daksh Services India Pvt. Ltd.",
-    companyImage: "/assets/companies/concentrix.avif",
+    companyImage: "/assets/companies/concentrix.webp",
     details: [
       {
         title: "Customer Support Operations",
@@ -377,7 +377,7 @@ export const experience = [
     endMonth: "August",
     endYear: 2017,
     company: "Digital Web Solutions Pvt. Ltd.",
-    companyImage: "/assets/companies/dws.jpeg",
+    companyImage: "/assets/companies/dws.webp",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "PHP", "WordPress"],
     details: [
       {
@@ -422,7 +422,7 @@ export const portfolio = [
     title: "Make My Trip",
     description:
       "Landing page copy of makemytrip.com created using HTML and CSS.",
-    thumbnail: "/assets/portfolio/make-my-trip/make-my-trip.png",
+    thumbnail: "/assets/portfolio/make-my-trip/make-my-trip.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://mmt-clone-site.netlify.app/",
@@ -433,7 +433,7 @@ export const portfolio = [
     title: "Ironing",
     description:
       "Landing page for ironing site created using HTML, CSS and Bootstrap.",
-    thumbnail: "/assets/portfolio/ironing/ironing-thumbnail.png",
+    thumbnail: "/assets/portfolio/ironing/ironing-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://ironing.netlify.app/",
@@ -445,7 +445,7 @@ export const portfolio = [
     description:
       "Landing page for Bitcoin-Journal Blog Page created using HTML, CSS and Bootstrap.",
     thumbnail:
-      "/assets/portfolio/bitcoin-journal/bitcoin-journal-thumbnail.png",
+      "/assets/portfolio/bitcoin-journal/bitcoin-journal-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://bitcoin-journal.netlify.app/",
@@ -457,7 +457,7 @@ export const portfolio = [
     description:
       "Landing page for cleaning site created using HTML, CSS and Bootstrap.",
     thumbnail:
-      "/assets/portfolio/commercial-cleaning/commercial-cleaning-thumbnail.png",
+      "/assets/portfolio/commercial-cleaning/commercial-cleaning-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://commercial-cleaning.netlify.app/",
@@ -468,7 +468,7 @@ export const portfolio = [
     title: "JonesTree",
     description:
       "Landing page for forestry work site created using HTML, CSS and Bootstrap.",
-    thumbnail: "/assets/portfolio/jonestree/jonestree-thumbnail.png",
+    thumbnail: "/assets/portfolio/jonestree/jonestree-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://jonestree.netlify.app/",
@@ -479,7 +479,7 @@ export const portfolio = [
     title: "Flipkart Clone",
     description:
       "Landing page copy of flipkart.com created using HTML and CSS.",
-    thumbnail: "/assets/portfolio/flipkart-clone/flipkart-clone-thumbnail.png",
+    thumbnail: "/assets/portfolio/flipkart-clone/flipkart-clone-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://flpkart-clone.netlify.app/",
@@ -489,7 +489,7 @@ export const portfolio = [
     id: 7,
     title: "Amazon Clone",
     description: "Landing page copy of amazon.com created using HTML and CSS.",
-    thumbnail: "/assets/portfolio/amazon-clone/amazon-clone-thumbnail.png",
+    thumbnail: "/assets/portfolio/amazon-clone/amazon-clone-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://amazon-clone-site.netlify.app/",
@@ -499,7 +499,7 @@ export const portfolio = [
     id: 8,
     title: "Currency Converter",
     description: "Currency Converter created using HTML, CSS and Vanilla JS.",
-    thumbnail: "/assets/portfolio/currency-converter/currency-converter.png",
+    thumbnail: "/assets/portfolio/currency-converter/currency-converter.webp",
     category: "Vanilla JS",
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://currency-converter-vanillajs.netlify.app/",
@@ -510,7 +510,7 @@ export const portfolio = [
     title: "JP Tech Fest",
     description:
       "Tech Fest Landing Page for JP Institute of Engineering and Technology created using HTML, CSS and Bootstrap.",
-    thumbnail: "/assets/portfolio/jp-tech-fest/jp-tech-fest-thumbnail.png",
+    thumbnail: "/assets/portfolio/jp-tech-fest/jp-tech-fest-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://rajesh-ranjan-git.github.io/JPTechFest/",
@@ -520,7 +520,7 @@ export const portfolio = [
     id: 10,
     title: "Tic Tac Toe",
     description: "Tic Tac Toe game created using HTML, CSS and Vanilla JS.",
-    thumbnail: "/assets/portfolio/tic-tac-toe/tic-tac-toe-thumbnail.png",
+    thumbnail: "/assets/portfolio/tic-tac-toe/tic-tac-toe-thumbnail.webp",
     category: "Vanilla JS",
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://tictactoe-vanilla-js.netlify.app/",
@@ -531,7 +531,7 @@ export const portfolio = [
     title: "Car Removal",
     description:
       "Landing page for car repairing site created using HTML, CSS and Bootstrap.",
-    thumbnail: "/assets/portfolio/car-removal/car-removal-thumbnail.png",
+    thumbnail: "/assets/portfolio/car-removal/car-removal-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://car-removal.netlify.app/",
@@ -543,7 +543,7 @@ export const portfolio = [
     description:
       "Landing page for washing company site created using HTML, CSS and Bootstrap.",
     thumbnail:
-      "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-thumbnail.png",
+      "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://exterior-water-blaster.netlify.app/",
@@ -553,7 +553,7 @@ export const portfolio = [
     id: 13,
     title: "To Do App",
     description: "To Do App created using HTML, CSS and Vanilla JS.",
-    thumbnail: "/assets/portfolio/to-do-app/to-do-app-thumbnail.png",
+    thumbnail: "/assets/portfolio/to-do-app/to-do-app-thumbnail.webp",
     category: "Vanilla JS",
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://to-do-vanillajs.netlify.app/",
@@ -563,7 +563,7 @@ export const portfolio = [
     id: 14,
     title: "Task Manager App creates using HTML, CSS and Vanilla JS",
     description: "Task Manager",
-    thumbnail: "/assets/portfolio/task-manager/task-manager-thumbnail.png",
+    thumbnail: "/assets/portfolio/task-manager/task-manager-thumbnail.webp",
     category: "Vanilla JS",
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://rajesh-ranjan-git.github.io/Task-Manager/",
@@ -575,7 +575,7 @@ export const portfolio = [
     description:
       "Tic Tac Toe game created using React & Vite with Tailwind CSS.",
     thumbnail:
-      "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-thumbnail.png",
+      "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-thumbnail.webp",
     category: "React JS",
     techStack: [
       "HTML5",
@@ -593,7 +593,7 @@ export const portfolio = [
     title: "FQS Painting",
     description:
       "Landing page for painting site created using HTML, CSS and Bootstrap.",
-    thumbnail: "/assets/portfolio/fqs-painting/fqs-painting-thumbnail.png",
+    thumbnail: "/assets/portfolio/fqs-painting/fqs-painting-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://rajesh-ranjan-git.github.io/FQS-Painting/",
@@ -604,7 +604,7 @@ export const portfolio = [
     title: "Sky Painting",
     description:
       "Landing page for painting site created using HTML, CSS and Bootstrap.",
-    thumbnail: "/assets/portfolio/sky-painting/sky-painting-thumbnail.png",
+    thumbnail: "/assets/portfolio/sky-painting/sky-painting-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://sky-painting.netlify.app/",
@@ -615,7 +615,7 @@ export const portfolio = [
     title: "Photo Phlix",
     description:
       "Image gallery application created using React JS & Vite with Tailwind CSS.",
-    thumbnail: "/assets/portfolio/photo-phlix/photo-phlix-thumbnail.png",
+    thumbnail: "/assets/portfolio/photo-phlix/photo-phlix-thumbnail.webp",
     category: "React JS",
     techStack: [
       "HTML5",
@@ -633,7 +633,7 @@ export const portfolio = [
     title: "Get Kart",
     description:
       "A full-stack e-commerce application with frontend using React JS, Vite, Tailwind CSS and backend using Node JS, Express JS and MongoDB",
-    thumbnail: "/assets/portfolio/get-kart/get-kart-thumbnail.png",
+    thumbnail: "/assets/portfolio/get-kart/get-kart-thumbnail.webp",
     category: "React JS",
     techStack: [
       "HTML5",
@@ -654,7 +654,7 @@ export const portfolio = [
     title: "Bancardify Me",
     description:
       "An end to end banking application with real banks and real transactions.",
-    thumbnail: "/assets/portfolio/bancardify-me/bancardify-me-thumbnail.png",
+    thumbnail: "/assets/portfolio/bancardify-me/bancardify-me-thumbnail.webp",
     category: "Next JS",
     techStack: [
       "HTML5",
@@ -676,7 +676,7 @@ export const portfolio = [
     title: "Movie Mania",
     description:
       "Movie hub application created using React JS, Vite and Tailwind CSS.",
-    thumbnail: "/assets/portfolio/movie-mania/movie-mania-thumbnail.png",
+    thumbnail: "/assets/portfolio/movie-mania/movie-mania-thumbnail.webp",
     category: "React JS",
     techStack: [
       "HTML5",
@@ -694,7 +694,7 @@ export const portfolio = [
     title: "Shopprixity",
     description:
       "A full-stack e-commerce platform designed to provide users with an intuitive and robust online shopping experience.",
-    thumbnail: "/assets/portfolio/shopprixity/shopprixity-thumbnail.png",
+    thumbnail: "/assets/portfolio/shopprixity/shopprixity-thumbnail.webp",
     category: "React JS",
     techStack: [
       "HTML5",
@@ -722,84 +722,99 @@ export const certificates = [
     platform: "Outskill",
     imageSrc:
       "/assets/certificates/ai-for-engineers-masterclass-certificate-outskill.webp",
+    url: "",
   },
   {
     name: "Data Science vs Machine Learning vs AI Masterclass",
     platform: "Scaler",
     imageSrc:
       "/assets/certificates/data-science-vs-machine-learning-vs-artificial-intelligence-masterclass-scaler-certificate.webp",
+    url: "",
   },
   {
     name: "SEO",
     platform: "India Today Group",
     imageSrc: "/assets/certificates/seo-certificate-itg.webp",
+    url: "",
   },
   {
     name: "Fundamentals of Docker & Kubernetes",
     platform: "Scaler",
     imageSrc:
       "/assets/certificates/fundamentals-of-docker-&-kubernetes-certificate-scaler.webp",
+    url: "",
   },
   {
     name: "SOLID Principles Masterclass",
     platform: "Scaler",
     imageSrc:
       "/assets/certificates/solid-principles-every-developer-must-know-masterclass-scaler-certificate.webp",
+    url: "",
   },
   {
     name: "React Native Development Internship",
     platform: "CYBERED",
     imageSrc:
       "/assets/certificates/internship-completion-&-recommendation-react-native-development-certificate-cybered-edtech.webp",
+    url: "",
   },
   {
     name: "Namaste FrontEnd System Design",
     platform: "NamasteDev.com",
     imageSrc:
       "/assets/certificates/namaste-frontend-system-design-certificate-namastedev.webp",
+    url: "",
   },
   {
     name: "MERN Full Stack Web Development",
     platform: "GeeksForGeeks",
     imageSrc:
       "/assets/certificates/mern-full-stack-web-developement-certificate-gfg.webp",
+    url: "",
   },
   {
     name: "Namaste Node JS",
     platform: "NamasteDev.com",
     imageSrc:
       "/assets/certificates/namaste-node-js-certificate-namastedev.webp",
+    url: "",
   },
   {
     name: "Namaste JavaScript",
     platform: "NamasteDev.com",
     imageSrc:
       "/assets/certificates/namaste-javascript-certificate-namastedev.webp",
+    url: "",
   },
   {
     name: "React JS",
     platform: "GeeksForGeeks",
     imageSrc: "/assets/certificates/react-js-certificate-gfg.webp",
+    url: "",
   },
   {
     name: "React JS & Grunt",
     platform: "NTT Data Services",
     imageSrc: "/assets/certificates/react-js-&-grunt-certificate-ntt.webp",
+    url: "",
   },
   {
     name: "HTML5 with JavaScript & Css3 Introduction",
     platform: "NTT Data Services",
     imageSrc:
       "/assets/certificates/html5-with-javascript-&-css3-introduction-certificate-ntt.webp",
+    url: "",
   },
   {
     name: "Industrial Training - Java",
     platform: "Ducat",
     imageSrc: "/assets/error/image-not-available.webp",
+    url: "",
   },
   {
     name: "Industrial Training - Python",
     platform: "Ducat",
     imageSrc: "/assets/error/image-not-available.webp",
+    url: "",
   },
 ] as const;

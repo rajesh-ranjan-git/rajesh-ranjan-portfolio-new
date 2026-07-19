@@ -19,7 +19,7 @@ const SidebarFooter = () => {
       <hr className="text-slate-700" />
       <div className="flex justify-between items-center gap-2 px-1 w-full h-full">
         <Image
-          src="/assets/personal-img/personal-img-circular.png"
+          src="/assets/personal-img/profile-photo-3d-cartoon-square.webp"
           width={40}
           height={40}
           alt="profile-img"
