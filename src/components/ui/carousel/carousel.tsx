@@ -11,6 +11,9 @@ import React, {
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { CarouselProps } from "@/types/props/carouse.props.types";
 import Card from "@/components/ui/card/card";
+import Link from "next/link";
+import { MdOpenInNew } from "react-icons/md";
+import Tooltip from "../tooltip/tooltip";
 
 const BREAKPOINTS = { md: 768, lg: 1024, xl: 1200 };
 
@@ -229,6 +232,24 @@ const Carousel = ({
                       rounded ? "rounded-xl" : ""
                     }`}
                   />
+
+                  {slide?.url ? (
+                    <div className="top-2 right-2 absolute">
+                      <Tooltip
+                        content="See certificate"
+                        position="left"
+                        delay={0}
+                      >
+                        <Link
+                          href={slide.url}
+                          target="blank"
+                          className="bg-surface-bg hover:bg-surface-bg-hover shadow-[0_12px_20px_var(--color-surface-shadow)] backdrop-blur-xl p-1 border-surface-border hover:border-surface-border-hover rounded-lg transition-all duration-300"
+                        >
+                          <MdOpenInNew size={20} />
+                        </Link>
+                      </Tooltip>
+                    </div>
+                  ) : null}
 
                   {slide.name && (
                     <div

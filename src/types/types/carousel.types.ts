@@ -3,4 +3,5 @@ export type CarouselSlide = {
   platform?: string;
   imageSrc: string;
   alt?: string;
+  url?: string;
 };

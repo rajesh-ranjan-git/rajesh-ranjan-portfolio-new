@@ -722,99 +722,104 @@ export const certificates = [
     platform: "Outskill",
     imageSrc:
       "/assets/certificates/ai-for-engineers-masterclass-certificate-outskill.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/13zkE31ndTIo7SdTIv57hFmP3kwhtg9HV/view?usp=drive_link",
   },
   {
     name: "Data Science vs Machine Learning vs AI Masterclass",
     platform: "Scaler",
     imageSrc:
       "/assets/certificates/data-science-vs-machine-learning-vs-artificial-intelligence-masterclass-scaler-certificate.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1bMTsJmeCq0cHEX_3SRt2l7YcM_TQXJ1X/view?usp=drive_link",
   },
   {
     name: "SEO",
     platform: "India Today Group",
     imageSrc: "/assets/certificates/seo-certificate-itg.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1ylTZCVNfJc8P8VnQ59hq2fuVwX9opUPr/view?usp=drive_link",
   },
   {
     name: "Fundamentals of Docker & Kubernetes",
     platform: "Scaler",
     imageSrc:
       "/assets/certificates/fundamentals-of-docker-&-kubernetes-certificate-scaler.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1ZMJUQHjG4Bg66ALhOCY5M3Lq9laIVUkw/view?usp=drive_link",
   },
   {
     name: "SOLID Principles Masterclass",
     platform: "Scaler",
     imageSrc:
       "/assets/certificates/solid-principles-every-developer-must-know-masterclass-scaler-certificate.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1WgyKdWs7xpdTSbiodHz0cZ1yBFuYEVHh/view?usp=drive_link",
   },
   {
     name: "React Native Development Internship",
     platform: "CYBERED",
     imageSrc:
       "/assets/certificates/internship-completion-&-recommendation-react-native-development-certificate-cybered-edtech.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1uaXBqmSd3QOtoVPz46nf1yGDdXYEURDs/view?usp=drive_link",
   },
   {
     name: "Namaste FrontEnd System Design",
     platform: "NamasteDev.com",
     imageSrc:
       "/assets/certificates/namaste-frontend-system-design-certificate-namastedev.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1VhpRBFVuTlhp69_6mYx7RN3jruDV8cM5/view?usp=drive_link",
   },
   {
     name: "MERN Full Stack Web Development",
     platform: "GeeksForGeeks",
     imageSrc:
-      "/assets/certificates/mern-full-stack-web-developement-certificate-gfg.webp",
-    url: "",
+      "/assets/certificates/mern-full-stack-web-development-certificate-gfg.webp",
+    url: "https://drive.google.com/file/d/1H03oAe-SboKKAFK0hZk9TodYC4nqolm1/view?usp=drive_link",
   },
   {
     name: "Namaste Node JS",
     platform: "NamasteDev.com",
     imageSrc:
       "/assets/certificates/namaste-node-js-certificate-namastedev.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1Lw0HAzjF3ra7OMI5NYZDP93_xkUhIYsi/view?usp=drive_link",
   },
   {
     name: "Namaste JavaScript",
     platform: "NamasteDev.com",
     imageSrc:
       "/assets/certificates/namaste-javascript-certificate-namastedev.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1rgeTaUVUz9ZYyiGXxYEx1DSwGzqvuyOB/view?usp=drive_link",
+  },
+  {
+    name: "Crack FrontEnd Interview",
+    platform: "NamasteDev.com",
+    imageSrc:
+      "/assets/certificates/crack-frontend-interview-certificate-namastedev.webp",
+    url: "https://drive.google.com/file/d/1Kw_RDOtcAbZJbKqUnTxwK3FKPnjBA6Ld/view?usp=drive_link",
   },
   {
     name: "React JS",
     platform: "GeeksForGeeks",
     imageSrc: "/assets/certificates/react-js-certificate-gfg.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1MFjV6NudohOh6n95IqnwSa_VAk42AJQQ/view?usp=drive_link",
   },
   {
     name: "React JS & Grunt",
     platform: "NTT Data Services",
     imageSrc: "/assets/certificates/react-js-&-grunt-certificate-ntt.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/1VhocrtC0DMQADKvmGudZxVRG46nldELb/view?usp=drive_link",
   },
   {
     name: "HTML5 with JavaScript & Css3 Introduction",
     platform: "NTT Data Services",
     imageSrc:
       "/assets/certificates/html5-with-javascript-&-css3-introduction-certificate-ntt.webp",
-    url: "",
+    url: "https://drive.google.com/file/d/16w6XGnbvRlYsooY62rPODrGpA3gGhbtE/view?usp=drive_link",
   },
   {
     name: "Industrial Training - Java",
     platform: "Ducat",
     imageSrc: "/assets/error/image-not-available.webp",
-    url: "",
   },
   {
     name: "Industrial Training - Python",
     platform: "Ducat",
     imageSrc: "/assets/error/image-not-available.webp",
-    url: "",
   },
 ] as const;
