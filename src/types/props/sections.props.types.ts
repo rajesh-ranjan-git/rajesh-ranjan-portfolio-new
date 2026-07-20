@@ -70,5 +70,5 @@ export interface PortfolioDetailsPageProps {
 }
 
 export interface PortfolioDetailsProps {
-  project: PortfolioItemType;
+  project?: PortfolioItemType;
 }
