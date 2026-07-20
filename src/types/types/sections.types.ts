@@ -62,10 +62,16 @@ export type PortfolioItemFeatureType = {
   description: string;
 };
 
+export type PortfolioItemUsageType = {
+  title: string;
+  description: string;
+};
+
 export type PortfolioItemType = {
   id: number;
   title: string;
   description?: string;
+  overview?: string;
   thumbnail?: string;
   category?: string;
   techStack?: PortfolioItemTechType[];
@@ -73,4 +79,5 @@ export type PortfolioItemType = {
   githubUrl: string;
   screens?: readonly string[];
   features?: PortfolioItemFeatureType[];
+  usage?: PortfolioItemUsageType[];
 };

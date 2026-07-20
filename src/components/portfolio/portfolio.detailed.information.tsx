@@ -13,6 +13,13 @@ const PortfolioDetailedInformation = ({ project }: PortfolioDetailsProps) => {
         <p className="text-lg">{project?.description}</p>
       ) : null}
 
+      {project?.overview ? (
+        <div className="flex flex-col gap-2">
+          <h5>Overview</h5>
+          <p className="text-lg">{project?.overview}</p>
+        </div>
+      ) : null}
+
       {project?.techStack && project?.techStack?.length > 0 ? (
         <div className="flex flex-col gap-2">
           <h5>Tech Stack</h5>
@@ -54,6 +61,26 @@ const PortfolioDetailedInformation = ({ project }: PortfolioDetailsProps) => {
                   {feature.title} :
                 </span>
                 <span className="min-w-0">{feature.description}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : null}
+
+      {project?.usage && project?.usage?.length > 0 ? (
+        <div className="flex flex-col gap-2">
+          <h5>Usage Instructions</h5>
+
+          <div className="flex flex-col gap-3 sm:gap-2">
+            {project.usage.map((item) => (
+              <div
+                key={item.title}
+                className="flex sm:flex-row flex-col sm:items-start gap-1 sm:gap-2 w-full"
+              >
+                <span className="md:min-w-72 font-semibold shrink-0">
+                  {item.title} :
+                </span>
+                <span className="min-w-0">{item.description}</span>
               </div>
             ))}
           </div>

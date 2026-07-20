@@ -421,7 +421,9 @@ export const portfolio = [
     id: 1,
     title: "Make My Trip",
     description:
-      "Landing page copy of makemytrip.com created using HTML and CSS.",
+      "A static front-end recreation of the MakeMyTrip.com landing page, built to practice layout and styling with plain HTML and CSS",
+    overview:
+      "MakeMyTrip-Clone is a single-page static replica of the MakeMyTrip.com homepage. It recreates the header, search/booking widgets, and promotional sections using only HTML and CSS, with no backend or JavaScript logic involved.",
     thumbnail: "/assets/portfolio/make-my-trip/make-my-trip.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [
@@ -430,12 +432,41 @@ export const portfolio = [
     liveUrl: "https://mmt-clone-site.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/MakeMyTrip/",
     screens: ["/assets/portfolio/make-my-trip/make-my-trip.webp"],
+    features: [
+      {
+        title: "Landing Page Layout",
+        description:
+          "Recreation of MakeMyTrip's homepage structure (header, nav bar, booking widgets, promo sections).",
+      },
+      {
+        title: "Static Styling",
+        description: "Pure CSS layout for the homepage sections.",
+      },
+      {
+        title: "Static Assets",
+        description: "Local images used to mirror the original imagery.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Landing Page",
+        description:
+          "Open the page in your browser to view the recreated MakeMyTrip landing page.",
+      },
+      {
+        title: "Explore Page Sections",
+        description:
+          "Scroll through the header, booking widget, and promotional sections to see the layout.",
+      },
+    ],
   },
   {
     id: 2,
     title: "Ironing",
     description:
-      "Landing page for ironing site created using HTML, CSS and Bootstrap.",
+      "A static business landing page built with HTML, CSS, and Bootstrap for an ironing services company.",
+    overview:
+      "Ironing is a static marketing landing page for an ironing service, presenting company information and services styled with Bootstrap and custom CSS.",
     thumbnail: "/assets/portfolio/ironing/ironing-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [
@@ -447,12 +478,39 @@ export const portfolio = [
       "/assets/portfolio/ironing/ironing-1.webp",
       "/assets/portfolio/ironing/ironing-2.webp",
     ],
+    features: [
+      {
+        title: "Business Landing Layout",
+        description: "Header, services, and information sections.",
+      },
+      {
+        title: "Bootstrap Components",
+        description: "Responsive grid and UI components from Bootstrap.",
+      },
+      {
+        title: "Icon Support",
+        description: "Font Awesome icons used throughout the page.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Landing Page",
+        description:
+          "Open the page in your browser to view the ironing service landing page.",
+      },
+      {
+        title: "Browse Services & Info",
+        description: "Browse the services and company information sections.",
+      },
+    ],
   },
   {
     id: 3,
     title: "Bitcoin Journal",
     description:
-      "Landing page for Bitcoin-Journal Blog Page created using HTML, CSS and Bootstrap.",
+      "A static blog landing page built with HTML, CSS, and Bootstrap, showcasing a magazine-style layout for a crypto/finance blog.",
+    overview:
+      "Bitcoin-Journal is a static blog landing page for a Bitcoin/crypto-themed publication. It presents a header, featured articles, and blog post sections styled with Bootstrap and custom CSS.",
     thumbnail:
       "/assets/portfolio/bitcoin-journal/bitcoin-journal-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
@@ -467,12 +525,39 @@ export const portfolio = [
       "/assets/portfolio/ironing/bitcoin-journal-landing-page-3.webp",
       "/assets/portfolio/ironing/bitcoin-journal-landing-page-4.webp",
     ],
+    features: [
+      {
+        title: "Blog Landing Layout",
+        description: "Header, featured post, and article grid sections.",
+      },
+      {
+        title: "Bootstrap Components",
+        description: "Responsive grid and UI components from Bootstrap.",
+      },
+      {
+        title: "Icon Support",
+        description: "Font Awesome icons used throughout the page.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Blog Landing Page",
+        description:
+          "Open the page in your browser to view the blog landing page.",
+      },
+      {
+        title: "Browse Articles & Posts",
+        description: "Browse the featured article and blog post sections.",
+      },
+    ],
   },
   {
     id: 4,
     title: "Commercial Cleaning",
     description:
-      "Landing page for cleaning site created using HTML, CSS and Bootstrap.",
+      "A static multi-page business site built with HTML, CSS, and Bootstrap for a commercial cleaning services company.",
+    overview:
+      "Commercial-Cleaning is a static marketing site for a commercial cleaning service, made up of a home page and an 'About Us' page, styled with Bootstrap and custom CSS.",
     thumbnail:
       "/assets/portfolio/commercial-cleaning/commercial-cleaning-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
@@ -485,16 +570,50 @@ export const portfolio = [
       "/assets/portfolio/ironing/commercial-cleaning-1.webp",
       "/assets/portfolio/ironing/commercial-cleaning-2.webp",
     ],
+    features: [
+      {
+        title: "Multi-Page Layout",
+        description:
+          "Separate home (index.html) and about (about-us.html) pages.",
+      },
+      {
+        title: "Bootstrap Components",
+        description: "Responsive grid and UI components from Bootstrap.",
+      },
+      {
+        title: "Icon Support",
+        description: "Font Awesome icons used throughout the site.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Home Page",
+        description: "Open index.html in your browser to view the home page.",
+      },
+      {
+        title: "Navigate to About Us",
+        description: "Navigate to the 'About Us' page to view company details.",
+      },
+    ],
   },
   {
     id: 5,
     title: "JonesTree",
     description:
-      "Landing page for forestry work site created using HTML, CSS and Bootstrap.",
+      "A static business landing page built with HTML, CSS, and Bootstrap for a forestry/tree work services company, including a working PHP contact form.",
+    overview:
+      "Jonestree is a static marketing landing page for a forestry/tree work company, with a PHP-based handler for processing contact form submissions.",
     thumbnail: "/assets/portfolio/jonestree/jonestree-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [
-      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+      {
+        type: "Frontend",
+        tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      },
+      {
+        type: "Backend",
+        tech: ["PHP"],
+      },
     ],
     liveUrl: "https://jonestree.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Jonestree/",
@@ -502,12 +621,42 @@ export const portfolio = [
       "/assets/portfolio/jonestree/jonestree-landing-page-1.webp",
       "/assets/portfolio/jonestree/jonestree-landing-page-2.webp",
     ],
+    features: [
+      {
+        title: "Business Landing Layout",
+        description: "Header, services, and information sections.",
+      },
+      {
+        title: "Contact Form Backend",
+        description: "action.php handles contact form submissions server-side.",
+      },
+      {
+        title: "Bootstrap Components",
+        description: "Responsive grid and UI components from Bootstrap.",
+      },
+      {
+        title: "Icon Support",
+        description: "Font Awesome icons used throughout the page.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Landing Page",
+        description: "Open the page in your browser to view the landing page.",
+      },
+      {
+        title: "Submit the Contact Form",
+        description: "Submit the contact form to trigger the PHP mail handler.",
+      },
+    ],
   },
   {
     id: 6,
     title: "Flipkart Clone",
     description:
-      "Landing page copy of flipkart.com created using HTML and CSS.",
+      "A static front-end recreation of the Flipkart.com landing page, built to practice layout and styling with plain HTML and CSS.",
+    overview:
+      "Flipkart-Clone is a single-page static replica of the Flipkart.com homepage. It recreates the header, search bar, navigation, banner carousels, and product category sections using only HTML and CSS, with no backend or JavaScript logic involved.",
     thumbnail: "/assets/portfolio/flipkart-clone/flipkart-clone-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [
@@ -521,11 +670,42 @@ export const portfolio = [
       "/assets/portfolio/flipkart-clone/flipkart-clone-3.webp",
       "/assets/portfolio/flipkart-clone/flipkart-clone-4.webp",
     ],
+    features: [
+      {
+        title: "Landing Page Layout",
+        description:
+          "Recreation of Flipkart's homepage structure (header, nav bar, banners, category cards).",
+      },
+      {
+        title: "Static Styling",
+        description: "Pure CSS layout for the homepage sections.",
+      },
+      {
+        title: "Static Assets",
+        description:
+          "Local images used to mirror the original product/category imagery.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Landing Page",
+        description:
+          "Open the page in your browser to view the recreated Flipkart landing page.",
+      },
+      {
+        title: "Explore Page Sections",
+        description:
+          "Scroll through the header, banner, and category sections to see the layout.",
+      },
+    ],
   },
   {
     id: 7,
     title: "Amazon Clone",
-    description: "Landing page copy of amazon.com created using HTML and CSS.",
+    description:
+      "A static front-end recreation of the Amazon.com landing page, built to practice pixel-level layout and styling with plain HTML and CSS.",
+    overview:
+      "Amazon-Clone is a single-page static replica of the Amazon.com homepage. It focuses on recreating the visual layout — header, search bar, navigation, hero banner, and product category grid — using only HTML and CSS, with no backend or JavaScript logic involved.",
     thumbnail: "/assets/portfolio/amazon-clone/amazon-clone-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
@@ -536,23 +716,97 @@ export const portfolio = [
       "/assets/portfolio/amazon-clone/amazon-clone-2.webp",
       "/assets/portfolio/amazon-clone/amazon-clone-3.webp",
     ],
+    features: [
+      {
+        title: "Landing Page Layout",
+        description:
+          "Recreation of Amazon's homepage structure (header, nav bar, banner, category cards).",
+      },
+      {
+        title: "Static Styling",
+        description: "Pure CSS layout for the homepage sections.",
+      },
+      {
+        title: "Static Assets",
+        description:
+          "Local images used to mirror the original product/category imagery.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Landing Page",
+        description:
+          "Open the page in your browser to view the recreated Amazon landing page.",
+      },
+      {
+        title: "Explore Page Sections",
+        description:
+          "Scroll through the header, banner, and category sections to see the layout.",
+      },
+    ],
   },
   {
     id: 8,
     title: "Currency Converter",
-    description: "Currency Converter created using HTML, CSS and Vanilla JS.",
+    description:
+      "A Vanilla JavaScript app that lets you check live exchange rates between currencies from almost every country in the world.",
+    overview:
+      "Currency-Converter is a client-side currency conversion tool. Users pick a 'from' and 'to' currency from dropdowns populated with every supported country/currency code, enter an amount, and get the converted value using live exchange rate data along with the corresponding country flags.",
     thumbnail: "/assets/portfolio/currency-converter/currency-converter.webp",
     category: "Vanilla JS",
-    techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] },
+      { type: "External APIs", tech: ["currency-api", "FlagsAPI"] },
+    ],
     liveUrl: "https://currency-converter-vanillajs.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Currency-Converter/",
     screens: ["/assets/portfolio/currency-converter/currency-converter.webp"],
+    features: [
+      {
+        title: "Live Exchange Rates",
+        description:
+          "Fetches current currency exchange rates from a public currency-rate API.",
+      },
+      {
+        title: "Full Currency List",
+        description:
+          "Dropdowns populated with currency codes for almost every country.",
+      },
+      {
+        title: "Flag Indicators",
+        description:
+          "Displays the flag of the selected currency's country via the FlagsAPI.",
+      },
+      {
+        title: "Default Selection",
+        description:
+          "Defaults to USD → INR on load, editable to any supported pair.",
+      },
+    ],
+    usage: [
+      {
+        title: "Select Currencies",
+        description:
+          "Select a currency to convert from and a currency to convert to.",
+      },
+      {
+        title: "Enter an Amount",
+        description: "Enter an amount (defaults to 1 if left empty).",
+      },
+      {
+        title: "Convert & View Results",
+        description:
+          "Click the convert button to see the converted amount and the corresponding flags.",
+      },
+    ],
   },
   {
     id: 9,
     title: "JP Tech Fest",
     description:
-      "Tech Fest Landing Page for JP Institute of Engineering and Technology created using HTML, CSS and Bootstrap.",
+      "A static event landing page built with HTML, CSS, and Bootstrap for JPIET's technical fest.",
+    overview:
+      "JP Tech Fest is a static event site for JPIET's tech fest, made up of a home page and an event details page (event.html), styled with Bootstrap and Sass-derived CSS.",
     thumbnail: "/assets/portfolio/jp-tech-fest/jp-tech-fest-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [
@@ -567,11 +821,43 @@ export const portfolio = [
       "/assets/portfolio/jp-tech-fest/jp-tech-fest-team.webp",
       "/assets/portfolio/jp-tech-fest/jp-tech-fest-all-events.webp",
     ],
+    features: [
+      {
+        title: "Multi-Page Layout",
+        description: "Home (index.html) and event details (event.html) pages.",
+      },
+      {
+        title: "Bootstrap Components",
+        description: "Responsive grid and UI components from Bootstrap.",
+      },
+      {
+        title: "Sass Styling",
+        description: "Sass sources alongside compiled CSS.",
+      },
+      {
+        title: "Icon Support",
+        description: "Font Awesome icons used throughout the site.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Home Page",
+        description:
+          "Open index.html in your browser to view the fest home page.",
+      },
+      {
+        title: "Navigate to Event Details",
+        description: "Navigate to the event page to see fest event details.",
+      },
+    ],
   },
   {
     id: 10,
     title: "Tic Tac Toe",
-    description: "Tic Tac Toe game created using HTML, CSS and Vanilla JS.",
+    description:
+      "A classic Tic Tac Toe game built with Vanilla JavaScript, complete with win/draw detection and sound effects.",
+    overview:
+      "Tic Tac Toe is a client-side implementation of the classic two-player game, playable directly in the browser with no backend involved.",
     thumbnail: "/assets/portfolio/tic-tac-toe/tic-tac-toe-thumbnail.webp",
     category: "Vanilla JS",
     techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
@@ -583,12 +869,44 @@ export const portfolio = [
       "/assets/portfolio/tic-tac-toe/tic-tac-toe-draw-page.webp",
       "/assets/portfolio/tic-tac-toe/tic-tac-toe-loader.webp",
     ],
+    features: [
+      {
+        title: "Two-Player Gameplay",
+        description: "Classic X/O turn-based play on a 3x3 grid.",
+      },
+      {
+        title: "Win/Draw Detection",
+        description:
+          "Automatically detects winning combinations and draw conditions.",
+      },
+      {
+        title: "Sound Effects",
+        description: "Cool sound effects on moves and game outcomes.",
+      },
+    ],
+    usage: [
+      {
+        title: "Open the Game",
+        description: "Open the page in your browser.",
+      },
+      {
+        title: "Take Turns",
+        description: "Take turns clicking cells to place X or O.",
+      },
+      {
+        title: "Game Outcome",
+        description:
+          "The game announces the winner or a draw, with sound effects.",
+      },
+    ],
   },
   {
     id: 11,
     title: "Car Removal",
     description:
-      "Landing page for car repairing site created using HTML, CSS and Bootstrap.",
+      "A static business landing page built with HTML, CSS, and Bootstrap for a car removal/repair services company.",
+    overview:
+      "Car-Removal is a static marketing landing page for a car removal/repair service. It presents company information, services, and a call-to-action layout styled with Bootstrap and custom CSS.",
     thumbnail: "/assets/portfolio/car-removal/car-removal-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [
@@ -601,17 +919,45 @@ export const portfolio = [
       "/assets/portfolio/car-removal/car-removal-2.webp",
       "/assets/portfolio/car-removal/car-removal-3.webp",
     ],
+    features: [
+      {
+        title: "Business Landing Layout",
+        description: "Header, services, and call-to-action sections.",
+      },
+      {
+        title: "Bootstrap Components",
+        description: "Responsive grid and UI components from Bootstrap.",
+      },
+      {
+        title: "Icon Support",
+        description: "Font Awesome icons used throughout the page.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Landing Page",
+        description:
+          "Open the page in your browser to view the car removal service landing page.",
+      },
+      {
+        title: "Browse Services & Info",
+        description: "Browse the services and company information sections.",
+      },
+    ],
   },
   {
     id: 12,
     title: "Exterior Water Blaster",
     description:
-      "Landing page for washing company site created using HTML, CSS and Bootstrap.",
+      "A static multi-page business site built with HTML, CSS, and Bootstrap for an exterior water blasting/washing company, including a working PHP contact form.",
+    overview:
+      "Exterior-Water-Blaster is a static marketing site for an exterior washing/water blasting company. It includes a home page and a contact page, with a PHP-based mail handler for processing contact form submissions.",
     thumbnail:
       "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [
       { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+      { type: "backend", tech: ["PHP"] },
     ],
     liveUrl: "https://exterior-water-blaster.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Exterior-Water-Blaster/",
@@ -619,14 +965,50 @@ export const portfolio = [
       "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-1.webp",
       "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-2.webp",
     ],
+    features: [
+      {
+        title: "Multi-Page Layout",
+        description: "Home (index.html) and contact (contact.html) pages.",
+      },
+      {
+        title: "Contact Form Backend",
+        description:
+          "mailform.php / action.php handle contact form submissions server-side.",
+      },
+      {
+        title: "Bootstrap Components",
+        description: "Responsive grid and UI components from Bootstrap.",
+      },
+      {
+        title: "Icon Support",
+        description: "Font Awesome icons used throughout the page.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Home Page",
+        description: "Open index.html in your browser to view the home page.",
+      },
+      {
+        title: "Submit the Contact Form",
+        description:
+          "Navigate to the contact page and submit the form to trigger the PHP mail handler.",
+      },
+    ],
   },
   {
     id: 13,
     title: "To Do App",
-    description: "To Do App created using HTML, CSS and Vanilla JS.",
+    description:
+      "A Vanilla JavaScript to-do list app that lets you add, edit, and delete tasks, with LocalStorage used to keep track of your list in the browser.",
+    overview:
+      "To-Do-App is a client-side to-do list manager. Users can add todo items with a title and description, edit either field, and delete items, with everything persisted locally via LocalStorage.",
     thumbnail: "/assets/portfolio/to-do-app/to-do-app-thumbnail.webp",
     category: "Vanilla JS",
-    techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] },
+      { type: "Storage", tech: ["Browser LocalStorage"] },
+    ],
     liveUrl: "https://to-do-vanillajs.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/To-Do-App/",
     screens: [
@@ -638,14 +1020,58 @@ export const portfolio = [
       "/assets/portfolio/to-do-app/to-do-app-new-title.webp",
       "/assets/portfolio/to-do-app/to-do-app-deleting-item.webp",
     ],
+    features: [
+      {
+        title: "Add Todos",
+        description: "Create todo items with a title and description.",
+      },
+      {
+        title: "Edit Todos",
+        description:
+          "Edit both the title and description of existing todo items.",
+      },
+      {
+        title: "Delete Todos",
+        description: "Remove todo items from the list.",
+      },
+      {
+        title: "Local Persistence",
+        description:
+          "Todos are stored in LocalStorage, so they persist across page reloads.",
+      },
+    ],
+    usage: [
+      {
+        title: "Add Todos",
+        description: "Add a new todo item with a title and description.",
+      },
+      {
+        title: "Edit Todos",
+        description: "Edit the title or description of an existing todo.",
+      },
+      {
+        title: "Delete Todos",
+        description: "Delete todo items you no longer need.",
+      },
+      {
+        title: "Persistent Storage",
+        description: "Your todo list persists in the browser between visits.",
+      },
+    ],
   },
   {
     id: 14,
     title: "Task Manager",
-    description: "Task Manager App creates using HTML, CSS and Vanilla JS",
+    description:
+      "A Vanilla JavaScript task management app with search and filter functionality, using LocalStorage to persist tasks in the browser.",
+    overview:
+      "Task-Manager is a client-side task management app. Tasks are created, searched, and filtered directly in the browser, with all data persisted locally via the browser's LocalStorage — no backend required.",
     thumbnail: "/assets/portfolio/task-manager/task-manager-thumbnail.webp",
     category: "Vanilla JS",
-    techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] },
+      { type: "Storage", tech: ["Browser LocalStorage"] },
+    ],
     liveUrl: "https://rajesh-ranjan-git.github.io/Task-Manager/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Task-Manager/",
     screens: [
@@ -655,12 +1081,51 @@ export const portfolio = [
       "/assets/portfolio/task-manager/task-manager-filtered-tasks.webp",
       "/assets/portfolio/task-manager/task-manager-tasks-after-deleting.webp",
     ],
+    features: [
+      {
+        title: "Task Management",
+        description: "Add and manage tasks in the browser.",
+      },
+      {
+        title: "Search Functionality",
+        description: "Search through existing tasks.",
+      },
+      {
+        title: "Filter Functionality",
+        description: "Filter tasks based on criteria.",
+      },
+      {
+        title: "Local Persistence",
+        description:
+          "Tasks are stored in LocalStorage, so they persist across page reloads.",
+      },
+    ],
+    usage: [
+      {
+        title: "Add Tasks",
+        description: "Add a new task using the input field.",
+      },
+      {
+        title: "Search Tasks",
+        description: "Use the search bar to find specific tasks.",
+      },
+      {
+        title: "Filter Tasks",
+        description: "Use the filter controls to narrow down the task list.",
+      },
+      {
+        title: "Persistent Storage",
+        description: "Tasks remain saved in your browser between visits.",
+      },
+    ],
   },
   {
     id: 15,
     title: "Tic Tac Toe React",
     description:
-      "Tic Tac Toe game created using React & Vite with Tailwind CSS.",
+      "A React + Vite rebuild of the classic Tic Tac Toe game, with player name entry, sound effects, and routing.",
+    overview:
+      "Tic Tac Toe - React is a component-based rebuild of the classic game. Players enter their names before starting, play a full game with win/draw detection, and enjoy sound effects throughout.",
     thumbnail:
       "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-thumbnail.webp",
     category: "React JS",
@@ -676,6 +1141,14 @@ export const portfolio = [
           "Vite",
         ],
       },
+      {
+        type: "Routing",
+        tech: ["React Router DOM"],
+      },
+      {
+        type: "State Management",
+        tech: ["Context API"],
+      },
     ],
     liveUrl: "https://tictactoe-react-vite-game.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/TicTacToe-React/",
@@ -686,12 +1159,58 @@ export const portfolio = [
       "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-winner-page.webp",
       "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-draw-page.webp",
     ],
+    features: [
+      {
+        title: "Player Names",
+        description: "Choose player names before starting a game.",
+      },
+      {
+        title: "Two-Player Gameplay",
+        description: "Classic X/O turn-based play on a 3x3 grid.",
+      },
+      {
+        title: "Win/Draw Detection",
+        description:
+          "Automatically detects winning combinations and draw conditions.",
+      },
+      {
+        title: "Sound Effects",
+        description: "Cool sound effects on moves and game outcomes.",
+      },
+      {
+        title: "Routing",
+        description:
+          "Multiple views (start screen, game, winner screen) via React Router.",
+      },
+      {
+        title: "Reusable Patterns",
+        description:
+          "Custom Hooks, Higher Order Components, Context API, and state lifting.",
+      },
+    ],
+    usage: [
+      {
+        title: "Enter Player Names",
+        description: "Enter player names on the start screen.",
+      },
+      {
+        title: "Take Turns",
+        description: "Take turns clicking cells to place X or O.",
+      },
+      {
+        title: "Game Outcome",
+        description:
+          "The game announces the winner or a draw, with sound effects.",
+      },
+    ],
   },
   {
     id: 16,
     title: "FQS Painting",
     description:
-      "Landing page for painting site created using HTML, CSS and Bootstrap.",
+      "A static multi-page business site built with HTML, CSS, and Bootstrap for a painting and plastering services company",
+    overview:
+      "FQS-Painting is a static marketing site for a painting company, covering home, about, services, gallery, plasterboard-stopping, and contact pages.",
     thumbnail: "/assets/portfolio/fqs-painting/fqs-painting-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [
@@ -707,16 +1226,45 @@ export const portfolio = [
       "/assets/portfolio/fqs-painting/fqs-painting-contact-page.webp",
       "/assets/portfolio/fqs-painting/fqs-painting-image-view.webp",
     ],
+    features: [
+      {
+        title: "Multi-Page Layout",
+        description:
+          "Home, About Us, Services, Gallery, Plasterboard Stopping, and Contact Us pages.",
+      },
+      {
+        title: "Bootstrap Components",
+        description: "Responsive grid and UI components from Bootstrap.",
+      },
+      {
+        title: "Custom Web Fonts",
+        description: "Local font files used across the site.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Home Page",
+        description: "Open index.html in your browser to view the home page.",
+      },
+      {
+        title: "Navigate Site Pages",
+        description:
+          "Navigate between the About, Services, Gallery, and Contact pages using the site navigation.",
+      },
+    ],
   },
   {
     id: 17,
     title: "Sky Painting",
     description:
-      "Landing page for painting site created using HTML, CSS and Bootstrap.",
+      "A static business site built with HTML, CSS, and Bootstrap for a painting services company, including a working PHP contact form.",
+    overview:
+      "Sky-Painting is a static marketing site for a painting company, with a home page and a thank-you page, backed by a PHP mail handler for the contact form.",
     thumbnail: "/assets/portfolio/sky-painting/sky-painting-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
     techStack: [
       { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+      { type: "Backend", tech: ["PHP"] },
     ],
     liveUrl: "https://sky-painting.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Sky-Painting/",
@@ -725,12 +1273,43 @@ export const portfolio = [
       "/assets/portfolio/sky-painting/sky-painting-landing-page-2.webp",
       "/assets/portfolio/sky-painting/sky-painting-landing-page-3.webp",
     ],
+    features: [
+      {
+        title: "Multi-Page Layout",
+        description: "Home (index.html) and thank-you (thankyou.html) pages.",
+      },
+      {
+        title: "Contact Form Backend",
+        description: "mail.php handles contact form submissions server-side.",
+      },
+      {
+        title: "Bootstrap Components",
+        description: "Responsive grid and UI components from Bootstrap.",
+      },
+      {
+        title: "Icon Support",
+        description: "Font Awesome icons used throughout the site.",
+      },
+    ],
+    usage: [
+      {
+        title: "View the Home Page",
+        description: "Open index.html in your browser to view the home page.",
+      },
+      {
+        title: "Submit the Contact Form",
+        description:
+          "Submit the contact form to trigger the PHP mail handler and view the thank-you page.",
+      },
+    ],
   },
   {
     id: 18,
-    title: "Photo Phlix",
+    title: "PhotoPhlix",
     description:
-      "Image gallery application created using React JS & Vite with Tailwind CSS.",
+      "An image gallery application built with React and Vite, powered by the Unsplash API.",
+    overview:
+      "PhotoPhlix lets users browse photos uploaded by the Unsplash community, view them in a lightbox, favorite images, and share them via WhatsApp.",
     thumbnail: "/assets/portfolio/photo-phlix/photo-phlix-thumbnail.webp",
     category: "React JS",
     techStack: [
@@ -743,7 +1322,29 @@ export const portfolio = [
           "JavaScript",
           "React JS",
           "Vite",
+          "JSX",
+          "Flowbite / Flowbite React",
         ],
+      },
+      {
+        type: "State Management",
+        tech: ["Redux Toolkit", "React Redux", "Context API"],
+      },
+      {
+        type: "HTTP Client",
+        tech: ["Fetch API"],
+      },
+      {
+        type: "Routing",
+        tech: ["React Router DOM"],
+      },
+      {
+        type: "Image Viewer",
+        tech: ["yet-another-react-lightbox"],
+      },
+      {
+        type: "Data Source",
+        tech: ["Unsplash API"],
       },
     ],
     liveUrl: "https://photophlix.netlify.app/",
@@ -754,12 +1355,59 @@ export const portfolio = [
       "/assets/portfolio/photo-phlix/photo-phlix-light-box.webp",
       "/assets/portfolio/photo-phlix/photo-phlix-after-search.webp",
     ],
+    features: [
+      {
+        title: "Photo Browsing",
+        description: "Browse and search photos sourced from Unsplash.",
+      },
+      {
+        title: "Lightbox Viewer",
+        description: "View images full-size using React Lightbox.",
+      },
+      {
+        title: "Favorites",
+        description: "Mark photos as favorites for quick access.",
+      },
+      {
+        title: "Share to WhatsApp",
+        description: "Share a photo directly via WhatsApp's share link.",
+      },
+      {
+        title: "Infinite Scrolling",
+        description: "Continuously load more photos while browsing.",
+      },
+      {
+        title: "Reusable Patterns",
+        description:
+          "Custom Hooks, Higher Order Components, Controlled/Uncontrolled carousel components, Context API, and state lifting.",
+      },
+    ],
+    usage: [
+      {
+        title: "Browse & Search Photos",
+        description: "Browse and search photos on the home page.",
+      },
+      {
+        title: "View in Lightbox",
+        description: "Click a photo to view it in the lightbox.",
+      },
+      {
+        title: "Favorite Photos",
+        description: "Favorite photos to revisit them later.",
+      },
+      {
+        title: "Share via WhatsApp",
+        description: "Share a photo via WhatsApp using the share option.",
+      },
+    ],
   },
   {
     id: 19,
     title: "Get Kart",
     description:
-      "A full-stack e-commerce application with frontend using React JS, Vite, Tailwind CSS and backend using Node JS, Express JS and MongoDB",
+      "An e-commerce web application built with React and Vite, showcasing a broad range of modern React patterns alongside authentication, cart, and product-browsing functionality.",
+    overview:
+      "GetKart is a React + Vite e-commerce front end. Users can browse a product catalog, search, filter, and sort products, add items to a cart, and sign up / log in via a JWT-authenticated backend. Product data is sourced from DummyJSON, while user accounts are handled by a separate Node.js/Express/MongoDB backend deployed on Render.",
     thumbnail: "/assets/portfolio/get-kart/get-kart-thumbnail.webp",
     category: "React JS",
     techStack: [
@@ -772,11 +1420,31 @@ export const portfolio = [
           "JavaScript",
           "React JS",
           "Vite",
+          "JSX",
+          "Daisy UI",
+          "Remix Icons",
         ],
       },
       { type: "Backend", tech: ["Node JS", "Express JS"] },
-      { type: "Database", tech: ["MongoDB"] },
-      { type: "Authentication", tech: ["JWT"] },
+      { type: "Database", tech: ["MongoDB", "Mongoose"] },
+      { type: "Authentication", tech: ["JWT", "cookies", "Bcrypt"] },
+      {
+        type: "State Management",
+        tech: ["Redux Toolkit", "React Redux", "Context API"],
+      },
+      {
+        type: "HTTP Client",
+        tech: ["Fetch API"],
+      },
+      { type: "Forms/Validation", tech: "Formik, Yup" },
+      {
+        type: "Routing",
+        tech: ["React Router DOM"],
+      },
+      {
+        type: "Data Source",
+        tech: ["DummyJSON"],
+      },
     ],
     liveUrl: "https://get-kart.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/GetKart/",
@@ -790,12 +1458,71 @@ export const portfolio = [
       "/assets/portfolio/get-kart/get-kart-singleproduct-page.webp",
       "/assets/portfolio/get-kart/get-kart-cart-page.webp",
     ],
+    features: [
+      {
+        title: "Product Catalog",
+        description: "Browse products with Search Bar, Filtering, and Sorting.",
+      },
+      {
+        title: "Shimmer UI",
+        description: "Loading skeletons while data is being fetched.",
+      },
+      {
+        title: "Cart Management",
+        description: "Add products to a cart and review them before checkout.",
+      },
+      {
+        title: "Authentication",
+        description:
+          "Sign up / log in flow using JWT tokens stored in cookies.",
+      },
+      {
+        title: "Form Validation",
+        description: "Validated forms via Formik and Yup.",
+      },
+      {
+        title: "State Management",
+        description: "Redux Toolkit alongside Context API for shared state.",
+      },
+      {
+        title: "Routing",
+        description:
+          "Dynamic routing with React Router, including protected/auth-wrapped routes.",
+      },
+      {
+        title: "Reusable Patterns",
+        description:
+          "Custom Hooks, Higher Order Components, Lazy Loading, Controlled/Uncontrolled components (e.g. accordion), and state lifting.",
+      },
+    ],
+    usage: [
+      {
+        title: "Browse the Catalog",
+        description:
+          "Browse the product catalog on the home page, using search, filters, and sorting.",
+      },
+      {
+        title: "Sign Up / Log In",
+        description: "Sign up or log in to your account.",
+      },
+      {
+        title: "Manage Your Cart",
+        description:
+          "Add products to your cart and review them from the cart page.",
+      },
+      {
+        title: "View Product Details",
+        description: "View individual product details on the product page.",
+      },
+    ],
   },
   {
     id: 20,
     title: "Bancardify Me",
     description:
-      "An end to end banking application with real banks and real transactions.",
+      "A modern finance/banking dashboard platform built with Next.js, giving users a unified view of their bank accounts, transactions, and payment transfers.",
+    overview:
+      "BancardifyMe is a Next.js (App Router) banking dashboard. Users sign up / sign in, securely link their real bank accounts via Plaid, view balances and recent transactions across linked banks, transfer funds between accounts using Dwolla, and track their full transaction history.",
     thumbnail: "/assets/portfolio/bancardify-me/bancardify-me-thumbnail.webp",
     category: "Next JS",
     techStack: [
@@ -808,11 +1535,16 @@ export const portfolio = [
           "TypeScript",
           "Next JS",
           "Shadcn UI",
+          "React JS",
+          "Radix UI",
         ],
       },
+      { type: "Forms/Validation", tech: ["React Hook Form", "Zod"] },
+      { type: "Charts", tech: ["Chart JS"] },
       { type: "Backend", tech: ["Node JS", "Appwrite"] },
       { type: "Authentication", tech: ["JWT"] },
       { type: "Payment", tech: ["Plaid", "Dwolla"] },
+      { type: "Monitoring", tech: ["Sentry"] },
     ],
     liveUrl: "https://bancardifyme.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/bancardifyme/",
@@ -825,12 +1557,85 @@ export const portfolio = [
       "/assets/portfolio/bancardify-me/bancardify-me-transactions.webp",
       "/assets/portfolio/bancardify-me/bancardify-me-transfer.webp",
     ],
+    features: [
+      {
+        title: "Authentication",
+        description: "Sign-up and sign-in flows backed by Appwrite accounts.",
+      },
+      {
+        title: "Bank Linking",
+        description: "Securely connect bank accounts via Plaid Link.",
+      },
+      {
+        title: "My Banks",
+        description: "View all linked bank accounts and their details.",
+      },
+      {
+        title: "Transaction History",
+        description:
+          "Browse historical transactions per linked account, with pagination.",
+      },
+      {
+        title: "Payment Transfer",
+        description:
+          "Transfer funds between accounts using Dwolla as the payment processor.",
+      },
+      {
+        title: "Dashboard Overview",
+        description:
+          "Total balance summary, animated counters, and a doughnut chart breakdown of balances by bank.",
+      },
+      {
+        title: "Error Monitoring",
+        description:
+          "Sentry integration for client, server, and edge runtime error tracking.",
+      },
+    ],
+    usage: [
+      {
+        title: "Sign up / Sign in",
+        description:
+          "Create an account or log in from the /sign-up or /sign-in pages. Sessions are managed by Appwrite.",
+      },
+      {
+        title: "Link a bank account",
+        description:
+          "From the dashboard, use the Plaid Link button to securely connect a bank account (use Plaid's Sandbox test credentials in development).",
+      },
+      {
+        title: "View your dashboard",
+        description:
+          "See your total balance, an animated summary of balances by bank, and recent transactions on the home page.",
+      },
+      {
+        title: "My Banks",
+        description:
+          "Go to /my-banks to see all linked bank accounts and their individual details.",
+      },
+      {
+        title: "Transaction History",
+        description:
+          "Go to /transaction-history to browse the full, paginated transaction history for a selected bank.",
+      },
+      {
+        title: "Transfer funds",
+        description:
+          "Go to /payment-transfer to send money between accounts; transfers are processed through Dwolla.",
+      },
+      {
+        title: "Sign out",
+        description:
+          "End your session from the sidebar/footer sign-out action.",
+      },
+    ],
   },
   {
     id: 21,
     title: "Movie Mania",
     description:
-      "Movie hub application created using React JS, Vite and Tailwind CSS.",
+      "A Movie & TV Show hub built with React and Vite, powered by The Movie Database (TMDB) API.",
+    overview:
+      "MovieMania lets users browse Popular, Trending, Upcoming, Now Playing, On Air, Similar, and Recommended movies and TV shows, view details, and watch trailers — all backed by the TMDB API.",
     thumbnail: "/assets/portfolio/movie-mania/movie-mania-thumbnail.webp",
     category: "React JS",
     techStack: [
@@ -845,6 +1650,10 @@ export const portfolio = [
           "Vite",
         ],
       },
+      { type: "State Management", tech: ["Redux Toolkit", "React Redux"] },
+      { type: "HTTP Client", tech: ["Axios"] },
+      { type: "Routing", tech: ["React Router DOM"] },
+      { type: "Data Source", tech: ["TMDB API"] },
     ],
     liveUrl: "https://app-moviemania.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/MovieMania/",
@@ -857,12 +1666,57 @@ export const portfolio = [
       "/assets/portfolio/movie-mania/movie-mania-trailer-section.webp",
       "/assets/portfolio/movie-mania/movie-mania-tv-shows-page.webp",
     ],
+    features: [
+      {
+        title: "Browse by Category",
+        description:
+          "Popular, Trending, Upcoming, Now Playing, On Air sections for Movies and TV Shows.",
+      },
+      {
+        title: "Search & Filter",
+        description: "Search bar with filtering of result cards.",
+      },
+      {
+        title: "Trailers",
+        description: "Watch trailers embedded via YouTube.",
+      },
+      {
+        title: "Infinite Scrolling",
+        description: "Debounced infinite scroll to reduce redundant API calls.",
+      },
+      {
+        title: "Similar & Recommended",
+        description: "Related content suggestions on details pages.",
+      },
+      {
+        title: "Reusable Patterns",
+        description:
+          "Custom Hooks, Higher Order Components, Controlled/Uncontrolled carousel components, and state lifting.",
+      },
+    ],
+    usage: [
+      {
+        title: "Browse by Category",
+        description: "Browse movies and TV shows by category on the home page.",
+      },
+      {
+        title: "Search Titles",
+        description: "Use the search bar to find specific titles.",
+      },
+      {
+        title: "View Title Details",
+        description:
+          "Open a title's details page to view info, cast, trailers, and recommendations.",
+      },
+    ],
   },
   {
     id: 22,
     title: "Shopprixity",
     description:
-      "A full-stack e-commerce platform designed to provide users with an intuitive and robust online shopping experience.",
+      "A platform is designed to provide users with an intuitive and robust online shopping experience. It has admin section as well to manage and simply the entire shopping experience.",
+    overview:
+      "A full-stack e-commerce platform designed to provide users with an intuitive and robust online shopping experience. This project is designed to cater to both small businesses and large enterprises, with flexibility and scalability in mind.",
     thumbnail: "/assets/portfolio/shopprixity/shopprixity-thumbnail.webp",
     category: "React JS",
     techStack: [
@@ -870,11 +1724,41 @@ export const portfolio = [
       { type: "Backend", tech: ["Node JS", "Express JS"] },
       { type: "Database", tech: ["MongoDB"] },
       { type: "ORM", tech: ["Prisma"] },
-      { type: "Authentication", tech: ["JWT", "Firebase"] },
+      { type: "Authentication", tech: ["JWT", "Firebase", "cookies"] },
       { type: "Payment", tech: ["Paypal"] },
     ],
     liveUrl: "https://shopprixity.vercel.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Shopprixity/",
+
+    screens: [
+      "/assets/portfolio/shopprixity/shopprixity-shophome.webp",
+      "/assets/portfolio/shopprixity/shopprixity-shophome1.webp",
+      "/assets/portfolio/shopprixity/shopprixity-signin.webp",
+      "/assets/portfolio/shopprixity/shopprixity-register.webp",
+      "/assets/portfolio/shopprixity/shopprixity-allproducts.webp",
+      "/assets/portfolio/shopprixity/shopprixity-filterproducts.webp",
+      "/assets/portfolio/shopprixity/shopprixity-filterproducts1.webp",
+      "/assets/portfolio/shopprixity/shopprixity-search.webp",
+      "/assets/portfolio/shopprixity/shopprixity-searchresults.webp",
+      "/assets/portfolio/shopprixity/shopprixity-profiledropdown.webp",
+      "/assets/portfolio/shopprixity/shopprixity-cart.webp",
+      "/assets/portfolio/shopprixity/shopprixity-checkout.webp",
+      "/assets/portfolio/shopprixity/shopprixity-checkout1.webp",
+      "/assets/portfolio/shopprixity/shopprixity-paypal.webp",
+      "/assets/portfolio/shopprixity/shopprixity-paymentsuccess.webp",
+      "/assets/portfolio/shopprixity/shopprixity-accountorders.webp",
+      "/assets/portfolio/shopprixity/shopprixity-accountaddress.webp",
+      "/assets/portfolio/shopprixity/shopprixity-accountaddress1.webp",
+      "/assets/portfolio/shopprixity/shopprixity-orderdetails.webp",
+      "/assets/portfolio/shopprixity/shopprixity-admindashboard.webp",
+      "/assets/portfolio/shopprixity/shopprixity-adminproducts.webp",
+      "/assets/portfolio/shopprixity/shopprixity-adminorders.webp",
+      "/assets/portfolio/shopprixity/shopprixity-adminorderdetails.webp",
+      "/assets/portfolio/shopprixity/shopprixity-adminorderupdate.webp",
+      "/assets/portfolio/shopprixity/shopprixity-orderupdatedstatus.webp",
+      "/assets/portfolio/shopprixity/shopprixity-addproduct.webp",
+      "/assets/portfolio/shopprixity/shopprixity-editproduct.webp",
+    ],
     features: [
       {
         title: "Product Catalog",
@@ -910,34 +1794,32 @@ export const portfolio = [
           "Easy search functionality with advanced filtering options to help users find the products they need.",
       },
     ],
-    screens: [
-      "/assets/portfolio/shopprixity/shopprixity-shophome.webp",
-      "/assets/portfolio/shopprixity/shopprixity-shophome1.webp",
-      "/assets/portfolio/shopprixity/shopprixity-signin.webp",
-      "/assets/portfolio/shopprixity/shopprixity-register.webp",
-      "/assets/portfolio/shopprixity/shopprixity-allproducts.webp",
-      "/assets/portfolio/shopprixity/shopprixity-filterproducts.webp",
-      "/assets/portfolio/shopprixity/shopprixity-filterproducts1.webp",
-      "/assets/portfolio/shopprixity/shopprixity-search.webp",
-      "/assets/portfolio/shopprixity/shopprixity-searchresults.webp",
-      "/assets/portfolio/shopprixity/shopprixity-profiledropdown.webp",
-      "/assets/portfolio/shopprixity/shopprixity-cart.webp",
-      "/assets/portfolio/shopprixity/shopprixity-checkout.webp",
-      "/assets/portfolio/shopprixity/shopprixity-checkout1.webp",
-      "/assets/portfolio/shopprixity/shopprixity-paypal.webp",
-      "/assets/portfolio/shopprixity/shopprixity-paymentsuccess.webp",
-      "/assets/portfolio/shopprixity/shopprixity-accountorders.webp",
-      "/assets/portfolio/shopprixity/shopprixity-accountaddress.webp",
-      "/assets/portfolio/shopprixity/shopprixity-accountaddress1.webp",
-      "/assets/portfolio/shopprixity/shopprixity-orderdetails.webp",
-      "/assets/portfolio/shopprixity/shopprixity-admindashboard.webp",
-      "/assets/portfolio/shopprixity/shopprixity-adminproducts.webp",
-      "/assets/portfolio/shopprixity/shopprixity-adminorders.webp",
-      "/assets/portfolio/shopprixity/shopprixity-adminorderdetails.webp",
-      "/assets/portfolio/shopprixity/shopprixity-adminorderupdate.webp",
-      "/assets/portfolio/shopprixity/shopprixity-orderupdatedstatus.webp",
-      "/assets/portfolio/shopprixity/shopprixity-addproduct.webp",
-      "/assets/portfolio/shopprixity/shopprixity-editproduct.webp",
+    usage: [
+      {
+        title: "Sign Up / Log In",
+        description:
+          "Create an account or log in to access personalized features.",
+      },
+      {
+        title: "Browse Products",
+        description:
+          "Browse the product catalog or use the search and filter features to find items.",
+      },
+      {
+        title: "Add Items to Cart",
+        description:
+          "Add products to your shopping cart and view your cart from the navigation menu.",
+      },
+      {
+        title: "Proceed to Checkout",
+        description:
+          "Enter your shipping details and payment information, then complete the purchase.",
+      },
+      {
+        title: "Track Orders",
+        description:
+          "View and manage your order history from your account dashboard.",
+      },
     ],
   },
 ];
