@@ -45,14 +45,14 @@ export const MONTHS_SHORT = [
 ];
 
 export const CARD_TRANSLATE_CLASSES = {
-  up: "hover:-translate-y-2",
+  top: "hover:-translate-y-2",
   bottom: "hover:translate-y-2",
   left: "hover:-translate-x-2",
   right: "hover:translate-x-2",
 } as const;
 
 export const CARD_SCALE_CLASSES = {
-  up: "hover:scale-y-102",
+  top: "hover:scale-y-102",
   bottom: "hover:scale-y-98",
   left: "hover:scale-x-98",
   right: "hover:scale-x-102",

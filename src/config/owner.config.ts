@@ -427,6 +427,7 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://mmt-clone-site.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/MakeMyTrip/",
+    images: ["/assets/portfolio/make-my-trip/make-my-trip.webp"],
   },
   {
     id: 2,
@@ -438,6 +439,10 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://ironing.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Ironing/",
+    images: [
+      "/assets/portfolio/ironing/ironing-1.webp",
+      "/assets/portfolio/ironing/ironing-2.webp",
+    ],
   },
   {
     id: 3,
@@ -450,6 +455,12 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://bitcoin-journal.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Bitcoin-Journal/",
+    images: [
+      "/assets/portfolio/ironing/bitcoin-journal-landing-page-1.webp",
+      "/assets/portfolio/ironing/bitcoin-journal-landing-page-2.webp",
+      "/assets/portfolio/ironing/bitcoin-journal-landing-page-3.webp",
+      "/assets/portfolio/ironing/bitcoin-journal-landing-page-4.webp",
+    ],
   },
   {
     id: 4,
@@ -462,6 +473,10 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://commercial-cleaning.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Commercial-Cleaning/",
+    images: [
+      "/assets/portfolio/ironing/commercial-cleaning-1.webp",
+      "/assets/portfolio/ironing/commercial-cleaning-2.webp",
+    ],
   },
   {
     id: 5,
@@ -473,6 +488,10 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://jonestree.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Jonestree/",
+    images: [
+      "/assets/portfolio/jonestree/jonestree-landing-page-1.webp",
+      "/assets/portfolio/jonestree/jonestree-landing-page-2.webp",
+    ],
   },
   {
     id: 6,
@@ -484,6 +503,12 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://flpkart-clone.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Flipkart-Clone/",
+    images: [
+      "/assets/portfolio/flipkart-clone/flipkart-clone-1.webp",
+      "/assets/portfolio/flipkart-clone/flipkart-clone-2.webp",
+      "/assets/portfolio/flipkart-clone/flipkart-clone-3.webp",
+      "/assets/portfolio/flipkart-clone/flipkart-clone-4.webp",
+    ],
   },
   {
     id: 7,
@@ -494,6 +519,11 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://amazon-clone-site.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Amazon-Clone/",
+    images: [
+      "/assets/portfolio/amazon-clone/amazon-clone-1.webp",
+      "/assets/portfolio/amazon-clone/amazon-clone-2.webp",
+      "/assets/portfolio/amazon-clone/amazon-clone-3.webp",
+    ],
   },
   {
     id: 8,
@@ -504,6 +534,7 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://currency-converter-vanillajs.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Currency-Converter/",
+    images: ["/assets/portfolio/currency-converter/currency-converter.webp"],
   },
   {
     id: 9,
@@ -515,6 +546,13 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://rajesh-ranjan-git.github.io/JPTechFest/",
     githubUrl: "https://github.com/rajesh-ranjan-git/JPTechFest/",
+    images: [
+      "/assets/portfolio/jp-tech-fest/jp-tech-fest-about.webp",
+      "/assets/portfolio/jp-tech-fest/jp-tech-fest-all-events.webp",
+      "/assets/portfolio/jp-tech-fest/jp-tech-fest-events.webp",
+      "/assets/portfolio/jp-tech-fest/jp-tech-fest-home-page.webp",
+      "/assets/portfolio/jp-tech-fest/jp-tech-fest-team.webp",
+    ],
   },
   {
     id: 10,
@@ -525,6 +563,12 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://tictactoe-vanilla-js.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/TicTacToe/",
+    images: [
+      "/assets/portfolio/tic-tac-toe/tic-tac-toe-draw-page.webp",
+      "/assets/portfolio/tic-tac-toe/tic-tac-toe-game-page.webp",
+      "/assets/portfolio/tic-tac-toe/tic-tac-toe-loader.webp",
+      "/assets/portfolio/tic-tac-toe/tic-tac-toe-winner-page.webp",
+    ],
   },
   {
     id: 11,
@@ -536,6 +580,11 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://car-removal.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Car-Removal/",
+    images: [
+      "/assets/portfolio/car-removal/car-removal-1.webp",
+      "/assets/portfolio/car-removal/car-removal-2.webp",
+      "/assets/portfolio/car-removal/car-removal-3.webp",
+    ],
   },
   {
     id: 12,
@@ -548,6 +597,10 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://exterior-water-blaster.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Exterior-Water-Blaster/",
+    images: [
+      "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-1.webp",
+      "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-2.webp",
+    ],
   },
   {
     id: 13,
@@ -558,6 +611,15 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://to-do-vanillajs.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/To-Do-App/",
+    images: [
+      "/assets/portfolio/to-do-app/to-do-app-adding-description.webp",
+      "/assets/portfolio/to-do-app/to-do-app-deleting-item.webp",
+      "/assets/portfolio/to-do-app/to-do-app-editing-title.webp",
+      "/assets/portfolio/to-do-app/to-do-app-home-page.webp",
+      "/assets/portfolio/to-do-app/to-do-app-new-title.webp",
+      "/assets/portfolio/to-do-app/to-do-app-with-description.webp",
+      "/assets/portfolio/to-do-app/to-do-app-with-items-without-description.webp",
+    ],
   },
   {
     id: 14,
@@ -568,6 +630,13 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript"],
     liveUrl: "https://rajesh-ranjan-git.github.io/Task-Manager/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Task-Manager/",
+    images: [
+      "/assets/portfolio/task-manager/task-manager-add-tasks.webp",
+      "/assets/portfolio/task-manager/task-manager-filtered-tasks.webp",
+      "/assets/portfolio/task-manager/task-manager-home-page.webp",
+      "/assets/portfolio/task-manager/task-manager-tasks-after-deleting.webp",
+      "/assets/portfolio/task-manager/task-manager-tasks-with-priorities.webp",
+    ],
   },
   {
     id: 15,
@@ -587,6 +656,13 @@ export const portfolio = [
     ],
     liveUrl: "https://tictactoe-react-vite-game.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/TicTacToe-React/",
+    images: [
+      "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-draw-page.webp",
+      "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-game-page.webp",
+      "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-player-page.webp",
+      "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-start-page.webp",
+      "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-winner-page.webp",
+    ],
   },
   {
     id: 16,
@@ -598,6 +674,14 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://rajesh-ranjan-git.github.io/FQS-Painting/",
     githubUrl: "https://github.com/rajesh-ranjan-git/FQS-Painting/",
+    images: [
+      "/assets/portfolio/fqs-painting/fqs-painting-about-page.webp",
+      "/assets/portfolio/fqs-painting/fqs-painting-contact-page.webp",
+      "/assets/portfolio/fqs-painting/fqs-painting-gallery-page.webp",
+      "/assets/portfolio/fqs-painting/fqs-painting-home-page.webp",
+      "/assets/portfolio/fqs-painting/fqs-painting-image-view.webp",
+      "/assets/portfolio/fqs-painting/fqs-painting-services-page.webp",
+    ],
   },
   {
     id: 17,
@@ -609,6 +693,11 @@ export const portfolio = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
     liveUrl: "https://sky-painting.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Sky-Painting/",
+    images: [
+      "/assets/portfolio/sky-painting/sky-painting-landing-page-1.webp",
+      "/assets/portfolio/sky-painting/sky-painting-landing-page-2.webp",
+      "/assets/portfolio/sky-painting/sky-painting-landing-page-3.webp",
+    ],
   },
   {
     id: 18,
@@ -627,6 +716,12 @@ export const portfolio = [
     ],
     liveUrl: "https://photophlix.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/PhotoPhlix/",
+    images: [
+      "/assets/portfolio/photo-phlix/photo-phlix-after-search.webp",
+      "/assets/portfolio/photo-phlix/photo-phlix-favorites-page.webp",
+      "/assets/portfolio/photo-phlix/photo-phlix-home-page.webp",
+      "/assets/portfolio/photo-phlix/photo-phlix-light-box.webp",
+    ],
   },
   {
     id: 19,
@@ -648,6 +743,16 @@ export const portfolio = [
     ],
     liveUrl: "https://get-kart.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/GetKart/",
+    images: [
+      "/assets/portfolio/get-kart/get-kart-cart-page.webp",
+      "/assets/portfolio/get-kart/get-kart-home-page-lighttheme.webp",
+      "/assets/portfolio/get-kart/get-kart-home-page.webp",
+      "/assets/portfolio/get-kart/get-kart-login-page.webp",
+      "/assets/portfolio/get-kart/get-kart-profile-page-withupdatedetails.webp",
+      "/assets/portfolio/get-kart/get-kart-shimmerui.webp",
+      "/assets/portfolio/get-kart/get-kart-signup-page.webp",
+      "/assets/portfolio/get-kart/get-kart-singleproduct-page.webp",
+    ],
   },
   {
     id: 20,
@@ -670,6 +775,15 @@ export const portfolio = [
     ],
     liveUrl: "https://bancardifyme.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/bancardifyme/",
+    images: [
+      "/assets/portfolio/bancardify-me/bancardify-me-banks.webp",
+      "/assets/portfolio/bancardify-me/bancardify-me-home.webp",
+      "/assets/portfolio/bancardify-me/bancardify-me-sign-in.webp",
+      "/assets/portfolio/bancardify-me/bancardify-me-sign-up-2.webp",
+      "/assets/portfolio/bancardify-me/bancardify-me-sign-up.webp",
+      "/assets/portfolio/bancardify-me/bancardify-me-transactions.webp",
+      "/assets/portfolio/bancardify-me/bancardify-me-transfer.webp",
+    ],
   },
   {
     id: 21,
@@ -688,6 +802,15 @@ export const portfolio = [
     ],
     liveUrl: "https://app-moviemania.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/MovieMania/",
+    images: [
+      "/assets/portfolio/movie-mania/movie-mania-home-page.webp",
+      "/assets/portfolio/movie-mania/movie-mania-horizontal-cards.webp",
+      "/assets/portfolio/movie-mania/movie-mania-movies-page.webp",
+      "/assets/portfolio/movie-mania/movie-mania-search-page.webp",
+      "/assets/portfolio/movie-mania/movie-mania-singlemovie-page.webp",
+      "/assets/portfolio/movie-mania/movie-mania-trailer-section.webp",
+      "/assets/portfolio/movie-mania/movie-mania-tv-shows-page.webp",
+    ],
   },
   {
     id: 22,
@@ -713,6 +836,35 @@ export const portfolio = [
     ],
     liveUrl: "https://shopprixity.vercel.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Shopprixity/",
+    images: [
+      "/assets/portfolio/shopprixity/shopprixity-accountaddress.webp",
+      "/assets/portfolio/shopprixity/shopprixity-accountaddress1.webp",
+      "/assets/portfolio/shopprixity/shopprixity-accountorders.webp",
+      "/assets/portfolio/shopprixity/shopprixity-addproduct.webp",
+      "/assets/portfolio/shopprixity/shopprixity-admindashboard.webp",
+      "/assets/portfolio/shopprixity/shopprixity-adminorderdetails.webp",
+      "/assets/portfolio/shopprixity/shopprixity-adminorders.webp",
+      "/assets/portfolio/shopprixity/shopprixity-adminorderupdate.webp",
+      "/assets/portfolio/shopprixity/shopprixity-adminproducts.webp",
+      "/assets/portfolio/shopprixity/shopprixity-allproducts.webp",
+      "/assets/portfolio/shopprixity/shopprixity-cart.webp",
+      "/assets/portfolio/shopprixity/shopprixity-checkout.webp",
+      "/assets/portfolio/shopprixity/shopprixity-checkout1.webp",
+      "/assets/portfolio/shopprixity/shopprixity-editproduct.webp",
+      "/assets/portfolio/shopprixity/shopprixity-filterproducts.webp",
+      "/assets/portfolio/shopprixity/shopprixity-filterproducts1.webp",
+      "/assets/portfolio/shopprixity/shopprixity-orderdetails.webp",
+      "/assets/portfolio/shopprixity/shopprixity-orderupdatedstatus.webp",
+      "/assets/portfolio/shopprixity/shopprixity-paymentsuccess.webp",
+      "/assets/portfolio/shopprixity/shopprixity-paypal.webp",
+      "/assets/portfolio/shopprixity/shopprixity-profiledropdown.webp",
+      "/assets/portfolio/shopprixity/shopprixity-register.webp",
+      "/assets/portfolio/shopprixity/shopprixity-search.webp",
+      "/assets/portfolio/shopprixity/shopprixity-searchresults.webp",
+      "/assets/portfolio/shopprixity/shopprixity-shophome.webp",
+      "/assets/portfolio/shopprixity/shopprixity-shophome1.webp",
+      "/assets/portfolio/shopprixity/shopprixity-signin.webp",
+    ],
   },
 ];
 

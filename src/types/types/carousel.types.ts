@@ -1,5 +1,6 @@
 export type CarouselSlide = {
-  name: string;
+  name?: string;
+  title?: string;
   platform?: string;
   imageSrc: string;
   alt?: string;
