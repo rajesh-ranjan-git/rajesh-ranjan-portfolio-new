@@ -21,6 +21,7 @@ export interface FadeInProps {
   distance?: number;
   className?: string;
   once?: boolean;
+  threshold?: number;
 }
 
 export interface UseInputFieldOptionsProps<T> {

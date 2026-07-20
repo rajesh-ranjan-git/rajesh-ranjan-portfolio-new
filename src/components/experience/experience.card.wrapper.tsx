@@ -52,7 +52,7 @@ const ExperienceCardWrapper = ({
       <div
         className={`${experienceStyles.timeline_right} ${isReversed ? "md:order-1" : "md:order-3"}`}
       >
-        <FadeIn delay={150} distance={40}>
+        <FadeIn delay={150} threshold={0}>
           <ExperienceCard experience={experience} />
         </FadeIn>
       </div>

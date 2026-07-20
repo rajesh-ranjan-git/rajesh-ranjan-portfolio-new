@@ -10,8 +10,9 @@ export function FadeIn({
   distance = 24,
   className = "",
   once,
+  threshold,
 }: FadeInProps) {
-  const { ref, isInView } = useInView<HTMLDivElement>({ once });
+  const { ref, isInView } = useInView<HTMLDivElement>({ once, threshold });
 
   return (
     <div
