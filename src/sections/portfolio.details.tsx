@@ -4,6 +4,7 @@ import SectionHeading from "@/components/sections/section.heading";
 import Carousel from "@/components/ui/carousel/carousel";
 import PortfolioInformation from "@/components/portfolio/portfolio.information";
 import PortfolioDetailedInformation from "@/components/portfolio/portfolio.detailed.information";
+import { FadeIn } from "@/components/ui/fade-in/fade.in";
 
 const PortfolioDetails = ({ project }: PortfolioDetailsProps) => {
   const slides: CarouselSlide[] =
@@ -18,23 +19,25 @@ const PortfolioDetails = ({ project }: PortfolioDetailsProps) => {
         <SectionHeading title={`${project.title} Details`} />
       ) : null}
 
-      <div className="relative flex flex-col gap-8">
-        {slides.length > 0 ? (
-          <div className="w-full">
-            <Carousel
-              slides={slides}
-              slidesPerViewOverride={1}
-              autoPlay
-              autoPlayInterval={3000}
-              showArrows={false}
-              dotsPosition="bottom-left"
-              slideHeightClassName="h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[30rem]"
-            />
-          </div>
-        ) : null}
+      <FadeIn delay={150} distance={40}>
+        <div className="relative flex flex-col gap-8">
+          {slides.length > 0 ? (
+            <div className="w-full">
+              <Carousel
+                slides={slides}
+                slidesPerViewOverride={1}
+                autoPlay
+                autoPlayInterval={3000}
+                showArrows={false}
+                dotsPosition="bottom-left"
+                slideHeightClassName="h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[30rem]"
+              />
+            </div>
+          ) : null}
 
-        <PortfolioInformation project={project} />
-      </div>
+          <PortfolioInformation project={project} />
+        </div>
+      </FadeIn>
 
       <PortfolioDetailedInformation project={project} />
     </section>

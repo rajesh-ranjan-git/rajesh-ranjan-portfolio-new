@@ -9,6 +9,20 @@ export interface UseWebStorageProps<T> {
   expiresIn?: number;
 }
 
+export interface UseInViewOptionsProps {
+  threshold?: number;
+  rootMargin?: string;
+  once?: boolean;
+}
+
+export interface FadeInProps {
+  children: ReactNode;
+  delay?: number;
+  distance?: number;
+  className?: string;
+  once?: boolean;
+}
+
 export interface UseInputFieldOptionsProps<T> {
   initialValue: T;
   validate: ValidatorType<T>;
