@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaChevronRight } from "react-icons/fa6";
 import { BreadcrumbProps } from "@/types/props/common.props.types";
 
 export default function Breadcrumb({ items }: BreadcrumbProps) {
@@ -7,6 +8,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       <ol className="flex flex-wrap items-center text-sm">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
+
           return (
             <li key={index} className="flex items-center">
               {item.href && !isLast ? (
@@ -24,8 +26,11 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                   {item.label}
                 </span>
               )}
+
               {!isLast && (
-                <span className="mx-2 text-secondary select-none">›</span>
+                <span className="mx-2 text-secondary select-none">
+                  <FaChevronRight size={10} />
+                </span>
               )}
             </li>
           );
