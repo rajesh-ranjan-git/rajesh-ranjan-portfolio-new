@@ -57,6 +57,11 @@ export type PortfolioItemTechType = {
   tech: string[];
 };
 
+export type PortfolioItemFeatureType = {
+  title: string;
+  description: string;
+};
+
 export type PortfolioItemType = {
   id: number;
   title: string;
@@ -67,8 +72,5 @@ export type PortfolioItemType = {
   liveUrl?: string;
   githubUrl: string;
   screens?: readonly string[];
-  features?: {
-    title: string;
-    description: string;
-  };
+  features?: PortfolioItemFeatureType[];
 };

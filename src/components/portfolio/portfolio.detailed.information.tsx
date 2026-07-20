@@ -23,7 +23,7 @@ const PortfolioDetailedInformation = ({ project }: PortfolioDetailsProps) => {
                 key={stack.type}
                 className="flex flex-wrap items-center gap-2 w-full"
               >
-                <span className="pr-1 md:min-w-64 font-semibold shrink-0">
+                <span className="pr-1 md:min-w-72 font-semibold shrink-0">
                   {stack.type} :
                 </span>
                 {stack.tech.map((item) => (
@@ -44,16 +44,16 @@ const PortfolioDetailedInformation = ({ project }: PortfolioDetailsProps) => {
         <div className="flex flex-col gap-2">
           <h5>Features</h5>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3 sm:gap-2">
             {project.features.map((feature) => (
               <div
                 key={feature.title}
-                className="flex flex-wrap items-center gap-2 w-full"
+                className="flex sm:flex-row flex-col sm:items-start gap-1 sm:gap-2 w-full"
               >
-                <span className="pr-1 md:min-w-64 font-semibold shrink-0">
+                <span className="md:min-w-72 font-semibold shrink-0">
                   {feature.title} :
                 </span>
-                <span>{feature.description}</span>
+                <span className="min-w-0">{feature.description}</span>
               </div>
             ))}
           </div>

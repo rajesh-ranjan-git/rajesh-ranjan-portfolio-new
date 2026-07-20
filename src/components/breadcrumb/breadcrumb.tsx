@@ -4,7 +4,10 @@ import { BreadcrumbProps } from "@/types/props/common.props.types";
 
 export default function Breadcrumb({ items }: BreadcrumbProps) {
   return (
-    <nav aria-label="Breadcrumb" className="px-(--section-padding-x) md:pt-2">
+    <nav
+      aria-label="Breadcrumb"
+      className="px-(--section-padding-x) pt-8 md:pt-6"
+    >
       <ol className="flex flex-wrap items-center text-sm">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;

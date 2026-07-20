@@ -9,7 +9,7 @@ import React, {
   useState,
 } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import { CarouselProps } from "@/types/props/carouse.props.types";
+import { CarouselProps } from "@/types/props/carousel.props.types";
 import Card from "@/components/ui/card/card";
 import Link from "next/link";
 import { MdOpenInNew } from "react-icons/md";
@@ -188,7 +188,7 @@ const Carousel = ({
 
   const dots = showDots && realCount > slidesPerView && (
     <div
-      className={`flex items-center gap-2 px-4 ${dotsJustifyClassName} ${
+      className={`flex items-center flex-wrap gap-2 px-4 ${dotsJustifyClassName} ${
         isDotsOnTop ? "mb-8" : "mt-8"
       }`}
     >
@@ -198,7 +198,7 @@ const Carousel = ({
           type="button"
           aria-label={`Go to slide ${index + 1}`}
           onClick={() => goTo(index + cloneCount)}
-          className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-blue cursor-pointer shadow-sm shadow-surface-shadow-strong ${
+          className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-blue cursor-pointer shadow-sm shadow-surface-shadow-strong shrink-0 ${
             index === activeDot
               ? "w-6 bg-accent-blue"
               : "w-2 bg-gray-300 hover:bg-gray-400"
