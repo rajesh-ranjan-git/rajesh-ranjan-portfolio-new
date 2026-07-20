@@ -1,4 +1,4 @@
-.fadeIn {
+.fade_in {
   opacity: 0;
   transform: translateY(var(--distance, 24px));
   transition:

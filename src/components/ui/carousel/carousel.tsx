@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React, {
   useCallback,
   useEffect,
@@ -8,12 +7,13 @@ import React, {
   useRef,
   useState,
 } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { MdOpenInNew } from "react-icons/md";
 import { CarouselProps } from "@/types/props/carousel.props.types";
 import Card from "@/components/ui/card/card";
-import Link from "next/link";
-import { MdOpenInNew } from "react-icons/md";
-import Tooltip from "../tooltip/tooltip";
+import Tooltip from "@/components/ui/tooltip/tooltip";
 
 const BREAKPOINTS = { md: 768, lg: 1024, xl: 1200 };
 

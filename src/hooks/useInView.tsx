@@ -8,7 +8,7 @@ export function useInView<T extends HTMLElement = HTMLDivElement>(
 ) {
   const {
     threshold = 0.15,
-    rootMargin = "0px 0px -10% 0px",
+    rootMargin = "0px 0px 5% 0px",
     once = true,
   } = options;
 

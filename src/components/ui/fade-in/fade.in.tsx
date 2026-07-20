@@ -16,7 +16,7 @@ export function FadeIn({
   return (
     <div
       ref={ref}
-      className={`${fadeInStyles.fadeIn} ${isInView ? fadeInStyles.visible : ""} ${className}`}
+      className={`${fadeInStyles.fade_in} ${isInView ? fadeInStyles.visible : ""} ${className}`}
       style={
         {
           transitionDelay: `${delay}ms`,
