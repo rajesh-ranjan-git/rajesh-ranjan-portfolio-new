@@ -9,6 +9,11 @@ export type StoredDataType<T> = {
   expiresAt?: number;
 };
 
+export type BreadcrumbItemType = {
+  label: string;
+  href?: string;
+};
+
 export type FloatingBadgePositionType =
   | "top-left"
   | "top-right"

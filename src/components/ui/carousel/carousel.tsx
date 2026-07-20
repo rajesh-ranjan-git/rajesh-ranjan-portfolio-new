@@ -225,8 +225,8 @@ const Carousel = ({
                       slide.imageSrc || "/assets/error/image-not-available.webp"
                     }
                     alt={slide.alt ?? (slide.name as string)}
-                    width={400}
-                    height={400}
+                    width={1600}
+                    height={1600}
                     draggable={false}
                     className={`w-full h-full object-cover object-top pointer-events-none ${
                       rounded ? "rounded-xl" : ""

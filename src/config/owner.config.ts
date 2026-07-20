@@ -623,8 +623,8 @@ export const portfolio = [
   },
   {
     id: 14,
-    title: "Task Manager App creates using HTML, CSS and Vanilla JS",
-    description: "Task Manager",
+    title: "Task Manager",
+    description: "Task Manager App creates using HTML, CSS and Vanilla JS",
     thumbnail: "/assets/portfolio/task-manager/task-manager-thumbnail.webp",
     category: "Vanilla JS",
     techStack: ["HTML5", "CSS3", "JavaScript"],

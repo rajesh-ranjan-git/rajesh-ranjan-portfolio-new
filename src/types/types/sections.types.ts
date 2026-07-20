@@ -61,4 +61,5 @@ export type PortfolioItemType = {
   techStack?: string[];
   liveUrl?: string;
   githubUrl: string;
+  images?: readonly string[];
 };

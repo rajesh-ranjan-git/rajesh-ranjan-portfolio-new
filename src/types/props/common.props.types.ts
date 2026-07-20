@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import {
+  BreadcrumbItemType,
   FloatingBadgePositionType,
   FloatingBadgeFloatType,
 } from "@/types/types/common.types";
@@ -10,6 +11,10 @@ export interface ReactNodeProps {
 
 export interface BannerProps {
   nodeVersion: string;
+}
+
+export interface BreadcrumbProps {
+  items: BreadcrumbItemType[];
 }
 
 export interface ButtonProps {
