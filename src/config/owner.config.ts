@@ -424,10 +424,12 @@ export const portfolio = [
       "Landing page copy of makemytrip.com created using HTML and CSS.",
     thumbnail: "/assets/portfolio/make-my-trip/make-my-trip.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://mmt-clone-site.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/MakeMyTrip/",
-    images: ["/assets/portfolio/make-my-trip/make-my-trip.webp"],
+    screens: ["/assets/portfolio/make-my-trip/make-my-trip.webp"],
   },
   {
     id: 2,
@@ -436,10 +438,12 @@ export const portfolio = [
       "Landing page for ironing site created using HTML, CSS and Bootstrap.",
     thumbnail: "/assets/portfolio/ironing/ironing-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://ironing.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Ironing/",
-    images: [
+    screens: [
       "/assets/portfolio/ironing/ironing-1.webp",
       "/assets/portfolio/ironing/ironing-2.webp",
     ],
@@ -452,10 +456,12 @@ export const portfolio = [
     thumbnail:
       "/assets/portfolio/bitcoin-journal/bitcoin-journal-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://bitcoin-journal.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Bitcoin-Journal/",
-    images: [
+    screens: [
       "/assets/portfolio/ironing/bitcoin-journal-landing-page-1.webp",
       "/assets/portfolio/ironing/bitcoin-journal-landing-page-2.webp",
       "/assets/portfolio/ironing/bitcoin-journal-landing-page-3.webp",
@@ -470,10 +476,12 @@ export const portfolio = [
     thumbnail:
       "/assets/portfolio/commercial-cleaning/commercial-cleaning-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://commercial-cleaning.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Commercial-Cleaning/",
-    images: [
+    screens: [
       "/assets/portfolio/ironing/commercial-cleaning-1.webp",
       "/assets/portfolio/ironing/commercial-cleaning-2.webp",
     ],
@@ -485,10 +493,12 @@ export const portfolio = [
       "Landing page for forestry work site created using HTML, CSS and Bootstrap.",
     thumbnail: "/assets/portfolio/jonestree/jonestree-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://jonestree.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Jonestree/",
-    images: [
+    screens: [
       "/assets/portfolio/jonestree/jonestree-landing-page-1.webp",
       "/assets/portfolio/jonestree/jonestree-landing-page-2.webp",
     ],
@@ -500,10 +510,12 @@ export const portfolio = [
       "Landing page copy of flipkart.com created using HTML and CSS.",
     thumbnail: "/assets/portfolio/flipkart-clone/flipkart-clone-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://flpkart-clone.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Flipkart-Clone/",
-    images: [
+    screens: [
       "/assets/portfolio/flipkart-clone/flipkart-clone-1.webp",
       "/assets/portfolio/flipkart-clone/flipkart-clone-2.webp",
       "/assets/portfolio/flipkart-clone/flipkart-clone-3.webp",
@@ -516,10 +528,10 @@ export const portfolio = [
     description: "Landing page copy of amazon.com created using HTML and CSS.",
     thumbnail: "/assets/portfolio/amazon-clone/amazon-clone-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript"],
+    techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
     liveUrl: "https://amazon-clone-site.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Amazon-Clone/",
-    images: [
+    screens: [
       "/assets/portfolio/amazon-clone/amazon-clone-1.webp",
       "/assets/portfolio/amazon-clone/amazon-clone-2.webp",
       "/assets/portfolio/amazon-clone/amazon-clone-3.webp",
@@ -531,10 +543,10 @@ export const portfolio = [
     description: "Currency Converter created using HTML, CSS and Vanilla JS.",
     thumbnail: "/assets/portfolio/currency-converter/currency-converter.webp",
     category: "Vanilla JS",
-    techStack: ["HTML5", "CSS3", "JavaScript"],
+    techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
     liveUrl: "https://currency-converter-vanillajs.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Currency-Converter/",
-    images: ["/assets/portfolio/currency-converter/currency-converter.webp"],
+    screens: ["/assets/portfolio/currency-converter/currency-converter.webp"],
   },
   {
     id: 9,
@@ -543,10 +555,12 @@ export const portfolio = [
       "Tech Fest Landing Page for JP Institute of Engineering and Technology created using HTML, CSS and Bootstrap.",
     thumbnail: "/assets/portfolio/jp-tech-fest/jp-tech-fest-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://rajesh-ranjan-git.github.io/JPTechFest/",
     githubUrl: "https://github.com/rajesh-ranjan-git/JPTechFest/",
-    images: [
+    screens: [
       "/assets/portfolio/jp-tech-fest/jp-tech-fest-home-page.webp",
       "/assets/portfolio/jp-tech-fest/jp-tech-fest-events.webp",
       "/assets/portfolio/jp-tech-fest/jp-tech-fest-about.webp",
@@ -560,10 +574,10 @@ export const portfolio = [
     description: "Tic Tac Toe game created using HTML, CSS and Vanilla JS.",
     thumbnail: "/assets/portfolio/tic-tac-toe/tic-tac-toe-thumbnail.webp",
     category: "Vanilla JS",
-    techStack: ["HTML5", "CSS3", "JavaScript"],
+    techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
     liveUrl: "https://tictactoe-vanilla-js.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/TicTacToe/",
-    images: [
+    screens: [
       "/assets/portfolio/tic-tac-toe/tic-tac-toe-game-page.webp",
       "/assets/portfolio/tic-tac-toe/tic-tac-toe-winner-page.webp",
       "/assets/portfolio/tic-tac-toe/tic-tac-toe-draw-page.webp",
@@ -577,10 +591,12 @@ export const portfolio = [
       "Landing page for car repairing site created using HTML, CSS and Bootstrap.",
     thumbnail: "/assets/portfolio/car-removal/car-removal-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://car-removal.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Car-Removal/",
-    images: [
+    screens: [
       "/assets/portfolio/car-removal/car-removal-1.webp",
       "/assets/portfolio/car-removal/car-removal-2.webp",
       "/assets/portfolio/car-removal/car-removal-3.webp",
@@ -594,10 +610,12 @@ export const portfolio = [
     thumbnail:
       "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://exterior-water-blaster.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Exterior-Water-Blaster/",
-    images: [
+    screens: [
       "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-1.webp",
       "/assets/portfolio/exterior-water-blaster/exterior-water-blaster-2.webp",
     ],
@@ -608,10 +626,10 @@ export const portfolio = [
     description: "To Do App created using HTML, CSS and Vanilla JS.",
     thumbnail: "/assets/portfolio/to-do-app/to-do-app-thumbnail.webp",
     category: "Vanilla JS",
-    techStack: ["HTML5", "CSS3", "JavaScript"],
+    techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
     liveUrl: "https://to-do-vanillajs.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/To-Do-App/",
-    images: [
+    screens: [
       "/assets/portfolio/to-do-app/to-do-app-home-page.webp",
       "/assets/portfolio/to-do-app/to-do-app-with-items-without-description.webp",
       "/assets/portfolio/to-do-app/to-do-app-adding-description.webp",
@@ -627,10 +645,10 @@ export const portfolio = [
     description: "Task Manager App creates using HTML, CSS and Vanilla JS",
     thumbnail: "/assets/portfolio/task-manager/task-manager-thumbnail.webp",
     category: "Vanilla JS",
-    techStack: ["HTML5", "CSS3", "JavaScript"],
+    techStack: [{ type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript"] }],
     liveUrl: "https://rajesh-ranjan-git.github.io/Task-Manager/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Task-Manager/",
-    images: [
+    screens: [
       "/assets/portfolio/task-manager/task-manager-home-page.webp",
       "/assets/portfolio/task-manager/task-manager-add-tasks.webp",
       "/assets/portfolio/task-manager/task-manager-tasks-with-priorities.webp",
@@ -647,16 +665,21 @@ export const portfolio = [
       "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-thumbnail.webp",
     category: "React JS",
     techStack: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Tailwind CSS",
-      "React JS",
-      "Vite",
+      {
+        type: "Frontend",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Tailwind CSS",
+          "React JS",
+          "Vite",
+        ],
+      },
     ],
     liveUrl: "https://tictactoe-react-vite-game.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/TicTacToe-React/",
-    images: [
+    screens: [
       "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-start-page.webp",
       "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-player-page.webp",
       "/assets/portfolio/tic-tac-toe-react/tic-tac-toe-react-game-page.webp",
@@ -671,10 +694,12 @@ export const portfolio = [
       "Landing page for painting site created using HTML, CSS and Bootstrap.",
     thumbnail: "/assets/portfolio/fqs-painting/fqs-painting-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://rajesh-ranjan-git.github.io/FQS-Painting/",
     githubUrl: "https://github.com/rajesh-ranjan-git/FQS-Painting/",
-    images: [
+    screens: [
       "/assets/portfolio/fqs-painting/fqs-painting-home-page.webp",
       "/assets/portfolio/fqs-painting/fqs-painting-about-page.webp",
       "/assets/portfolio/fqs-painting/fqs-painting-gallery-page.webp",
@@ -690,10 +715,12 @@ export const portfolio = [
       "Landing page for painting site created using HTML, CSS and Bootstrap.",
     thumbnail: "/assets/portfolio/sky-painting/sky-painting-thumbnail.webp",
     category: "Frontend (HTML & CSS)",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    techStack: [
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"] },
+    ],
     liveUrl: "https://sky-painting.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Sky-Painting/",
-    images: [
+    screens: [
       "/assets/portfolio/sky-painting/sky-painting-landing-page-1.webp",
       "/assets/portfolio/sky-painting/sky-painting-landing-page-2.webp",
       "/assets/portfolio/sky-painting/sky-painting-landing-page-3.webp",
@@ -707,16 +734,21 @@ export const portfolio = [
     thumbnail: "/assets/portfolio/photo-phlix/photo-phlix-thumbnail.webp",
     category: "React JS",
     techStack: [
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "JavaScript",
-      "React JS",
-      "Vite",
+      {
+        type: "Frontend",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "Tailwind CSS",
+          "JavaScript",
+          "React JS",
+          "Vite",
+        ],
+      },
     ],
     liveUrl: "https://photophlix.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/PhotoPhlix/",
-    images: [
+    screens: [
       "/assets/portfolio/photo-phlix/photo-phlix-home-page.webp",
       "/assets/portfolio/photo-phlix/photo-phlix-favorites-page.webp",
       "/assets/portfolio/photo-phlix/photo-phlix-light-box.webp",
@@ -731,19 +763,24 @@ export const portfolio = [
     thumbnail: "/assets/portfolio/get-kart/get-kart-thumbnail.webp",
     category: "React JS",
     techStack: [
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "JavaScript",
-      "Node JS",
-      "React JS",
-      "Vite",
-      "MongoDB",
-      "Express JS",
+      {
+        type: "Frontend",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "Tailwind CSS",
+          "JavaScript",
+          "React JS",
+          "Vite",
+        ],
+      },
+      { type: "Backend", tech: ["Node JS", "Express JS"] },
+      { type: "Database", tech: ["MongoDB"] },
+      { type: "Authentication", tech: ["JWT"] },
     ],
     liveUrl: "https://get-kart.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/GetKart/",
-    images: [
+    screens: [
       "/assets/portfolio/get-kart/get-kart-home-page.webp",
       "/assets/portfolio/get-kart/get-kart-home-page-lighttheme.webp",
       "/assets/portfolio/get-kart/get-kart-login-page.webp",
@@ -762,20 +799,24 @@ export const portfolio = [
     thumbnail: "/assets/portfolio/bancardify-me/bancardify-me-thumbnail.webp",
     category: "Next JS",
     techStack: [
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "TypeScript",
-      "Node JS",
-      "Next JS",
-      "Shadcn UI",
-      "Appwrite",
-      "Plaid",
-      "Dwolla",
+      {
+        type: "Frontend",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "Tailwind CSS",
+          "TypeScript",
+          "Next JS",
+          "Shadcn UI",
+        ],
+      },
+      { type: "Backend", tech: ["Node JS", "Appwrite"] },
+      { type: "Authentication", tech: ["JWT"] },
+      { type: "Payment", tech: ["Plaid", "Dwolla"] },
     ],
     liveUrl: "https://bancardifyme.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/bancardifyme/",
-    images: [
+    screens: [
       "/assets/portfolio/bancardify-me/bancardify-me-home.webp",
       "/assets/portfolio/bancardify-me/bancardify-me-banks.webp",
       "/assets/portfolio/bancardify-me/bancardify-me-sign-in.webp",
@@ -793,16 +834,21 @@ export const portfolio = [
     thumbnail: "/assets/portfolio/movie-mania/movie-mania-thumbnail.webp",
     category: "React JS",
     techStack: [
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "JavaScript",
-      "React JS",
-      "Vite",
+      {
+        type: "Frontend",
+        tech: [
+          "HTML5",
+          "CSS3",
+          "Tailwind CSS",
+          "JavaScript",
+          "React JS",
+          "Vite",
+        ],
+      },
     ],
     liveUrl: "https://app-moviemania.netlify.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/MovieMania/",
-    images: [
+    screens: [
       "/assets/portfolio/movie-mania/movie-mania-home-page.webp",
       "/assets/portfolio/movie-mania/movie-mania-horizontal-cards.webp",
       "/assets/portfolio/movie-mania/movie-mania-movies-page.webp",
@@ -820,23 +866,51 @@ export const portfolio = [
     thumbnail: "/assets/portfolio/shopprixity/shopprixity-thumbnail.webp",
     category: "React JS",
     techStack: [
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "JavaScript",
-      "React JS",
-      "Node JS",
-      "Express JS",
-      "MongoDB",
-      "Shadcn UI",
-      "Prisma",
-      "Paypal",
-      "Firebase",
-      "Vercel",
+      { type: "Frontend", tech: ["HTML5", "CSS3", "JavaScript", "React JS"] },
+      { type: "Backend", tech: ["Node JS", "Express JS"] },
+      { type: "Database", tech: ["MongoDB"] },
+      { type: "ORM", tech: ["Prisma"] },
+      { type: "Authentication", tech: ["JWT", "Firebase"] },
+      { type: "Payment", tech: ["Paypal"] },
     ],
     liveUrl: "https://shopprixity.vercel.app/",
     githubUrl: "https://github.com/rajesh-ranjan-git/Shopprixity/",
-    images: [
+    features: [
+      {
+        title: "Product Catalog",
+        description:
+          "Create, update, and manage your product listings with ease.",
+      },
+      {
+        title: "User Accounts",
+        description:
+          "Allow users to create accounts, track orders, and save preferences.",
+      },
+      {
+        title: "Shopping Cart",
+        description:
+          "Users can add products to their cart and proceed to checkout.",
+      },
+      {
+        title: "Payment Gateway Integration",
+        description:
+          "Process payments securely through third-party services (PayPal).",
+      },
+      {
+        title: "Order Management",
+        description: "Admins can track and manage customer orders.",
+      },
+      {
+        title: "Responsive Design",
+        description: "Optimized for desktops, tablets, and mobile devices.",
+      },
+      {
+        title: "Search and Filters",
+        description:
+          "Easy search functionality with advanced filtering options to help users find the products they need.",
+      },
+    ],
+    screens: [
       "/assets/portfolio/shopprixity/shopprixity-shophome.webp",
       "/assets/portfolio/shopprixity/shopprixity-shophome1.webp",
       "/assets/portfolio/shopprixity/shopprixity-signin.webp",

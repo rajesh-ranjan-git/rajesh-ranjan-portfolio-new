@@ -1,12 +1,13 @@
 import { CarouselSlide } from "@/types/types/carousel.types";
 import { PortfolioDetailsProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
-import PortfolioInformation from "@/components/portfolio/portfolio.information";
 import Carousel from "@/components/ui/carousel/carousel";
+import PortfolioInformation from "@/components/portfolio/portfolio.information";
+import PortfolioDetailedInformation from "@/components/portfolio/portfolio.detailed.information";
 
 const PortfolioDetails = ({ project }: PortfolioDetailsProps) => {
   const slides: CarouselSlide[] =
-    project?.images?.map((imageSrc) => ({
+    project?.screens?.map((imageSrc) => ({
       imageSrc,
       alt: project.title,
     })) ?? [];
@@ -17,8 +18,8 @@ const PortfolioDetails = ({ project }: PortfolioDetailsProps) => {
         <SectionHeading title={`${project.title} Details`} />
       ) : null}
 
-      <div className="relative">
-        {slides.length ? (
+      <div className="relative flex flex-col gap-8">
+        {slides.length > 0 ? (
           <div className="w-full">
             <Carousel
               slides={slides}
@@ -34,6 +35,8 @@ const PortfolioDetails = ({ project }: PortfolioDetailsProps) => {
 
         <PortfolioInformation project={project} />
       </div>
+
+      <PortfolioDetailedInformation project={project} />
     </section>
   );
 };

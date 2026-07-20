@@ -52,14 +52,23 @@ export type ExperienceType = {
 
 export type ExperienceDetailsType = { title: string; description?: string };
 
+export type PortfolioItemTechType = {
+  type: string;
+  tech: string[];
+};
+
 export type PortfolioItemType = {
   id: number;
   title: string;
   description?: string;
   thumbnail?: string;
   category?: string;
-  techStack?: string[];
+  techStack?: PortfolioItemTechType[];
   liveUrl?: string;
   githubUrl: string;
-  images?: readonly string[];
+  screens?: readonly string[];
+  features?: {
+    title: string;
+    description: string;
+  };
 };
