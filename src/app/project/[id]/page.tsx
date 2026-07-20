@@ -1,20 +1,12 @@
 import { portfolio } from "@/config/owner.config";
-import { ProjectDetailsPageProps } from "@/types/props/sections.props.types";
-import { CarouselSlide } from "@/types/types/carousel.types";
+import { PortfolioDetailsPageProps } from "@/types/props/sections.props.types";
 import Breadcrumb from "@/components/breadcrumb/breadcrumb";
-import SectionHeading from "@/components/sections/section.heading";
-import Carousel from "@/components/ui/carousel/carousel";
+import PortfolioDetails from "@/sections/portfolio.details";
 
-const ProjectDetailsPage = async ({ params }: ProjectDetailsPageProps) => {
+const PortfolioDetailsPage = async ({ params }: PortfolioDetailsPageProps) => {
   const { id } = await params;
 
   const project = portfolio.find((item) => item.id === Number(id));
-
-  const slides: CarouselSlide[] =
-    project?.images?.map((imageSrc) => ({
-      imageSrc,
-      alt: project.title,
-    })) ?? [];
 
   return (
     <main className="relative pt-10 md:pt-0 pl-0 md:pl-16 min-h-screen">
@@ -26,26 +18,9 @@ const ProjectDetailsPage = async ({ params }: ProjectDetailsPageProps) => {
         ]}
       />
 
-      <section>
-        {project?.title ? (
-          <SectionHeading title={`${project.title} Details`} />
-        ) : null}
-
-        {slides.length ? (
-          <div className="w-full">
-            <Carousel
-              slides={slides}
-              slidesPerViewOverride={1}
-              autoPlay
-              autoPlayInterval={3000}
-              showArrows={false}
-              slideHeightClassName="h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[30rem]"
-            />
-          </div>
-        ) : null}
-      </section>
+      <PortfolioDetails project={project} />
     </main>
   );
 };
 
-export default ProjectDetailsPage;
+export default PortfolioDetailsPage;

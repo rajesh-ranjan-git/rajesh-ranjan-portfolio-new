@@ -65,6 +65,10 @@ export interface PortfolioCardProps {
   portfolioItem: PortfolioItemType;
 }
 
-export interface ProjectDetailsPageProps {
+export interface PortfolioDetailsPageProps {
   params: Promise<{ id: string }>;
+}
+
+export interface PortfolioDetailsProps {
+  project: PortfolioItemType;
 }
