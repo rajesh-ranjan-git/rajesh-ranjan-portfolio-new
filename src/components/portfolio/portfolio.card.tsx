@@ -29,14 +29,14 @@ const PortfolioCard = ({ portfolioItem }: PortfolioCardProps) => {
               ? portfolioItem.liveUrl
               : portfolioItem.githubUrl
           }
-          target="blank"
+          target="_blank"
           className={`inline-block before:-bottom-px before:left-0 before:absolute relative before:rounded-lg before:w-0 hover:before:w-full before:h-0.75 font-semibold uppercase transition-all before:transition-all duration-300 before:duration-300 before:bg-accent-pink ${portfolioStyles.link_mask}`}
         >
           {portfolioItem.title}
         </Link>
         <Link
           href={`/project/${portfolioItem.id}`}
-          target="blank"
+          target="_blank"
           className={`inline-block before:-bottom-px before:left-0 before:absolute relative before:rounded-lg before:w-0 hover:before:w-full before:h-0.75 transition-all before:transition-all duration-300 before:duration-300 before:bg-accent-pink ${portfolioStyles.link_mask}`}
         >
           View more

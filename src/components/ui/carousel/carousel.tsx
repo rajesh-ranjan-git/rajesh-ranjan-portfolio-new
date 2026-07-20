@@ -34,6 +34,7 @@ const Carousel = ({
   autoPlayInterval = 3500,
   showArrows = true,
   showDots = true,
+  dotsPosition = "bottom-center",
   rounded = true,
   scale,
   className = "",
@@ -178,6 +179,35 @@ const Carousel = ({
 
   const translatePercent = -(currentIndex * slidePercent) + dragDeltaPercent;
 
+  const isDotsOnTop = dotsPosition.startsWith("top");
+  const dotsJustifyClassName = dotsPosition.endsWith("left")
+    ? "justify-start"
+    : dotsPosition.endsWith("right")
+      ? "justify-end"
+      : "justify-center";
+
+  const dots = showDots && realCount > slidesPerView && (
+    <div
+      className={`flex items-center gap-2 px-4 ${dotsJustifyClassName} ${
+        isDotsOnTop ? "mb-8" : "mt-8"
+      }`}
+    >
+      {slides.map((slide, index) => (
+        <button
+          key={`${slide.name}-${index}`}
+          type="button"
+          aria-label={`Go to slide ${index + 1}`}
+          onClick={() => goTo(index + cloneCount)}
+          className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-blue cursor-pointer shadow-sm shadow-surface-shadow-strong ${
+            index === activeDot
+              ? "w-6 bg-accent-blue"
+              : "w-2 bg-gray-300 hover:bg-gray-400"
+          }`}
+        />
+      ))}
+    </div>
+  );
+
   if (realCount === 0) return null;
 
   return (
@@ -186,6 +216,8 @@ const Carousel = ({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={onPointerLeave}
     >
+      {isDotsOnTop && dots}
+
       <div
         ref={trackWrapperRef}
         className="overflow-hidden touch-pan-y"
@@ -242,7 +274,7 @@ const Carousel = ({
                       >
                         <Link
                           href={slide.url}
-                          target="blank"
+                          target="_blank"
                           className="bg-surface-bg hover:bg-surface-bg-hover shadow-[0_12px_20px_var(--color-surface-shadow)] backdrop-blur-xl p-1 border-surface-border hover:border-surface-border-hover rounded-lg transition-all duration-300"
                         >
                           <MdOpenInNew size={20} />
@@ -295,23 +327,7 @@ const Carousel = ({
         </>
       )}
 
-      {showDots && realCount > slidesPerView && (
-        <div className="flex justify-center items-center gap-2 mt-8">
-          {slides.map((slide, index) => (
-            <button
-              key={`${slide.name}-${index}`}
-              type="button"
-              aria-label={`Go to slide ${index + 1}`}
-              onClick={() => goTo(index + cloneCount)}
-              className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-blue cursor-pointer shadow-sm shadow-surface-shadow-strong ${
-                index === activeDot
-                  ? "w-6 bg-accent-blue"
-                  : "w-2 bg-gray-300 hover:bg-gray-400"
-              }`}
-            />
-          ))}
-        </div>
-      )}
+      {!isDotsOnTop && dots}
     </div>
   );
 };
