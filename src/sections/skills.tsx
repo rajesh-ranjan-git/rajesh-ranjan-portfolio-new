@@ -8,6 +8,7 @@ import SkillsToggle from "@/components/skills/skills.toggle";
 import SkillsContainer from "@/components/skills/skills.container";
 import ToolsContainer from "@/components/skills/tools.container";
 import RainSkills from "@/components/skills/rain.skills";
+import { FadeIn } from "@/components/ui/fade-in/fade.in";
 
 const icons = [
   "/assets/tech-img/react.svg",
@@ -31,24 +32,26 @@ const Skills = ({ title, description }: SectionProps) => {
 
       {description ? <SectionDescription description={description} /> : null}
 
-      <div className="items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-2 w-full">
-        <div className="flex flex-col justify-between items-center gap-4 w-full h-full">
-          <SkillsToggle
-            activeSkillButton={activeSkillButton}
-            setActiveSkillButton={setActiveSkillButton}
-          />
+      <FadeIn delay={150} distance={40}>
+        <div className="items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-2 w-full">
+          <div className="flex flex-col justify-between items-center gap-4 w-full h-full">
+            <SkillsToggle
+              activeSkillButton={activeSkillButton}
+              setActiveSkillButton={setActiveSkillButton}
+            />
 
-          <div className="relative rounded-2xl w-full md:h-full min-h-20">
-            <RainSkills icons={icons} />
+            <div className="relative rounded-2xl w-full md:h-full min-h-20">
+              <RainSkills icons={icons} />
+            </div>
+          </div>
+
+          <div className="relative">
+            <SkillsContainer activeSkillButton={activeSkillButton} />
+
+            <ToolsContainer activeSkillButton={activeSkillButton} />
           </div>
         </div>
-
-        <div className="relative">
-          <SkillsContainer activeSkillButton={activeSkillButton} />
-
-          <ToolsContainer activeSkillButton={activeSkillButton} />
-        </div>
-      </div>
+      </FadeIn>
     </section>
   );
 };

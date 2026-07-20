@@ -2,17 +2,22 @@ import GreetingsText from "@/components/greetings/greetings.text";
 import SocialMedia from "@/components/social-media/social.media";
 import GreetingsImage from "@/components/greetings/greetings.image";
 import GreetingsButtons from "@/components/greetings/greetings.buttons";
+import { FadeIn } from "@/components/ui/fade-in/fade.in";
 
 const GreetingsContent = () => {
   return (
     <>
-      <div className="z-10 flex flex-col justify-center gap-6 pt-16 lg:pt-0 w-full lg:w-[60%] h-full lg:text-left text-center grow">
+      <FadeIn
+        delay={150}
+        distance={40}
+        className="z-10 flex flex-col justify-center gap-6 pt-16 lg:pt-0 w-full lg:w-[60%] h-full lg:text-left text-center grow"
+      >
         <GreetingsText />
 
         <SocialMedia />
 
         <GreetingsButtons />
-      </div>
+      </FadeIn>
 
       <GreetingsImage />
     </>
