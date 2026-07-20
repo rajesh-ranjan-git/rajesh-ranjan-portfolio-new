@@ -16,11 +16,19 @@ const About = ({ title, description }: SectionProps) => {
       {description ? <SectionDescription description={description} /> : null}
 
       <div className="items-center gap-12 md:gap-28 grid grid-cols-1 lg:grid-cols-[minmax(18rem,20rem)_minmax(0,1fr)] lg:pl-12 w-full">
-        <FadeIn delay={150} distance={40}>
+        <FadeIn
+          delay={150}
+          distance={40}
+          className="order-2 lg:order-1 justify-self-center w-full md:w-1/2 lg:w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-none"
+        >
           <AboutImage />
         </FadeIn>
 
-        <FadeIn delay={150} distance={40}>
+        <FadeIn
+          delay={150}
+          distance={40}
+          className="order-1 lg:order-2 w-full min-w-0"
+        >
           <AboutText
             title={aboutDetails.title}
             description={aboutDetails.description}

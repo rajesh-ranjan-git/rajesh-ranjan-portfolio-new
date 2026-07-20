@@ -2,7 +2,7 @@ import { AboutTextProps } from "@/types/props/sections.props.types";
 
 const AboutText = ({ title, description, details }: AboutTextProps) => {
   return (
-    <div className="order-1 lg:order-2 w-full min-w-0">
+    <div className="w-full">
       <h2 className="text-shadow-[2px_2px_black] font-arima font-bold text-balance text-accent-blue">
         {title}
       </h2>
