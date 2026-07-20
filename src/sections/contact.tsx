@@ -12,13 +12,15 @@ const Contact = ({ title, description }: SectionProps) => {
 
       {description ? <SectionDescription description={description} /> : null}
 
-      <FadeIn delay={150} distance={40}>
-        <div className="items-center gap-6 grid grid-cols-1 lg:grid-cols-2 w-full">
+      <div className="items-center gap-6 grid grid-cols-1 lg:grid-cols-2 w-full">
+        <FadeIn delay={150} distance={40} className="w-full h-full">
           <ContactSocials />
+        </FadeIn>
 
+        <FadeIn delay={150} distance={40}>
           <ContactForm />
-        </div>
-      </FadeIn>
+        </FadeIn>
+      </div>
     </section>
   );
 };

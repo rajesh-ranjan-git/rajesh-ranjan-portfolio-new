@@ -19,7 +19,13 @@ const GreetingsContent = () => {
         <GreetingsButtons />
       </FadeIn>
 
-      <GreetingsImage />
+      <FadeIn
+        delay={150}
+        distance={40}
+        className="z-10 flex justify-center items-center w-full lg:w-[40%] h-full grow"
+      >
+        <GreetingsImage />
+      </FadeIn>
     </>
   );
 };

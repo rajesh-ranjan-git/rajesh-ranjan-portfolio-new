@@ -11,13 +11,14 @@ const Education = ({ title, description }: SectionProps) => {
       {title ? <SectionHeading title={title} /> : null}
 
       {description ? <SectionDescription description={description} /> : null}
-      <FadeIn delay={150} distance={40}>
-        <div className="justify-center items-center gap-8 grid grid-cols-1 lg:grid-cols-2 w-full">
-          {Object.values(education).map((educationItem) => (
-            <EducationCard key={educationItem.name} education={educationItem} />
-          ))}
-        </div>
-      </FadeIn>
+
+      <div className="justify-center items-center gap-8 grid grid-cols-1 lg:grid-cols-2 w-full">
+        {Object.values(education).map((educationItem) => (
+          <FadeIn delay={150} distance={40} key={educationItem.name}>
+            <EducationCard education={educationItem} />
+          </FadeIn>
+        ))}
+      </div>
     </section>
   );
 };

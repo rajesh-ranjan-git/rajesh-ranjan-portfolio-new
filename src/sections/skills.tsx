@@ -32,8 +32,8 @@ const Skills = ({ title, description }: SectionProps) => {
 
       {description ? <SectionDescription description={description} /> : null}
 
-      <FadeIn delay={150} distance={40}>
-        <div className="items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-2 w-full">
+      <div className="items-center gap-12 md:gap-24 grid grid-cols-1 lg:grid-cols-2 w-full">
+        <FadeIn delay={150} distance={40} className="w-full h-full">
           <div className="flex flex-col justify-between items-center gap-4 w-full h-full">
             <SkillsToggle
               activeSkillButton={activeSkillButton}
@@ -44,14 +44,18 @@ const Skills = ({ title, description }: SectionProps) => {
               <RainSkills icons={icons} />
             </div>
           </div>
+        </FadeIn>
 
-          <div className="relative">
+        <div className="relative">
+          <FadeIn delay={150} distance={40}>
             <SkillsContainer activeSkillButton={activeSkillButton} />
+          </FadeIn>
 
+          <FadeIn delay={150} distance={40}>
             <ToolsContainer activeSkillButton={activeSkillButton} />
-          </div>
+          </FadeIn>
         </div>
-      </FadeIn>
+      </div>
     </section>
   );
 };
