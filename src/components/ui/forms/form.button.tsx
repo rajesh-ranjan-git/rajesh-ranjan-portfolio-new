@@ -1,5 +1,5 @@
-import { TbLoader3 } from "react-icons/tb";
 import { FormButtonProps } from "@/types/props/forms.props.types";
+import Loader from "@/components/ui/loader/loader";
 
 const FormButton = ({
   variant = "secondary",
@@ -35,7 +35,8 @@ const FormButton = ({
       disabled={disabled || loading}
       className={`${base} ${sizes[size]} ${variants[variant]} ${className}`}
     >
-      {loading ? <TbLoader3 size={18} className="animate-spin" /> : null}
+      {loading ? <Loader /> : null}
+
       {children}
     </button>
   );
