@@ -1,56 +1,6 @@
 import { ValidatorResultType } from "@/types/types/validators.types";
 import { toTitleCase } from "@/utils/common.utils";
 
-export const numberPropertiesValidator = ({
-  propertyName,
-  propertyValue,
-  minValue,
-  maxValue,
-}: {
-  propertyName: string;
-  propertyValue: any;
-  minValue: number;
-  maxValue: number;
-}): ValidatorResultType<number> => {
-  if (!propertyValue && propertyValue !== 0 && propertyValue !== "0") {
-    return { isPropertyValid: true, validatedProperty: null };
-  }
-
-  propertyName = toTitleCase(propertyName);
-
-  propertyValue =
-    typeof propertyValue === "string"
-      ? propertyValue.trim().toLowerCase()
-      : propertyValue;
-
-  const isPropertyValid =
-    (typeof propertyValue === "number" || typeof propertyValue === "string") &&
-    !isNaN(Number(propertyValue));
-
-  if (!isPropertyValid) {
-    return { isPropertyValid: false, message: `${propertyName} is invalid!` };
-  }
-
-  if (Number(propertyValue) < minValue) {
-    return {
-      isPropertyValid: false,
-      message: `${propertyName} must be more than ${minValue}!`,
-    };
-  }
-
-  if (Number(propertyValue) > maxValue) {
-    return {
-      isPropertyValid: false,
-      message: `${propertyName} must be less than ${maxValue}!`,
-    };
-  }
-
-  return {
-    isPropertyValid: true,
-    validatedProperty: Number(propertyValue),
-  };
-};
-
 export const numberRegexPropertiesValidator = (
   propertyName: string,
   propertyValue: any,
