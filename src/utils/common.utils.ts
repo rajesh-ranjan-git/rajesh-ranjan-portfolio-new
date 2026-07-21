@@ -1,7 +1,7 @@
 export const getRandomItem = <T>(arr: T[]): T =>
   arr[Math.floor(Math.random() * arr.length)];
 
-export const toTitleCase = (text?: string) => {
+export const toTitleCase = (text?: string | null) => {
   if (!text) {
     return "";
   }
@@ -23,7 +23,7 @@ export const toTitleCase = (text?: string) => {
     .join(" ");
 };
 
-export const toSentenceCase = (text?: string) => {
+export const toSentenceCase = (text?: string | null) => {
   if (!text) {
     return "";
   }

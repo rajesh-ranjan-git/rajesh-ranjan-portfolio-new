@@ -12,6 +12,7 @@ import AppError from "@/services/error/error.service";
 import { emailService } from "@/services/email/email.service";
 import { contactNotificationEmail } from "@/services/email/email.templates";
 import { responseService } from "@/services/response/response.service";
+import { toSentenceCase } from "@/utils/common.utils";
 
 export async function POST(request: NextRequest) {
   try {
@@ -100,7 +101,7 @@ export async function POST(request: NextRequest) {
     }
 
     const result = await emailService.send({
-      subject: `New Portfolio Contact: ${validatedSubject}`,
+      subject: `New Portfolio Contact: ${toSentenceCase(validatedSubject)}`,
       template: contactNotificationEmail({
         name: validatedName ?? null,
         email: validatedEmail as string,
