@@ -1,13 +1,5 @@
 import { ReactNode, RefObject } from "react";
-import { StorageType } from "@/types/types/common.types";
 import { ValidatorType } from "@/types/types/hooks.types";
-
-export interface UseWebStorageProps<T> {
-  key: string;
-  value: T;
-  type?: StorageType;
-  expiresIn?: number;
-}
 
 export interface UseInViewOptionsProps {
   threshold?: number;
@@ -36,16 +28,6 @@ export interface UseOutsideClickProps {
   eventType?: "click" | "mousedown";
   defer?: boolean;
   callback: () => void;
-}
-
-export interface SheetProps {
-  open: boolean;
-  onClose: () => void;
-  children?: ReactNode;
-}
-
-export interface UseSheetProps {
-  type: string | null;
 }
 
 export interface UseScrollVisibilityProps {

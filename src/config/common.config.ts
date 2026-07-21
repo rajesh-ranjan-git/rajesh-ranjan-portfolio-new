@@ -9,11 +9,6 @@ export const themeConfig = {
   light: "light",
 } as const;
 
-export const storageConfig = {
-  local: "local",
-  session: "session",
-} as const;
-
 export const staticImagesConfig = {
   notFoundError: {
     src: "/assets/error/404-error.webp",
@@ -37,25 +32,4 @@ export const propertyConstraintsConfig = {
   minStringLength: 2,
   maxStringLength: 100,
   phoneLength: 10,
-};
-
-export const timelineConfig = {
-  oneHour: 1000 * 60 * 60,
-  twoHours: 1000 * 60 * 60 * 2,
-  threeHours: 1000 * 60 * 60 * 3,
-  sixHours: 1000 * 60 * 60 * 6,
-  halfDay: 1000 * 60 * 60 * 12,
-  oneDay: 1000 * 60 * 60 * 24,
-  twoDays: 1000 * 60 * 60 * 24 * 2,
-  threeDays: 1000 * 60 * 60 * 24 * 3,
-  oneWeek: 1000 * 60 * 60 * 24 * 7,
-  twoWeeks: 1000 * 60 * 60 * 24 * 7 * 2,
-  threeWeeks: 1000 * 60 * 60 * 24 * 7 * 3,
-  oneMonth: 1000 * 60 * 60 * 24 * 30,
-  twoMonths: 1000 * 60 * 60 * 24 * 30 * 2,
-  threeMonths: 1000 * 60 * 60 * 24 * 30 * 3,
-  sixMonths: 1000 * 60 * 60 * 24 * 30 * 6,
-  oneYear: 1000 * 60 * 60 * 24 * 30 * 12,
-  twoYears: 1000 * 60 * 60 * 24 * 30 * 12 * 2,
-  fourYears: 1000 * 60 * 60 * 24 * 30 * 12 * 3,
 };

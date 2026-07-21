@@ -22,6 +22,8 @@ export type RainItem = {
   opacity: number;
 };
 
+export type GradingSystemType = "percent" | "cgpa" | "gpa";
+
 export type EducationTextDetailsType = {
   name?: string;
   location?: LocationType;
@@ -34,9 +36,7 @@ export type EducationTextDetailsType = {
   imageSrc?: string;
 };
 
-export type DegreeType = "Bachelor of Technology" | "Senior Secondary (XII)";
-
-export type GradingSystemType = "percent" | "cgpa" | "gpa";
+export type ExperienceDetailsType = { title: string; description?: string };
 
 export type ExperienceType = {
   designation: string;
@@ -49,8 +49,6 @@ export type ExperienceType = {
   companyImage?: string;
   details?: readonly ExperienceDetailsType[];
 };
-
-export type ExperienceDetailsType = { title: string; description?: string };
 
 export type PortfolioItemTechType = {
   type: string;

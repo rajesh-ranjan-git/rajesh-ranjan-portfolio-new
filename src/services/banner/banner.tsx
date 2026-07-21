@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import figlet from "figlet";
 import gradient from "gradient-string";
 import boxen from "boxen";
+import { BASE_PORT } from "@/constants/env.constants";
 import { appConfig } from "@/config/common.config";
 import { toastVariantsConfig } from "@/config/toast.config";
 import { bannerFontsConfig, bannerThemesConfig } from "@/config/banner.config";
@@ -17,7 +18,7 @@ const systemInfo = (nodeVersion: string) => {
 
   const info = `
     Node: ${nodeVersion}
-    Port: ${process.env.NEXT_PUBLIC_BASE_PORT}
+    Port: ${BASE_PORT}
     Mode: ${toTitleCase(env)}
     Time: ${getDateToShow(new Date())}
   `;
