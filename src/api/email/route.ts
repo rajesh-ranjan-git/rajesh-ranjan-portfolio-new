@@ -11,6 +11,7 @@ import { propertyConstraintsConfig } from "@/config/common.config";
 import { responseService } from "@/services/response/response.service";
 import { httpStatusConfig } from "@/config/http.config";
 import { connectionEmail } from "@/services/email/email.templates";
+import { activityService } from "@/services/activity/activity.service";
 
 interface RequestBody {
   name?: string;
@@ -117,6 +118,13 @@ export async function POST(request: NextRequest, response: NextResponse) {
         profileUrl: `${BASE_URL}/profile`,
         userName,
       }),
+    });
+
+    await activityService.logActivity({
+      user: request.data.userId,
+      action: "admin_user_status_changed",
+      metadata: { targetUserId: userId, newStatus: status },
+      ipAddress: request.ip,
     });
 
     return responseService.successResponseHandler(request, response, {
