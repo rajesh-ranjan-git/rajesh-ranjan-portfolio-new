@@ -1,5 +1,6 @@
 "use client";
 
+import "@/services/logger/logger";
 import { useEffect } from "react";
 
 const ServiceWorker = () => {

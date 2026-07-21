@@ -1,7 +1,4 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-import { MODE, LOG_LEVEL, LOG_TARGET } from "@/constants/env.constants";
+import { MODE, LOG_LEVEL } from "@/constants/env.constants";
 import { ansiConfig } from "@/config/banner.config";
 import { getDateToShow, getDateToStore } from "@/utils/date.utils";
 import type AppError from "@/services/error/error.service";
@@ -10,31 +7,10 @@ import {
   LogContextType,
   LogEntryType,
   LogLevelType,
-  LogTargetsType,
 } from "@/types/types/logger.types";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 const mode = (MODE ?? "development").toLowerCase();
-const LOG_DIR = path.resolve(
-  process.env.LOG_DIR ?? path.join(__dirname, "../../logs"),
-);
 const LOGGING_LEVEL = (LOG_LEVEL ?? "info").toLowerCase();
-
-const resolveTargets = (): LogTargetsType => {
-  const explicit = (LOG_TARGET ?? "").toLowerCase();
-
-  if (explicit === "file") return { file: true, db: false };
-  if (explicit === "db") return { file: false, db: true };
-  if (explicit === "both") return { file: true, db: true };
-
-  if (mode === "production") return { file: true, db: true };
-  if (mode === "test") return { file: false, db: false };
-  return { file: true, db: false };
-};
-
-const TARGETS = resolveTargets();
 
 const LEVELS: Record<LogLevelType, number> = {
   error: 0,
@@ -45,27 +21,6 @@ const LEVELS: Record<LogLevelType, number> = {
 
 const shouldLog = (level: LogLevelType): boolean => {
   return (LEVELS[level] ?? 99) <= (LEVELS[LOGGING_LEVEL as LogLevelType] ?? 2);
-};
-
-if (TARGETS.file) {
-  fs.mkdirSync(LOG_DIR, { recursive: true });
-}
-
-const logFilePath = (level: LogLevelType) => {
-  const date = new Date().toISOString().split("T")[0];
-  return path.join(LOG_DIR, `${date}-${level}.log`);
-};
-
-const writeToFile = (level: LogLevelType, entry: LogEntryType) => {
-  if (!TARGETS.file) return;
-  try {
-    const line = JSON.stringify(entry) + "\n";
-    fs.appendFileSync(logFilePath(level), line, "utf8");
-    fs.appendFileSync(path.join(LOG_DIR, "combined.log"), line, "utf8");
-  } catch (ioErr) {
-    const errMessage = ioErr instanceof Error ? ioErr.message : String(ioErr);
-    process.stderr.write(`[logger] File write failed: ${errMessage}\n`);
-  }
 };
 
 let _dbAdapter: ((entry: LogEntryType) => Promise<void> | void) | null = null;
@@ -79,7 +34,6 @@ export const setDbAdapter = (
 };
 
 const writeToDB = async (entry: LogEntryType) => {
-  if (!TARGETS.db) return;
   if (!_dbAdapter) {
     process.stderr.write(
       "[Logger Service] DB target enabled but no adapter registered. " +
@@ -131,7 +85,6 @@ const runSinks = async (
 ) => {
   if (mode === "test" || !shouldLog(level)) return;
   const entry = buildEntry(level, args, context);
-  writeToFile(level, entry);
   await writeToDB(entry);
 };
 
@@ -477,7 +430,7 @@ const logger = {
     this[level]({ appError, metadata });
   },
 
-  config: Object.freeze({ mode, TARGETS, LOG_DIR, LOGGING_LEVEL }),
+  config: Object.freeze({ mode, LOGGING_LEVEL }),
 };
 
 if (!globalThis.logger) {

@@ -152,7 +152,10 @@ const ContactForm = () => {
   }, [state]);
 
   const isDisabled =
-    isPending || !emailField.raw || !subjectField.error || !messageField.error;
+    isPending ||
+    !!emailField.error ||
+    !!subjectField.error ||
+    !!messageField.error;
 
   return (
     <Card
@@ -196,7 +199,7 @@ const ContactForm = () => {
           </div>
 
           <div className="relative flex flex-col gap-4 mb-4">
-            <FormField htmlFor="phone" error={nameField.error}>
+            <FormField htmlFor="phone" error={phoneField.error}>
               <FormInput
                 id="phone"
                 name="phone"
