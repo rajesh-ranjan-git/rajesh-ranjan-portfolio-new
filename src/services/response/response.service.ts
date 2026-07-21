@@ -1,103 +1,92 @@
-import { NextResponse } from "next/server";
-import { httpStatusConfig } from "@/config/http.config.js";
-import { BASE_URL, MODE } from "@/constants/env.constants.js";
-import { sanitizeMongoData } from "@/utils/db.utils.js";
-import { getDateToStore } from "@/utils/date.utils.js";
-import AppError from "@/services/error/error.service.js";
+import { NextRequest, NextResponse } from "next/server";
+import { httpStatusConfig } from "@/config/http.config";
+import { MODE } from "@/constants/env.constants";
+import { sanitizeData } from "@/utils/db.utils";
+import { getDateToStore } from "@/utils/date.utils";
+import AppError from "@/services/error/error.service";
+import logger from "@/services/logger/logger";
+import {
+  ApiErrorResponseType,
+  ApiSuccessResponseType,
+  ResponseMetadataType,
+} from "@/types/types/api.types";
+import {
+  ErrorLogMetadataType,
+  SuccessResponseOptionsType,
+} from "@/types/types/response.types";
 
 class ResponseService {
-  successResponseHandler(
-    request,
-    response,
+  private getRequestMetadata(request: NextRequest): ResponseMetadataType {
+    return {
+      requestId: request.headers.get("x-request-id") ?? undefined,
+      path: request.nextUrl.pathname,
+      method: request.method,
+    };
+  }
+
+  successResponseHandler<T = unknown>(
+    request: NextRequest,
     {
       status = httpStatusConfig.success.message,
       statusCode = httpStatusConfig.success.statusCode,
       message = null,
       data = null,
-    } = {},
-  ) {
-    return NextResponse.json(response, {
+    }: SuccessResponseOptionsType<T> = {},
+  ): NextResponse<ApiSuccessResponseType<T | null>> {
+    const payload: ApiSuccessResponseType<T | null> = {
       success: true,
       status,
       statusCode,
       message,
-      data: sanitizeMongoData(data),
+      data: sanitizeData(data) as T | null,
       timestamp: getDateToStore(new Date()),
       metadata:
-        MODE === "development"
-          ? {
-              requestId: request.headers["x-request-id"],
-              path: request.originalUrl || request.url,
-              method: request.method,
-            }
-          : null,
-    });
-  }
-
-  errorResponseHandler(error, request, response, next) {
-    let errorResponse;
-
-    const errMessage = error?.message ?? "";
-
-    const logMetadata = {
-      path: error?.metadata?.path || request.originalUrl || req.url,
-      requestId: error?.requestId || request.headers["x-request-id"],
-      isOperational:
-        errMessage.startsWith("Unexpected token") ||
-        errMessage.startsWith("Expected")
-          ? true
-          : error?.isOperational || false,
-      method: request.method,
+        MODE === "development" ? this.getRequestMetadata(request) : null,
     };
 
-    if (error instanceof AppError) {
-      errorResponse = {
-        success: false,
-        status: error.name,
-        code: error.code,
-        statusCode: error.statusCode,
-        message: error.message,
-        details: error.details,
-        timestamp: error.timestamp,
-        metadata:
-          MODE === "development"
-            ? {
-                path:
-                  error?.metadata?.path || request.originalUrl || request.url,
-                requestId: error?.requestId || request.headers["x-request-id"],
-                isOperational: error?.isOperational || false,
-                method: request.method,
-              }
-            : null,
-      };
+    return NextResponse.json(payload, { status: statusCode });
+  }
 
-      logger.logAppError(error, {
-        ...errorResponse,
-        metadata: logMetadata,
-      });
+  errorResponseHandler(
+    error: unknown,
+    request: NextRequest,
+  ): NextResponse<ApiErrorResponseType> {
+    const rawMessage = error instanceof Error ? error.message : "";
+    const isMalformedJsonError =
+      rawMessage.startsWith("Unexpected token") ||
+      rawMessage.startsWith("Expected");
 
-      return NextResponse.json(response, errorResponse);
-    }
+    const appError = isMalformedJsonError
+      ? AppError.badRequest({
+          message: "Please provide a valid input!",
+          code: "INVALID_REQUEST_BODY",
+          path: request.nextUrl.pathname,
+          isOperational: true,
+        })
+      : AppError.from(error, { path: request.nextUrl.pathname });
 
-    errorResponse = {
+    const logMetadata: ErrorLogMetadataType = {
+      ...this.getRequestMetadata(request),
+      isOperational: appError.metadata.isOperational ?? false,
+    };
+
+    const errorResponse: ApiErrorResponseType = {
       success: false,
-      status: error.name || httpStatusConfig.internalServerError.statusCode,
-      code: error.code || "UNEXPECTED ERROR",
-      statusCode:
-        error.statusCode || httpStatusConfig.internalServerError.statusCode,
-      message:
-        errMessage.startsWith("Unexpected token") ||
-        errMessage.startsWith("Expected")
-          ? "Please provide a valid input!"
-          : errMessage || "An unexpected error has occurred!",
-      details: null,
-      timestamp: getDateToStore(new Date()),
+      status: appError.name,
+      code: appError.code,
+      statusCode: appError.statusCode,
+      message: appError.message,
+      details: appError.details,
+      timestamp: appError.timestamp,
       metadata: MODE === "development" ? logMetadata : null,
     };
 
-    logger.error({ error, extra: response });
+    logger.logAppError(appError, {
+      ...errorResponse,
+      metadata: logMetadata,
+    });
 
-    return NextResponse.json(response, errorResponse);
+    return NextResponse.json(errorResponse, { status: appError.statusCode });
   }
 }
 

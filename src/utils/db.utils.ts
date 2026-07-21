@@ -1,29 +1,36 @@
-export const sanitizeSingleMongoDocument = (doc) => {
-  if (!doc || typeof doc !== "object") {
-    return doc;
+import { ResponseData } from "@/types/types/response.types";
+
+export const sanitizeSingleData = (data: unknown): unknown => {
+  if (!data || typeof data !== "object") {
+    return data;
   }
 
-  if (Array.isArray(doc)) {
-    return doc.map((item) => sanitizeSingleMongoDocument(item));
+  if (Array.isArray(data)) {
+    return data.map((item) => sanitizeSingleData(item));
   }
 
-  if (doc.constructor && doc.constructor.name === "ObjectId") {
-    return doc.toString();
+  if (data instanceof Date) {
+    return data;
   }
 
-  if (doc instanceof Date) {
-    return doc;
+  const incomingData = data as ResponseData;
+
+  if (
+    incomingData.constructor &&
+    incomingData.constructor.name === "ObjectId"
+  ) {
+    return incomingData.toString?.();
   }
 
-  let plainDoc = doc;
-  if (doc.toObject && typeof doc.toObject === "function") {
-    plainDoc = doc.toObject();
-  }
+  const plainData: Record<string, unknown> =
+    typeof incomingData.toObject === "function"
+      ? incomingData.toObject()
+      : incomingData;
 
-  const sanitized = { ...plainDoc };
+  const sanitized: Record<string, unknown> = { ...plainData };
 
   if (sanitized._id) {
-    sanitized.id = sanitized._id.toString();
+    sanitized.id = (sanitized._id as { toString(): string }).toString();
     delete sanitized._id;
   }
 
@@ -35,21 +42,21 @@ export const sanitizeSingleMongoDocument = (doc) => {
     const value = sanitized[key];
 
     if (value && typeof value === "object") {
-      sanitized[key] = sanitizeSingleMongoDocument(value);
+      sanitized[key] = sanitizeSingleData(value);
     }
   });
 
   return sanitized;
 };
 
-export const sanitizeMongoData = (data) => {
+export const sanitizeData = (data: unknown): unknown => {
   if (!data) {
     return data;
   }
 
   if (Array.isArray(data)) {
-    return data.map((doc) => sanitizeSingleMongoDocument(doc));
+    return data.map((d) => sanitizeSingleData(d));
   }
 
-  return sanitizeSingleMongoDocument(data);
+  return sanitizeSingleData(data);
 };

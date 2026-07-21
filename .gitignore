@@ -45,3 +45,6 @@ next-env.d.ts
 
 # package
 package-lock.json
+
+# logger file output
+/src/logs/

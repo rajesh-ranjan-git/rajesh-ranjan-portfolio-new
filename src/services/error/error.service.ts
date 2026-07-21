@@ -1,14 +1,27 @@
-import { getDateToStore } from "../../utils/date.utils.js";
-import { httpStatusConfig } from "../../config/http.config.js";
+import { getDateToStore } from "@/utils/date.utils";
+import { httpStatusConfig } from "@/config/http.config";
+import {
+  AppErrorFactoryOptionsType,
+  AppErrorJSONType,
+  AppErrorMetadataType,
+  AppErrorOptionsType,
+} from "@/types/types/error.types";
 
 class AppError extends Error {
+  code: string;
+  statusCode: number;
+  details: Record<string, unknown>;
+  timestamp: string;
+  metadata: Required<AppErrorMetadataType>;
+  originalStack?: string;
+
   constructor({
     message = "Internal Server Error",
     code = "INTERNAL SERVER ERROR",
     statusCode = 500,
     details = {},
-    metadata = { path: null, requestId: null, isOperational: true },
-  } = {}) {
+    metadata = {},
+  }: AppErrorOptionsType = {}) {
     super(message);
 
     Object.setPrototypeOf(this, new.target.prototype);
@@ -20,9 +33,9 @@ class AppError extends Error {
     this.details = details;
     this.timestamp = getDateToStore(new Date());
     this.metadata = {
-      path: metadata.path,
-      requestId: metadata.requestId,
-      isOperational: metadata.isOperational,
+      path: metadata.path ?? null,
+      requestId: metadata.requestId ?? null,
+      isOperational: metadata.isOperational ?? true,
     };
 
     if (Error.captureStackTrace) {
@@ -30,14 +43,20 @@ class AppError extends Error {
     }
   }
 
-  static from(err, context = {}) {
+  static from(
+    err: unknown,
+    context: AppErrorFactoryOptionsType = {},
+  ): AppError {
     if (err instanceof AppError) {
       Object.assign(err, context);
       return err;
     }
 
+    const message =
+      err instanceof Error ? err.message : "An unexpected error occurred";
+
     const wrapped = new AppError({
-      message: err?.message ?? "An unexpected error occurred",
+      message,
       code: context.code ?? "UNEXPECTED ERROR",
       statusCode:
         context.statusCode ?? httpStatusConfig.internalServerError.statusCode,
@@ -49,7 +68,7 @@ class AppError extends Error {
       },
     });
 
-    if (err?.stack) {
+    if (err instanceof Error && err.stack) {
       wrapped.originalStack = err.stack;
     }
 
@@ -61,7 +80,7 @@ class AppError extends Error {
     code = httpStatusConfig.badRequest.message,
     details = {},
     ...context
-  } = {}) {
+  }: AppErrorFactoryOptionsType = {}) {
     return new AppError({
       message,
       code,
@@ -79,7 +98,7 @@ class AppError extends Error {
     code = httpStatusConfig.unauthorized.message,
     details = {},
     ...context
-  } = {}) {
+  }: AppErrorFactoryOptionsType = {}) {
     return new AppError({
       message,
       code,
@@ -97,7 +116,7 @@ class AppError extends Error {
     code = httpStatusConfig.forbidden.message,
     details = {},
     ...context
-  } = {}) {
+  }: AppErrorFactoryOptionsType = {}) {
     return new AppError({
       message,
       code,
@@ -115,7 +134,7 @@ class AppError extends Error {
     code = httpStatusConfig.notFound.message,
     details = {},
     ...context
-  } = {}) {
+  }: AppErrorFactoryOptionsType = {}) {
     return new AppError({
       message,
       code,
@@ -133,7 +152,7 @@ class AppError extends Error {
     code = httpStatusConfig.conflict.message,
     details = {},
     ...context
-  } = {}) {
+  }: AppErrorFactoryOptionsType = {}) {
     return new AppError({
       message,
       code,
@@ -151,7 +170,7 @@ class AppError extends Error {
     code = httpStatusConfig.unprocessableEntity.message,
     details = {},
     ...context
-  } = {}) {
+  }: AppErrorFactoryOptionsType = {}) {
     return new AppError({
       message,
       code,
@@ -169,7 +188,7 @@ class AppError extends Error {
     code = httpStatusConfig.tooManyRequests.message,
     details = {},
     ...context
-  } = {}) {
+  }: AppErrorFactoryOptionsType = {}) {
     return new AppError({
       message,
       code,
@@ -187,7 +206,7 @@ class AppError extends Error {
     code = httpStatusConfig.internalServerError.message,
     details = {},
     ...context
-  } = {}) {
+  }: AppErrorFactoryOptionsType = {}) {
     return new AppError({
       message,
       code,
@@ -205,7 +224,7 @@ class AppError extends Error {
     code = httpStatusConfig.serviceUnavailable.message,
     details = {},
     ...context
-  } = {}) {
+  }: AppErrorFactoryOptionsType = {}) {
     return new AppError({
       message,
       code,
@@ -218,7 +237,7 @@ class AppError extends Error {
     });
   }
 
-  toJSON() {
+  toJSON(): AppErrorJSONType {
     return {
       error: {
         message: this.message,

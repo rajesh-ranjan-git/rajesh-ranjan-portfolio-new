@@ -1,7 +1,6 @@
 "use client";
 
 import "@/app/globals.css";
-import "@/services/logger/logger";
 import Image from "next/image";
 import { MdError } from "react-icons/md";
 import { staticImagesConfig } from "@/config/common.config";

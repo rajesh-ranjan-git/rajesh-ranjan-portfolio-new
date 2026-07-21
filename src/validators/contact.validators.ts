@@ -17,15 +17,14 @@ export const nameValidator = (name: unknown): ValidatorResultType<string> => {
   if (trimmedName.length < propertyConstraintsConfig.minNameLength) {
     return {
       isPropertyValid: false,
-      message: `"Name must be at least ${propertyConstraintsConfig.minNameLength} character long!`,
+      message: `Name must be at least ${propertyConstraintsConfig.minNameLength} character long!`,
     };
   }
 
   if (trimmedName.length > propertyConstraintsConfig.maxNameLength) {
     return {
       isPropertyValid: false,
-      message:
-        "Name must not be longer than ${propertyConstraintsConfig.maxNameLength} characters!",
+      message: `Name must not be longer than ${propertyConstraintsConfig.maxNameLength} characters!`,
     };
   }
 

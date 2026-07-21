@@ -4,17 +4,25 @@ import { fileURLToPath } from "url";
 import { MODE, LOG_LEVEL, LOG_TARGET } from "@/constants/env.constants";
 import { ansiConfig } from "@/config/banner.config";
 import { getDateToShow, getDateToStore } from "@/utils/date.utils";
+import type AppError from "@/services/error/error.service";
+import {
+  AppErrorLogPayloadType,
+  LogContextType,
+  LogEntryType,
+  LogLevelType,
+  LogTargetsType,
+} from "@/types/types/logger.types";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const mode = MODE.toLowerCase();
+const mode = (MODE ?? "development").toLowerCase();
 const LOG_DIR = path.resolve(
   process.env.LOG_DIR ?? path.join(__dirname, "../../logs"),
 );
 const LOGGING_LEVEL = (LOG_LEVEL ?? "info").toLowerCase();
 
-const resolveTargets = () => {
+const resolveTargets = (): LogTargetsType => {
   const explicit = (LOG_TARGET ?? "").toLowerCase();
 
   if (explicit === "file") return { file: true, db: false };
@@ -28,41 +36,49 @@ const resolveTargets = () => {
 
 const TARGETS = resolveTargets();
 
-const LEVELS = { error: 0, warn: 1, info: 2, debug: 3 };
+const LEVELS: Record<LogLevelType, number> = {
+  error: 0,
+  warn: 1,
+  info: 2,
+  debug: 3,
+};
 
-const shouldLog = (level) => {
-  return (LEVELS[level] ?? 99) <= (LEVELS[LOGGING_LEVEL] ?? 2);
+const shouldLog = (level: LogLevelType): boolean => {
+  return (LEVELS[level] ?? 99) <= (LEVELS[LOGGING_LEVEL as LogLevelType] ?? 2);
 };
 
 if (TARGETS.file) {
   fs.mkdirSync(LOG_DIR, { recursive: true });
 }
 
-const logFilePath = (level) => {
+const logFilePath = (level: LogLevelType) => {
   const date = new Date().toISOString().split("T")[0];
   return path.join(LOG_DIR, `${date}-${level}.log`);
 };
 
-const writeToFile = (level, entry) => {
+const writeToFile = (level: LogLevelType, entry: LogEntryType) => {
   if (!TARGETS.file) return;
   try {
     const line = JSON.stringify(entry) + "\n";
     fs.appendFileSync(logFilePath(level), line, "utf8");
     fs.appendFileSync(path.join(LOG_DIR, "combined.log"), line, "utf8");
   } catch (ioErr) {
-    process.stderr.write(`[logger] File write failed: ${ioErr.message}\n`);
+    const errMessage = ioErr instanceof Error ? ioErr.message : String(ioErr);
+    process.stderr.write(`[logger] File write failed: ${errMessage}\n`);
   }
 };
 
-let _dbAdapter = null;
+let _dbAdapter: ((entry: LogEntryType) => Promise<void> | void) | null = null;
 
-export const setDbAdapter = (fn) => {
+export const setDbAdapter = (
+  fn: (entry: LogEntryType) => Promise<void> | void,
+) => {
   if (typeof fn !== "function")
     throw new TypeError("DB adapter must be a function!");
   _dbAdapter = fn;
 };
 
-const writeToDB = async (entry) => {
+const writeToDB = async (entry: LogEntryType) => {
   if (!TARGETS.db) return;
   if (!_dbAdapter) {
     process.stderr.write(
@@ -74,11 +90,16 @@ const writeToDB = async (entry) => {
   try {
     await _dbAdapter(entry);
   } catch (dbErr) {
-    process.stderr.write(`[logger] DB write failed: ${dbErr.message}\n`);
+    const errMessage = dbErr instanceof Error ? dbErr.message : String(dbErr);
+    process.stderr.write(`[logger] DB write failed: ${errMessage}\n`);
   }
 };
 
-const buildEntry = (level, args, context = {}) => {
+const buildEntry = (
+  level: LogLevelType,
+  args: unknown[],
+  context: LogContextType = {},
+): LogEntryType => {
   const message = args
     .map((a) => (typeof a === "object" ? JSON.stringify(a) : String(a)))
     .join(" ");
@@ -103,7 +124,11 @@ const buildEntry = (level, args, context = {}) => {
   };
 };
 
-const runSinks = async (level, args, context = {}) => {
+const runSinks = async (
+  level: LogLevelType,
+  args: unknown[],
+  context: LogContextType = {},
+) => {
   if (mode === "test" || !shouldLog(level)) return;
   const entry = buildEntry(level, args, context);
   writeToFile(level, entry);
@@ -128,6 +153,31 @@ const serverPrint = (
 ) => {
   console[method](`${color}${label}`, ...args);
 };
+
+const isAppErrorLogPayload = (
+  value: unknown,
+): value is AppErrorLogPayloadType => {
+  return (
+    !!value &&
+    typeof value === "object" &&
+    "appError" in value &&
+    "metadata" in value
+  );
+};
+
+const readPath = (source: unknown, path: string[]): unknown =>
+  path.reduce<unknown>((value, key) => {
+    if (!value || typeof value !== "object") return undefined;
+    return (value as Record<string, unknown>)[key];
+  }, source);
+
+const readString = (source: unknown, path: string[]): string | undefined => {
+  const value = readPath(source, path);
+  return typeof value === "string" ? value : undefined;
+};
+
+const hasOwnEntries = (value: unknown): value is Record<string, unknown> =>
+  !!value && typeof value === "object" && Object.keys(value).length > 0;
 
 const browserPrint = (
   method: "info" | "log" | "warn" | "error" | "debug",
@@ -188,7 +238,7 @@ const logger = {
         args,
       );
 
-      runSinks("log", args, { code: "LOG" });
+      runSinks("info", args, { code: "LOG" });
     } else {
       browserPrint(
         "log",
@@ -221,49 +271,50 @@ const logger = {
 
   warn: (...args: unknown[]) => {
     if (isServer) {
-      const incomingError = args[0].appError;
-      const incomingErrorMetadata = args[0].metadata;
+      const payload = isAppErrorLogPayload(args[0]) ? args[0] : null;
+      const incomingError = payload?.appError;
+      const incomingErrorMetadata = payload?.metadata;
 
       if (incomingError && incomingErrorMetadata) {
+        const method = readString(incomingErrorMetadata, [
+          "metadata",
+          "method",
+        ]);
+        const statusCode = incomingError.statusCode;
+        const status = incomingError.name;
+        const code =
+          incomingError.code ??
+          readString(incomingErrorMetadata, ["appError", "code"]);
+        const nestedDetails = readPath(incomingErrorMetadata, ["details"]);
+        const details = hasOwnEntries(incomingError.details)
+          ? incomingError.details
+          : nestedDetails;
+        const nestedRequestMetadata = readPath(incomingErrorMetadata, [
+          "metadata",
+        ]);
+
         const argsToPrint = [
-          incomingError.metadata.method || incomingErrorMetadata.metadata.method
-            ? `[ ${incomingError.metadata.method || incomingErrorMetadata.metadata.method} ]`
-            : null,
-          incomingError.statusCode || incomingErrorMetadata.statusCode
-            ? `( ${incomingError.statusCode || incomingErrorMetadata.statusCode} )`
-            : null,
-          incomingError.name ||
-          incomingError.status ||
-          incomingErrorMetadata.status
-            ? `[ ${incomingError.name || incomingError.status || incomingErrorMetadata.status} ]`
-            : null,
-          incomingError.code || incomingErrorMetadata.appError.code
-            ? `[ ${incomingError.code || incomingErrorMetadata.appError.code} ]`
-            : null,
+          method ? `[ ${method} ]` : null,
+          statusCode ? `( ${statusCode} )` : null,
+          status ? `[ ${status} ]` : null,
+          code ? `[ ${code} ]` : null,
           incomingError.message ?? "An unknown warning has occurred!",
-          Object.keys(incomingError?.details).length > 0 ||
-          Object.keys(incomingErrorMetadata?.details).length > 0
-            ? `\nError Details: ${JSON.stringify(
-                Object.keys(incomingError?.details).length > 0
-                  ? incomingError?.details
-                  : incomingErrorMetadata?.details,
-                null,
-                2,
-              )}`
+          hasOwnEntries(details)
+            ? `\nError Details: ${JSON.stringify(details, null, 2)}`
             : null,
-          Object.keys(incomingError.metadata).length > 0 ||
-          Object.keys(incomingErrorMetadata.metadata).length > 0
+          hasOwnEntries(incomingError.metadata) ||
+          hasOwnEntries(nestedRequestMetadata)
             ? `\nError Metadata: ${JSON.stringify(
                 {
                   path:
                     incomingError.metadata.path ||
-                    incomingErrorMetadata.metadata.path,
+                    readString(nestedRequestMetadata, ["path"]),
                   requestId:
                     incomingError.metadata.requestId ||
-                    incomingErrorMetadata.metadata.requestId,
+                    readString(nestedRequestMetadata, ["requestId"]),
                   isOperational:
                     incomingError.metadata.isOperational ||
-                    incomingErrorMetadata.metadata.isOperational,
+                    readPath(nestedRequestMetadata, ["isOperational"]),
                 },
                 null,
                 2,
@@ -282,8 +333,16 @@ const logger = {
           "warn",
           [incomingError.message ?? "An unknown warning has occurred!"],
           {
-            ...incomingErrorMetadata,
-            ...incomingErrorMetadata.metadata,
+            code: incomingError.code,
+            statusCode: incomingError.statusCode,
+            details: incomingError.details,
+            path:
+              readString(nestedRequestMetadata, ["path"]) ??
+              incomingError.metadata.path,
+            requestId:
+              readString(nestedRequestMetadata, ["requestId"]) ??
+              incomingError.metadata.requestId,
+            isOperational: incomingError.metadata.isOperational,
           },
         );
 
@@ -310,49 +369,50 @@ const logger = {
 
   error: (...args: unknown[]) => {
     if (isServer) {
-      const incomingError = args[0].appError;
-      const incomingErrorMetadata = args[0].metadata;
+      const payload = isAppErrorLogPayload(args[0]) ? args[0] : null;
+      const incomingError = payload?.appError;
+      const incomingErrorMetadata = payload?.metadata;
 
       if (incomingError && incomingErrorMetadata) {
+        const method = readString(incomingErrorMetadata, [
+          "metadata",
+          "method",
+        ]);
+        const statusCode = incomingError.statusCode;
+        const status = incomingError.name;
+        const code =
+          incomingError.code ??
+          readString(incomingErrorMetadata, ["appError", "code"]);
+        const nestedDetails = readPath(incomingErrorMetadata, ["details"]);
+        const details = hasOwnEntries(incomingError.details)
+          ? incomingError.details
+          : nestedDetails;
+        const nestedRequestMetadata = readPath(incomingErrorMetadata, [
+          "metadata",
+        ]);
+
         const argsToPrint = [
-          incomingError.metadata.method || incomingErrorMetadata.metadata.method
-            ? `[ ${incomingError.metadata.method || incomingErrorMetadata.metadata.method} ]`
-            : null,
-          incomingError.statusCode || incomingErrorMetadata.statusCode
-            ? `( ${incomingError.statusCode || incomingErrorMetadata.statusCode} )`
-            : null,
-          incomingError.name ||
-          incomingError.status ||
-          incomingErrorMetadata.status
-            ? `[ ${incomingError.name || incomingError.status || incomingErrorMetadata.status} ]`
-            : null,
-          incomingError.code || incomingErrorMetadata.appError.code
-            ? `[ ${incomingError.code || incomingErrorMetadata.appError.code} ]`
-            : null,
+          method ? `[ ${method} ]` : null,
+          statusCode ? `( ${statusCode} )` : null,
+          status ? `[ ${status} ]` : null,
+          code ? `[ ${code} ]` : null,
           incomingError.message ?? "An unknown error has occurred!",
-          Object.keys(incomingError.details).length > 0 ||
-          Object.keys(incomingErrorMetadata.details).length > 0
-            ? `\nError Details: ${JSON.stringify(
-                Object.keys(incomingError.details).length > 0
-                  ? incomingError.details
-                  : incomingErrorMetadata.details,
-                null,
-                2,
-              )}`
+          hasOwnEntries(details)
+            ? `\nError Details: ${JSON.stringify(details, null, 2)}`
             : null,
-          Object.keys(incomingError.metadata).length > 0 ||
-          Object.keys(incomingErrorMetadata.metadata).length > 0
+          hasOwnEntries(incomingError.metadata) ||
+          hasOwnEntries(nestedRequestMetadata)
             ? `\nError Metadata: ${JSON.stringify(
                 {
                   path:
                     incomingError.metadata.path ||
-                    incomingErrorMetadata.metadata.path,
+                    readString(nestedRequestMetadata, ["path"]),
                   requestId:
                     incomingError.metadata.requestId ||
-                    incomingErrorMetadata.metadata.requestId,
+                    readString(nestedRequestMetadata, ["requestId"]),
                   isOperational:
                     incomingError.metadata.isOperational ||
-                    incomingErrorMetadata.metadata.isOperational,
+                    readPath(nestedRequestMetadata, ["isOperational"]),
                 },
                 null,
                 2,
@@ -371,8 +431,16 @@ const logger = {
           "error",
           [incomingError.message ?? "An unknown error has occurred!"],
           {
-            ...incomingErrorMetadata,
-            ...incomingErrorMetadata.metadata,
+            code: incomingError.code,
+            statusCode: incomingError.statusCode,
+            details: incomingError.details,
+            path:
+              readString(nestedRequestMetadata, ["path"]) ??
+              incomingError.metadata.path,
+            requestId:
+              readString(nestedRequestMetadata, ["requestId"]) ??
+              incomingError.metadata.requestId,
+            isOperational: incomingError.metadata.isOperational,
             stack: incomingError.stack,
           },
         );
@@ -398,9 +466,13 @@ const logger = {
     }
   },
 
-  logAppError(appError, metadata) {
-    const level =
-      (appError.statusCode || metadata.statusCode) >= 500 ? "error" : "warn";
+  logAppError(appError: AppError, metadata: Record<string, unknown>) {
+    const level: "error" | "warn" =
+      (appError.statusCode ||
+        (metadata.statusCode as number | undefined) ||
+        0) >= 500
+        ? "error"
+        : "warn";
 
     this[level]({ appError, metadata });
   },

@@ -133,7 +133,7 @@ export const stringPropertiesValidator = (
   if (trimmedProperty.length > maxLength) {
     return {
       isPropertyValid: false,
-      message: `${toTitleCase(propertyName)} must not less than ${maxLength} characters long!`,
+      message: `${toTitleCase(propertyName)} must not be more than ${maxLength} characters long!`,
     };
   }
 

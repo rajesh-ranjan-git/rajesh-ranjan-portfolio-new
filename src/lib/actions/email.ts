@@ -6,7 +6,7 @@ import {
   numberRegexPropertiesValidator,
   stringPropertiesValidator,
 } from "@/validators/common.validators";
-import { api } from "@/lib/api/apiHandler";
+import { api, ApiError } from "@/lib/api/apiHandler";
 
 export const sendMessage = async (
   prevState: FormStateType,
@@ -48,7 +48,7 @@ export const sendMessage = async (
       propertyConstraintsConfig.minStringLength,
       propertyConstraintsConfig.maxStringLength,
     );
-  errors.message = subjectErrorMessage ?? null;
+  errors.message = messageErrorMessage ?? null;
 
   if (Object.values(errors).some((error) => error !== null)) {
     return {
@@ -75,16 +75,18 @@ export const sendMessage = async (
     });
 
     return { ...response };
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const apiError = error instanceof ApiError ? error : null;
+
     return {
       success: false,
-      status: error?.status ?? "VALIDATION FAILED",
-      code: error?.code ?? "SEND EMAIL FAILED",
-      statusCode: error?.statusCode ?? 500,
-      message: error?.message ?? "Unable to send email!",
-      details: error?.details ?? null,
+      status: apiError?.name ?? "VALIDATION FAILED",
+      code: apiError?.code ?? "SEND EMAIL FAILED",
+      statusCode: apiError?.statusCode ?? 500,
+      message: apiError?.message ?? "Unable to send email!",
+      details: apiError?.details ?? null,
       timestamp: new Date().toISOString(),
-      metadata: error?.metadata ?? null,
+      metadata: apiError?.metadata ?? null,
       inputs: Object.fromEntries(formData),
     };
   }

@@ -1,29 +1,21 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
+import { PHONE_REGEX } from "@/constants/regex.constants";
+import { propertyConstraintsConfig } from "@/config/common.config";
+import { httpStatusConfig } from "@/config/http.config";
+import { ContactFormRequestBodyType } from "@/types/types/email.types";
 import { emailValidator, nameValidator } from "@/validators/contact.validators";
-import AppError from "@/services/error/error.service";
-import { emailService } from "@/services/email/email.service";
 import {
   numberRegexPropertiesValidator,
   stringPropertiesValidator,
 } from "@/validators/common.validators";
-import { PHONE_REGEX } from "@/constants/regex.constants";
-import { propertyConstraintsConfig } from "@/config/common.config";
+import AppError from "@/services/error/error.service";
+import { emailService } from "@/services/email/email.service";
+import { contactNotificationEmail } from "@/services/email/email.templates";
 import { responseService } from "@/services/response/response.service";
-import { httpStatusConfig } from "@/config/http.config";
-import { connectionEmail } from "@/services/email/email.templates";
-import { activityService } from "@/services/activity/activity.service";
 
-interface RequestBody {
-  name?: string;
-  email: string;
-  phone?: number;
-  subject: string;
-  message: string;
-}
-
-export async function POST(request: NextRequest, response: NextResponse) {
+export async function POST(request: NextRequest) {
   try {
-    const body: RequestBody = await request.json();
+    const body: ContactFormRequestBodyType = await request.json();
 
     const { name, email, phone, subject, message } = body;
 
@@ -108,32 +100,23 @@ export async function POST(request: NextRequest, response: NextResponse) {
     }
 
     const result = await emailService.send({
-      validatedName,
-      validatedEmail,
-      validatedSubject,
-      validatedPhone,
-      validatedMessage,
-      template: connectionEmail({
-        appName: appConfig.name,
-        profileUrl: `${BASE_URL}/profile`,
-        userName,
+      subject: `New Portfolio Contact: ${validatedSubject}`,
+      template: contactNotificationEmail({
+        name: validatedName ?? null,
+        email: validatedEmail as string,
+        phone: validatedPhone ?? null,
+        subject: validatedSubject as string,
+        message: validatedMessage as string,
       }),
     });
 
-    await activityService.logActivity({
-      user: request.data.userId,
-      action: "admin_user_status_changed",
-      metadata: { targetUserId: userId, newStatus: status },
-      ipAddress: request.ip,
-    });
-
-    return responseService.successResponseHandler(request, response, {
+    return responseService.successResponseHandler(request, {
       status: "EMAIL SEND SUCCESS",
       statusCode: httpStatusConfig.success.statusCode,
       message: result.message,
-      data,
+      data: { messageId: result.messageId },
     });
   } catch (error) {
-    responseService.errorResponseHandler(error, request, response, next);
+    return responseService.errorResponseHandler(error, request);
   }
 }
