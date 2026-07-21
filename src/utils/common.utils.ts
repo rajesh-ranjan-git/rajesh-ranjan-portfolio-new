@@ -22,3 +22,13 @@ export const toTitleCase = (text?: string) => {
     })
     .join(" ");
 };
+
+export const toSentenceCase = (text?: string) => {
+  if (!text) {
+    return "";
+  }
+
+  let temp = text.toLowerCase().split("_").join(" ").split("-").join(" ");
+
+  return temp.charAt(0).toUpperCase() + temp.slice(1) + ".";
+};

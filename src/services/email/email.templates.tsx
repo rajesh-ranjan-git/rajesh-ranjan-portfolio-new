@@ -3,60 +3,89 @@ import {
   ContactNotificationEmailPropsType,
   EmailLayoutPropsType,
 } from "@/types/types/email.types";
+import { toSentenceCase } from "@/utils/common.utils";
+
+const theme = {
+  navy: "#0d0f2b",
+  secondary: "#4b5563",
+  mutedSecondary: "#6b7280",
+  bodyBg: "#f4f7ff",
+  border: "#e2e5f5",
+  accentBlue: "#3f82d9",
+  accentPurple: "#8b5cf6",
+  accentPink: "#f54568",
+};
+
+const fontFamily =
+  "'Poppins', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
 
 const styles = {
   body: {
-    backgroundColor: "#f6f7fb",
-    color: "#111827",
-    fontFamily:
-      "Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    backgroundColor: theme.bodyBg,
+    color: theme.navy,
+    fontFamily,
     margin: 0,
     padding: "32px 16px",
   },
-  container: {
+  card: {
     backgroundColor: "#ffffff",
-    border: "1px solid #e5e7eb",
-    borderRadius: "8px",
+    border: `1px solid ${theme.border}`,
+    borderRadius: "16px",
     margin: "0 auto",
     maxWidth: "600px",
+    overflow: "hidden",
+  },
+  accentBar: {
+    background: `linear-gradient(90deg, ${theme.accentBlue}, ${theme.accentPurple}, ${theme.accentPink})`,
+    height: "4px",
+  },
+  container: {
     padding: "32px",
   },
   eyebrow: {
-    color: "#6b7280",
+    color: theme.accentBlue,
     fontSize: "13px",
     fontWeight: "700",
-    letterSpacing: "0",
+    letterSpacing: "0.06em",
     margin: "0 0 12px",
     textTransform: "uppercase" as const,
   },
   heading: {
-    color: "#111827",
+    color: theme.navy,
     fontSize: "24px",
+    fontWeight: "800",
+    lineHeight: "32px",
+    margin: "0 0 16px",
+  },
+  subject: {
+    color: theme.accentPurple,
+    fontSize: "20px",
+    fontWeight: "600",
     lineHeight: "32px",
     margin: "0 0 16px",
   },
   paragraph: {
-    color: "#374151",
+    color: theme.secondary,
     fontSize: "16px",
     lineHeight: "24px",
     margin: "0 0 16px",
     whiteSpace: "pre-wrap" as const,
   },
   muted: {
-    color: "#6b7280",
+    color: theme.mutedSecondary,
     fontSize: "13px",
     fontWeight: "700",
-    letterSpacing: "0",
+    letterSpacing: "0.06em",
     margin: "0 0 8px",
     textTransform: "uppercase" as const,
   },
   divider: {
     border: "none",
-    borderTop: "1px solid #e5e7eb",
+    borderTop: `1px solid ${theme.border}`,
     margin: "24px 0",
   },
   link: {
-    color: "#4f46e5",
+    color: theme.accentBlue,
     wordBreak: "break-all" as const,
   },
   detailsTable: {
@@ -65,7 +94,7 @@ const styles = {
     width: "100%",
   },
   detailsLabel: {
-    color: "#6b7280",
+    color: theme.mutedSecondary,
     fontSize: "13px",
     fontWeight: "700",
     padding: "6px 12px 6px 0",
@@ -73,10 +102,19 @@ const styles = {
     whiteSpace: "nowrap" as const,
   },
   detailsValue: {
-    color: "#111827",
+    color: theme.navy,
     fontSize: "14px",
     padding: "6px 0",
     wordBreak: "break-word" as const,
+  },
+  footer: {
+    color: theme.mutedSecondary,
+    fontSize: "12px",
+    lineHeight: "18px",
+    margin: "20px auto 0",
+    maxWidth: "600px",
+    padding: "0 32px",
+    textAlign: "center" as const,
   },
 };
 
@@ -85,12 +123,20 @@ const EmailLayout = ({ appName, preview, children }: EmailLayoutPropsType) => {
     <html>
       <head>
         <title>{preview}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body style={styles.body}>
-        <div style={styles.container}>
-          <p style={styles.eyebrow}>{appName}</p>
-          {children}
+        <div style={styles.card}>
+          <div style={styles.accentBar} />
+          <div style={styles.container}>
+            <p style={styles.eyebrow}>{appName}</p>
+            {children}
+          </div>
         </div>
+        <p style={styles.footer}>
+          This message was sent from the {appName} contact form.
+        </p>
       </body>
     </html>
   );
@@ -132,17 +178,15 @@ export const contactNotificationEmail = ({
             <td style={styles.detailsLabel}>Phone</td>
             <td style={styles.detailsValue}>{phone ?? "Not provided"}</td>
           </tr>
-          <tr>
-            <td style={styles.detailsLabel}>Subject</td>
-            <td style={styles.detailsValue}>{subject}</td>
-          </tr>
         </tbody>
       </table>
 
       <hr style={styles.divider} />
 
+      <h2 style={styles.subject}>{toSentenceCase(subject)}</h2>
+
       <p style={styles.muted}>Message</p>
-      <p style={styles.paragraph}>{message}</p>
+      <p style={styles.paragraph}>{toSentenceCase(message)}</p>
     </EmailLayout>
   );
 };
