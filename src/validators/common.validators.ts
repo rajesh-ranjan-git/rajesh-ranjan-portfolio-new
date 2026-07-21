@@ -80,7 +80,10 @@ export const stringPropertiesValidator = (
   maxLength: number,
 ): ValidatorResultType<string> => {
   if (!propertyValue) {
-    return { isPropertyValid: true, validatedProperty: null };
+    return {
+      isPropertyValid: false,
+      message: `Please provide ${toTitleCase(propertyName)}!`,
+    };
   }
 
   if (typeof propertyValue !== "string") {

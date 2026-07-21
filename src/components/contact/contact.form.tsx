@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import Form from "next/form";
 import { FaPhone, FaUserTie } from "react-icons/fa6";
 import { MdEmail, MdSubject } from "react-icons/md";
@@ -9,12 +9,14 @@ import { PHONE_REGEX } from "@/constants/regex.constants";
 import { propertyConstraintsConfig } from "@/config/common.config";
 import { initialState } from "@/config/forms.config";
 import useInputFieldValidator from "@/hooks/useInputFieldValidation";
+import { useToast } from "@/hooks/toast";
 import { getFullName } from "@/helpers/owner.helpers";
 import { emailValidator, nameValidator } from "@/validators/contact.validators";
 import {
   numberRegexPropertiesValidator,
   stringPropertiesValidator,
 } from "@/validators/common.validators";
+import { sendMessage } from "@/lib/actions/email";
 import Card from "@/components/ui/card/card";
 import FormField from "@/components/ui/forms/form.field";
 import FormInput from "@/components/ui/forms/form.input";
@@ -22,6 +24,8 @@ import FormTextarea from "@/components/ui/forms/form.textarea";
 import FormButton from "@/components/ui/forms/form.button";
 
 const ContactForm = () => {
+  const { showToast } = useToast();
+
   const validateName = (val: string): string => {
     const { message: nameError } = nameValidator(val);
 
@@ -124,11 +128,31 @@ const ContactForm = () => {
     validate: validateMessage,
   });
 
-  const action = async (prevState: any, formData: FormData): Promise<any> => {
-    return prevState;
-  };
+  const action = async (prevState: any, formData: FormData): Promise<any> =>
+    sendMessage(prevState, formData);
 
   const [state, formAction, isPending] = useActionState(action, initialState);
+
+  useEffect(() => {
+    if (state && state.status === "IDLE") return;
+
+    if (state?.success) {
+      showToast({
+        title: state.status,
+        message: state.message ?? "Email sent successfully!",
+        variant: "success",
+      });
+    } else {
+      showToast({
+        title: state.code,
+        message: state.message,
+        variant: "error",
+      });
+    }
+  }, [state]);
+
+  const isDisabled =
+    isPending || !emailField.raw || !subjectField.error || !messageField.error;
 
   return (
     <Card
@@ -224,7 +248,7 @@ const ContactForm = () => {
               type="submit"
               variant="primary"
               loading={isPending}
-              disabled={isPending}
+              disabled={isDisabled}
               className="rounded-xl w-full"
             >
               <span>Send Message</span>
