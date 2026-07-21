@@ -37,9 +37,7 @@ class EmailService {
   private normalizeRecipients(recipients: EmailRecipientsType): string[] {
     if (!recipients) return [];
 
-    const list = Array.isArray(recipients)
-      ? recipients
-      : recipients.split(",");
+    const list = Array.isArray(recipients) ? recipients : recipients.split(",");
 
     return list
       .map((recipient) => recipient?.trim().toLowerCase())

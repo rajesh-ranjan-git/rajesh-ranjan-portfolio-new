@@ -29,7 +29,9 @@ export const staticImagesConfig = {
 export const propertyConstraintsConfig = {
   minNameLength: 2,
   maxNameLength: 100,
-  minStringLength: 2,
-  maxStringLength: 100,
+  minSubjectLength: 2,
+  maxSubjectLength: 100,
+  minMessageLength: 2,
+  maxMessageLength: 500,
   phoneLength: 10,
 };

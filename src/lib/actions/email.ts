@@ -36,8 +36,8 @@ export const sendMessage = async (
     stringPropertiesValidator(
       "subject",
       subject,
-      propertyConstraintsConfig.minStringLength,
-      propertyConstraintsConfig.maxStringLength,
+      propertyConstraintsConfig.minSubjectLength,
+      propertyConstraintsConfig.maxSubjectLength,
     );
   errors.subject = subjectErrorMessage ?? null;
 
@@ -45,8 +45,8 @@ export const sendMessage = async (
     stringPropertiesValidator(
       "message",
       message,
-      propertyConstraintsConfig.minStringLength,
-      propertyConstraintsConfig.maxStringLength,
+      propertyConstraintsConfig.minMessageLength,
+      propertyConstraintsConfig.maxMessageLength,
     );
   errors.message = messageErrorMessage ?? null;
 

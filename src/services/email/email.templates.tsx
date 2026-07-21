@@ -3,7 +3,7 @@ import {
   ContactNotificationEmailPropsType,
   EmailLayoutPropsType,
 } from "@/types/types/email.types";
-import { toSentenceCase } from "@/utils/common.utils";
+import { toSentenceCase, toTitleCase } from "@/utils/common.utils";
 
 const theme = {
   navy: "#0d0f2b",
@@ -130,12 +130,14 @@ const EmailLayout = ({ appName, preview, children }: EmailLayoutPropsType) => {
         <div style={styles.card}>
           <div style={styles.accentBar} />
           <div style={styles.container}>
-            <p style={styles.eyebrow}>{appName}</p>
+            <p style={styles.eyebrow}>✨ Rajesh Ranjan • {appName}</p>
             {children}
           </div>
         </div>
+
         <p style={styles.footer}>
-          This message was sent from the {appName} contact form.
+          📬 This notification was sent from the contact form on your&nbsp;
+          <strong>{appName}</strong>.
         </p>
       </body>
     </html>
@@ -152,32 +154,39 @@ export const contactNotificationEmail = ({
   return (
     <EmailLayout
       appName={appConfig.name}
-      preview={`New portfolio contact message from ${name ?? email}`}
+      preview={`📩 New portfolio enquiry from ${toTitleCase(name) ?? email}`}
     >
-      <h1 style={styles.heading}>New Contact Message</h1>
+      <h1 style={styles.heading}>📩 You've received a new enquiry!</h1>
 
       <p style={styles.paragraph}>
-        Someone has just contacted you through your portfolio.
+        Great news! Someone just reached out through your portfolio website.
+        Here are the details of their message:
       </p>
 
       <table style={styles.detailsTable}>
         <tbody>
+          {name && (
+            <tr>
+              <td style={styles.detailsLabel}>Contact Name</td>
+              <td style={styles.detailsValue}>{toTitleCase(name)}</td>
+            </tr>
+          )}
+
           <tr>
-            <td style={styles.detailsLabel}>Name</td>
-            <td style={styles.detailsValue}>{name ?? "Not provided"}</td>
-          </tr>
-          <tr>
-            <td style={styles.detailsLabel}>Email</td>
+            <td style={styles.detailsLabel}>Reply To</td>
             <td style={styles.detailsValue}>
               <a href={`mailto:${email}`} style={styles.link}>
                 {email}
               </a>
             </td>
           </tr>
-          <tr>
-            <td style={styles.detailsLabel}>Phone</td>
-            <td style={styles.detailsValue}>{phone ?? "Not provided"}</td>
-          </tr>
+
+          {phone && (
+            <tr>
+              <td style={styles.detailsLabel}>Phone No.</td>
+              <td style={styles.detailsValue}>{phone}</td>
+            </tr>
+          )}
         </tbody>
       </table>
 

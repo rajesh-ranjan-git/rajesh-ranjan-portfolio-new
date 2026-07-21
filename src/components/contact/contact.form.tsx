@@ -72,8 +72,8 @@ const ContactForm = () => {
     const { message: subjectError } = stringPropertiesValidator(
       "subject",
       val,
-      propertyConstraintsConfig.minStringLength,
-      propertyConstraintsConfig.maxStringLength,
+      propertyConstraintsConfig.minSubjectLength,
+      propertyConstraintsConfig.maxSubjectLength,
     );
 
     if (!subjectError) return "";
@@ -88,17 +88,17 @@ const ContactForm = () => {
     if (!val)
       return `Message is required to send a message to ${getFullName()}!`;
 
-    const { message: subjectError } = stringPropertiesValidator(
-      "subject",
+    const { message: messageError } = stringPropertiesValidator(
+      "message",
       val,
-      propertyConstraintsConfig.minStringLength,
-      propertyConstraintsConfig.maxStringLength,
+      propertyConstraintsConfig.minMessageLength,
+      propertyConstraintsConfig.maxMessageLength,
     );
 
-    if (!subjectError) return "";
+    if (!messageError) return "";
 
     return (
-      subjectError ??
+      messageError ??
       `A valid message is required to send a message to ${getFullName()}!`
     );
   };
@@ -142,6 +142,12 @@ const ContactForm = () => {
         message: state.message ?? "Email sent successfully!",
         variant: "success",
       });
+
+      nameField.reset();
+      emailField.reset();
+      phoneField.reset();
+      subjectField.reset();
+      messageField.reset();
     } else {
       showToast({
         title: state.code,

@@ -12,7 +12,7 @@ import AppError from "@/services/error/error.service";
 import { emailService } from "@/services/email/email.service";
 import { contactNotificationEmail } from "@/services/email/email.templates";
 import { responseService } from "@/services/response/response.service";
-import { toSentenceCase } from "@/utils/common.utils";
+import { toSentenceCase, toTitleCase } from "@/utils/common.utils";
 
 export async function POST(request: NextRequest) {
   try {
@@ -69,8 +69,8 @@ export async function POST(request: NextRequest) {
     } = stringPropertiesValidator(
       "subject",
       subject,
-      propertyConstraintsConfig.minStringLength,
-      propertyConstraintsConfig.maxStringLength,
+      propertyConstraintsConfig.minSubjectLength,
+      propertyConstraintsConfig.maxSubjectLength,
     );
 
     if (!isSubjectValid) {
@@ -88,8 +88,8 @@ export async function POST(request: NextRequest) {
     } = stringPropertiesValidator(
       "message",
       message,
-      propertyConstraintsConfig.minStringLength,
-      propertyConstraintsConfig.maxStringLength,
+      propertyConstraintsConfig.minMessageLength,
+      propertyConstraintsConfig.maxMessageLength,
     );
 
     if (!isMessageValid) {
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
     }
 
     const result = await emailService.send({
-      subject: `New Portfolio Contact: ${toSentenceCase(validatedSubject)}`,
+      subject: `📩 New Portfolio Enquiry from ${toTitleCase(validatedName) || validatedEmail} — ${toSentenceCase(validatedSubject)}`,
       template: contactNotificationEmail({
         name: validatedName ?? null,
         email: validatedEmail as string,
