@@ -1,13 +1,13 @@
 import { MODE, LOG_LEVEL } from "@/constants/env.constants";
 import { ansiConfig } from "@/config/banner.config";
-import { getDateToShow, getDateToStore } from "@/utils/date.utils";
-import type AppError from "@/services/error/error.service";
 import {
   AppErrorLogPayloadType,
   LogContextType,
   LogEntryType,
   LogLevelType,
 } from "@/types/types/logger.types";
+import { getDateToShow, getDateToStore } from "@/utils/date.utils";
+import type AppError from "@/services/error/error.service";
 
 const mode = (MODE ?? "development").toLowerCase();
 const LOGGING_LEVEL = (LOG_LEVEL ?? "info").toLowerCase();

@@ -1,8 +1,8 @@
 "use client";
 
 import fadeInStyles from "@/styles/fade.in.module.css";
-import { useInView } from "@/hooks/useInView";
 import { FadeInProps } from "@/types/props/hooks.props.types";
+import { useInView } from "@/hooks/useInView";
 
 const FadeIn = ({
   children,

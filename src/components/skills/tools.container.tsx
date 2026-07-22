@@ -2,7 +2,6 @@ import Image from "next/image";
 import { basicDetails } from "@/config/owner.config";
 import { technologiesConfig } from "@/config/technologies.config";
 import { SkillsToggleProps } from "@/types/props/sections.props.types";
-import { toTitleCase } from "@/utils/common.utils";
 import Card from "@/components/ui/card/card";
 import Tooltip from "@/components/ui/tooltip/tooltip";
 

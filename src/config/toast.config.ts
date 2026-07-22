@@ -1,4 +1,3 @@
-import { FaInfoCircle } from "react-icons/fa";
 import { FiAlertCircle, FiCheckCircle } from "react-icons/fi";
 import { TbAlertTriangle } from "react-icons/tb";
 

@@ -8,11 +8,11 @@ import {
   numberRegexPropertiesValidator,
   stringPropertiesValidator,
 } from "@/validators/common.validators";
+import { toSentenceCase, toTitleCase } from "@/utils/common.utils";
 import AppError from "@/services/error/error.service";
 import { emailService } from "@/services/email/email.service";
 import { contactNotificationEmail } from "@/services/email/email.templates";
 import { responseService } from "@/services/response/response.service";
-import { toSentenceCase, toTitleCase } from "@/utils/common.utils";
 
 export async function POST(request: NextRequest) {
   try {

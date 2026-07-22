@@ -10,12 +10,12 @@ import {
   AWS_SES_SECRET_ACCESS_KEY,
 } from "@/constants/env.constants";
 import { httpStatusConfig } from "@/config/http.config";
-import AppError from "@/services/error/error.service";
 import {
   EmailRecipientsType,
   SendEmailParamsType,
   SendEmailResultType,
 } from "@/types/types/email.types";
+import AppError from "@/services/error/error.service";
 
 class EmailService {
   private readonly client: SESClient;

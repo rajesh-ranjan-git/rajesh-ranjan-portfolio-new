@@ -1,12 +1,10 @@
 .icon_rain {
-  position: absolute;
   top: -60px;
 
   animation: icon-rain var(--duration) linear infinite;
   animation-delay: var(--delay);
 
   will-change: transform, opacity;
-  user-select: none;
 }
 
 .rain_mask {

@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SplashScreen from "@/components/ui/splash/splash.screen";
 import { SplashGateProps } from "@/types/props/splash.props.types";
+import SplashScreen from "@/components/ui/splash/splash.screen";
 
 const SplashGate = ({
   children,
