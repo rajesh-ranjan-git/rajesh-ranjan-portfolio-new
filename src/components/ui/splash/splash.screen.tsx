@@ -1,11 +1,6 @@
 import splashStyles from "@/animations/splash.module.css";
+import { SplashScreenProps } from "@/types/props/splash.props.types";
 import SplashLoader from "@/components/ui/splash/splash.loader";
-
-export interface SplashScreenProps {
-  loadingText?: string;
-  backgroundColor?: string;
-  className?: string;
-}
 
 export default function SplashScreen({
   loadingText = "Loading...",

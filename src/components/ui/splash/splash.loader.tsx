@@ -2,22 +2,13 @@
 
 import { useEffect, useState } from "react";
 import splashStyles from "@/animations/splash.module.css";
-
-export interface SplashLoaderProps {
-  loadingText?: string;
-}
-
-interface FazerStyle {
-  "--top": string;
-  "--width": string;
-  "--duration": string;
-  "--delay": string;
-}
+import { FazerStyleType } from "@/types/types/splash.types";
+import { SplashLoaderProps } from "@/types/props/splash.props.types";
 
 export default function SplashLoader({
   loadingText = "Loading...",
 }: SplashLoaderProps) {
-  const [fazers, setFazers] = useState<FazerStyle[]>([]);
+  const [fazers, setFazers] = useState<FazerStyleType[]>([]);
 
   useEffect(() => {
     setFazers(
