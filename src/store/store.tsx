@@ -15,7 +15,7 @@ export const useAppStore = create<AppStateType>()(
               ? themeOrUpdater(state.activeTheme)
               : themeOrUpdater,
         })),
-      splash: false,
+      splash: true,
       setSplash: (value) => set({ splash: value }),
       sidebarToggle: false,
       setSidebarToggle: (value) => set({ sidebarToggle: value }),
