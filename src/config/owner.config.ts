@@ -13,7 +13,7 @@ export const basicDetails = {
   images: {
     profileImage: "/assets/personal-img/profile-photo-3d-cartoon-square.webp",
     greetingsImage: "/assets/personal-img/profile-photo-3d-cartoon.webp",
-    aboutImage: "/assets/personal-img/profile-photo-3d-cartoon.webp",
+    aboutImage: "/assets/personal-img/profile-photo-transparent.webp",
   },
   typewriterTexts: [
     "Full Stack Developer",
