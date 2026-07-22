@@ -5,11 +5,13 @@ export interface SplashScreenProps {
   endingText?: string;
   backgroundColor?: string;
   className?: string;
+  duration?: number;
 }
 
 export interface SplashLoaderProps {
   loadingText?: string;
   endingText?: string;
+  duration?: number;
 }
 
 export interface SplashGateProps {

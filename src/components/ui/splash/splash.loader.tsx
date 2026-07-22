@@ -8,6 +8,7 @@ import { SplashLoaderProps } from "@/types/props/splash.props.types";
 export default function SplashLoader({
   loadingText = "Loading...",
   endingText = "Welcome",
+  duration = 2000,
 }: SplashLoaderProps) {
   const [fazers, setFazers] = useState<FazerStyleType[]>([]);
 
@@ -65,6 +66,11 @@ export default function SplashLoader({
         <div className="w-1/2 md:w-1/4">
           <span
             className={`inline-block relative w-0 after:absolute before:absolute before:opacity-0 after:opacity-0 ${splashStyles.splash_progress}`}
+            style={
+              {
+                "--progress-duration": `${duration + 1000}ms`,
+              } as React.CSSProperties
+            }
           ></span>
         </div>
       </div>

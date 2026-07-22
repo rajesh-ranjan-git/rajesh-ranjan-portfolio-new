@@ -26,6 +26,7 @@ export default function SplashGate({
         endingText={endingText}
         backgroundColor={backgroundColor}
         className={className}
+        duration={duration}
       />
     );
   }

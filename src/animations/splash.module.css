@@ -96,14 +96,14 @@
 }
 
 .splash_progress {
-  --color-2: rgba(255, 255, 255, 0.5);
+  --color: rgba(255, 255, 255, 0.5);
   --size: clamp(0.5px, 0.3px + 0.055vw, 1px);
 
   height: calc(4.8 * var(--size));
   background: var(--fixed-light);
-  box-shadow: 0 0 calc(10 * var(--size)) var(--color-2);
+  box-shadow: 0 0 calc(10 * var(--size)) var(--color);
   box-sizing: border-box;
-  animation: splash_progress 8s linear infinite;
+  animation: splash_progress var(--progress-duration, 2000ms) linear forwards;
 }
 .splash_progress::after,
 .splash_progress::before {

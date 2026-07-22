@@ -7,6 +7,7 @@ export default function SplashScreen({
   endingText = "Welcome",
   backgroundColor = "#040b14",
   className = "",
+  duration = 2000,
 }: SplashScreenProps) {
   return (
     <div
@@ -16,7 +17,11 @@ export default function SplashScreen({
       <div
         className={`w-full h-full overflow-hidden ${splashStyles.splash_screen}`}
       >
-        <SplashLoader loadingText={loadingText} endingText={endingText} />
+        <SplashLoader
+          loadingText={loadingText}
+          endingText={endingText}
+          duration={duration}
+        />
       </div>
     </div>
   );
