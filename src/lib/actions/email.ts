@@ -56,7 +56,7 @@ export const sendMessage = async (
       status: "VALIDATION FAILED",
       code: "SEND EMAIL FAILED",
       statusCode: 422,
-      message: "Please provide valid details to update!",
+      message: "Please provide valid details!",
       details: errors,
       timestamp: new Date().toISOString(),
       metadata: null,
