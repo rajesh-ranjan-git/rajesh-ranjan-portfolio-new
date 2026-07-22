@@ -22,29 +22,10 @@ export default function SplashLoader({
   }, []);
 
   return (
-    <div className="w-full h-full">
+    <div className="relative w-full h-full">
       <div
-        className={`absolute w-full h-full inset-0 ${splashStyles.splash_fly}`}
+        className={`absolute inset-0 w-full h-full ${splashStyles.splash_longfazers}`}
       >
-        <div
-          className={`absolute top-1/2 left-1/2 ${splashStyles.splash_body}`}
-        >
-          <span className={`${splashStyles.splash_wing}`}>
-            <span className="absolute bg-fixed-light w-7.5 h-px" />
-            <span className="absolute bg-fixed-light w-7.5 h-px" />
-            <span className="absolute bg-fixed-light w-7.5 h-px" />
-            <span className="absolute bg-fixed-light w-7.5 h-px" />
-          </span>
-          <div className={`absolute w-0 h-0 ${splashStyles.splash_base}`}>
-            <span className="absolute before:absolute after:absolute before:bg-fixed-light before:rounded-full w-0 before:w-6 after:w-0 h-0 before:h-6 after:h-0" />
-            <div
-              className={`absolute w-5 h-3 bg-fixed-light after:absolute after:w-3 after:h-3 after:bg-fixed-light ${splashStyles.splash_face}`}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className={splashStyles.splash_longfazers}>
         {fazers.map((style, i) => (
           <span
             key={i}
@@ -54,16 +35,37 @@ export default function SplashLoader({
         ))}
       </div>
 
-      <h1
-        className={`bottom-[30%] left-1/2 absolute font-semibold text-white whitespace-nowrap -translate-x-1/2 font-alkatra inline-block ${splashStyles.splash_loader}`}
-      >
-        {loadingText}
-      </h1>
+      <div className="relative flex flex-col justify-center items-center gap-12 w-full h-full">
+        <div className={splashStyles.splash_fly}>
+          <div className={`relative ${splashStyles.splash_body}`}>
+            <span
+              className={`absolute bg-fixed-light ${splashStyles.splash_wing}`}
+            >
+              <span className="absolute bg-fixed-light w-7.5 h-px" />
+              <span className="absolute bg-fixed-light w-7.5 h-px" />
+              <span className="absolute bg-fixed-light w-7.5 h-px" />
+              <span className="absolute bg-fixed-light w-7.5 h-px" />
+            </span>
+            <div className={`absolute w-0 h-0 ${splashStyles.splash_base}`}>
+              <span className="absolute before:absolute after:absolute before:bg-fixed-light before:rounded-full w-0 before:w-6 after:w-0 h-0 before:h-6 after:h-0" />
+              <div
+                className={`absolute w-5 h-3 bg-fixed-light after:absolute after:w-3 after:h-3 after:bg-fixed-light ${splashStyles.splash_face}`}
+              />
+            </div>
+          </div>
+        </div>
 
-      <div className="bottom-[20%] left-1/2 absolute w-1/2 md:w-1/4 -translate-x-1/2">
-        <span
-          className={`inline-block relative w-0 after:absolute before:absolute before:opacity-0 after:opacity-0 ${splashStyles.splash_progress}`}
-        ></span>
+        <h1
+          className={`font-semibold text-fixed-light whitespace-nowrap font-alkatra inline-block ${splashStyles.splash_loader}`}
+        >
+          {loadingText}
+        </h1>
+
+        <div className="w-1/2 md:w-1/4">
+          <span
+            className={`inline-block relative w-0 after:absolute before:absolute before:opacity-0 after:opacity-0 ${splashStyles.splash_progress}`}
+          ></span>
+        </div>
       </div>
     </div>
   );

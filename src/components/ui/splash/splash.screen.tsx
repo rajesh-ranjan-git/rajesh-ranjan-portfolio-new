@@ -9,11 +9,11 @@ export default function SplashScreen({
 }: SplashScreenProps) {
   return (
     <div
-      className={`z-100 relative flex h-screen w-screen items-center justify-center ${className}`}
+      className={`z-100 relative h-screen w-screen ${className}`}
       style={{ backgroundColor }}
     >
       <div
-        className={`relative rounded-full w-full h-full overflow-hidden ${splashStyles.splash_screen}`}
+        className={`w-full h-full overflow-hidden ${splashStyles.splash_screen}`}
       >
         <SplashLoader loadingText={loadingText} />
       </div>

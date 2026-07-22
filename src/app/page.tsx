@@ -14,9 +14,9 @@ import SplashScreen from "@/components/ui/splash/splash.screen";
 export default function Home() {
   const [splash, setSplash] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => setSplash(false), 2000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => setSplash(false), 2000);
+  }, []);
 
   if (splash) {
     return <SplashScreen loadingText="Loading..." backgroundColor="#040b14" />;
