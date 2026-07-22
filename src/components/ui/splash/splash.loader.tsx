@@ -52,7 +52,7 @@ export default function SplashLoader({
         {loadingText}
       </h1>
 
-      <div className="bottom-[20%] left-1/2 absolute w-1/4 -translate-x-1/2">
+      <div className="bottom-[20%] left-1/2 absolute w-1/2 md:w-1/4 -translate-x-1/2">
         <span className={splashStyles.splash_progress}></span>
       </div>
     </div>
