@@ -4,6 +4,7 @@ import SplashLoader from "@/components/ui/splash/splash.loader";
 
 export default function SplashScreen({
   loadingText = "Loading...",
+  endingText = "Welcome",
   backgroundColor = "#040b14",
   className = "",
 }: SplashScreenProps) {
@@ -15,7 +16,7 @@ export default function SplashScreen({
       <div
         className={`w-full h-full overflow-hidden ${splashStyles.splash_screen}`}
       >
-        <SplashLoader loadingText={loadingText} />
+        <SplashLoader loadingText={loadingText} endingText={endingText} />
       </div>
     </div>
   );

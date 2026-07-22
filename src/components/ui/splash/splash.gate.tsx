@@ -1,0 +1,34 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import SplashScreen from "@/components/ui/splash/splash.screen";
+import { SplashGateProps } from "@/types/props/splash.props.types";
+
+export default function SplashGate({
+  children,
+  loadingText = "Loading...",
+  endingText = "Welcome",
+  backgroundColor = "#040b14",
+  className = "",
+  duration = 2000,
+}: SplashGateProps) {
+  const [splash, setSplash] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setSplash(false), duration);
+    return () => clearTimeout(timer);
+  }, [duration]);
+
+  if (splash) {
+    return (
+      <SplashScreen
+        loadingText={loadingText}
+        endingText={endingText}
+        backgroundColor={backgroundColor}
+        className={className}
+      />
+    );
+  }
+
+  return <>{children}</>;
+}

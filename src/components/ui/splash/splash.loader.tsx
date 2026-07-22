@@ -7,6 +7,7 @@ import { SplashLoaderProps } from "@/types/props/splash.props.types";
 
 export default function SplashLoader({
   loadingText = "Loading...",
+  endingText = "Welcome",
 }: SplashLoaderProps) {
   const [fazers, setFazers] = useState<FazerStyleType[]>([]);
 
