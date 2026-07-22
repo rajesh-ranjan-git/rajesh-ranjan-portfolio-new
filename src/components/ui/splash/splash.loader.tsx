@@ -46,9 +46,15 @@ export default function SplashLoader({
         ))}
       </div>
 
-      <h1 className="bottom-[30%] left-1/2 absolute font-semibold text-white text-xl uppercase tracking-wide whitespace-nowrap -translate-x-1/2">
+      <h1
+        className={`bottom-[30%] left-1/2 absolute font-semibold text-white whitespace-nowrap -translate-x-1/2 font-alkatra ${splashStyles.splash_loader}`}
+      >
         {loadingText}
       </h1>
+
+      <div className="bottom-[20%] left-1/2 absolute w-1/4 -translate-x-1/2">
+        <span className={splashStyles.splash_progress}></span>
+      </div>
     </div>
   );
 }
