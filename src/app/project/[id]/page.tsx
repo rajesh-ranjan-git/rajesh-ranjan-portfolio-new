@@ -24,7 +24,7 @@ const PortfolioDetailsPage = async ({ params }: PortfolioDetailsPageProps) => {
   const project = portfolio.find((item) => item.id === Number(id));
 
   return (
-    <SplashGate loadingText="Loading..." endingText="Welcome">
+    <SplashGate loadingText="Loading..." endingText="Welcome...">
       <main className="relative pt-10 md:pt-0 pl-0 md:pl-16 min-h-screen">
         <Breadcrumb
           items={[

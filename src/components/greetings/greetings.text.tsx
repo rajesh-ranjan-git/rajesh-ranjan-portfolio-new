@@ -2,6 +2,7 @@ import greetingsStyles from "@/styles/greetings.module.css";
 import { basicDetails } from "@/config/owner.config";
 import { getFullName } from "@/helpers/owner.helpers";
 import Typewriter from "@/components/typewriter/typewriter";
+import ScrambleText from "@/components/ui/scramble-text/scramble.text";
 
 const GreetingsText = () => {
   return (
@@ -20,7 +21,7 @@ const GreetingsText = () => {
       <h1 className="text-nowrap">
         I'm
         <span className="text-shadow-[2px_2px_var(--color-surface-shadow-strong)] ml-4 font-alkatra font-bold uppercase text-accent-blue">
-          {getFullName()}
+          <ScrambleText initialText="Loading..." finalText={getFullName()} />
         </span>
       </h1>
 

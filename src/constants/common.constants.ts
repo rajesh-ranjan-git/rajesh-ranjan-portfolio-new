@@ -16,3 +16,6 @@ export const CARD_SCALE_CLASSES = {
   right: "hover:scale-x-102",
   all: "hover:scale-102",
 } as const;
+
+export const DEFAULT_CHARACTERS =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*";

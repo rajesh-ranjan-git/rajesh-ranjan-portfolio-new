@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 import splashStyles from "@/styles/splash.module.css";
 import { FazerStyleType } from "@/types/types/splash.types";
 import { SplashLoaderProps } from "@/types/props/splash.props.types";
+import ScrambleText from "@/components/ui/scramble-text/scramble.text";
 
 const SplashLoader = ({
   loadingText = "Loading...",
-  endingText = "Welcome",
+  endingText = "Welcome...",
   duration = 2000,
 }: SplashLoaderProps) => {
   const [fazers, setFazers] = useState<FazerStyleType[]>([]);
@@ -60,7 +61,12 @@ const SplashLoader = ({
         <h1
           className={`font-semibold text-fixed-light whitespace-nowrap font-alkatra inline-block mt-8 ${splashStyles.splash_loader}`}
         >
-          {loadingText}
+          <ScrambleText
+            initialText={loadingText}
+            finalText={endingText}
+            delay={1000}
+            duration={500}
+          />
         </h1>
 
         <div className="w-1/2 md:w-1/4">

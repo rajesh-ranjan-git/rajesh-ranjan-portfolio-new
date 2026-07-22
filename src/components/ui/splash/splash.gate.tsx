@@ -7,7 +7,7 @@ import SplashScreen from "@/components/ui/splash/splash.screen";
 const SplashGate = ({
   children,
   loadingText = "Loading...",
-  endingText = "Welcome",
+  endingText = "Welcome...",
   backgroundColor = "#040b14",
   className = "",
   duration = 2000,

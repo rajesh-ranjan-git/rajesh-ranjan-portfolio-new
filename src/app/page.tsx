@@ -10,7 +10,7 @@ import SplashGate from "@/components/ui/splash/splash.gate";
 
 const Home = () => {
   return (
-    <SplashGate loadingText="Loading..." endingText="Welcome">
+    <SplashGate loadingText="Loading..." endingText="Welcome...">
       <main className="relative pl-0 md:pl-16 min-h-screen">
         <Greetings />
         <About title="About me..." />
