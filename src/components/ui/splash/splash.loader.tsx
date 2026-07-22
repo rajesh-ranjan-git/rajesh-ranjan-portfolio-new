@@ -37,7 +37,7 @@ const SplashLoader = ({
         ))}
       </div>
 
-      <div className="relative flex flex-col justify-center items-center gap-12 w-full h-full">
+      <div className="relative flex flex-col justify-center items-center gap-4 w-full h-full">
         <div className={splashStyles.splash_fly}>
           <div className={`relative ${splashStyles.splash_body}`}>
             <span
@@ -58,7 +58,7 @@ const SplashLoader = ({
         </div>
 
         <h1
-          className={`font-semibold text-fixed-light whitespace-nowrap font-alkatra inline-block ${splashStyles.splash_loader}`}
+          className={`font-semibold text-fixed-light whitespace-nowrap font-alkatra inline-block mt-8 ${splashStyles.splash_loader}`}
         >
           {loadingText}
         </h1>
