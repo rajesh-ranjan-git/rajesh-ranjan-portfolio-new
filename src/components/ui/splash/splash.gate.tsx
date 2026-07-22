@@ -19,19 +19,43 @@ const SplashGate = ({
     return () => clearTimeout(timer);
   }, [duration]);
 
-  if (splash) {
-    return (
-      <SplashScreen
-        loadingText={loadingText}
-        endingText={endingText}
-        backgroundColor={backgroundColor}
-        className={className}
-        duration={duration}
-      />
-    );
-  }
+  useEffect(() => {
+    document.documentElement.classList.toggle("splash-open", splash);
+    document.body.classList.toggle("splash-open", splash);
 
-  return <>{children}</>;
+    return () => {
+      document.documentElement.classList.remove("splash-open");
+      document.body.classList.remove("splash-open");
+    };
+  }, [splash]);
+
+  useEffect(() => {
+    if (splash) return;
+
+    const hash = window.location.hash?.slice(1);
+    if (!hash) return;
+
+    document.getElementById(hash)?.scrollIntoView({
+      behavior: "instant",
+      block: "start",
+    });
+  }, [splash]);
+
+  return (
+    <>
+      {children}
+
+      {splash ? (
+        <SplashScreen
+          loadingText={loadingText}
+          endingText={endingText}
+          backgroundColor={backgroundColor}
+          className={className}
+          duration={duration}
+        />
+      ) : null}
+    </>
+  );
 };
 
 export default SplashGate;

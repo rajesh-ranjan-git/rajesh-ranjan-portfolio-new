@@ -11,7 +11,7 @@ const SplashScreen = ({
 }: SplashScreenProps) => {
   return (
     <div
-      className={`z-100 relative h-screen w-screen ${className}`}
+      className={`z-100 fixed inset-0 h-screen w-screen ${className}`}
       style={{ backgroundColor }}
     >
       <div

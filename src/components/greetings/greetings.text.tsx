@@ -21,7 +21,11 @@ const GreetingsText = () => {
       <h1 className="text-nowrap">
         I'm
         <span className="text-shadow-[2px_2px_var(--color-surface-shadow-strong)] ml-4 font-alkatra font-bold uppercase text-accent-blue">
-          <ScrambleText initialText="Loading..." finalText={getFullName()} />
+          <ScrambleText
+            initialText="Loading..."
+            finalText={getFullName()}
+            delay={2000}
+          />
         </span>
       </h1>
 

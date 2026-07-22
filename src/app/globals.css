@@ -221,6 +221,13 @@
     touch-action: none;
   }
 
+  html.splash-open,
+  body.splash-open {
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: none;
+  }
+
   section {
     width: 100%;
     max-width: 1440px;
