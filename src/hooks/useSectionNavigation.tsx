@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { toastVariantsConfig } from "@/config/toast.config";
 import { UseSectionNavigationProps } from "@/types/props/hooks.props.types";
+import { useAppStore } from "@/store/store";
 import { useToast } from "@/hooks/toast";
 import { toTitleCase } from "@/utils/common.utils";
 
@@ -12,7 +13,8 @@ export const useSectionNavigation = ({
   rootMargin = "-30% 0px -60% 0px",
   threshold = 0,
 }: UseSectionNavigationProps) => {
-  const [activeSection, setActiveSection] = useState(sectionIds[0] || "");
+  const activeSection = useAppStore((state) => state.activeSection);
+  const setActiveSection = useAppStore((state) => state.setActiveSection);
 
   const pathname = usePathname();
   const router = useRouter();
@@ -49,6 +51,8 @@ export const useSectionNavigation = ({
   }, [sectionIds, rootMargin, threshold]);
 
   const scrollToSection = (sectionId: string) => {
+    setActiveSection(sectionId);
+
     if (pathname !== "/") {
       router.push(sectionId ? `/#${sectionId}` : "/");
       return;

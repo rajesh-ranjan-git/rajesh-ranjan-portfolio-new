@@ -6,4 +6,6 @@ export type AppStateType = {
   setActiveTheme: Dispatch<SetStateAction<ThemeType>>;
   sidebarToggle: boolean;
   setSidebarToggle: (value: boolean) => void;
+  activeSection: string;
+  setActiveSection: (value: string) => void;
 };
