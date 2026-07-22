@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { SplashGateProps } from "@/types/props/splash.props.types";
+import { useAppStore } from "@/store/store";
 import SplashScreen from "@/components/ui/splash/splash.screen";
 
 const SplashGate = ({
@@ -12,7 +13,8 @@ const SplashGate = ({
   className = "",
   duration = 2000,
 }: SplashGateProps) => {
-  const [splash, setSplash] = useState(true);
+  const splash = useAppStore((state) => state.splash);
+  const setSplash = useAppStore((state) => state.setSplash);
 
   useEffect(() => {
     const timer = setTimeout(() => setSplash(false), duration);

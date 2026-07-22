@@ -86,7 +86,7 @@ const ScrambleText = forwardRef<ScrambleTextHandle, ScrambleTextProps>(
     useEffect(() => {
       let timeoutId: ReturnType<typeof setTimeout> | null = null;
 
-      if (trigger === "mount") {
+      if (trigger === "mount" || trigger === "visible") {
         timeoutId = setTimeout(play, delay);
       }
 

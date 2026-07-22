@@ -1,7 +1,7 @@
 export interface ScrambleTextProps {
   initialText?: string;
   finalText: string;
-  trigger?: "mount" | "hover" | "manual";
+  trigger?: "mount" | "hover" | "visible" | "manual";
   scrambleSpeed?: number;
   duration?: number;
   delay?: number;

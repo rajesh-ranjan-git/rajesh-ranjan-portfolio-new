@@ -15,6 +15,8 @@ export const useAppStore = create<AppStateType>()(
               ? themeOrUpdater(state.activeTheme)
               : themeOrUpdater,
         })),
+      splash: false,
+      setSplash: (value) => set({ splash: value }),
       sidebarToggle: false,
       setSidebarToggle: (value) => set({ sidebarToggle: value }),
       activeSection: menuItems[0].id || "",
