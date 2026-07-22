@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import splashStyles from "@/animations/splash.module.css";
+import splashStyles from "@/styles/splash.module.css";
 import { FazerStyleType } from "@/types/types/splash.types";
 import { SplashLoaderProps } from "@/types/props/splash.props.types";
 
-export default function SplashLoader({
+const SplashLoader = ({
   loadingText = "Loading...",
   endingText = "Welcome",
   duration = 2000,
-}: SplashLoaderProps) {
+}: SplashLoaderProps) => {
   const [fazers, setFazers] = useState<FazerStyleType[]>([]);
 
   useEffect(() => {
@@ -76,4 +76,6 @@ export default function SplashLoader({
       </div>
     </div>
   );
-}
+};
+
+export default SplashLoader;

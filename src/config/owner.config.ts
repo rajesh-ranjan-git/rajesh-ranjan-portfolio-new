@@ -1436,7 +1436,7 @@ export const portfolio = [
         type: "HTTP Client",
         tech: ["Fetch API"],
       },
-      { type: "Forms/Validation", tech: "Formik, Yup" },
+      { type: "Forms/Validation", tech: ["Formik", "Yup"] },
       {
         type: "Routing",
         tech: ["React Router DOM"],

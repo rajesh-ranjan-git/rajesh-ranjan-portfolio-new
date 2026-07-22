@@ -1,4 +1,4 @@
-import greetingsStyles from "@/animations/greetings.module.css";
+import greetingsStyles from "@/styles/greetings.module.css";
 import GreetingsParticles from "@/components/greetings/greetings.particles";
 
 const GreetingsBackground = () => {

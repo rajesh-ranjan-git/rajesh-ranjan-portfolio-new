@@ -4,7 +4,7 @@ import SectionHeading from "@/components/sections/section.heading";
 import Carousel from "@/components/ui/carousel/carousel";
 import PortfolioInformation from "@/components/portfolio/portfolio.information";
 import PortfolioDetailedInformation from "@/components/portfolio/portfolio.detailed.information";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const PortfolioDetails = ({ project }: PortfolioDetailsProps) => {
   const slides: CarouselSlide[] =

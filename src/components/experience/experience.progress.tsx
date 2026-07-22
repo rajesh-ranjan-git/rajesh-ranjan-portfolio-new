@@ -1,4 +1,4 @@
-import experienceStyles from "@/animations/experience.module.css";
+import experienceStyles from "@/styles/experience.module.css";
 
 const ExperienceProgress = () => {
   return (

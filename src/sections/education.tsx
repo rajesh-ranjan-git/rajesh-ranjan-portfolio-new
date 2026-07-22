@@ -3,7 +3,7 @@ import { SectionProps } from "@/types/props/sections.props.types";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
 import EducationCard from "@/components/education/education.card";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const Education = ({ title, description }: SectionProps) => {
   return (

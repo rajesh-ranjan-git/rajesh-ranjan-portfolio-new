@@ -1,4 +1,4 @@
-import buttonStyles from "@/animations/button.module.css";
+import buttonStyles from "@/styles/button.module.css";
 import { ButtonProps } from "@/types/props/common.props.types";
 
 const MaskedButton = ({

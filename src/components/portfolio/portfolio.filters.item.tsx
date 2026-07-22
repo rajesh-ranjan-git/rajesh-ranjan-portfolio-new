@@ -1,4 +1,4 @@
-import portfolioStyles from "@/animations/portfolio.module.css";
+import portfolioStyles from "@/styles/portfolio.module.css";
 import { PortfolioFiltersItemProps } from "@/types/props/sections.props.types";
 
 const PortfolioFiltersItem = ({

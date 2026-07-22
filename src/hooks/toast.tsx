@@ -8,7 +8,7 @@ import {
   useEffect,
 } from "react";
 import { IoClose } from "react-icons/io5";
-import styles from "@/animations/toast.module.css";
+import styles from "@/styles/toast.module.css";
 import {
   positionStylesConfig,
   toastPositionsConfig,

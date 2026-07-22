@@ -2,7 +2,7 @@
 
 import { CSSProperties, useEffect, useState } from "react";
 import Image from "next/image";
-import skillsStyles from "@/animations/skills.module.css";
+import skillsStyles from "@/styles/skills.module.css";
 import { RainItem } from "@/types/types/sections.types";
 import { RainSkillsProps } from "@/types/props/sections.props.types";
 

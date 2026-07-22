@@ -1,4 +1,4 @@
-import orbStyles from "@/animations/orb.module.css";
+import orbStyles from "@/styles/orb.module.css";
 
 const Orb = () => {
   return (

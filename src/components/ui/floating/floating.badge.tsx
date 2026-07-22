@@ -1,4 +1,4 @@
-import aboutStyles from "@/animations/about.module.css";
+import aboutStyles from "@/styles/about.module.css";
 import {
   FloatingBadgeFloatType,
   FloatingBadgePositionType,

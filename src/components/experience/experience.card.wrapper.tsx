@@ -1,11 +1,11 @@
-import experienceStyles from "@/animations/experience.module.css";
+import experienceStyles from "@/styles/experience.module.css";
 import {
   getExperienceDuration,
   getExperienceTimeLine,
 } from "@/helpers/owner.helpers";
 import { ExperienceCardWrapperProps } from "@/types/props/sections.props.types";
 import ExperienceCard from "@/components/experience/experience.card";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const ExperienceCardWrapper = ({
   isReversed,

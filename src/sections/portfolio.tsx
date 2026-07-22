@@ -8,7 +8,7 @@ import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
 import PortfolioFilters from "@/components/portfolio/portfolio.filters";
 import PortfolioCard from "@/components/portfolio/portfolio.card";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const Portfolio = ({ title, description }: SectionProps) => {
   const [activeFilter, setActiveFilter] = useState<string>("all");

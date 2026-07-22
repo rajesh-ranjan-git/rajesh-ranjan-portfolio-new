@@ -1,5 +1,5 @@
 import { PortfolioDetailsProps } from "@/types/props/sections.props.types";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const PortfolioDetailedInformation = ({ project }: PortfolioDetailsProps) => {
   return (

@@ -8,7 +8,7 @@ import SkillsToggle from "@/components/skills/skills.toggle";
 import SkillsContainer from "@/components/skills/skills.container";
 import ToolsContainer from "@/components/skills/tools.container";
 import RainSkills from "@/components/skills/rain.skills";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const icons = [
   "/assets/tech-img/react.svg",

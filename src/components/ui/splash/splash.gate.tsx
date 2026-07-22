@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import SplashScreen from "@/components/ui/splash/splash.screen";
 import { SplashGateProps } from "@/types/props/splash.props.types";
 
-export default function SplashGate({
+const SplashGate = ({
   children,
   loadingText = "Loading...",
   endingText = "Welcome",
   backgroundColor = "#040b14",
   className = "",
   duration = 2000,
-}: SplashGateProps) {
+}: SplashGateProps) => {
   const [splash, setSplash] = useState(true);
 
   useEffect(() => {
@@ -32,4 +32,6 @@ export default function SplashGate({
   }
 
   return <>{children}</>;
-}
+};
+
+export default SplashGate;

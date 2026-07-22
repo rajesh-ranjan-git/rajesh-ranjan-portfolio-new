@@ -2,7 +2,7 @@ import GreetingsText from "@/components/greetings/greetings.text";
 import SocialMedia from "@/components/social-media/social.media";
 import GreetingsImage from "@/components/greetings/greetings.image";
 import GreetingsButtons from "@/components/greetings/greetings.buttons";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const GreetingsContent = () => {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import styles from "@/animations/tooltip.module.css";
+import styles from "@/styles/tooltip.module.css";
 import {
   tooltipArrowPositionClassesConfig,
   tooltipDelayConfig,

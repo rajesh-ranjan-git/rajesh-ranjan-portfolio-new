@@ -17,11 +17,11 @@ import Tooltip from "@/components/ui/tooltip/tooltip";
 
 const BREAKPOINTS = { md: 768, lg: 1024, xl: 1200 };
 
-function getSlidesPerView(width: number): number {
+const getSlidesPerView = (width: number): number => {
   if (width >= BREAKPOINTS.xl) return 2;
   if (width >= BREAKPOINTS.lg) return 2;
   return 1;
-}
+};
 
 const DRAG_THRESHOLD_RATIO = 0.15;
 const TRANSITION_MS = 500;

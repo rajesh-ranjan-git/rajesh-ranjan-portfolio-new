@@ -1,4 +1,4 @@
-import greetingsStyles from "@/animations/greetings.module.css";
+import greetingsStyles from "@/styles/greetings.module.css";
 import { basicDetails } from "@/config/owner.config";
 import { getFullName } from "@/helpers/owner.helpers";
 import Typewriter from "@/components/typewriter/typewriter";

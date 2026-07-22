@@ -1,14 +1,14 @@
-import splashStyles from "@/animations/splash.module.css";
+import splashStyles from "@/styles/splash.module.css";
 import { SplashScreenProps } from "@/types/props/splash.props.types";
 import SplashLoader from "@/components/ui/splash/splash.loader";
 
-export default function SplashScreen({
+const SplashScreen = ({
   loadingText = "Loading...",
   endingText = "Welcome",
   backgroundColor = "#040b14",
   className = "",
   duration = 2000,
-}: SplashScreenProps) {
+}: SplashScreenProps) => {
   return (
     <div
       className={`z-100 relative h-screen w-screen ${className}`}
@@ -25,4 +25,6 @@ export default function SplashScreen({
       </div>
     </div>
   );
-}
+};
+
+export default SplashScreen;

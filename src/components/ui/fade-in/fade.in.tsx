@@ -1,17 +1,17 @@
 "use client";
 
-import fadeInStyles from "@/animations/fade.in.module.css";
+import fadeInStyles from "@/styles/fade.in.module.css";
 import { useInView } from "@/hooks/useInView";
 import { FadeInProps } from "@/types/props/hooks.props.types";
 
-export function FadeIn({
+const FadeIn = ({
   children,
   delay = 0,
   distance = 24,
   className = "",
   once,
   threshold,
-}: FadeInProps) {
+}: FadeInProps) => {
   const { ref, isInView } = useInView<HTMLDivElement>({ once, threshold });
 
   return (
@@ -28,4 +28,6 @@ export function FadeIn({
       {children}
     </div>
   );
-}
+};
+
+export default FadeIn;

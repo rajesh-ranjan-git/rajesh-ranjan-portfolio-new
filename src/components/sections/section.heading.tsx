@@ -1,5 +1,5 @@
 import { SectionProps } from "@/types/props/sections.props.types";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const SectionHeading = ({ title }: Partial<SectionProps>) => {
   return (

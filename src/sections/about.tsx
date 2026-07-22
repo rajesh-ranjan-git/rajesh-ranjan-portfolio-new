@@ -4,7 +4,7 @@ import AboutImage from "@/components/about/about.image";
 import AboutText from "@/components/about/about.text";
 import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const About = ({ title, description }: SectionProps) => {
   const aboutDetails = getAboutDetails();
@@ -19,7 +19,7 @@ const About = ({ title, description }: SectionProps) => {
         <FadeIn
           delay={150}
           distance={40}
-          className="order-2 lg:order-1 justify-self-center w-full md:w-1/2 lg:w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-none"
+          className="justify-self-center order-2 lg:order-1 w-full md:w-1/2 lg:w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-none"
         >
           <AboutImage />
         </FadeIn>

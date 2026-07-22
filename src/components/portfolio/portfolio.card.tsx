@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import portfolioStyles from "@/animations/portfolio.module.css";
+import portfolioStyles from "@/styles/portfolio.module.css";
 import { PortfolioCardProps } from "@/types/props/sections.props.types";
 
 const PortfolioCard = ({ portfolioItem }: PortfolioCardProps) => {

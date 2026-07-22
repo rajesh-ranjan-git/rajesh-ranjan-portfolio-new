@@ -3,7 +3,7 @@ import SectionHeading from "@/components/sections/section.heading";
 import SectionDescription from "@/components/sections/section.description";
 import ContactSocials from "@/components/contact/contact.socials";
 import ContactForm from "@/components/contact/contact.form";
-import { FadeIn } from "@/components/ui/fade-in/fade.in";
+import FadeIn from "@/components/ui/fade-in/fade.in";
 
 const Contact = ({ title, description }: SectionProps) => {
   return (

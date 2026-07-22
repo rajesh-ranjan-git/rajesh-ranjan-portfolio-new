@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa6";
 import { BreadcrumbProps } from "@/types/props/common.props.types";
 
-export default function Breadcrumb({ items }: BreadcrumbProps) {
+const Breadcrumb = ({ items }: BreadcrumbProps) => {
   return (
     <nav
       aria-label="Breadcrumb"
@@ -41,4 +41,6 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       </ol>
     </nav>
   );
-}
+};
+
+export default Breadcrumb;

@@ -1,4 +1,4 @@
-import greetingsStyles from "@/animations/greetings.module.css";
+import greetingsStyles from "@/styles/greetings.module.css";
 import GreetingsBackground from "@/components/greetings/greetings.background";
 import GreetingsContent from "@/components/greetings/greetings.content";
 
