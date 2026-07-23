@@ -17,6 +17,10 @@ if (existsSync(envFilePath)) {
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  reactCompiler: true,
+
+  poweredByHeader: false,
+  compress: true,
 
   async headers() {
     return [
@@ -31,12 +35,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-
-  // Optional: Expose NEXT_PUBLIC_* values to the client
-  env: {
-    // All NEXT_PUBLIC_ vars will automatically pass through
-  },
-  reactCompiler: true,
 };
 
 export default nextConfig;
